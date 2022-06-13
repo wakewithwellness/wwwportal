@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>Leaves</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+			<div class="header-left">
+				<a href="main.html" class="logo">
+					<img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>WakeWithWellness</span>
+				</a>
+			</div>
+			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+          
+         
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+
+                       
+
+                        <li>
+                            <a href="main.html"><i class="fa fa-user"></i> <span>Home</span></a>
+                        </li>
+
+                        <li>
+							<a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+						</li>
+				
+						<li class="submenu">
+							<a><i class="fa fa-user"></i> <span> Members </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="employees.html">Members List</a></li>
+								<li><a href="attendance.html">Attendance</a></li>
+                                <li class="active"><a href="leaves.html">Leaves</a></li>
+							</ul>
+						</li>
+				
+				
+					
+                      
+                        <li>
+                            <a href="task.html"><i class="fa fa-money"></i> <span>Task Updates</span></a>
+                        </li>
+              
+                     
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Leave Application</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="leaveform">
+               
+        
+                <input type="text" id="NameMod" style="width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" placeholder="Name" required><br><br>
+                <label style="color: rgb(94, 94, 94);">Reason :</label>
+                <select id="ReasonMod" name="Reason" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);">
+                    <option value="Select your reason" disabled>Select your reason</option>
+          <option value="Sick Leave">Sick Leave</option>
+          <option value="Academic Leave">Academic Leave</option>  
+          <option value="Personal Leave">Personal Leave</option>        
+           <option value="Out of Station">Out of Station</option>
+          <option value="Others">Others</option>
+
+                </select>
+            
+        
+                <label style="margin-top: 20px;color: rgb(94, 94, 94);">From :</label><br>
+                   <input type="date" placeholder="DD-MM-YYYY" id="FromMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required><br><br>
+                <label style="color: rgb(94, 94, 94);">To :</label>   <br>
+                  <input type="date" placeholder="DD-MM-YYYY" id="ToMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required>
+       
+       
+                  <input id="StatusMod" value="Pending" style="display: none;">
+          
+       
+                
+                <div class="modal-footer" style="margin-top: 20px;">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()">Add New Record</button>
+                     <button id="UpdModBtn" type="button" class="btn btn-success"  onclick="UpdStd()">Update Record</button>
+                     <button id="DelModBtn" type="button" class="btn btn-danger"  onclick="DelStd()">Delete</button>
+                  
+                </div>
+              </form>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="row">
+                    <div class="col-sm-8 col-6">
+                        <h4 class="page-title">Leave Request</h4>
+                    </div>
+                    
+                    <div class="col-sm-4 col-6 text-right m-b-30">
+                        <button onclick="FillTboxes(null)" type="button" class="btn btn-primary btn-rounded float-right" data-toggle="modal" data-target="#exampleModalCenter">
+                            <i class="fa fa-plus"></i> Add Leave
+                          </button>
+                    
+                    </div>
+                </div>
+                
+                <div class="row">
+                    
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table custom-table" id="myTable" style="color: rgb(34, 34, 34);text-align: center;">
+                                <thead>
+                                    <tr style="text-align: left;"> 
+                                    <th scope="col">SNo.</th> 
+                                    <th scope="col">Name.</th>
+                                    <th scope="col">Reason.</th>
+                                    <th scope="col">From</th>
+                                    <th scope="col">To</th>
+                                    <th scope="col">Status</th>
+                                    
+            
+                              
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody1" style="text-align: left;">
+                                   
+            
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+		
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+
+      <script>
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+  apiKey: "AIzaSyDPI48GnqgmNA9aD42AO7MErMgVTcBVdQU",
+  authDomain: "interns-ed08d.firebaseapp.com",
+  projectId: "interns-ed08d",
+  storageBucket: "interns-ed08d.appspot.com",
+  messagingSenderId: "821769104185",
+  appId: "1:821769104185:web:253f71ca9aa6b592f7d6e8",
+  measurementId: "G-7EHCSN5SY8"
+};
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    
+
+
+
+
+        //GET ALL DATA
+ var stdNo;
+        function SelectAllData(){
+          document.getElementById('tbody1').innerHTML="";
+
+          stdNo=0;
+            firebase.database().ref('leaverequest').orderByChild('status').once('value',
+            function(AllRecords){
+                AllRecords.forEach(
+                    function(CurrentRecord){
+           
+                        var name = CurrentRecord.val().name;
+                        var reason = CurrentRecord.val().reason;
+                        var from = CurrentRecord.val().from;
+                        var to = CurrentRecord.val().to;
+                        var status = CurrentRecord.val().status;
+                        
+                        
+                        
+                        
+                        AddItemsToTable(name,reason,from,to,status);
+
+                    }
+                );
+
+            });
+        }
+
+        window.onload = SelectAllData;
+
+        //Filling the table
+        
+        var stdList = [];
+        function AddItemsToTable(name,reason,from,to,status){
+            var tbody = document.getElementById('tbody1');
+            var trow = document.createElement('tr');
+            var td0 = document.createElement('td');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+            var td5 = document.createElement('td');
+   
+         
+
+      
+
+
+          stdList.push([name,reason,from,to,status])
+     
+     
+           
+            td0.innerHTML = ++stdNo;
+            td1.innerHTML = name;
+            td2.innerHTML = reason;
+            td3.innerHTML = from;
+            td4.innerHTML = to;
+            td5.innerHTML = status;
+            
+    
+     
+            trow.appendChild(td0);
+            trow.appendChild(td1); 
+            trow.appendChild(td2); 
+            trow.appendChild(td3); 
+            trow.appendChild(td4); 
+            trow.appendChild(td5);
+
+           
+      
+           
+           
+  
+            var ControlDiv = document.createElement("div");
+           
+         
+         
+            trow.appendChild(ControlDiv);
+
+            tbody.appendChild(trow);
+            
+        }
+
+        var ModName = document.getElementById('NameMod');
+        var ModReason = document.getElementById('ReasonMod');
+        var ModFrom = document.getElementById('FromMod');
+        var ModTo = document.getElementById('ToMod');
+        var ModStatus = document.getElementById('StatusMod');
+      
+        var AddModBtn = document.getElementById('AddModBtn');
+        var UpdModBtn = document.getElementById('UpdModBtn');
+        var DelModBtn = document.getElementById('DelModBtn');
+
+
+        function FillTboxes(index){
+
+          if(index==null){
+
+            ModName.value = "";
+            ModReason.value = "";
+            ModFrom.value = "";
+            ModTo.value = "";
+            ModStatus.value = "";
+             
+  
+            ModName.disabled=false;
+            ModReason.disabled=false;
+            ModFrom.disabled=false;
+            ModTo.disabled=false;
+          
+              
+               AddModBtn.style.display='inline-block';
+               UpdModBtn.style.display='none';
+               DelModBtn.style.display='none';
+
+          }
+          else{
+               --index;
+         
+               ModName.value = stdList[index][0];
+               ModReason.value = stdList[index][1];
+               ModFrom.value = stdList[index][2];
+               ModTo.value = stdList[index][3];
+               ModStatus.value = stdList[index][4];
+
+
+     
+              ModName.disabled=true;
+               ModReason.disabled=true;
+               ModFrom.disabled=true;
+               ModTo.disabled=true;
+          
+             
+               AddModBtn.style.display='none';
+               UpdModBtn.style.display='inline-block';
+               DelModBtn.style.display='inline-block';
+
+          }
+        }
+
+        function AddStd(){
+             
+             firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).set(
+                  {
+               
+                    name: ModName.value,
+                    reason: ModReason.value,
+                    from: ModFrom.value,
+                    to: ModTo.value,
+                    status: ModStatus.value
+                    
+
+                  },
+                  (error)=>{
+                       if(error){
+                            alert("Record was not added, there was some problem");
+                       }
+                       else{
+                            alert("Record was added");
+                            SelectAllData();
+                            
+                        
+
+                            
+                            
+                       }
+                  }
+             )
+        }
+
+
+
+        function UpdStd(){
+             
+             firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).update(
+                  {
+         
+                    name: ModName.value,
+                    reason: ModReason.value,
+                    from: ModFrom.value,
+                    to: ModTo.value,
+                    status: ModStatus.value
+
+                  },
+                  (error)=>{
+                       if(error){
+                            alert("Record was not updated, there was some problem");
+                       }
+                       else{
+                            alert("Record was updated");
+                            SelectAllData();
+                            
+                            
+                            
+                       }
+                  }
+             )
+        }
+
+
+
+
+        function DelStd(){
+             
+             firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).remove().then(
+             function(){
+              alert("Record was deleted");
+              SelectAllData();
+              
+             }
+             )
+        }
+
+  </script>
+</body>
+
+</html>
