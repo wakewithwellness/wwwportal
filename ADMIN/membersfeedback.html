@@ -1,0 +1,200 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MembersFeedbacks</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+ 
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+
+
+  <style>
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #2e2e2e;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    
+    
+        /* Add a black background color to the top navigation */
+      .topnav {
+        background-color: #009ce7;
+        overflow: hidden;
+      }
+      
+      /* Style the links inside the navigation bar */
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      /* Change the color of links on hover */
+      .topnav a:hover {
+        background-color: rgb(27, 27, 27);
+        color: rgb(235, 235, 235);
+      }
+      
+      /* Add a color to the active/current link */
+      .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+
+
+      #myInput {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+      </style>
+    
+ 
+
+
+
+
+
+       
+
+
+
+</head>
+
+<body>
+  <div class="topnav" style="width: 100%;">
+    <div>
+      <img src="../assets/img/logoonly.png" style="width: 160px;float: left;padding: 10px;">
+      
+
+    </div>
+  
+  </div>
+   
+ <div class="container" style="margin-top: 20px;">
+  <input style="width:100%" id="searchbar" onkeyup="search_animal()" type="text" name="search" placeholder="Search by name...">
+
+ </div>
+  
+  <div class="container" style="margin-top: 20px; font-size: 14px; text-align: justify" id="accordion">
+   </div>
+    <!-- <div class="container" id="accordion">
+        <div class="card">
+            
+
+          <h1>Cloud Cafe</h1>
+
+          <div class="content">
+  
+              <form id="add-cafe-form"></form>
+  
+              <ul id="cafe-list">
+                <li id="name"></li>
+              </ul>
+  
+          </div>
+            
+        </div>
+
+    </div> -->
+
+    
+
+
+
+
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+
+<script>
+  var config = {
+apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+authDomain: "members-76725.firebaseapp.com",
+projectId: "members-76725",
+storageBucket: "members-76725.appspot.com",
+messagingSenderId: "734645197873",
+appId: "1:734645197873:web:808127fdb4d643d4d24910",
+measurementId: "G-7LYZ3R48GT"
+};
+firebase.initializeApp(config);
+const db = firebase.firestore();
+db.settings({ timestampsInSnapshots: true }); 
+
+
+
+</script>
+
+<script>
+  
+// JavaScript code
+function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('text');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+</script>
+
+
+<script src="scripts/feedbacks.js"></script>
+
+
+</html>
