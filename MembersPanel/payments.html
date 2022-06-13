@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>Payments</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+</head>
+
+<body style="background-color: black;">
+
+
+    <div class="topnav" style="width: 100%;">
+   
+        <div style="float: right"> 
+          <a class="modal-trigger" href="#modal2" id="loginli" style="visibility: collapse;color:#5793D1;">Login</a>
+          <a class="modal-trigger" href="#modal1" id="signupli" style="visibility: collapse;"></a>
+         
+    
+        </div>
+      
+      </div>
+    
+    
+      <div class="header">
+        <div class="header-left">
+          <a class="logo" style="margin-left: -15px;">
+            <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>Members Portal</span>
+          </a>
+        </div>
+        <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+              <ul class="nav user-menu float-right" id="logoutli" style="display: none;"> 
+              </ul>
+              <div class="dropdown mobile-user-menu float-right" id="logoutli" style="display: none;">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>                 
+              </div>
+          </div>
+    
+    
+
+    
+    <div style="margin-top: 20px;"></div>
+    
+
+      <div id="logindata"></div>
+             
+
+    
+      <div class="center">
+        <div class="userDetails"></div>
+      </div>
+             
+
+
+
+
+
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+          authDomain: "members-76725.firebaseapp.com",
+          projectId: "members-76725",
+          storageBucket: "members-76725.appspot.com",
+          messagingSenderId: "734645197873",
+          appId: "1:734645197873:web:808127fdb4d643d4d24910",
+          measurementId: "G-7LYZ3R48GT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+      <script src="./scripts/auth.js"></script>
+      <script src="./scripts/payments.js" ></script>
+
+
+</body>
+
+</html>

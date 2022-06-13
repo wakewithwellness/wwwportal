@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>Timeline</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+
+  <style>
+
+.mt-70 {
+    margin-top: 20px
+}
+
+.mb-70 {
+    margin-bottom: 70px
+}
+
+.card {
+    box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+    border-width: 0;
+    transition: all .2s
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(26, 54, 126, 0.125);
+    border-radius: .25rem
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+.vertical-timeline {
+    width: 100%;
+    position: relative;
+    padding: 1.5rem 0 1rem
+}
+
+.vertical-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 27px;
+    height: 100%;
+    width: 4px;
+    background: #e9ecef;
+    border-radius: .25rem
+}
+
+.vertical-timeline-element {
+    position: relative;
+    margin: 0 0 1rem
+}
+
+.vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
+    visibility: visible;
+    animation: cd-bounce-1 .8s
+}
+
+.vertical-timeline-element-icon {
+    position: absolute;
+    top: 0;
+    left: 20px
+}
+
+.vertical-timeline-element-icon .badge-dot-xl {
+    box-shadow: 0 0 0 5px #fff
+}
+
+.badge-dot-xl {
+    width: 18px;
+    height: 18px;
+    position: relative
+}
+
+.badge:empty {
+    display: none
+}
+
+.badge-dot-xl::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: .25rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -5px 0 0 -5px;
+    background: #fff
+}
+
+.vertical-timeline-element-content {
+    position: relative;
+    margin-left: 50px;
+    font-size: .8rem
+}
+
+.vertical-timeline-element-content .timeline-title {
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin: 0 0 .5rem;
+    padding: 2px 0 0;
+    font-weight: bold
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+    display: block;
+    position: absolute;
+    left: -90px;
+    top: 0;
+    padding-right: 10px;
+    text-align: right;
+    color: #adb5bd;
+    font-size: .7619rem;
+    white-space: nowrap
+}
+
+.vertical-timeline-element-content:after {
+    content: "";
+    display: table;
+    clear: both
+}
+  </style>
+</head>
+
+<body  style="background-color: black;">
+    <div class="main-wrapper">
+        <div class="header">
+			<div class="header-left">
+				<a href="main.html" class="logo">
+					<img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>WakeWithWellness</span>
+				</a>
+			</div>
+			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+          
+         
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+
+                       
+
+                        <li>
+                            <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+                        </li>
+
+                        <li>
+							<a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+						</li>
+				
+						<li class="submenu">
+							<a><i class="fa fa-user"></i> <span> Members </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="employees.html">Members List</a></li>
+								<li><a href="attendance.html">Attendance</a></li>
+                                <li ><a href="leaves.html">Leaves</a></li>
+							</ul>
+						</li>
+
+                              
+                              <li class="active">
+							<a href="timeline.html"><i class="fa fa-bell-o"></i> <span>Timeline</span></a>
+						</li>
+
+
+						<li class="submenu">
+							<a><i class="fa fa-money"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="payments.html">Payments</a></li>
+							</ul>
+						</li>
+
+
+                     
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-wrapper">
+          
+                    
+
+                    <div class="row d-flex justify-content-center mt-70 mb-70">
+                         <div class="col-md-6">
+                             <div class="main-card mb-3 card">
+                                 <div class="card-body">
+                                     <h5 class="card-title">TIMELINE FOR THE MONTH OF APRIL 2022</h5>
+                                     <div class="vertical-timeline vertical-timeline--animate vertical-timeline--one-column">
+                                         <div class="vertical-timeline-item vertical-timeline-element">
+                                             <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-success"></i> </span>
+                                                 <div class="vertical-timeline-element-content bounce-in">
+                                                  
+                                                    
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="vertical-timeline-item vertical-timeline-element">
+                                             <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-danger"> </i> </span>
+                                                 <div class="vertical-timeline-element-content bounce-in">
+                                                  <h4 class="timeline-title">Prevention of Blindness week</h4>
+                                                  <p><b class="text-danger">1st April</b></p>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <div class="vertical-timeline-item vertical-timeline-element">
+                                            <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-danger"> </i> </span>
+                                                <div class="vertical-timeline-element-content bounce-in">
+                                                 <h4 class="timeline-title">World Autism Awareness Day</h4>
+                                                 <p><b class="text-danger">2nd April</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-item vertical-timeline-element">
+                                            <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-danger"> </i> </span>
+                                                <div class="vertical-timeline-element-content bounce-in">
+                                                 <h4 class="timeline-title">International Day of Mine awareness</h4>
+                                                 <p><b class="text-danger">4th April</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-item vertical-timeline-element">
+                                            <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-danger"> </i> </span>
+                                                <div class="vertical-timeline-element-content bounce-in">
+                                                 <h4 class="timeline-title">World Health Day</h4>
+                                                 <p><b class="text-danger">7th April</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                            
+                                         <div class="vertical-timeline-item vertical-timeline-element">
+                                            <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-primary"> </i> </span>
+                                                <div class="vertical-timeline-element-content bounce-in">
+                                                    <h4 class="timeline-title text-success">World Homoeopathy Day (WHD)</h4>
+                                                    <p><b class="text-danger">17th April</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="vertical-timeline-item vertical-timeline-element">
+                                             <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-success"> </i> </span>
+                                                 <div class="vertical-timeline-element-content bounce-in">
+                                                     <h4 class="timeline-title text-success">National Safe Motherhood Day (NSMD)</h4>
+                                                     <p><b class="text-danger">11th April</b></p>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <div class="vertical-timeline-item vertical-timeline-element">
+                                             <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-primary"> </i> </span>
+                                                 <div class="vertical-timeline-element-content bounce-in">
+                                                     <h4 class="timeline-title text-success">World Haemophilia Day</h4>
+                                                     <p><b class="text-danger">17th April</b></p>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <div class="vertical-timeline-item vertical-timeline-element">
+                                            <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-success"> </i> </span>
+                                                <div class="vertical-timeline-element-content bounce-in">
+                                                    <h4 class="timeline-title text-success">World Earth Day</h4>
+                                                    <p><b class="text-danger">22nd April</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-item vertical-timeline-element">
+                                            <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-primary"> </i> </span>
+                                                <div class="vertical-timeline-element-content bounce-in">
+                                                    <h4 class="timeline-title text-success">World Malaria Day</h4>
+                                                    <p><b class="text-danger">25th April </b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-item vertical-timeline-element">
+                                            <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-success"> </i> </span>
+                                                <div class="vertical-timeline-element-content bounce-in">
+                                                    <h4 class="timeline-title text-success">World Day for Safety and Health at Work</h4>
+                                                    <p><b class="text-danger">28th April</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-timeline-item vertical-timeline-element">
+                                            <div> <span class="vertical-timeline-element-icon bounce-in"> <i class="badge badge-dot badge-dot-xl badge-primary"> </i> </span>
+                                                <div class="vertical-timeline-element-content bounce-in">
+                                                    <h4 class="timeline-title text-success">World Veterinary Day</h4>
+                                                    <p><b class="text-danger">30th April</b></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    
+                                       
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                    
+                
+                </div>
+                
+               
+        
+		
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+
+</body>
+
+</html>

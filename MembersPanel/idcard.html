@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>ID Card registration</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+</head>
+
+<body  style="background-color: rgb(37, 37, 37);">
+     <div class="header">
+          <div class="header-left">
+               <a href="index.html" class="logo">
+                    <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>WakeWithWellness</span>
+               </a>
+          </div>
+         
+      
+     
+      
+   </div>
+
+   
+          <div class="container"  style="margin-top: 60px;">
+               <div class="row">
+                   <div class="col-sm-12">
+                       <h4 class="page-title">ID Card Registration Form</h4>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-lg-12">
+                       <div class="card-box">
+                          
+                           <form id="idreg">
+                               <div class="form-group row">
+                                   <label class="col-form-label col-md-2" style="color: white">Name</label>
+                                   <div class="col-md-10">
+                                       <input required id="name" type="text" class="form-control">
+                                   </div>
+                               </div>
+
+                               <div class="form-group row">
+                                   <label class="col-form-label col-md-2" style="color: white">Upload a recent photo of yours </label>
+                                   <div class="col-md-10">
+                                       <input required type="file" accept="image/*" value="upload" id="fileButton" class="form-control">
+                                       <progress style="width: 100%;height: 25px;" role="progressbar" value="0" max="100" id="uploader">0%</progress>
+                                       <p style="text-align:right" class="prog1"></p>
+                                   </div>
+                                   
+                               </div>
+                               <div class="form-group row">
+                                   <label class="col-form-label col-md-2" style="color: white">E-mail</label>
+                                   <div class="col-md-10">
+                                       <input required id="email" type="email" class="form-control">
+                                   </div>
+                               </div>
+                               <div class="form-group row">
+                                   <label class="col-form-label col-md-2" style="color: white">Contact no.</label>
+                                   <div class="col-md-10">
+                                       <input required id="contact" type="tel" class="form-control">
+                                   </div>
+                               </div>
+ 
+                               
+                               
+                           
+                               <div class="form-group row">
+                                   <label class="col-form-label col-md-2" style="color: white">Blood Group</label>
+                                   <div class="col-md-10">
+                                       <input required id="blood" type="text" class="form-control">
+                                   </div>
+                               </div>
+
+                               <div class="form-group row">
+                                   <label class="col-form-label col-md-2" style="color: white">Signature (On a white plane paper)</label>
+                                   <div class="col-md-10">
+                                       <input required type="file" accept="image/*" value="upload" id="signature" class="form-control">
+                                       <progress style="width: 100%;height: 25px;" role="progressbar" value="0" max="100" id="uploadersign">0%</progress>
+                                       <p style="text-align:right" class="prog2"></p>
+                                   </div>
+                               </div>
+                              
+                             
+                               <div class="form-group row">
+                                   <label class="col-form-label col-md-2" style="color: white">Address</label>
+                                   <div class="col-md-10">
+                                       <textarea required id="address" rows="5" cols="5" class="form-control" ></textarea>
+                                   </div>
+                               </div>
+
+
+                              
+                              
+                               <div class="text-right">
+                                   <input type="submit" class="btn btn-primary" onclick="location.href='https://rzp.io/l/idcard'" id="submit" value="Continue">
+                                 
+                               </div>  
+                           </form>
+                           <button type="cancel" class="btn btn-secondary" style="float: right;margin-top: -36px;margin-right: 105px;" onclick="location.href='activities.html'">Cancel</button>
+                       </div>
+                      
+                   </div>
+               </div>
+           </div>
+    
+     
+
+     <div class="sidebar-overlay" data-reff=""></div>
+     <script src="assets/js/jquery-3.2.1.min.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+     <script src="assets/js/bootstrap.min.js"></script>
+     <script src="assets/js/jquery.dataTables.min.js"></script>
+     <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+     <script src="assets/js/jquery.slimscroll.js"></script>
+     <script src="assets/js/app.js"></script>
+ 
+ 
+     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+ <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+ 
+
+ 
+     <script>
+         // Your web app's Firebase configuration
+         var firebaseConfig = {
+          apiKey: "AIzaSyDeglJB_pqDlgnfKDDJwdI9aj0jl-CfpWM",
+  authDomain: "profilepics-68390.firebaseapp.com",
+  databaseURL: "https://profilepics-68390-default-rtdb.firebaseio.com",
+  projectId: "profilepics-68390",
+  storageBucket: "profilepics-68390.appspot.com",
+  messagingSenderId: "487722572949",
+  appId: "1:487722572949:web:fb4e5f47131241dde8cf9c",
+  measurementId: "G-TT3NP0XQVE"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+
+
+
+
+     // firebase bucket name
+		// REPLACE WITH THE ONE YOU CREATE
+		// ALSO CHECK STORAGE RULES IN FIREBASE CONSOLE
+		var bucket = 'IDProfiles';
+
+// get elements
+var uploader = document.getElementById('uploader');
+var fileButton = document.getElementById('fileButton');
+
+
+// listen for file selection
+fileButton.addEventListener('change', function (e) {
+
+     // what happened
+     console.log('file upload event', e);
+
+     // get file
+     var file = e.target.files[0];
+
+     // create a storage ref
+     var storageRef = firebase.storage().ref(`${bucket}/${file.name}`);
+
+     // upload file
+     var uploadTask = storageRef.put(file);
+
+     // The part below is largely copy-pasted from the 'Full Example' section from
+     // https://firebase.google.com/docs/storage/web/upload-files
+
+     // update progress bar
+     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+          function (snapshot) {
+               // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+               var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+               uploader.value = progress;
+               console.log('Upload is ' + progress + '% done');
+               document.querySelector('.prog1').innerHTML=`${progress}%`;
+               switch (snapshot.state) {
+                    case firebase.storage.TaskState.PAUSED: // or 'paused'
+                         console.log('Upload is paused');
+                         break;
+                    case firebase.storage.TaskState.RUNNING: // or 'running'
+                         console.log('Upload is running');
+                         
+                         break;
+               }
+          }, function (error) {
+
+               // A full list of error codes is available at
+               // https://firebase.google.com/docs/storage/web/handle-errors
+               switch (error.code) {
+                    case 'storage/unauthorized':
+                         // User doesn't have permission to access the object
+                         break;
+
+                    case 'storage/canceled':
+                         // User canceled the upload
+                         break;
+
+                    case 'storage/unknown':
+                         // Unknown error occurred, inspect error.serverResponse
+                         break;
+               }
+          }, function () {
+               // Upload completed successfully, now we can get the download URL
+               // save this link somewhere, e.g. put it in an input field
+               var downloadURL = uploadTask.snapshot.downloadURL;
+               console.log('downloadURL', downloadURL);
+          });
+
+});
+
+
+
+
+
+
+
+
+// firebase bucket name
+		// REPLACE WITH THE ONE YOU CREATE
+		// ALSO CHECK STORAGE RULES IN FIREBASE CONSOLE
+		var fbBucketName = 'IDSignatures';
+
+// get elements
+var signuploader = document.getElementById('uploadersign');
+var signaturefile = document.getElementById('signature');
+
+// listen for file selection
+signaturefile.addEventListener('change', function (e) {
+
+     // what happened
+     console.log('file upload event', e);
+
+     // get file
+     var file = e.target.files[0];
+
+     // create a storage ref
+     var storageRef = firebase.storage().ref(`${fbBucketName}/${file.name}`);
+
+     // upload file
+     var uploadTask = storageRef.put(file);
+
+     // The part below is largely copy-pasted from the 'Full Example' section from
+     // https://firebase.google.com/docs/storage/web/upload-files
+
+     // update progress bar
+     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
+          function (snapshot) {
+               // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+               var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+               signuploader.value = progress;
+               console.log('Upload is ' + progress + '% done');
+               document.querySelector('.prog2').innerHTML=`${progress}%`;
+               switch (snapshot.state) {
+                    case firebase.storage.TaskState.PAUSED: // or 'paused'
+                         console.log('Upload is paused');
+                         break;
+                    case firebase.storage.TaskState.RUNNING: // or 'running'
+                         console.log('Upload is running');
+                         break;
+               }
+          }, function (error) {
+
+               // A full list of error codes is available at
+               // https://firebase.google.com/docs/storage/web/handle-errors
+               switch (error.code) {
+                    case 'storage/unauthorized':
+                         // User doesn't have permission to access the object
+                         break;
+
+                    case 'storage/canceled':
+                         // User canceled the upload
+                         break;
+
+                    case 'storage/unknown':
+                         // Unknown error occurred, inspect error.serverResponse
+                         break;
+               }
+          }, function () {
+               // Upload completed successfully, now we can get the download URL
+               // save this link somewhere, e.g. put it in an input field
+               var downloadURL = uploadTask.snapshot.downloadURL;
+               console.log('downloadURL', downloadURL);
+          });
+
+});
+
+
+
+
+    </script> <script src="idcard.js"></script>
+</body>
