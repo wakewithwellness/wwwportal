@@ -94,7 +94,7 @@
 
         <div class="container-fluid" style="margin-top: 10px">
           <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">MEMBERS REGISTRATION (Design & Marketing)</h6>
-
+<p style="font-weight: bold;">Note:  <span style="font-weight: 600;color:red;font-style: italic">1-7 are old registrations</span></p>
             <div class="table-responsive custom-table-responsive">
     
                 <table class="table custom-table" id="myTable" style="color: black;">
@@ -106,6 +106,7 @@
                         <th scope="col">Contact</th>
                         <th scope="col">Department</th>
                         <th scope="col">College</th>
+                        <th scope="col">Term</th>
                  
 
                   
@@ -117,6 +118,12 @@
                     </tbody>
                 </table>
             </div>
+
+
+
+
+            
+       
         </div>
 
 
@@ -143,7 +150,6 @@
       <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
 
-
   <script id="MainScript">
       //Connection
         var firebaseConfig = {
@@ -160,63 +166,67 @@
         firebase.initializeApp(firebaseConfig);
 
 
+//GET ALL DATA
 
+function SelectAllData(){
+          firebase.database().ref('Recruitment').once('value',
+          function(AllRecords){
+              AllRecords.forEach(
+                  function(CurrentRecord){
+                      var name = CurrentRecord.val().name;
+                      var email = CurrentRecord.val().email;
+                      var phone = CurrentRecord.val().phone;            
+                      var department = CurrentRecord.val().department;
+                      var college = CurrentRecord.val().college;
+                      var check = CurrentRecord.val().check;
+                      AddItemsToTable(name,email,phone,department,college,check);
 
-        //GET ALL DATA
+                  }
+              );
 
-        function SelectAllData(){
-            firebase.database().ref('Recruitment').once('value',
-            function(AllRecords){
-                AllRecords.forEach(
-                    function(CurrentRecord){
-                        var name = CurrentRecord.val().name;
-                        var email = CurrentRecord.val().email;
-                        var contact = CurrentRecord.val().contact;            
-                        var department = CurrentRecord.val().department;
-                        var college = CurrentRecord.val().college;
-                        AddItemsToTable(name,email,contact,department,college);
+          });
+      }
 
-                    }
-                );
+      window.onload = SelectAllData;
 
-            });
-        }
+      //Filling the table
+      var stdNo = 0;
+      function AddItemsToTable(name,email,phone,department,college,check){
+          var tbody = document.getElementById('tbody1');
+          var trow = document.createElement('tr');
+          var td1 = document.createElement('td');
+          var td2 = document.createElement('td');
+          var td3 = document.createElement('td');
+          var td4 = document.createElement('td');
+          var td5 = document.createElement('td');
+          var td6 = document.createElement('td');
+          var td7 = document.createElement('td');
+        
 
-        window.onload = SelectAllData;
-
-        //Filling the table
-        var stdNo = 0;
-        function AddItemsToTable(name,email,contact,department,college,){
-            var tbody = document.getElementById('tbody1');
-            var trow = document.createElement('tr');
-            var td1 = document.createElement('td');
-            var td2 = document.createElement('td');
-            var td3 = document.createElement('td');
-            var td4 = document.createElement('td');
-            var td5 = document.createElement('td');
-            var td6 = document.createElement('td');
           
-  
-            
-            td1.innerHTML = ++stdNo;
-            td2.innerHTML = name;
-            td3.innerHTML = email;
-            td4.innerHTML = contact;
-            td5.innerHTML = department;
-            td6.innerHTML = college;
+          td1.innerHTML = ++stdNo;
+          td2.innerHTML = name;
+          td3.innerHTML = email;
+          td4.innerHTML = phone;
+          td5.innerHTML = department;
+          td6.innerHTML = college;
+          td7.innerHTML = check;
 
-            trow.appendChild(td1); 
-            trow.appendChild(td2); 
-            trow.appendChild(td3); 
-            trow.appendChild(td4); 
-            trow.appendChild(td5); 
-            trow.appendChild(td6); 
+          trow.appendChild(td1); 
+          trow.appendChild(td2); 
+          trow.appendChild(td3); 
+          trow.appendChild(td4); 
+          trow.appendChild(td5); 
+          trow.appendChild(td6); 
+          trow.appendChild(td7); 
+        
+
           
- 
-            
-            tbody.appendChild(trow);
-            
-        }
+          tbody.appendChild(trow);
+          
+      }
+
+
 
 
   </script>
