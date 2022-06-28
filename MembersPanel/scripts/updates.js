@@ -56,10 +56,6 @@ var firebaseConfig = {
 
 
 
-
-
-
-
 db.collection("attendance").orderBy('regno').limitToLast(7).get().then(querySnapshot=>{
      querySnapshot.forEach(doc=>{
          let data = doc.data();
@@ -94,23 +90,27 @@ db.collection("attendance").orderBy('regno').limitToLast(7).get().then(querySnap
 
 
 
+
 db.collection("attendance").orderBy('regno').limit(34).get().then(querySnapshot=>{
-     querySnapshot.forEach(doc=>{
-         let data = doc.data();
-         let row  = `<tr>
-           
-                    <th scope="row">
-                       <label>${data.regno}</label>
-                     </th>
-                         <td>${data.name}</td>
-                         
-                         
-                    
-                   </tr>`;
-         let table = document.getElementById('myTable3')
-         table.innerHTML += row
-     })
+    querySnapshot.forEach(doc=>{
+        let data = doc.data();
+        let row  = `<tr>
+          
+                   <th scope="row">
+                      <label>${data.regno}</label>
+                    </th>
+                        <td>${data.name}</td>
+                        <td style="text-align:center;font-weight:700">${data.AAper}</td>
+                            <td>${data.Jun}</td>
+                            <td>${data.Jul22a}</td>
+                        <td>${data.Jul22b}</td>
+                       
+                     
+                  </tr>`;
+        let table = document.getElementById('myTable3')
+        table.innerHTML += row
     })
+   })
     
 
 
