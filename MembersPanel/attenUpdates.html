@@ -140,6 +140,28 @@ border: 1px solid #ddd; /* Add a grey border */
 margin-bottom: 12px; /* Add some space below the input */
 }
 
+#myInput2 {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myInput3 {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
 </style>
 
 
@@ -170,7 +192,7 @@ margin-bottom: 12px; /* Add some space below the input */
   <select style="width: 100%;height:30px;font-size: 12px;">
     <option>Choose batch</option>
     <option value="first1">First batch (July'2021-May'2022)</option>
-    <option value="first2">First batch (July'2021-May'2023)</option>
+    <option value="first2">First batch (June'2022-May'2023)</option>
     <option value="second1">Second batch (February'2021-January'2023)</option>
     
 </select>
@@ -185,7 +207,7 @@ margin-bottom: 12px; /* Add some space below the input */
 <div class="first1 batch">
   <div class="table-responsive custom-table-responsive">
 
-    <input type="text" id="myInput" onkeyup="myFunction()"  placeholder="Search by name...">
+    <input type="text" id="myInput" onkeyup="myFunction1()"  placeholder="Search by name...">
       <table class="table custom-table" id="myTable" style="color: rgb(0, 0, 0);cursor: pointer;">
             
           <thead>
@@ -237,7 +259,7 @@ margin-bottom: 12px; /* Add some space below the input */
 <div class="first2 batch">
   <div class="table-responsive custom-table-responsive">
 
-    <input type="text" id="myInput" onkeyup="myFunction()"  placeholder="Search by name...">
+    <input type="text" id="myInput3" onkeyup="myFunction3()"  placeholder="Search by name...">
       <table class="table custom-table" id="myTable3" style="color: rgb(0, 0, 0);cursor: pointer;">
             
           <thead>
@@ -245,30 +267,10 @@ margin-bottom: 12px; /* Add some space below the input */
                 <th scope="col">Reg No.</th>
               <th scope="col">Name</th>
               <th scope="col" style="text-align: center">Percentage</th>
-              <th scope="col">May2'23</th> 
-              <th scope="col">May2'23</th> 
-              <th scope="col">Apr2'23</th> 
-              <th scope="col">Apr1'23</th> 
-              <th scope="col">Mar2'23</th> 
-              <th scope="col">Mar1'23</th> 
-              <th scope="col">Feb2'23</th> 
-              <th scope="col">Feb1'23</th>
-              <th scope="col">Jan2'23</th> 
-              <th scope="col">Jan1'23</th> 
-              <th scope="col">Dec2'22</th> 
-              <th scope="col">Dec1'22</th> 
-              <th scope="col">Nov2'22</th> 
-              <th scope="col">Nov1'22</th> 
-              <th scope="col">Oct2'22</th> 
-              <th scope="col">Oct1'22</th> 
-              <th scope="col">Sep2'22</th> 
-              <th scope="col">Sep1'22</th> 
-              <th scope="col">Aug2'22</th> 
-              <th scope="col">Aug1'22</th> 
-              <th scope="col">Jul2'22</th> 
-              <th scope="col">Jul1'22</th> 
-              <th scope="col">Jun2'22</th> 
-              <th scope="col">Jun1'22</th> 
+              <th scope="col">Jun'22</th> 
+              <th scope="col">July'22</th> 
+              <th scope="col">July'22</th> 
+            
               
               </tr>
           </thead>
@@ -284,6 +286,7 @@ margin-bottom: 12px; /* Add some space below the input */
 
 <div class="second1 batch">
   <div class="table-responsive custom-table-responsive">
+     <input type="text" id="myInput2" onkeyup="myFunction2()"  placeholder="Search by name...">
       <table class="table custom-table" id="myTable2" style="color: rgb(0, 0, 0);cursor: pointer;">
             
           <thead>
@@ -291,22 +294,7 @@ margin-bottom: 12px; /* Add some space below the input */
                 <th scope="col">Reg No.</th>
               <th scope="col">Name</th>
               <th scope="col" style="text-align: center">Percentage</th>
-              <!-- <th scope="col">Jan2'23</th> 
-              <th scope="col">Jan1'23</th> 
-              <th scope="col">Dec2'22</th> 
-              <th scope="col">Dec1'22</th> 
-              <th scope="col">Nov2'22</th> 
-              <th scope="col">Nov1'22</th> 
-              <th scope="col">Oct2'22</th> 
-              <th scope="col">Oct1'22</th> 
-              <th scope="col">Sep2'22</th> 
-              <th scope="col">Sep1'22</th> 
-              <th scope="col">Aug2'22</th> 
-              <th scope="col">Aug1'22</th> 
-              <th scope="col">Jul2'22</th> 
-              <th scope="col">Jul1'22</th> 
-              <th scope="col">Jun2'22</th> 
-              <th scope="col">Jun1'22</th>  -->
+  
               <th scope="col">May2'22</th> 
               <th scope="col">May1'22</th> 
               <th scope="col">Apr2'22</th> 
@@ -367,12 +355,62 @@ margin-bottom: 12px; /* Add some space below the input */
 
 
 <script>
-  function myFunction() {
+  function myFunction1() {
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+
+
+
+  function myFunction2() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput2");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable2");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+
+
+
+  function myFunction3() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput3");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable3");
     tr = table.getElementsByTagName("tr");
   
     // Loop through all table rows, and hide those who don't match the search query
