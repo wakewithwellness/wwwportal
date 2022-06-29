@@ -175,10 +175,10 @@ async function getuserInfoRealtime(userID){
 
 
             <div class="container-fluid">
-  <div class="row" style="margin-top:-25px ;border: 1px solid #009efb; margin-bottom:10px ;color:white;height:35px">
-    <div class="col-8" style="padding-top:6px">Download our Android App Now ! </div>
+  <div class="row" style="margin-top:-25px ;border: 1px solid #009efb; margin-bottom:10px ;color:white;height:48px;text-align: left">
+    <div class="col-8" style="padding-top:6px">Download our Android Portal App Now ! </div>
     <div onclick="location.href='https://firebasestorage.googleapis.com/v0/b/files-bf645.appspot.com/o/WWW.apk?alt=media&token=a467a626-80d4-436c-afe5-0de4d2562559'" class="col-4" style="cursor:pointer;background-color: #009efb;padding-top:6px"><i class="fa fa-download" aria-hidden="true"></i> </i>Download</div>
-  </div>
+    </div>
 </div>
            
            
