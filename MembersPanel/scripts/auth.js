@@ -46,14 +46,16 @@ async function login(e){
 
 
 function forgotPass(){
-  const email = document.getElementById("loginEmail").value
+  const email = document.getElementById("forgotEmail").value
   firebase.auth().sendPasswordResetEmail(email)
   .then(() => {
-      alert("Reset link sent to your email id")
+    document.querySelector('.forgot').style.display = 'block';
+    M.toast({html:`Reset link sent`,classes:"green"})
+    
   })
   .catch((err) => {
     console.log(err)
-    M.toast({html: err.message,classes:"red"})
+    M.toast({html:`Error !`,classes:"red"})
   });
 }
 
