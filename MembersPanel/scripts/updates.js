@@ -66,6 +66,12 @@ db.collection("attendance").orderBy('regno').limitToLast(7).get().then(querySnap
                      </th>
                          <td>${data.name}</td>
                          <td style="text-align:center;font-weight:700">${data.AAper}</td>
+                         <td>${data.Sept22b}</td>
+                        <td>${data.Sept22a}</td>
+                        <td>${data.Aug22b}</td>
+                        <td>${data.Aug22a}</td>
+                        <td>${data.Jul22b}</td>
+                        <td>${data.Jul22a}</td>
                          <td>${data.Jun}</td>
                          <td>${data.May2}</td>
                          <td>${data.May1}</td>
@@ -103,7 +109,12 @@ db.collection("attendance").orderBy('regno').limit(34).get().then(querySnapshot=
                         <td>${data.name}</td>
                         <td style="text-align:center;font-weight:700">${data.AAper}</td>
                               
-                       
+                        <td>${data.Sept22b}</td>
+                        <td>${data.Sept22a}</td>
+                        <td>${data.Aug22b}</td>
+                        <td>${data.Aug22a}</td>
+                        <td>${data.Jul22b}</td>
+                        <td>${data.Jul22a}</td>
                         <td>${data.Jun}</td>
                      
                        
