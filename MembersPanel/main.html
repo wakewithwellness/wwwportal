@@ -28,7 +28,18 @@
         display: none;
       }
   
+      
 
+      .forgot{
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        background:#ff8811;
+        color: white;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        display: none;
+      }
 
 
 
@@ -93,7 +104,38 @@
 
 
 
-      <!-- LoGOUT Modal -->
+ <!-- Forgot your password -->
+      <div id="modal2" class="modal container" style="background: none;">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Forgot Password</h3>
+      
+             
+            </div>
+            <div class="modal-body">
+<labe>Enter your email : </labe>
+              <input type="email" style="border: 1px solid rgb(79, 78, 78); padding: 5px; border-radius:5px" id="forgotEmail" placeholder="Email">
+              <div class="forgot">Your password reset link will be sent to your email address<span style="font-weight: 600;"> (SPAM FOLDER)</span>.</div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" onclick="location.href='main.html'">Close</button>
+           
+              <button onclick="forgotPass()" type="button" style="margin-left:5px" class="btn btn-primary">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+ <!-- Forgot your password -->
+
+
+
+
+
+
+     <!-- LoGOUT Modal -->
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
   <div class="modal-dialog" role="document" >
     <div class="modal-content">
