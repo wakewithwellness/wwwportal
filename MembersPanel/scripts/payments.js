@@ -115,38 +115,28 @@ async function getuserInfoRealtime(userID){
     <div class="sidebar" id="sidebar">
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
+
             <ul>
-                <li class="menu-title">Main</li>
-
-               
-
-                <li>
-                    <a href="main.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
-                </li>
-
-                <li >
-                           <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
-                      </li>
-            
-                               
-               
-                <li>
-                <a href="employees.html"><i class="fa fa-users"></i> <span>Members List</span></a>
-               </li>
-
-               <li>
-                <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
-               </li>
-
-               <li>
-               <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
-              </li>
-
-                <li>
-                    <a href="payments.html"><i class="fa fa-money active"></i> <span>Payments</span></a>
-                </li>
-
-            </ul>
+            <li class="menu-title">Main</li>
+            <li>
+              <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+          </li>
+      
+            <li >
+              <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+            </li>
+           
+            <li>
+            <a href="employees.html"><i class="fa fa-users"></i> <span>Members List</span></a>
+           </li>
+           <li>
+            <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
+           </li>
+      
+           <li>
+           <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+          </li>
+        </ul>
         </div>
     </div>
 </div>
