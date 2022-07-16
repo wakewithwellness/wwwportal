@@ -125,9 +125,7 @@ async function getuserInfoRealtime(userID){
                     <ul>
                         <li class="menu-title">Main</li>
                        
-                        <li>
-                            <a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
-                        </li>
+                  
                         <li >
 							<a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
 						</li>
