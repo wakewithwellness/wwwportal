@@ -167,13 +167,15 @@ async function getuserInfoRealtime(userID){
                           </select>
                                 <div class="alert">Attendance posted successfully</div>
                           <div class="btn-block">
-                            <button onclick="location.href='attenUpdates.html'" style="border: 1px solid #df0f00;background-color:black;color:#df0f00"><i class="fa fa-pencil" aria-hidden="true"></i> Updates</button>
-                            <button style="margin-left:16px;background-color:#009efb" id="send" type="submit" >Post</button> 
+                          
+                            <button style="background-color:#009efb" id="send" type="submit" >Post</button> 
                              </div>
                           <div class="container-fluid" style="margin-bottom:40px;">
            
             </div>
                         </form>
+
+                        <button onclick="location.href='attenUpdates.html'" style="border: 1px solid #df0f00;background-color:black;color:#df0f00"><i class="fa fa-pencil" aria-hidden="true"></i> Updates</button>
                       </div> 
                     
                     
