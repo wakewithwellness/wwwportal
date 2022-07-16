@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     
     <title>Attendance</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <link href="../assets/img/favicon.png" rel="icon">
    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -129,7 +131,30 @@
           </div>
     
     
+ <!-- Forgot your password -->
+ <div id="modal2" class="modal container" style="background: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Forgot Password</h3>
 
+       
+      </div>
+      <div class="modal-body">
+<labe>Enter your email : </labe>
+        <input type="email" style="border: 1px solid rgb(79, 78, 78); padding: 5px; border-radius:5px" id="forgotEmail" placeholder="Email">
+        <div class="forgot">Your password reset link will be sent to your email address<span style="font-weight: 600;"> (SPAM FOLDER)</span>.</div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="location.href='main.html'">Close</button>
+     
+        <button onclick="forgotPass()" type="button" style="margin-left:5px" class="btn btn-primary">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Forgot your password -->
     
     <div style="margin-top: 20px;"></div>
     
@@ -162,7 +187,13 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+</script>  
 
     <script>
         // Your web app's Firebase configuration
