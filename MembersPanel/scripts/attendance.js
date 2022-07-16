@@ -1,4 +1,3 @@
-
 const Atten  = document.querySelector('.Atten')
 
 
@@ -59,7 +58,7 @@ async function getuserInfo(userID){
               <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
               height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
               font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-
+              <a class="modal-trigger" href="#modal2">Forgot Password</a><br>
               <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 5px;" >
                   <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
                   font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
@@ -158,7 +157,7 @@ async function getuserInfoRealtime(userID){
                           <hr>
                           <p class="container-fluid" style="text-align: center;font-size: 20px;color: rgba(78, 207, 3, 0.979);border: 1px solid  rgba(78, 207, 3, 0.979);padding: 5px;" id="demo"></p>
                           
-                          <h5 style="color: white;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the first half of<span style="font-weight: 500;">July</span> <span style="font-size: 14px;color: #009efb;">[01/07/2022 - 15/07/2022]</span></h5>
+                          <h5 style="color: white;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of July</span> <span style="font-size: 14px;color: #009efb;">[15/07/2022 - 31/07/2022]</span></h5>
                           <br><label>Works:</label>
                         <textarea id="work" maxlength="300" style="padding: 1px;color:white"   required ></textarea>
                           
@@ -224,7 +223,8 @@ async function getuserInfoRealtime(userID){
                 <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
                 height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
                 font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-
+                <a class="modal-trigger" href="#modal2">Forgot Password</a><br>
+                
                 <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 5px;" >
                     <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
                     font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
@@ -259,13 +259,13 @@ async function getuserInfoRealtime(userID){
 
 function updateattendance(event){
   event.preventDefault()
-  var Jul22a = document.getElementById('attend').value
-  var Jul22af = document.getElementById('work').value
+  var Jul22b = document.getElementById('attend').value
+  var Jul22bf = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-       Jul22a:Jul22a,
-       Jul22af:Jul22af
+    Jul22b:Jul22b,
+    Jul22bf:Jul22bf
 
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
@@ -290,7 +290,7 @@ function updateattendance(event){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("July 15, 2022 22:00:00").getTime();
+     var countDownDate = new Date("July 31, 2022 22:00:00").getTime();
      
      // Update the count down every 1 second
      var x = setInterval(function() {
