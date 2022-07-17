@@ -158,7 +158,7 @@ async function getuserInfoRealtime(userID){
                           <p class="container-fluid" style="text-align: center;font-size: 20px;color: rgba(78, 207, 3, 0.979);border: 1px solid  rgba(78, 207, 3, 0.979);padding: 5px;" id="demo"></p>
                           
                           <h5 style="color: white;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of July</span> <span style="font-size: 14px;color: #009efb;">[15/07/2022 - 31/07/2022]</span></h5>
-                          <br><label>Works:</label>
+                          <br><label>Tasks</label>
                         <textarea id="work" maxlength="300" style="padding: 1px;color:white"   required ></textarea>
                           
                           <select id="attend" style="color: white;font-weight: 400;">
@@ -170,7 +170,7 @@ async function getuserInfoRealtime(userID){
                           
                             <button style="background-color:#009efb" id="send" type="submit" >Post</button> 
                              </div>
-                          <div class="container-fluid" style="margin-bottom:40px;">
+                          <div class="container-fluid" style="margin-bottom:20px;">
            
             </div>
                         </form>
