@@ -343,22 +343,22 @@ async function getuserInfoRealtime(userID){
 					
 												<td class="text-right">
 													<a href="../../leavepanel.html" class="btn btn-outline-primary take-btn">View</a>
-												</td>
-											</tr>
+											 	</td>
+											       </tr>
 
-                                            <tr>
-                                            <td style="min-width: 200px;">
-                                                
-                                                <h2><a href="payments.html">Payments</a></h2>
-                                            </td>                 
-                
-                                            <td class="text-right">
-                                                <a href="payments.html" class="btn btn-outline-primary take-btn">View</a>
-                                            </td>
-                                        </tr>
+												    <tr>
+												    <td style="min-width: 200px;">
+
+													<h2><a href="payments.html">Payments</a></h2>
+												    </td>                 
+
+												    <td class="text-right">
+													<a href="payments.html" class="btn btn-outline-primary take-btn">View</a>
+												    </td>
+												</tr>
 
 
-                                        <tr>
+												<tr>
 												<td style="min-width: 200px;">
 													
 													<h2><a href="documents.html">Documents</a></h2>
@@ -368,6 +368,19 @@ async function getuserInfoRealtime(userID){
 													<a href="documents.html" class="btn btn-outline-primary take-btn">View</a>
 												</td>
 											</tr>
+											
+											
+											
+											     <tr>
+												    <td style="min-width: 200px;">
+
+													<h2><a href="../MembersPanel/agreement.html">Member Agreement Form</a></h2>
+												    </td>                 
+
+												    <td class="text-right">
+													<a href="../MembersPanel/agreement.html" class="btn btn-outline-primary take-btn">View</a>
+												    </td>
+												</tr>
 
 
 
