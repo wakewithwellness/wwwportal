@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BloodCamp</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #d4d4d4;
+      text-align: left;
+      padding: 8px;
+      font-size: 12px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #e4e4e4;
+    }
+    </style>
+  
+
+  <style>
+    /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: #009ce7;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(27, 27, 27);
+    color: rgb(235, 235, 235);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  </style>
+
+<style>
+  #myInput {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+#myInput2 {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+#myInput3 {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
+</style>
+
+<script>
+  function myFunction1() {
+    // Blood
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[5];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  function myFunction2() {
+    // For City
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput2");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[15];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  function myFunction3() {
+    // State
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput3");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[13];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+  </script>
+
+
+</head>
+
+<body>
+
+
+  <div class="topnav" style="width: 100%;">
+    <div>
+      <img src="../assets/img/logoonly.png" style="width: 160px;float: left;padding: 10px;">
+      
+    </div> 
+  </div> 
+
+  <main id="main">
+
+    
+
+        <div class="container-fluid" style="margin-top: 10px">
+          <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">BLOOD FOR LIFE DETAILS</h6>
+
+            <div class="table-responsive custom-table-responsive">
+              <input type="text" id="myInput" onkeyup="myFunction1()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Search by blood group...">
+              <input type="text" id="myInput2" onkeyup="myFunction2()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Search by city...">
+              <input type="text" id="myInput3" onkeyup="myFunction3()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Search by state...">
+                <table class="table custom-table" id="myTable" style="color: black;">
+                    <thead>
+                        <tr  style="background-color: #5793D1;color: #fff;"> 
+                        <th scope="col">SNo.</th> 
+                        <th scope="col">Name.</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Whatsapp</th>
+                        <th scope="col">BloodGroup</th>
+                    
+                        <th scope="col">Age</th>
+                        <th scope="col">Height</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col">BMI</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">AddressLine1</th>
+                        <th scope="col">AddressLine2</th>
+                        <th scope="col">State</th>
+                        <th scope="col">Pincode</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Identity</th>
+                        <th scope="col">IDNumber</th>
+
+                  
+                        </tr>
+                    </thead>
+                    <tbody id="tbody1">
+                       
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    
+   </main>
+
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+  <script src="../assets/js/main.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+
+  <script id="MainScript">
+      //Connection
+        var firebaseConfig = {
+            apiKey: "AIzaSyBTOvD0aod-fntZ0VYbT6EAp9z1L_bqKwY",
+            authDomain: "website-818ed.firebaseapp.com",
+            projectId: "website-818ed",
+            storageBucket: "website-818ed.appspot.com",
+            messagingSenderId: "542030860652",
+            appId: "1:542030860652:web:ee0bef0509915aa1da2349",
+            measurementId: "G-2VWCQ9QR4S"
+        };
+
+        //Init Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+
+
+        //GET ALL DATA
+
+        function SelectAllData(){
+            firebase.database().ref('blooddonation').once('value',
+            function(AllRecords){
+                AllRecords.forEach(
+                    function(CurrentRecord){
+                        var name = CurrentRecord.val().name;
+                        var email = CurrentRecord.val().email;
+                        var phone = CurrentRecord.val().phone;
+                        var whatsapp = CurrentRecord.val().whatsapp;
+                        var bloodg = CurrentRecord.val().bloodg;
+                  
+                        var age = CurrentRecord.val().age;
+                        var height = CurrentRecord.val().height;
+                        var weight = CurrentRecord.val().weight;
+                        var bmi = CurrentRecord.val().bmi;
+                        var info = CurrentRecord.val().info;
+                        var address1 = CurrentRecord.val().address1;
+                        var address2 = CurrentRecord.val().address2;
+                        var state = CurrentRecord.val().state;
+                        var zipcode = CurrentRecord.val().zipcode;
+                        var city = CurrentRecord.val().city;
+                        var identity = CurrentRecord.val().identity;
+                        var idnumber = CurrentRecord.val().idnumber;
+                       
+                        AddItemsToTable(name,email,phone,whatsapp,bloodg,age,height,weight,bmi,info,address1,address2,state,zipcode,city,identity,idnumber);
+
+                    }
+                );
+
+            });
+        }
+
+        window.onload = SelectAllData;
+
+        //Filling the table
+        var stdNo = 0;
+        function AddItemsToTable(name,email,phone,whatsapp,bloodg,age,height,weight,bmi,info,address1,address2,state,zipcode,city,identity,idnumber){
+            var tbody = document.getElementById('tbody1');
+            var trow = document.createElement('tr');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+            var td5 = document.createElement('td');
+            var td6 = document.createElement('td');
+            var td7 = document.createElement('td');
+            var td8 = document.createElement('td');
+            var td9 = document.createElement('td');
+            var td10 = document.createElement('td');
+            var td11 = document.createElement('td');
+            var td12 = document.createElement('td');
+            var td13 = document.createElement('td');
+            var td14 = document.createElement('td');
+            var td15 = document.createElement('td');
+            var td16 = document.createElement('td');
+            var td17 = document.createElement('td');
+            var td18 = document.createElement('td');
+  
+            
+            td1.innerHTML = ++stdNo;
+            td2.innerHTML = name;
+            td3.innerHTML = email;
+            td4.innerHTML = phone;
+            td5.innerHTML = whatsapp;
+            td6.innerHTML = bloodg;
+            td7.innerHTML = age;
+            td8.innerHTML = height;
+            td9.innerHTML = weight;
+            td10.innerHTML = bmi;
+            td11.innerHTML = info;
+            td12.innerHTML = address1;
+            td13.innerHTML = address2;
+            td14.innerHTML = state;
+            td15.innerHTML = zipcode;
+            td16.innerHTML = city;
+            td17.innerHTML = identity;
+            td18.innerHTML = idnumber;
+
+
+            trow.appendChild(td1); 
+            trow.appendChild(td2); 
+            trow.appendChild(td3); 
+            trow.appendChild(td4); 
+            trow.appendChild(td5); 
+            trow.appendChild(td6); 
+            trow.appendChild(td7); 
+            trow.appendChild(td8); 
+            trow.appendChild(td9);
+            trow.appendChild(td10); 
+            trow.appendChild(td11); 
+            trow.appendChild(td12); 
+            trow.appendChild(td13); 
+            trow.appendChild(td14); 
+            trow.appendChild(td15); 
+            trow.appendChild(td16); 
+            trow.appendChild(td17); 
+            trow.appendChild(td18); 
+
+ 
+            
+            tbody.appendChild(trow);
+            
+        }
+
+
+  </script>
+
+
+</body>
+
+</html>
