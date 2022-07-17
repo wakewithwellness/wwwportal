@@ -142,7 +142,7 @@ margin-bottom: 12px; /* Add some space below the input */
   
     // Loop through all table rows, and hide those who don't match the search query
     for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[15];
+      td = tr[i].getElementsByTagName("td")[16];
       if (td) {
         txtValue = td.textContent || td.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -164,7 +164,7 @@ margin-bottom: 12px; /* Add some space below the input */
   
     // Loop through all table rows, and hide those who don't match the search query
     for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[13];
+      td = tr[i].getElementsByTagName("td")[20];
       if (td) {
         txtValue = td.textContent || td.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -198,31 +198,34 @@ margin-bottom: 12px; /* Add some space below the input */
           <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">BLOOD FOR LIFE DETAILS</h6>
 
             <div class="table-responsive custom-table-responsive">
-              <input type="text" id="myInput" onkeyup="myFunction1()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Search by blood group...">
-              <input type="text" id="myInput2" onkeyup="myFunction2()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Search by city...">
-              <input type="text" id="myInput3" onkeyup="myFunction3()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Search by state...">
+              <input type="text" id="myInput" onkeyup="myFunction1()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Blood Group...">
+              <input type="text" id="myInput2" onkeyup="myFunction2()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Permanent city...">
+              <input type="text" id="myInput3" onkeyup="myFunction3()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Temporary city...">
                 <table class="table custom-table" id="myTable" style="color: black;">
                     <thead>
                         <tr  style="background-color: #5793D1;color: #fff;"> 
                         <th scope="col">SNo.</th> 
-                        <th scope="col">Name.</th>
-                        <th scope="col">Email</th>
+                        <th scope="col" style="min-width: 25vh">Name.</th>
+                        <th scope="col" style="min-width: 30vh">Email</th>
                         <th scope="col">Contact</th>
                         <th scope="col">Whatsapp</th>
-                        <th scope="col">BloodGroup</th>
-                    
+                        <th scope="col" style="background-color:darkorange">BloodGroup</th>
                         <th scope="col">Age</th>
                         <th scope="col">Height</th>
                         <th scope="col">Weight</th>
                         <th scope="col">BMI</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">AddressLine1</th>
-                        <th scope="col">AddressLine2</th>
+                        <th scope="col" style="background-color:#04AA6D">Status</th>
+                        <th scope="col" style="min-width: 15vh">Identity</th>
+                        <th scope="col">IDNumber</th>
+                        <th scope="col" style="min-width: 35vh">Permanent Address</th>
                         <th scope="col">State</th>
                         <th scope="col">Pincode</th>
                         <th scope="col">City</th>
-                        <th scope="col">Identity</th>
-                        <th scope="col">IDNumber</th>
+                        <th scope="col" style="min-width: 35vh">Temporary Address</th>
+                        <th scope="col">State</th>
+                        <th scope="col">Pincode</th>
+                        <th scope="col">City</th>
+                     
 
                   
                         </tr>
@@ -296,15 +299,19 @@ margin-bottom: 12px; /* Add some space below the input */
                         var weight = CurrentRecord.val().weight;
                         var bmi = CurrentRecord.val().bmi;
                         var info = CurrentRecord.val().info;
+                        var identity = CurrentRecord.val().identity;
+                        var idnumber = CurrentRecord.val().idnumber;
                         var address1 = CurrentRecord.val().address1;
-                        var address2 = CurrentRecord.val().address2;
                         var state = CurrentRecord.val().state;
                         var zipcode = CurrentRecord.val().zipcode;
                         var city = CurrentRecord.val().city;
-                        var identity = CurrentRecord.val().identity;
-                        var idnumber = CurrentRecord.val().idnumber;
+                      
+                        var address2 = CurrentRecord.val().address2;
+                        var state2 = CurrentRecord.val().state2;
+                        var zipcode2 = CurrentRecord.val().zipcode2;
+                        var city2 = CurrentRecord.val().city2;
                        
-                        AddItemsToTable(name,email,phone,whatsapp,bloodg,age,height,weight,bmi,info,address1,address2,state,zipcode,city,identity,idnumber);
+                        AddItemsToTable(name,email,phone,whatsapp,bloodg,age,height,weight,bmi,info,identity,idnumber,address1,state,zipcode,city,address2,state2,zipcode2,city2);
 
                     }
                 );
@@ -316,7 +323,7 @@ margin-bottom: 12px; /* Add some space below the input */
 
         //Filling the table
         var stdNo = 0;
-        function AddItemsToTable(name,email,phone,whatsapp,bloodg,age,height,weight,bmi,info,address1,address2,state,zipcode,city,identity,idnumber){
+        function AddItemsToTable(name,email,phone,whatsapp,bloodg,age,height,weight,bmi,info,identity,idnumber,address1,state,zipcode,city,address2,state2,zipcode2,city2){
             var tbody = document.getElementById('tbody1');
             var trow = document.createElement('tr');
             var td1 = document.createElement('td');
@@ -337,6 +344,10 @@ margin-bottom: 12px; /* Add some space below the input */
             var td16 = document.createElement('td');
             var td17 = document.createElement('td');
             var td18 = document.createElement('td');
+            var td19 = document.createElement('td');
+            var td20 = document.createElement('td');
+            var td21 = document.createElement('td');
+       
   
             
             td1.innerHTML = ++stdNo;
@@ -350,13 +361,17 @@ margin-bottom: 12px; /* Add some space below the input */
             td9.innerHTML = weight;
             td10.innerHTML = bmi;
             td11.innerHTML = info;
-            td12.innerHTML = address1;
-            td13.innerHTML = address2;
-            td14.innerHTML = state;
-            td15.innerHTML = zipcode;
-            td16.innerHTML = city;
-            td17.innerHTML = identity;
-            td18.innerHTML = idnumber;
+            td12.innerHTML = identity;
+            td13.innerHTML = idnumber;
+            td14.innerHTML = address1;
+            td15.innerHTML = state;
+            td16.innerHTML = zipcode;
+            td17.innerHTML = city;
+            td18.innerHTML = address2;
+            td19.innerHTML = state2;
+            td20.innerHTML = zipcode2;
+            td21.innerHTML = city2;
+    
 
 
             trow.appendChild(td1); 
@@ -377,6 +392,10 @@ margin-bottom: 12px; /* Add some space below the input */
             trow.appendChild(td16); 
             trow.appendChild(td17); 
             trow.appendChild(td18); 
+            trow.appendChild(td19); 
+            trow.appendChild(td20); 
+            trow.appendChild(td21); 
+
 
  
             
