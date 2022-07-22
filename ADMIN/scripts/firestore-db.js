@@ -385,17 +385,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-                                        <tr>
-                                        <td style="min-width: 200px;">
-                                            
-                                            <h2><a href="https://activityupdates.netlify.app/">Member Activity Updates</a></h2>
-                                        </td>                 
-            
-                                        <td class="text-right">
-                                            <a href="https://activityupdates.netlify.app/" class="btn btn-outline-primary take-btn">View</a>
-                                        </td>
-                                    </tr>
-
+                           
                                         
 
 										</tbody>
