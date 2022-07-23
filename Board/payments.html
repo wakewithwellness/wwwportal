@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Payments</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+  <style>
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+    /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: #009ce7;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(27, 27, 27);
+    color: rgb(235, 235, 235);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  </style>
+
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #d4d4d4;
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #c5c5c5;
+  }
+  </style>
+
+<style>
+  #myInput {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+  <div class="topnav" style="width: 100%;">
+    <div>
+      <img src="../assets/img/logoonly.png" style="width: 160px;float: left;padding: 10px;">
+      
+
+    </div>
+  
+  </div>
+
+
+  
+
+  <main id="main"> 
+    <div class="container-fluid" style="margin-top: 10px">
+      <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">MEMBER'S PAYMENTS</h6>
+
+        <div class="table-responsive custom-table-responsive">
+          <input type="text" id="myInput" onkeyup="myFunction()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Search by name...">
+            <table class="table custom-table" id="myTable" style="color: rgb(0, 0, 0);">
+                <thead>
+                    <tr style="background-color: #5793D1;color: #fff;"> 
+                      <th scope="col">Reg No.</th>
+                      <th scope="col">Name</th>  
+               
+                  
+                    <th scope="col" style="background-color: rgb(199, 169, 3);">Invoice</th> 
+                    <th scope="col" style="background-color: rgb(13, 153, 0);">Purpose</th>
+                    <th scope="col" style="background-color: rgb(223, 79, 13);">Amount</th> 
+                   
+                    <th scope="col" style="background-color: rgb(199, 169, 3);">Invoice</th> 
+                    <th scope="col" style="background-color: rgb(13, 153, 0);">Purpose</th>
+                    <th scope="col" style="background-color: rgb(223, 79, 13);">Amount</th> 
+                    
+                    <th scope="col" style="background-color: rgb(199, 169, 3);">Invoice</th> 
+                    <th scope="col" style="background-color: rgb(13, 153, 0);">Purpose</th>
+                    <th scope="col" style="background-color: rgb(223, 79, 13);">Amount</th> 
+                
+                    <th scope="col" style="background-color: rgb(199, 169, 3);">Invoice</th> 
+                    <th scope="col" style="background-color: rgb(13, 153, 0);">Purpose</th>
+                    <th scope="col" style="background-color: rgb(223, 79, 13);">Amount</th> 
+
+                    </tr>
+                </thead>
+                <tbody id="mytable">
+                   
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+
+
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+
+
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+
+
+  <script>
+      //Connection
+          // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+            authDomain: "members-76725.firebaseapp.com",
+            projectId: "members-76725",
+            storageBucket: "members-76725.appspot.com",
+            messagingSenderId: "734645197873",
+            appId: "1:734645197873:web:808127fdb4d643d4d24910",
+            measurementId: "G-7LYZ3R48GT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        db.settings({ timestampInSnapshots: true});
+
+
+        db.collection("Payments").orderBy('regno').get().then(querySnapshot=>{
+        querySnapshot.forEach(doc=>{
+            let data = doc.data();
+            let row  = `<tr>
+                        
+                        <th scope="row">
+                          <label>${data.regno}</label>
+                        </th>
+                            <td>${data.name}</td>
+                         
+                            
+                            <td>${data.i1}</td> 
+                            <td>${data.p1}</td> 
+                            <td>${data.a1}</td>
+
+                            
+                            <td>${data.i2}</td>
+                            <td>${data.p2}</td>
+                            <td>${data.a2}</td>
+
+                            
+                            <td>${data.i3}</td>
+                            <td>${data.p3}</td>
+                            <td>${data.a3}</td>
+
+                           
+                            <td>${data.i4}</td>
+                            <td>${data.p4}</td>
+                            <td>${data.a4}</td>
+                            
+                      </tr>`;
+            let table = document.getElementById('myTable')
+            table.innerHTML += row
+        })
+    })
+    .catch(err=>{
+        console.log(`Error: ${err}`)
+    });
+
+  </script>
+
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+  </script>
+
+
+
+</body>
+
+</html>
