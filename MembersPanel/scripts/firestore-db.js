@@ -310,7 +310,7 @@ async function getuserInfoRealtime(userID){
   <div class="card-box mb-0" style="text-align:left; height:108px;">
   <h3 class="card-title" style="color:white;float:left">Code of Ethics and Professional Conduct</h3>
     
- <button style="width: 100px; background-color: #009efb;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-right:13px;float:right" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=6af5a5ee-3079-45f1-a14e-0b35ccafe36c'"><i><img src="https://cdn-icons-png.flaticon.com/512/136/136522.png" style="height: 20px;"></i> View</button> 
+ <button style="width: 100px; background-color: #009efb;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-right:13px;float:right" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=df241a31-533a-46ba-91f2-52b371fd851a'"><i><img src="https://cdn-icons-png.flaticon.com/512/136/136522.png" style="height: 20px;"></i> View</button> 
 
 </div>
 
