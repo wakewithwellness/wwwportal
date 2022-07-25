@@ -123,11 +123,7 @@ async function getuserInfoRealtime(userID){
                     <a href="adminattendance.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
                 </li>
 
-                    <li>
-                    <a href="../MembersPanel/timeline.html"><i class="fa fa-calendar-o"></i> <span>Timeline</span></a>
-                </li>
-                
-                      
+  
 
                        <li>
                        <a href="../leavepanel.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
@@ -385,16 +381,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-                                        <tr>
-                                        <td style="min-width: 200px;">
-                                            
-                                            <h2><a href="https://activityupdates.netlify.app/">Member Activity Updates</a></h2>
-                                        </td>                 
-            
-                                        <td class="text-right">
-                                            <a href="https://activityupdates.netlify.app/" class="btn btn-outline-primary take-btn">View</a>
-                                        </td>
-                                    </tr>
+                 
 
                                         
 
@@ -407,64 +394,7 @@ async function getuserInfoRealtime(userID){
 
                     
 
-                         <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-						<div class="hospital-barchart">
-							<h4 class="card-title d-inline-block">Member's Management</h4>
-						</div>
-						<div class="bar-chart">
-							
-							<div class="chart clearfix">
-								<div class="item">
-									<div class="bar">
-										<span class="percent">12</span>
-										<div class="item-progress" data-percent="16">
-											<span class="title">Curation</span>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="bar">
-										<span class="percent">15</span>
-										<div class="item-progress" data-percent="71">
-											<span class="title">Editorial</span>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="bar">
-										<span class="percent">8</span>
-										<div class="item-progress" data-percent="82">
-											<span class="title">PR</span>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="bar">
-										<span class="percent">1</span>
-										<div class="item-progress" data-percent="67">
-											<span class="title">Events</span>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="bar">
-										<span class="percent">6</span>									
-										<div class="item-progress" data-percent="30">
-											<span class="title">Design</span>
-										</div>
-									</div>
-								</div>
-                                <div class="item">
-									<div class="bar">
-										<span class="percent">2</span>
-										<div class="item-progress" data-percent="67">
-											<span class="title">Marketing</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					 </div>
+                  
                 
 				</div>
 
@@ -480,18 +410,6 @@ async function getuserInfoRealtime(userID){
                             <table class="table mb-0">
                             
                                 <tbody>
-
-                                <tr>
-                                <td style="min-width: 200px;">
-                                    
-                                    <h2><a href="floodrelieffund.html" >Flood Relief Fund</a></h2>
-                                </td>                 
-
-                                <td class="text-right">
-                                    <a href="floodrelieffund.html"  class="btn btn-outline-primary take-btn">View</a>
-                                </td>
-                            </tr>
-
 
 
                                     <tr>
@@ -530,6 +448,19 @@ async function getuserInfoRealtime(userID){
                                     <a href="wellnessfund.html"  class="btn btn-outline-primary take-btn">View</a>
                                 </td>
                             </tr>
+
+
+
+                            <tr>
+                            <td style="min-width: 200px;">
+                                
+                                <h2><a href="finance.html"  >Finance Updates</a></h2>
+                            </td>                 
+
+                            <td class="text-right">
+                                <a href="finance.html"  class="btn btn-outline-primary take-btn">View</a>
+                            </td>
+                        </tr>
 
 
 
@@ -710,6 +641,32 @@ async function allUserDetails(){
     })
  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
