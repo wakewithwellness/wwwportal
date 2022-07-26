@@ -19,33 +19,33 @@ var firebaseConfig = {
      let row  = `<tr>
        
                 <th scope="row">
-                   <label>${data.regno}</label>
+                   <label style="color: ${data.status}">${data.regno}</label>
                  </th>
-                     <td>${data.name}</td>
+                     <td style="color: ${data.status}">${data.name}</td>
                      <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
-                         <td>${data.May2}</td>
-                         <td>${data.May1}</td>
-                     <td>${data.Apr2}</td>
-                     <td>${data.Apr1}</td>
-                     <td>${data.Mar2}</td>
-                     <td>${data.Mar1}</td>
-                     <td>${data.Feb2}</td>
-                     <td>${data.Feb1}</td>
-                     <td>${data.Jan2}</td>
-                     <td>${data.Jan1}</td>
-                     <td>${data.Dec2}</td>
-                     <td>${data.Dec1}</td>
-                     <td>${data.Nov2}</td>
-                     <td>${data.Nov1}</td>
-                     <td>${data.Oct2}</td>
-                     <td>${data.Oct1}</td>
-                     <td>${data.Sept2}</td>
-                     <td>${data.Sept1}</td>
-                     <td>${data.Aug2}</td>
-                     <td>${data.Aug1}</td>
-                     <td>${data.July3}</td>
-                     <td>${data.July2}</td>
-                     <td>${data.July1}</td>
+                         <td style="color: ${data.status}">${data.May2}</td>
+                         <td style="color: ${data.status}">${data.May1}</td>
+                     <td style="color: ${data.status}">${data.Apr2}</td>
+                     <td style="color: ${data.status}">${data.Apr1}</td>
+                     <td style="color: ${data.status}">${data.Mar2}</td>
+                     <td style="color: ${data.status}">${data.Mar1}</td>
+                     <td style="color: ${data.status}">${data.Feb2}</td>
+                     <td style="color: ${data.status}">${data.Feb1}</td>
+                     <td style="color: ${data.status}">${data.Jan2}</td>
+                     <td style="color: ${data.status}">${data.Jan1}</td>
+                     <td style="color: ${data.status}">${data.Dec2}</td>
+                     <td style="color: ${data.status}">${data.Dec1}</td>
+                     <td style="color: ${data.status}">${data.Nov2}</td>
+                     <td style="color: ${data.status}">${data.Nov1}</td>
+                     <td style="color: ${data.status}">${data.Oct2}</td>
+                     <td style="color: ${data.status}">${data.Oct1}</td>
+                     <td style="color: ${data.status}">${data.Sept2}</td>
+                     <td style="color: ${data.status}">${data.Sept1}</td>
+                     <td style="color: ${data.status}">${data.Aug2}</td>
+                     <td style="color: ${data.status}">${data.Aug1}</td>
+                     <td style="color: ${data.status}">${data.July3}</td>
+                     <td style="color: ${data.status}">${data.July2}</td>
+                     <td style="color: ${data.status}">${data.July1}</td>
                </tr>`;
      let table = document.getElementById('myTable')
      table.innerHTML += row
@@ -61,24 +61,24 @@ db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW00
          let data = doc.data();
          let row  = `<tr>
            
-                    <th scope="row">
-                       <label>${data.regno}</label>
+                    <th scope="row" >
+                       <label style="color: ${data.status}">${data.regno}</label>
                      </th>
-                         <td>${data.name}</td>
+                         <td style="color: ${data.status}">${data.name}</td>
                          <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
                     
-                        <td>${data.Aug22a}</td>
-                        <td>${data.Jul22b}</td>
-                        <td>${data.Jul22a}</td>
-                         <td>${data.Jun}</td>
-                         <td>${data.May2}</td>
-                         <td>${data.May1}</td>
-                         <td>${data.Apr2}</td>
-                         <td>${data.Apr1}</td>
-                         <td>${data.Mar2}</td>
-                         <td>${data.Mar1}</td>
-                         <td>${data.Feb2}</td>
-                         <td>${data.Feb1}</td>
+                        <td style="color: ${data.status}">${data.Aug22a}</td>
+                        <td style="color: ${data.status}">${data.Jul22b}</td>
+                        <td style="color: ${data.status}">${data.Jul22a}</td>
+                         <td style="color: ${data.status}">${data.Jun}</td>
+                         <td style="color: ${data.status}">${data.May2}</td>
+                         <td style="color: ${data.status}">${data.May1}</td>
+                         <td style="color: ${data.status}">${data.Apr2}</td>
+                         <td style="color: ${data.status}">${data.Apr1}</td>
+                         <td style="color: ${data.status}">${data.Mar2}</td>
+                         <td style="color: ${data.status}">${data.Mar1}</td>
+                         <td style="color: ${data.status}">${data.Feb2}</td>
+                         <td style="color: ${data.status}">${data.Feb1}</td>
                     
                    </tr>`;
          let table = document.getElementById('myTable2')
@@ -102,15 +102,15 @@ db.collection("attendance").orderBy('regno').limit(34).get().then(querySnapshot=
         let row  = `<tr>
           
                    <th scope="row">
-                      <label>${data.regno}</label>
+                      <label style="color: ${data.status}">${data.regno}</label>
                     </th>
-                        <td>${data.name}</td>
+                        <td style="color: ${data.status}">${data.name}</td>
                         <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
                       
-                        <td>${data.Aug22a}</td>
-                        <td>${data.Jul22b}</td>
-                        <td>${data.Jul22a}</td>
-                        <td>${data.Jun}</td>
+                        <td style="color: ${data.status}">${data.Aug22a}</td>
+                        <td style="color: ${data.status}">${data.Jul22b}</td>
+                        <td style="color: ${data.status}">${data.Jul22a}</td>
+                        <td style="color: ${data.status}">${data.Jun}</td>
                      
                        
                      
@@ -137,13 +137,13 @@ db.collection("attendance").orderBy('regno').limitToLast(4).get().then(querySnap
         let row  = `<tr>
           
                    <th scope="row">
-                      <label>${data.regno}</label>
+                      <label style="color: ${data.status}">${data.regno}</label>
                     </th>
-                        <td>${data.name}</td>
+                        <td style="color: ${data.status}">${data.name}</td>
                         <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
                      
-                       <td>${data.Aug22a}</td>
-                       <td>${data.Jul22b}</td>
+                       <td style="color: ${data.status}">${data.Aug22a}</td>
+                       <td style="color: ${data.status}">${data.Jul22b}</td>
                       
                    
                   </tr>`;
