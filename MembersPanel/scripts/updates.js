@@ -22,7 +22,7 @@ var firebaseConfig = {
                    <label>${data.regno}</label>
                  </th>
                      <td>${data.name}</td>
-                     <td style="text-align:center;font-weight:700">${data.AAper}</td>
+                     <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
                          <td>${data.May2}</td>
                          <td>${data.May1}</td>
                      <td>${data.Apr2}</td>
@@ -65,7 +65,7 @@ db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW00
                        <label>${data.regno}</label>
                      </th>
                          <td>${data.name}</td>
-                         <td style="text-align:center;font-weight:700">${data.AAper}</td>
+                         <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
                     
                         <td>${data.Aug22a}</td>
                         <td>${data.Jul22b}</td>
@@ -105,7 +105,7 @@ db.collection("attendance").orderBy('regno').limit(34).get().then(querySnapshot=
                       <label>${data.regno}</label>
                     </th>
                         <td>${data.name}</td>
-                        <td style="text-align:center;font-weight:700">${data.AAper}</td>
+                        <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
                       
                         <td>${data.Aug22a}</td>
                         <td>${data.Jul22b}</td>
@@ -140,7 +140,7 @@ db.collection("attendance").orderBy('regno').limitToLast(4).get().then(querySnap
                       <label>${data.regno}</label>
                     </th>
                         <td>${data.name}</td>
-                        <td style="text-align:center;font-weight:700">${data.AAper}</td>
+                        <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
                      
                        <td>${data.Aug22a}</td>
                        <td>${data.Jul22b}</td>
