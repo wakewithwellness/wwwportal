@@ -190,6 +190,7 @@ margin-bottom: 12px; /* Add some space below the input */
                 <thead>
                     <tr style="background-color: #5793D1;color: #fff;"> 
                       <th scope="col">Reg No.</th>
+                       <th scope="col">Photo</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Contact</th>
@@ -311,6 +312,7 @@ margin-bottom: 12px; /* Add some space below the input */
                         <th scope="row">
                           <label>${data.regno}</label>
                         </th>
+                        <td><img alt="Not available" src="${data.link}" style="width: 10vh; height: 10vh; object-fill: cover"></td>
                             <td>${data.name}</td>
                             <td>${data.email}</td>
                             <td>${data.phone}</td>
