@@ -22,7 +22,9 @@ function createUserCollection(user){
        state:"",
        pincode:"",
        exp:"",
-
+       agreement: "",
+       idcard:"",
+       certificate:"",
        status:""
 
    })
@@ -178,7 +180,7 @@ async function getuserInfoRealtime(userID){
             <div class="container-fluid">
   <div class="row" style="margin-top:-25px ;border: 1px solid #009efb; margin-bottom:10px ;color:white;height:48px;text-align: left">
     <div class="col-8" style="padding-top:6px">Download our Android Portal App Now ! </div>
-    <div onclick="location.href='https://firebasestorage.googleapis.com/v0/b/files-bf645.appspot.com/o/WWW.apk?alt=media&token=a467a626-80d4-436c-afe5-0de4d2562559'" class="col-4" style="cursor:pointer;background-color: #009efb;padding-top:6px"><i class="fa fa-download" aria-hidden="true"></i> </i>Download</div>
+    <div onclick="location.href='https://firebasestorage.googleapis.com/v0/b/files-bf645.appspot.com/o/WWW.apk?alt=media&token=a467a626-80d4-436c-afe5-0de4d2562559'" class="col-4" style="cursor:pointer;background-color: #009efb;padding-top:6px"><i class="fa fa-download" aria-hidden="true"></i> Download</div>
     </div>
 </div>
            
@@ -202,7 +204,7 @@ async function getuserInfoRealtime(userID){
                                     <div class="col-md-5">
                                         <div class="profile-info-left" style="text-align:justify">
                                             <h3 class="user-name m-t-0 mb-0" style="color:white">${userInfo.name}</h3>
-                                            <div class="staff-id">Registration ID : <span style="font-weight:normal;color:#009efb">${userInfo.regno}</span></div>
+                                            <div class="staff-id">Registration ID : <span style="font-weight:500;color:#009efb;font-size: 15px">${userInfo.regno}</span></div>
                                             <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department I :</span><span style="font-weight:500;color:white"> ${userInfo.department}</span></h4>
                                             <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department II :</span><span style="font-weight:500;color:white"> ${userInfo.department2}</span></h4>
                                             
@@ -236,14 +238,20 @@ async function getuserInfoRealtime(userID){
                                                 <span class="title">Gender:</span>
                                                 <span class="text">${userInfo.gender}</span>
                                             </li>
+
+                                          
                                         </ul>
                                     </div>
                                     
-                                    <button style="background-color: #009efb;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-left:13px" class="modal-trigger" href="#modal3">Edit details</button> 
+                                    <button style="background-color: #009efb;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-left:13px" class="modal-trigger" href="#modal3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit details</button> 
          
                                
                                
                                     </div>
+
+                                    <span class="btn btn-danger" onclick="location.href='${userInfo.agreement}'"><i class="fa fa-download" aria-hidden="true"></i> Agreement</span>
+                                    <span class="btn btn-warning" onclick="location.href='${userInfo.idcard}'"><i class="fa fa-download" aria-hidden="true"></i> Identity Card</span>
+                                    <span class="btn btn-success my-2" onclick="location.href='${userInfo.certificate}'"><i class="fa fa-download" aria-hidden="true"></i> Certificate</span>
                             </div>
                         </div>                        
                     </div>
@@ -310,7 +318,7 @@ async function getuserInfoRealtime(userID){
   <div class="card-box mb-0" style="text-align:left; height:108px;">
   <h3 class="card-title" style="color:white;float:left">Code of Ethics and Professional Conduct</h3>
     
- <button style="width: 100px; background-color: #009efb;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-right:13px;float:right" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=df241a31-533a-46ba-91f2-52b371fd851a'"><i><img src="https://cdn-icons-png.flaticon.com/512/136/136522.png" style="height: 20px;"></i> View</button> 
+ <button style="width: 100px; background-color: #009efb;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-right:13px;float:right" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=6af5a5ee-3079-45f1-a14e-0b35ccafe36c'"><i><img src="https://cdn-icons-png.flaticon.com/512/136/136522.png" style="height: 20px;"></i> View</button> 
 
 </div>
 
