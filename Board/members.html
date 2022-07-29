@@ -11,7 +11,7 @@
 
   <link href="../assets/img/favicon.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -193,7 +193,7 @@ margin-bottom: 12px; /* Add some space below the input */
                        <th scope="col">Photo</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Contact</th>
+                    <th scope="col" style="min-width:12vh">Contact</th>
                     <th scope="col">Whatsapp</th>
                     <th scope="col">Department</th>
                     <th scope="col">Dept II</th>
@@ -314,9 +314,9 @@ margin-bottom: 12px; /* Add some space below the input */
                         </th>
                         <td><img alt="Not available" src="${data.link}" style="width: 10vh; height: 10vh; object-fill: cover"></td>
                             <td>${data.name}</td>
-                            <td>${data.email}</td>
-                            <td>${data.phone}</td>
-                            <td>${data.whatsapp}</td>
+                            <td><a style="color: blue" href="mailto:${data.email}">${data.email}</a></td>
+                            <td><a style="color: green; font-weight: bold; font-size: 15px" href="tel:${data.phone}"><i class="fa fa-phone" aria-hidden="true"></i> Phone</a></td>
+                            <td><a style="color: green; font-weight: bold; font-size: 15px" target="_blank" href="https://wa.me/${data.whatsapp}"><i class="fa fa-whatsapp" aria-hidden="true"></i> Chat</a></td>
                             <td>${data.department}</td>
                             <td>${data.department2}</td>
                             <td>${data.college}</td>
