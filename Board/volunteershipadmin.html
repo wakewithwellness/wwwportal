@@ -108,6 +108,8 @@
                          <th scope="col">Whatsapp</th>
                          <th scope="col">Qualification</th>
                          <th scope="col">WorkPlace</th>
+                           <th scope="col">Hometown</th> 
+                          <th scope="col">state</th>
                          <th scope="col">Experience</th>
                          <th scope="col">Agreement</th>
                          <th scope="col">Status</th>
@@ -180,12 +182,14 @@
                         var whatsapp = CurrentRecord.val().whatsapp;
                         var qualification = CurrentRecord.val().qualification;
                         var work = CurrentRecord.val().work;
+                       var home = CurrentRecord.val().home;
+                           var state = CurrentRecord.val().state;
                         var exp = CurrentRecord.val().exp;
                         var checkbox = CurrentRecord.val().checkbox;
                         var status = CurrentRecord.val().status;
 
 
-                        AddItemsToTable(name,email,phone,whatsapp,qualification,work,exp,checkbox,status);
+                        AddItemsToTable(name,email,phone,whatsapp,qualification,work,home,state,exp,checkbox,status);
 
                     }
                 );
@@ -197,7 +201,7 @@
 
         //Filling the table
         var stdNo = 0;
-        function AddItemsToTable(name,email,phone,whatsapp,qualification,work,exp,checkbox,status){
+        function AddItemsToTable(name,email,phone,whatsapp,qualification,work,home,state,exp,checkbox,status){
           var tbody = document.getElementById('tbody1');
             var trow = document.createElement('tr');
             var td0 = document.createElement('td');
@@ -210,6 +214,8 @@
             var td7 = document.createElement('td');
             var td8 = document.createElement('td');
             var td9 = document.createElement('td');
+            var td10 = document.createElement('td');
+            var td11 = document.createElement('td');
 
 
   
@@ -221,9 +227,11 @@
             td4.innerHTML = whatsapp;
             td5.innerHTML = qualification;
             td6.innerHTML = work;
-            td7.innerHTML = exp;
-            td8.innerHTML = checkbox;
-            td9.innerHTML = status;
+            td7.innerHTML = home;  
+            td8.innerHTML = state;
+            td9.innerHTML = exp;
+            td10.innerHTML = checkbox;
+            td11.innerHTML = status;
             
     
      
@@ -237,7 +245,8 @@
             trow.appendChild(td7);
             trow.appendChild(td8);
             trow.appendChild(td9);
- 
+            trow.appendChild(td10);
+            trow.appendChild(td11);
             
             tbody.appendChild(trow);
             
