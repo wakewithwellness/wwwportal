@@ -188,7 +188,7 @@ margin-bottom: 12px; /* Add some space below the input */
           <input type="text" id="myInput" onkeyup="myFunction()"  placeholder="Search by name...">
             <table class="table custom-table" id="myTable" style="color: rgb(0, 0, 0);">
                 <thead>
-                    <tr style="background-color: #5793D1;color: #fff;"> 
+                    <tr style="background-color: #5793D1;color: #fff"> 
                       <th scope="col">Reg No.</th>
                        <th scope="col">Photo</th>
                     <th scope="col">Name</th>
@@ -203,6 +203,9 @@ margin-bottom: 12px; /* Add some space below the input */
                     <th scope="col">Address</th> 
                     <th scope="col">Pincode</th> 
                     <th scope="col">State</th> 
+                    <th scope="col" style="font-size:9px;text-align:center">Agreement</th> 
+                    <th scope="col" style="font-size:9px;text-align:center">IDCard</th> 
+                    <th scope="col" style="font-size:9px;text-align:center">Certificate</th> 
 
                     </tr>
                 </thead>
@@ -215,52 +218,6 @@ margin-bottom: 12px; /* Add some space below the input */
     </div>
 
 
-
-    <div class="container-fluid" style="margin-bottom: 20vh;">
-      <div id="form_container">
-        <div id="form_header_container">
-            <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;margin-top: 15px;">ADD MEMEBER</h6>
-        </div>
-</div>
-
-        <div class="form-inline" >
-         
-            <input type="email" id="email" placeholder="Enter Email" name="email">
-         
-            <input type="text" id="name" placeholder="Enter Full name" name="name">
-         
-            <input type="password" id="password" placeholder="Enter Password" name="pswd">
-           
-            <input type="text" id="regno" placeholder="Enter Regno." name="regno">
-            
-            <input type="tel" id="phone" placeholder="Enter Contact No." name="contact">
-
-            <input type="tel" id="whatsapp" placeholder="Enter Whatsapp No." name="whatsapp">
-
-            <input type="text" id="department" placeholder="Enter Department" name="department">
-            
-            <input type="text" id="department2" placeholder="Enter Department II" name="department2">
-             
-            <input type="text" id="department2" placeholder="Enter Department II" name="department2">
-            
-            <input type="text" id="college" placeholder="Enter College" name="college">
-            
-            <input type="text" id="exp" placeholder="Enter Experience" name="exp">
-            
-            <input type="text" id="blood" placeholder="Enter Blood" name="blood">
-
-            <input type="text" id="address" placeholder="Enter Address" name="address">
-
-            <input type="text" id="pincode" placeholder="Enter Pincode" name="pincode">
-
-            <input type="text" id="state" placeholder="Enter State" name="state">
-            
-         
-            <button onclick="register()">Add Member</button>
-            
-        </div>
-
-    </div>
 </main>
 
 
@@ -310,21 +267,24 @@ margin-bottom: 12px; /* Add some space below the input */
             let row  = `<tr>
               
                         <th scope="row">
-                          <label>${data.regno}</label>
+                          <label style="font-size:10px;text-align:center">${data.regno}</label>
                         </th>
-                        <td><img alt="Not available" src="${data.link}" style="width: 10vh; height: 10vh; object-fill: cover"></td>
-                            <td>${data.name}</td>
-                            <td><a style="color: blue" href="mailto:${data.email}">${data.email}</a></td>
-                            <td><a style="color: green; font-weight: bold; font-size: 15px" href="tel:${data.phone}"><i class="fa fa-phone" aria-hidden="true"></i> ${data.phone}</a></td>
-                            <td><a style="color: green; font-weight: bold; font-size: 15px;" href="https://wa.me/${data.whatsapp}">${data.whatsapp}</a></td>
-                            <td>${data.department}</td>
-                            <td>${data.department2}</td>
-                            <td>${data.college}</td>
-                            <td>${data.exp}</td>
-                            <td>${data.blood}</td>
-                            <td>${data.address}</td>
-                            <td>${data.pincode}</td>
-                            <td>${data.state}</td>
+                        <td ><img alt="Not available" onclick="location.href='${data.link}'" src="${data.link}" style="width: 7vh; height: 7vh; object-fill: cover;cursor:pointer"></td>
+                            <td style="font-size:10px">${data.name}</td>
+                            <td style="font-size:10px"><a style="color: blue" href="mailto:${data.email}">${data.email}</a></td>
+                            <td style="font-size:10px"><a style="color: green; font-weight: bold; font-size: 11px" href="tel:${data.phone}"><i class="fa fa-phone" aria-hidden="true"></i> ${data.phone}</a></td>
+                            <td style="font-size:10px"><a style="color: green; font-weight: bold; font-size: 11px;" href="https://wa.me/${data.whatsapp}">${data.whatsapp}</a></td>
+                            <td style="font-size:10px">${data.department}</td>
+                            <td style="font-size:10px">${data.department2}</td>
+                            <td style="font-size:10px">${data.college}</td>
+                            <td style="font-size:10px">${data.exp}</td>
+                            <td style="font-size:10px">${data.blood}</td>
+                            <td style="font-size:10px">${data.address}</td>
+                            <td style="font-size:10px">${data.pincode}</td>
+                            <td style="font-size:10px">${data.state}</td>
+                            <td style="text-align:center"><a style="color: #0090c4;font-size:18px;" href="${data.agreement}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                            <td style="text-align:center"><a style="color: #e6870b;font-size:18px;" href="${data.idcard}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                            <td style="text-align:center"><a style="color: #27a317;font-size:18px;" href="${data.certificate}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                       </tr>`;
             let table = document.getElementById('myTable')
             table.innerHTML += row
