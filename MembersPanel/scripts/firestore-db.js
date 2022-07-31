@@ -442,93 +442,74 @@ setTimeout(function(){
 
 
 
-
-var bucket = 'users';
-
-// get elements
-var uploader = document.getElementById('uploader');
-var fileButton = document.getElementById('file1');
-
-
-
-// listen for file selection
-fileButton.addEventListener('change', function uploadImage(e) {
-
-     // what happened
-     console.log('file upload event', e);
-
-     // get file
-     var file = e.target.files[0];
-
-     // create a storage ref
-     const uid = firebase.auth().currentUser.uid
-     const storageRef = firebase.storage().ref().child(`${bucket}/${uid}/profile`)
-     // upload file
-     var uploadTask = storageRef.put(file);
-
-
-     // update progress bar
-     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
-          function (snapshot) {
-               // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-             
-               var progress = ((snapshot.bytesTransferred / snapshot.totalBytes) * 100).toFixed(2);  
+function uploadImage(e){
+    console.log(e.target.files[0])
+    const uid = firebase.auth().currentUser.uid
+    const fileRef = firebase.storage().ref().child(`/users/${uid}/profile`)
+    const uploadTask =  fileRef.put(e.target.files[0])
+    uploadTask.on('state_changed', 
+  (snapshot) => {
+    
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    if(progress=='100') 
+     // Show alert
+     document.querySelector('.success').innerHTML=`<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
               
-               if(progress=='100')   
-                
-               // Show alert
-               document.querySelector('.success').innerHTML=`<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
-              
-              // Hide alert after 10 seconds
+     // Hide alert after 10 seconds
 setTimeout(function(){
-    document.querySelector('.success').innerHTML=``;
-  },10000);
-               
-               uploader.value = progress;
+document.querySelector('.success').innerHTML=``;
+},10000);
+      
+uploader.value = progress;
               
-               console.log('Upload is ' + progress + '% done');
-               document.querySelector('.prog').innerHTML=`${progress}%`;
-            
-               switch (snapshot.state) {
-                    case firebase.storage.TaskState.PAUSED: // or 'paused'
-                         console.log('Upload is paused');
-                      
-                         break;
-                    case firebase.storage.TaskState.RUNNING: // or 'running'
-                         console.log('Upload is running');
-                         
-                         break;
-               }
-          }, function (error) {
+console.log('Upload is ' + progress + '% done');
+document.querySelector('.prog').innerHTML=`${progress}%`;
 
-               // A full list of error codes is available at
-               // https://firebase.google.com/docs/storage/web/handle-errors
-               switch (error.code) {
-                    case 'storage/unauthorized':
-                         // User doesn't have permission to access the object
-                         break;
+switch (snapshot.state) {
+     case firebase.storage.TaskState.PAUSED: // or 'paused'
+          console.log('Upload is paused');
+       
+          break;
+     case firebase.storage.TaskState.RUNNING: // or 'running'
+          console.log('Upload is running');
+          
+          break;
+}
+}, function (error) {
 
-                    case 'storage/canceled':
-                         // User canceled the upload
-                         break;
+// A full list of error codes is available at
+// https://firebase.google.com/docs/storage/web/handle-errors
+switch (error.code) {
+     case 'storage/unauthorized':
+          // User doesn't have permission to access the object
+          break;
 
-                    case 'storage/unknown':
-                         // Unknown error occurred, inspect error.serverResponse
-                         break;
-               }
-          }, 
+     case 'storage/canceled':
+          // User canceled the upload
+          break;
 
-          function () {
-            uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-                console.log('File available at', downloadURL);
-                document.querySelector('#proimg').src = downloadURL
-                firebase.auth().currentUser.updateProfile({
-                  photoURL: downloadURL
-                })
-              });
-          });
+     case 'storage/unknown':
+          // Unknown error occurred, inspect error.serverResponse
+          break;
+}
+}, 
 
-});
+function () {
+    
+    uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+      console.log('File available at', downloadURL);
+      document.querySelector('#proimg').src = downloadURL
+      firebase.auth().currentUser.updateProfile({
+        photoURL: downloadURL
+      })
+    });
+  }
+
+
+  
+);
+}
+
 
 
 
