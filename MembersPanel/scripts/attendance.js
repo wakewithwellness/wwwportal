@@ -157,7 +157,7 @@ async function getuserInfoRealtime(userID){
                           <hr>
                           <p class="container-fluid" style="text-align: center;font-size: 20px;color: rgba(78, 207, 3, 0.979);border: 1px solid  rgba(78, 207, 3, 0.979);padding: 5px;" id="demo"></p>
                           
-                          <h5 style="color: white;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of July</span> <span style="font-size: 14px;color: #009efb;">[15/07/2022 - 31/07/2022]</span></h5>
+                          <h5 style="color: white;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">first half of August</span> <span style="font-size: 14px;color: #009efb;">[01/08/2022 - 15/08/2022]</span></h5>
                           <br><label>Tasks</label>
                         <textarea id="work" maxlength="300" style="padding: 1px;color:white"   required ></textarea>
                           
@@ -261,13 +261,13 @@ async function getuserInfoRealtime(userID){
 
 function updateattendance(event){
   event.preventDefault()
-  var Jul22b = document.getElementById('attend').value
-  var Jul22bf = document.getElementById('work').value
+  var Aug22a = document.getElementById('attend').value
+  var Aug22af = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Jul22b:Jul22b,
-    Jul22bf:Jul22bf
+    Aug22a:Aug22a,
+    Aug22af:Aug22af
 
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
@@ -292,7 +292,7 @@ function updateattendance(event){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("July 31, 2022 22:00:00").getTime();
+     var countDownDate = new Date("August 15, 2022 22:00:00").getTime();
      
      // Update the count down every 1 second
      var x = setInterval(function() {
