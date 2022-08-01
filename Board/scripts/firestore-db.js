@@ -298,6 +298,19 @@ async function getuserInfoRealtime(userID){
 													<a href="recruitments.html" class="btn btn-outline-primary take-btn">View</a>
 												</td>
 											</tr>
+
+                                            <tr>
+                                            <td style="min-width: 200px;">
+                                                
+                                                <h2><a href="members.html">Members List</a></h2>
+                                            </td>                 
+
+                                            <td class="text-right">
+                                                <a href="members.html" class="btn btn-outline-primary take-btn">View</a>
+                                            </td>
+                                        </tr>
+
+
 											<tr>
 												<td style="min-width: 200px;">
 												
@@ -306,39 +319,6 @@ async function getuserInfoRealtime(userID){
 
 												<td class="text-right">
 													<a href="agreementpanel.html" class="btn btn-outline-primary take-btn">View</a>
-												</td>
-											</tr>
-
-                                            <tr>
-												<td style="min-width: 200px;">
-													
-													<h2><a href="membersfeedback.html">Member's Feedbacks</a></h2>
-												</td>                 
-
-												<td class="text-right">
-													<a href="membersfeedback.html" class="btn btn-outline-danger take-btn">View</a>
-												</td>
-											</tr>
-
-
-											<tr>
-												<td style="min-width: 200px;">
-													
-													<h2><a href="members.html">Members List</a></h2>
-												</td>                 
-
-												<td class="text-right">
-													<a href="members.html" class="btn btn-outline-primary take-btn">View</a>
-												</td>
-											</tr>
-											<tr>
-												<td style="min-width: 200px;">
-													
-													<h2><a href="../leavepanel.html">Leave Requests</a></h2>
-												</td>                 
-					
-												<td class="text-right">
-													<a href="../../leavepanel.html" class="btn btn-outline-primary take-btn">View</a>
 												</td>
 											</tr>
 
@@ -353,8 +333,34 @@ async function getuserInfoRealtime(userID){
                                             </td>
                                         </tr>
 
+                                            <tr>
+												<td style="min-width: 200px;">
+													
+													<h2><a href="membersfeedback.html">Member's Feedbacks</a></h2>
+												</td>                 
+
+												<td class="text-right">
+													<a href="membersfeedback.html" class="btn btn-outline-danger take-btn">View</a>
+												</td>
+											</tr>
 
 
+				
+											<tr>
+												<td style="min-width: 200px;">
+													
+													<h2><a href="../leavepanel.html">Leave Requests</a></h2>
+												</td>                 
+					
+												<td class="text-right">
+													<a href="../../leavepanel.html" class="btn btn-outline-primary take-btn">View</a>
+												</td>
+											</tr>
+
+                                 
+
+
+                             
 
                                             <tr>
                                             <td style="min-width: 200px;">
@@ -399,17 +405,18 @@ async function getuserInfoRealtime(userID){
                             
                                 <tbody>
 
+                                <tr>
+                                <td style="min-width: 200px;">
+                                    
+                                    <h2><a href="bloodneeded.html"  >Blood Request</a></h2>
+                                </td>                 
 
-                                    <tr>
-                                        <td style="min-width: 200px;">
-                                            
-                                            <h2><a href="volunteershipadmin.html"  >Volunteership Pragram</a></h2>
-                                        </td>                 
+                                <td class="text-right">
+                                    <a href="bloodneeded.html"  class="btn btn-danger take-btn">View</a>
+                                </td>
+                            </tr>
 
-                                        <td class="text-right">
-                                            <a href="volunteershipadmin.html"  class="btn btn-outline-primary take-btn">View</a>
-                                        </td>
-                                    </tr>
+    
 
                                     <tr>
                                     <td style="min-width: 200px;">
@@ -418,12 +425,21 @@ async function getuserInfoRealtime(userID){
                                     </td>                 
 
                                     <td class="text-right">
-                                        <a href="BloodCamp.html"  class="btn btn-outline-primary take-btn">View</a>
+                                        <a href="BloodCamp.html"  class="btn btn-primary take-btn">View</a>
                                     </td>
                                 </tr>
 
     
+                                <tr>
+                                        <td style="min-width: 200px;">
+                                            
+                                            <h2><a href="volunteershipadmin.html"  >Volunteership Program</a></h2>
+                                        </td>                 
 
+                                        <td class="text-right">
+                                            <a href="volunteershipadmin.html"  class="btn btn-outline-primary take-btn">View</a>
+                                        </td>
+                                    </tr>
 
                                    
                                 <tr>
@@ -629,60 +645,5 @@ async function allUserDetails(){
     })
  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
