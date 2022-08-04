@@ -16,6 +16,9 @@ function createUserCollection(user){
        college:"",
        gender:"",
        address:"",
+       agreement: "",
+       idcard:"",
+       certificate:"",
      
 
    })
@@ -160,11 +163,14 @@ async function getuserInfoRealtime(userID){
 			    <div class="row">
 				   <div class="col-md-12">
 					  <div class="profile-view">
-						 <div class="profile-img-wrap">
-							<div class="profile-img">
-							    <a href="#"><img class="avatar" src="../assets/img/user.png" alt=""></a>
-							</div>
-						 </div>
+                      <div class="profile-img-wrap" style="height:25vh;width:24vh" >
+                      <div class="profile-img">
+                          <img id="proimg"  class="pic circle modal-trigger" href="#modal4" src="../assets/user.png" alt=""><br>
+
+                          <i href="#modal4" class="fa fa-camera upload-button modal-trigger">Upload</i>
+                      </div>
+                      
+                  </div>
 						 <div class="profile-basic">
 							<div class="row">
 							    <div class="col-md-5">
@@ -195,11 +201,19 @@ async function getuserInfoRealtime(userID){
 										 <span class="text">${userInfo.gender}</span>
 									  </li>
 								   </ul>
+
+                                
+
 							    </div>
 							</div>
+                            
 						 </div>
-					  </div>                        
+					  </div>     <span class="btn btn-secondary" onclick="location.href='${userInfo.agreement}'"><i class="fa fa-download" aria-hidden="true"></i> Agreement</span>
+                      <span class="btn btn-secondary" onclick="location.href='${userInfo.idcard}'"><i class="fa fa-download" aria-hidden="true"></i> Identity Card</span>
+                      <span class="btn btn-success my-2" onclick="location.href='${userInfo.certificate}'"><i class="fa fa-download" aria-hidden="true"></i> Certificate</span>
+         
 				   </div>
+                   
 			    </div>
 			</div>
 			 
@@ -540,6 +554,9 @@ async function getuserInfoRealtime(userID){
                         editProfile["department"].value = userInfo.department
                         editProfile["status"].value = userInfo.status
 
+                        if(firebase.auth().currentUser.photoURL){
+                            document.querySelector('#proimg').src = firebase.auth().currentUser.photoURL
+                        }
                       
 
                 }    
@@ -645,5 +662,80 @@ async function allUserDetails(){
     })
  
 }
+
+
+
+
+function uploadImage(e){
+    console.log(e.target.files[0])
+    const uid = firebase.auth().currentUser.uid
+    const fileRef = firebase.storage().ref().child(`/users/${uid}/profile`)
+    const uploadTask =  fileRef.put(e.target.files[0])
+    uploadTask.on('state_changed', 
+  (snapshot) => {
+    
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    if(progress=='100') 
+     // Show alert
+     document.querySelector('.success').innerHTML=`<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
+              
+     // Hide alert after 10 seconds
+setTimeout(function(){
+document.querySelector('.success').innerHTML=``;
+},10000);
+      
+uploader.value = progress;
+              
+console.log('Upload is ' + progress + '% done');
+document.querySelector('.prog').innerHTML=`${progress}%`;
+
+switch (snapshot.state) {
+     case firebase.storage.TaskState.PAUSED: // or 'paused'
+          console.log('Upload is paused');
+       
+          break;
+     case firebase.storage.TaskState.RUNNING: // or 'running'
+          console.log('Upload is running');
+          
+          break;
+}
+}, function (error) {
+
+// A full list of error codes is available at
+// https://firebase.google.com/docs/storage/web/handle-errors
+switch (error.code) {
+     case 'storage/unauthorized':
+          // User doesn't have permission to access the object
+          break;
+
+     case 'storage/canceled':
+          // User canceled the upload
+          break;
+
+     case 'storage/unknown':
+          // Unknown error occurred, inspect error.serverResponse
+          break;
+}
+}, 
+
+function () {
+    
+    uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+      console.log('File available at', downloadURL);
+      document.querySelector('#proimg').src = downloadURL
+      firebase.auth().currentUser.updateProfile({
+        photoURL: downloadURL
+      })
+    });
+  }
+
+
+  
+);
+}
+
+
+
+
 
 
