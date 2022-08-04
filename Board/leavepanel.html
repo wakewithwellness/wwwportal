@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Leave Panel</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #d4d4d4;
+      text-align: left;
+      padding: 8px;
+      font-size: 12px;
+    }
+   
+    
+    tr:nth-child(even) {
+      background-color: #e4e4e4;
+   
+    }
+    </style>
+  
+
+  <style>
+    /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: #009ce7;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(27, 27, 27);
+    color: rgb(235, 235, 235);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="topnav" style="width: 100%;">
+    <div>
+     <img src="assets/img/logoonly.png" style="width: 160px;float: left;padding: 10px;">
+    </div> 
+  </div> 
+
+  <main id="main">
+
+  
+     
+
+
+
+    <div class="container-fluid" style="margin-top: 10px">
+      <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">MEMBER'S LEAVE REQUESTS</h6>
+       <div class="table-responsive custom-table-responsive">
+
+ 
+            <table class="table custom-table" id="myTable" style="color: black">
+                <thead>
+                    <tr style="background-color: #5793D1;color: #fff;"> 
+                    <th scope="col">S No.</th> 
+                  
+                    <th scope="col">Name</th>
+                    <th scope="col">Reason</th>
+                    <th scope="col">From</th>
+                    <th scope="col">To</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Control Panel</th>
+                
+
+                    </tr>
+                </thead>
+                <tbody id="tbody1">
+                   
+
+                </tbody>
+            </table>
+        </div>
+
+
+      
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title" id="exampleModalLongTitle">Control Panel</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body">
+
+
+      <input type="text" id="NameMod" style="width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" placeholder="Name" required><br><br>
+                
+      <label style="color: rgb(94, 94, 94);">Reason :</label>
+      <select id="ReasonMod" name="Reason" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);">
+          <option value="Select your reason" disabled>Select your reason</option>
+          <option value="Sick Leave">Sick Leave</option>
+          <option value="Academic Leave">Academic Leave</option>  
+          <option value="Personal Leave">Personal Leave</option>        
+           <option value="Out of Station">Out of Station</option>
+          <option value="Others">Others</option>
+
+      </select>
+  
+
+      <label style="margin-top: 20px;color: rgb(94, 94, 94);">From :</label><br>
+         <input type="text" placeholder="DD-MM-YYYY" id="FromMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required><br><br>
+      <label style="color: rgb(94, 94, 94);">To :</label>   <br>
+        <input type="text" placeholder="DD-MM-YYYY" id="ToMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required>
+
+
+
+        <label style="margin-top: 20px;color: rgb(94, 94, 94);" class="labs" >Status:</label><br>
+        <select id="StatusMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);">
+          <option value="Pending" style="color: rgb(209, 209, 0);">Pending</option>
+          <option value="Approved" style="color: green;">Approved</option>
+          <option value="Cancelled" style="color: rgb(255, 123, 0);">Cancelled</option>
+          <option value="Declined" style="color: red;">Declined</option>
+          <option value="Over">Over</option>
+          <option value="Extended">Extend</option>
+        </select>
+    
+        
+      </div>
+      
+     </div>
+     <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()">Add New Record</button>
+       <button id="UpdModBtn" type="button" class="btn btn-success"  onclick="UpdStd()">Update Record</button>
+       <button id="DelModBtn" type="button" class="btn btn-danger"  onclick="DelStd()">Delete</button>
+    
+     </div>
+   </div>
+ </div>
+</div>
+
+
+
+
+    </div>
+</main>
+
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+  <script src="assets/js/main.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+
+      <script>
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+          authDomain: "members-76725.firebaseapp.com",
+          projectId: "members-76725",
+          storageBucket: "members-76725.appspot.com",
+          messagingSenderId: "734645197873",
+          appId: "1:734645197873:web:808127fdb4d643d4d24910",
+          measurementId: "G-7LYZ3R48GT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    
+ //GET ALL DATA
+ var stdNo;
+        function SelectAllData(){
+          document.getElementById('tbody1').innerHTML="";
+
+          stdNo=0;
+            firebase.database().ref('leaverequest').orderByChild('from').once('value',
+            function(AllRecords){
+                AllRecords.forEach(
+                    function(CurrentRecord){
+           
+                        var name = CurrentRecord.val().name;
+                        var reason = CurrentRecord.val().reason;
+                        var from = CurrentRecord.val().from;
+                        var to = CurrentRecord.val().to;
+                        var status = CurrentRecord.val().status;
+                        
+                        
+                        
+                        
+                        AddItemsToTable(name,reason,from,to,status);
+
+                    }
+                );
+
+            });
+        }
+
+        window.onload = SelectAllData;
+
+        //Filling the table
+        
+        var stdList = [];
+        function AddItemsToTable(name,reason,from,to,status){
+            var tbody = document.getElementById('tbody1');
+            var trow = document.createElement('tr');
+            var td0 = document.createElement('td');
+            var td1 = document.createElement('td');
+            var td2 = document.createElement('td');
+            var td3 = document.createElement('td');
+            var td4 = document.createElement('td');
+            var td5 = document.createElement('td');
+   
+         
+
+      
+
+
+          stdList.push([name,reason,from,to,status])
+     
+     
+           
+            td0.innerHTML = ++stdNo;
+            td1.innerHTML = name;
+            td2.innerHTML = reason;
+            td3.innerHTML = from;
+            td4.innerHTML = to;
+            td5.innerHTML = status;
+            
+    
+     
+            trow.appendChild(td0);
+            trow.appendChild(td1); 
+            trow.appendChild(td2); 
+            trow.appendChild(td3); 
+            trow.appendChild(td4); 
+            trow.appendChild(td5);
+
+           
+      
+           
+           
+  
+            var ControlDiv = document.createElement("div");
+           
+            ControlDiv.innerHTML = '<button type="button" class="btn my-2 ml-2" style="height:30px;margin-left:5px;color:white;margin-top:2px;font-size:12px;background-color:rgb(2, 142, 207);" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes('+stdNo+')">Edit Record</button>'
+         
+            trow.appendChild(ControlDiv);
+
+            tbody.appendChild(trow);
+            
+        }
+
+        var ModName = document.getElementById('NameMod');
+        var ModReason = document.getElementById('ReasonMod');
+        var ModFrom = document.getElementById('FromMod');
+        var ModTo = document.getElementById('ToMod');
+        var ModStatus = document.getElementById('StatusMod');
+      
+        var AddModBtn = document.getElementById('AddModBtn');
+        var UpdModBtn = document.getElementById('UpdModBtn');
+        var DelModBtn = document.getElementById('DelModBtn');
+
+
+        function FillTboxes(index){
+
+          if(index==null){
+
+            ModName.value = "";
+            ModReason.value = "";
+            ModFrom.value = "";
+            ModTo.value = "";
+            ModStatus.value = "";
+             
+  
+            ModName.disabled=false;
+
+            ModFrom.disabled=false;
+            ModTo.disabled=false;
+          
+              
+               AddModBtn.style.display='inline-block';
+               UpdModBtn.style.display='none';
+               DelModBtn.style.display='none';
+
+          }
+          else{
+               --index;
+         
+               ModName.value = stdList[index][0];
+               ModReason.value = stdList[index][1];
+               ModFrom.value = stdList[index][2];
+               ModTo.value = stdList[index][3];
+               ModStatus.value = stdList[index][4];
+
+
+     
+              ModName.disabled=true;
+
+               ModFrom.disabled=true;
+               ModTo.disabled=true;
+          
+             
+               AddModBtn.style.display='none';
+               UpdModBtn.style.display='inline-block';
+               DelModBtn.style.display='inline-block';
+
+          }
+        }
+
+        function AddStd(){
+             
+             firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).set(
+                  {
+               
+                    name: ModName.value,
+                    reason: ModReason.value,
+                    from: ModFrom.value,
+                    to: ModTo.value,
+                    status: ModStatus.value
+                    
+
+                  },
+                  (error)=>{
+                       if(error){
+                            alert("Record was not added, there was some problem");
+                       }
+                       else{
+                            alert("Record was added");
+                            SelectAllData();
+                            
+                        
+
+                            
+                            
+                       }
+                  }
+             )
+        }
+
+
+
+        function UpdStd(){
+             
+             firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).update(
+                  {
+         
+                    name: ModName.value,
+                    reason: ModReason.value,
+                    from: ModFrom.value,
+                    to: ModTo.value,
+                    status: ModStatus.value
+
+                  },
+                  (error)=>{
+                       if(error){
+                            alert("Record was not updated, there was some problem");
+                       }
+                       else{
+                            alert("Record was updated");
+                            SelectAllData();
+                            
+                            
+                            
+                       }
+                  }
+             )
+        }
+
+
+
+
+        function DelStd(){
+             
+             firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).remove().then(
+             function(){
+              alert("Record was deleted");
+              SelectAllData();
+              
+             }
+             )
+        }
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
