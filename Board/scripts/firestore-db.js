@@ -349,11 +349,11 @@ async function getuserInfoRealtime(userID){
 											<tr>
 												<td style="min-width: 200px;">
 													
-													<h2><a href="../leavepanel.html">Leave Requests</a></h2>
+													<h2><a href="leavepanel.html">Leave Requests</a></h2>
 												</td>                 
 					
 												<td class="text-right">
-													<a href="../../leavepanel.html" class="btn btn-outline-primary take-btn">View</a>
+													<a href="leavepanel.html" class="btn btn-outline-primary take-btn">View</a>
 												</td>
 											</tr>
 
