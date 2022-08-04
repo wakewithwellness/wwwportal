@@ -12,7 +12,7 @@
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -113,14 +113,15 @@
             <table class="table custom-table" id="myTable" style="color: black">
                 <thead>
                     <tr style="background-color: #5793D1;color: #fff;"> 
+                   
+                    <th scope="col" style="max-width: 15px">Action</th>
                     <th scope="col">S No.</th> 
-                  
                     <th scope="col">Name</th>
                     <th scope="col">Reason</th>
                     <th scope="col">From</th>
                     <th scope="col">To</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Control Panel</th>
+                   
                 
 
                     </tr>
@@ -302,7 +303,13 @@
             
     
      
-            trow.appendChild(td0);
+          
+            var ControlDiv = document.createElement("div");
+           
+           ControlDiv.innerHTML = '<button type="button" class="btn btn-warning my-2 ml-2" style="height:30px;margin-left:5px;margin-top:2px;font-size:12px;" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes('+stdNo+')"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>'
+        
+           trow.appendChild(ControlDiv);
+           trow.appendChild(td0);
             trow.appendChild(td1); 
             trow.appendChild(td2); 
             trow.appendChild(td3); 
@@ -314,11 +321,7 @@
            
            
   
-            var ControlDiv = document.createElement("div");
            
-            ControlDiv.innerHTML = '<button type="button" class="btn my-2 ml-2" style="height:30px;margin-left:5px;color:white;margin-top:2px;font-size:12px;background-color:rgb(2, 142, 207);" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes('+stdNo+')">Edit Record</button>'
-         
-            trow.appendChild(ControlDiv);
 
             tbody.appendChild(trow);
             
