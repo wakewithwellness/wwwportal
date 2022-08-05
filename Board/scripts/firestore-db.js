@@ -228,7 +228,7 @@ async function getuserInfoRealtime(userID){
                         <div class="dash-widget">
 							<span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
 							<div class="dash-widget-info text-right">
-								<h3>16</h3>
+								<h3>11</h3>
 								<span class="widget-title1">Curation <i class="fa fa-check" aria-hidden="true"></i></span>
 							</div>
                         </div>
@@ -237,7 +237,7 @@ async function getuserInfoRealtime(userID){
                         <div class="dash-widget">
                             <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
                             <div class="dash-widget-info text-right">
-                                <h3>15</h3>
+                                <h3>11</h3>
                                 <span class="widget-title2">Editorial <i class="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
@@ -246,7 +246,7 @@ async function getuserInfoRealtime(userID){
                         <div class="dash-widget">
                             <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
                             <div class="dash-widget-info text-right">
-                                <h3>14</h3>
+                                <h3>12</h3>
                                 <span class="widget-title3">Public Relation <i class="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                         </div>
@@ -264,7 +264,7 @@ async function getuserInfoRealtime(userID){
                          <div class="dash-widget">
                              <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
                              <div class="dash-widget-info text-right">
-                                 <h3>7</h3>
+                                 <h3>9</h3>
                                  <span class="widget-title3">Design & Media<i class="fa fa-check" aria-hidden="true"></i></span>
                              </div>
                          </div>
@@ -274,7 +274,7 @@ async function getuserInfoRealtime(userID){
                          <div class="dash-widget">
                                     <span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
                                     <div class="dash-widget-info text-right">
-                                         <h3>6</h3>
+                                         <h3>5</h3>
                                          <span class="widget-title1">Marketing<i class="fa fa-check" aria-hidden="true"></i></span>
                                     </div>
                          </div>
