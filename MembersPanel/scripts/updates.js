@@ -13,7 +13,10 @@ var firebaseConfig = {
  db.settings({ timestampInSnapshots: true});
 
 
- db.collection("attendance").orderBy('regno').limit(34).get().then(querySnapshot=>{
+
+
+// Batch1 (1st Year) batch
+ db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=>{
  querySnapshot.forEach(doc=>{
      let data = doc.data();
      let row  = `<tr>
@@ -55,7 +58,7 @@ var firebaseConfig = {
 
 
 
-
+// Batch2 (1st Year) batch
 db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW0066').get().then(querySnapshot=>{
      querySnapshot.forEach(doc=>{
          let data = doc.data();
@@ -66,7 +69,9 @@ db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW00
                      </th>
                          <td>${data.name}</td>
                          <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
-                    
+                         <td>${data.Sept22a}</td>
+                         <td>${data.Sept22a}</td>
+                         <td>${data.Aug22b}</td>
                         <td>${data.Aug22a}</td>
                         <td>${data.Jul22b}</td>
                         <td>${data.Jul22a}</td>
@@ -95,8 +100,8 @@ db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW00
 
 
 
-
-db.collection("attendance").orderBy('regno').limit(34).get().then(querySnapshot=>{
+// Batch1 (2nd Year) batch
+db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=>{
     querySnapshot.forEach(doc=>{
         let data = doc.data();
         let row  = `<tr>
@@ -106,7 +111,9 @@ db.collection("attendance").orderBy('regno').limit(34).get().then(querySnapshot=
                     </th>
                         <td>${data.name}</td>
                         <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
-                      
+                        <td>${data.Sept22a}</td>
+                        <td>${data.Sept22a}</td>
+                        <td>${data.Aug22b}</td>
                         <td>${data.Aug22a}</td>
                         <td>${data.Jul22b}</td>
                         <td>${data.Jul22a}</td>
@@ -130,7 +137,7 @@ db.collection("attendance").orderBy('regno').limit(34).get().then(querySnapshot=
 
 
 
-
+// Third batch
 db.collection("attendance").orderBy('regno').limitToLast(4).get().then(querySnapshot=>{
     querySnapshot.forEach(doc=>{
         let data = doc.data();
@@ -141,7 +148,9 @@ db.collection("attendance").orderBy('regno').limitToLast(4).get().then(querySnap
                     </th>
                         <td>${data.name}</td>
                         <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
-                     
+                        <td>${data.Sept22a}</td>
+                        <td>${data.Sept22a}</td>
+                        <td>${data.Aug22b}</td>
                        <td>${data.Aug22a}</td>
                        <td>${data.Jul22b}</td>
                       
