@@ -295,11 +295,11 @@ async function getuserInfoRealtime(userID){
 											<tr>
 												<td style="min-width: 200px;">
 													
-													<h2><a href="adminattendance.html"  style="color: green;font-weight: 500;">Attendance</a></h2>
+													<h2><a href="../MembersPanel/attenUpdates.html"  style="color: green;font-weight: 500;">Attendance</a></h2>
 												</td>                 
 
 												<td class="text-right">
-													<a href="adminattendance.html"  class="btn btn-outline-success take-btn">View</a>
+													<a href="../MembersPanel/attenUpdates.html"  class="btn btn-outline-success take-btn">View</a>
 												</td>
 											</tr>
 											<tr>
