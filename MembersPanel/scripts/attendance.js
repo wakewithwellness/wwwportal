@@ -158,8 +158,8 @@ async function getuserInfoRealtime(userID){
                           <p class="container-fluid" style="text-align: center;font-size: 20px;color: rgba(78, 207, 3, 0.979);border: 1px solid  rgba(78, 207, 3, 0.979);padding: 5px;" id="demo"></p>
                           
                           <h5 style="color: white;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of August</span> <span style="font-size: 14px;color: #009efb;">[15/08/2022 - 31/08/2022]</span></h5>
-                          <br><label>Tasks Updates</label>
-                        <textarea id="work" maxlength="300" style="padding: 1px;color:white"   required ></textarea>
+                          <br><label style="text-align: left">Tasks Updates</label>
+                        <textarea id="work" maxlength="300" style="padding: 1px;color:white;border: 1px solid  rgba(78, 207, 3, 0.979)" required ></textarea>
                           
                           <select id="attend" style="color: white;font-weight: 400;">
                             <option style="color: rgb(5, 216, 33);font-weight: 400;" value="Present">Present</option>
@@ -312,6 +312,9 @@ function updateattendance(event){
        // Display the result in the element with id="demo"
        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
        + minutes + "m " + seconds + "s ";
+
+
+ 
      
        // If the count down is finished, write some text
        if (distance < 0) {
@@ -319,6 +322,8 @@ function updateattendance(event){
          document.getElementById("demo").innerHTML = "Attendance closed for the week";
          document.getElementById("demo").style.color = "red";
          document.getElementById("demo").style.borderColor = "red";
+         document.getElementById("work").style.borderColor = "red";
+         document.querySelector('#work').disabled = "disabled";
          document.querySelector('#send').style.color = "white";
          document.querySelector('#send').style.background = "red";
          document.querySelector('#send').disabled = "disabled";
