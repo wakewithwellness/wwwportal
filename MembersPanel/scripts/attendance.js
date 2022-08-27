@@ -168,14 +168,14 @@ async function getuserInfoRealtime(userID){
                                 <div class="alert">Attendance posted successfully</div>
                           <div class="btn-block">
                           
-                            <button style="background-color:#009efb" id="send" type="submit" >Post</button> 
+                            <button style="background-color:rgba(78, 207, 3, 0.979); font-size:15px" id="send" type="submit" >Post</button> 
                              </div>
                           <div class="container-fluid" style="margin-bottom:20px;">
            
             </div>
                         </form>
 
-                        <button onclick="location.href='attenUpdates.html'" style="border: 1px solid #df0f00;background-color:black;color:#df0f00"><i class="fa fa-pencil" aria-hidden="true"></i> Updates</button>
+                        <button onclick="location.href='attenUpdates.html'" style="border: 1px solid white;background-color:black;color:#fff"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Updates</button>
                       </div> 
                     
                     
@@ -317,7 +317,12 @@ function updateattendance(event){
        if (distance < 0) {
          clearInterval(x);
          document.getElementById("demo").innerHTML = "Attendance closed for the week";
-         document.querySelector('#send').style.display = 'none';
+         document.getElementById("demo").style.color = "red";
+         document.getElementById("demo").style.borderColor = "red";
+         document.querySelector('#send').style.color = "white";
+         document.querySelector('#send').style.background = "red";
+         document.querySelector('#send').disabled = "disabled";
+      
        }
      }, 1000);
     
