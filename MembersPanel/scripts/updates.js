@@ -25,7 +25,7 @@ var firebaseConfig = {
                    <label>${data.regno}</label>
                  </th>
                      <td>${data.name}</td>
-                      <td style="text-align:center;font-weight:700;color: ${data.status1}">${data.p1}</td>
+                     <td style="text-align:center;font-weight:800;color: ${data.status1}">${data.p1}</td>
                          <td>${data.May2}</td>
                          <td>${data.May1}</td>
                      <td>${data.Apr2}</td>
@@ -68,7 +68,7 @@ db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW00
                        <label>${data.regno}</label>
                      </th>
                          <td>${data.name}</td>
-                         <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
+                         <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
                          <td>${data.Sept22a}</td>
                          <td>${data.Sept22a}</td>
                          <td>${data.Aug22b}</td>
@@ -110,7 +110,7 @@ db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=
                       <label>${data.regno}</label>
                     </th>
                         <td>${data.name}</td>
-                        <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
+                        <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
                         <td>${data.Sept22a}</td>
                         <td>${data.Sept22a}</td>
                         <td>${data.Aug22b}</td>
@@ -138,7 +138,7 @@ db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=
 
 
 // Third batch
-db.collection("attendance").orderBy('regno').limitToLast(5).get().then(querySnapshot=>{
+db.collection("attendance").orderBy('regno').limitToLast(4).get().then(querySnapshot=>{
     querySnapshot.forEach(doc=>{
         let data = doc.data();
         let row  = `<tr>
@@ -147,7 +147,7 @@ db.collection("attendance").orderBy('regno').limitToLast(5).get().then(querySnap
                       <label>${data.regno}</label>
                     </th>
                         <td>${data.name}</td>
-                        <td style="text-align:center;font-weight:700;color: ${data.status}">${data.AAper}</td>
+                        <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
                         <td>${data.Sept22a}</td>
                         <td>${data.Sept22a}</td>
                         <td>${data.Aug22b}</td>
