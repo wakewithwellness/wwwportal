@@ -170,12 +170,12 @@ async function getuserInfoRealtime(userID){
                           
                             <button style="background-color:rgba(78, 207, 3, 0.979); font-size:16px; font-weight:500; border-radius:5px" id="send" type="submit" >Post Attendance</button> 
                              </div>
-                          <div class="container-fluid" style="margin-bottom:25px;">
+                          <div class="container-fluid" style="margin-bottom:90px;">
            
             </div>
                         </form>
 
-                        <button onclick="location.href='attenUpdates.html'" style="border: 1px solid white;background-color:#009efb;color:#fff; border-radius:5px;font-size:16px; font-weight:500"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Updates</button>
+                        <button onclick="location.href='attenUpdates.html'" style="width: 50%;border: 1px solid white;background-color: white;border: 1px solid #009efb;color:#009efb; border-radius:5px;font-size:16px; font-weight:500"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Updates</button>
                       </div> 
                     
                     
