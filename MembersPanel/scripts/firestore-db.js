@@ -111,9 +111,9 @@ async function getuserInfoRealtime(userID){
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <style>
-    .profile-img .pic {
-        height: 90%;
-        width: 90%;
+    .pic {
+        height: 100%;
+        width: 100%;
         -o-object-fit: cover;
         object-fit: cover;
         -o-object-position: center;
@@ -125,7 +125,7 @@ async function getuserInfoRealtime(userID){
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
-                        <li class="menu-title">Main</li>
+                        <li class="menu-title" style="text-align:left">Main</li><hr>
                        
                   
                         <li >
@@ -141,6 +141,10 @@ async function getuserInfoRealtime(userID){
                         <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
                        </li>
                        <li>
+                        <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
+                        </li>
+
+                       <li>
                        <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
                       </li>
                         <li>
@@ -153,172 +157,183 @@ async function getuserInfoRealtime(userID){
         
         
         <div class="page-wrapper">
-        <div class="content">
+
+
+       <div style="float: right; margin-right:15px">
+        <a href="activities.html" style="background-color:#009efb;padding:10px;color:white;border-radius: 4px">Dashboard</a>
+        <a type="button" style="background-color:red;padding:8.5px;color:white;margin-left: 5px; border-radius: 4px; cursor: pointer" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-sign-out"></i> SignOut</a>
         
-            <div class="row">
-          
-          
-          
-
-                <div class="col-sm-7 col-6">
-                    <h4 class="page-title" style="float:left;font-weight:500;">My Profile</h4>
-                </div>
-                <div class="col-sm-5 col-6 text-right m-b-30">
-                    <a href="activities.html" style="background-color:#009efb;padding:10px;color:white;border">Dashboard</a>
-                    
-      <button type="button" style="margin-left:10px;border-color:#df0f00;background-color:black;padding:7px;"  data-toggle="modal" data-target="#exampleModal">
-      <i class="fa fa-sign-out" style="color:#df0f00"></i>
-    </button>
-    
-                </div>
-            </div>
+       
+      </div>
 
 
-           
 
 
-            <div class="container-fluid">
-  <div class="row" style="margin-top:-25px ;border: 1px solid #009efb; margin-bottom:10px ;color:white;height:48px;text-align: left">
-    <div class="col-8" style="padding-top:6px">Download our Android Portal App Now ! </div>
-    <div onclick="location.href='https://firebasestorage.googleapis.com/v0/b/files-bf645.appspot.com/o/WWW.apk?alt=media&token=a467a626-80d4-436c-afe5-0de4d2562559'" class="col-4" style="cursor:pointer;background-color: #009efb;padding-top:6px"><i class="fa fa-download" aria-hidden="true"></i> Download</div>
-    </div>
-</div>
-           
-           
-            
-            <div class="card-box profile-header" style="box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.336);">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="profile-view">
-                            <div class="profile-img-wrap" style="height:25vh;width:24vh;background-color:rgb(22, 22, 22)" >
+
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;padding: 20px">
+        
+                 <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="page-title" style="float:left">My Profile <a style="font-size: 15px" class="modal-trigger" href="#modal3">[ <i class="fa fa-pencil" aria-hidden="true"></i> Edit ]</a></h4><br><br>
+                        <hr>
+                    </div>
+                    </div>
+
+
+                    <div class="row">
+                    <div class="col-lg-2"> 
+                   
+                    <div class="profile-view">
+                            <div class="profile-img-wrap" style="height:25vh;width:24vh" >
                                 <div class="profile-img">
-                                    <img id="proimg"  class="pic circle modal-trigger" href="#modal4" src="../assets/user.png" alt=""><br>
+                                    <img id="proimg" class="pic modal-trigger" style="border-radius: 10px" href="#modal4" src="../assets/user.png" alt=""><br>
  
-                                    <i href="#modal4" class="fa fa-camera upload-button modal-trigger">Upload</i>
+                                    <i href="#modal4" class="fa fa-upload modal-trigger" style="margin-top: 10px"> Upload</i>
                                 </div>
                                 
                             </div>
-                            
-                            <div class="profile-basic">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="profile-info-left" style="text-align:justify">
-                                            <h3 class="user-name m-t-0 mb-0" style="color:white">${userInfo.name}</h3>
-                                            <div class="staff-id">Registration ID : <span style="font-weight:500;color:#009efb;font-size: 15px">${userInfo.regno}</span></div>
-                                            <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department I :</span><span style="font-weight:500;color:white"> ${userInfo.department}</span></h4>
-                                            <h4 class="text-muted" style="margin-top:5px"><span style="font-weight: lighter;">Department II :</span><span style="font-weight:500;color:white"> ${userInfo.department2}</span></h4>
-                                            
-                                    
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <ul class="personal-info" style="text-align:left">
-                                            <li>
-                                                <span class="title">Phone:</span>
-                                                <span class="text"><a>${userInfo.phone}</a></span>
-                                            </li>
-                                            <li>
-                                                <span class="title">Whatsapp:</span>
-                                                <span class="text"><a>${userInfo.whatsapp}</a></span>
-                                            </li>
-                                            <li>
-                                                <span class="title">Email:</span>
-                                                <span class="text"><a><span class="__cf_email__">${userInfo.email}</span></a></span>
-                                            </li>
-                                            
-                                            <li>
-                                                <span class="title">Address:</span>
-                                                <span class="text">${userInfo.address}, ${userInfo.state}, ${userInfo.pincode}</span>
-                                            </li>
-                                            <li>
-                                                <span class="title">Blood group:</span>
-                                                <span class="text">${userInfo.blood}</span>
-                                            </li>
-                                            <li>
-                                                <span class="title">Gender:</span>
-                                                <span class="text">${userInfo.gender}</span>
-                                            </li>
-
-                                          
-                                        </ul>
-                                    </div>
-                                    
-                                    <button style="background-color: #009efb;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-left:13px" class="modal-trigger" href="#modal3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit details</button> 
-         
-                               
-                               
-                                    </div>
-
-                                    <span class="btn btn-danger" onclick="location.href='${userInfo.agreement}'"><i class="fa fa-download" aria-hidden="true"></i> Agreement</span>
-                                    <span class="btn btn-warning" onclick="location.href='${userInfo.idcard}'"><i class="fa fa-download" aria-hidden="true"></i> Identity Card</span>
-                                    <span class="btn btn-success my-2" onclick="location.href='${userInfo.certificate}'"><i class="fa fa-download" aria-hidden="true"></i> Certificate</span>
-                            </div>
-                        </div>                        
                     </div>
+                    
                 </div>
-            </div>
-            
-    <div class="profile-tabs" >
-      <ul class="nav nav-tabs nav-tabs-bottom" style="background-color:black;border-color:#009efb">
-        <li class="nav-item" style="background-color:black"><a style="background-color:black;color:white" class="nav-link active" href="#about-cont" data-toggle="tab">About</a></li>
-      
-      </ul>
-      <div class="tab-content">
-        <div class="tab-pane show active" id="about-cont">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card-box" style="text-align:left">
-                        <h3 class="card-title" style="color:grey">Education Informations</h3>
-                        <div class="experience-box">
-                            <ul class="experience-list">
-                                <li>
-                                    
-                                    <div class="experience-content">
-                                        <div class="timeline-content">
-                                            <a class="name">${userInfo.college}</a>
-                                            
-                                        </div>
-                                    </div>
-                                </li>
-                            
-                               
-                            </ul>
-                        </div>
+                    <div class="col-lg"> 
+                    <div class="row" style="text-align:left">
+
+
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">Name: <span style="color: #009efb">${userInfo.name}</span></h4>
                     </div>
+
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">Registration no.: <span style="color: red">${userInfo.regno}</span></h4>
+                    </div>
+
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">E-mail: <span style="color: #009efb">${userInfo.email}</span></h4>
+                    </div>
+
+                  
+
+                    </div>
+
+
+                    <div class="row" style="text-align:left; margin-top:-9px">
+
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">Department: <span style="color: #009efb">${userInfo.department}</span></h4>
+                    </div>
+
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">Department II: <span style="color: #009efb">${userInfo.department2}</span></h4>
+                    </div>
+
+                    <div class="col-lg">
+                 
+                    </div>
+
+                    
+
+                    </div>
+
+
+                    <div class="row" style="text-align:left; margin-top:-9px">
+
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">Gender: <span style="color: #009efb">${userInfo.gender}</span></h4>
+                    </div>
+
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">Contact no.: <span style="color: #009efb">${userInfo.phone}</span></h4>
+                    </div>
+
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">Whatsapp no.: <span style="color: #009efb">${userInfo.whatsapp}</span></h4>
+                    </div>
+
+                 
+                    </div>
+
+
+
+                    <div class="row" style="text-align:left; margin-top:-9px">
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">Address: <span style="color: #009efb">${userInfo.address}, ${userInfo.state}, ${userInfo.pincode}</span></h4>
+                    </div>
+
+                    </div>
+
+                    </div>
+                    </div>
+
                    
-                </div>
-            </div>
-        </div>
-        
-        
-      </div>
-      <div class="card-box mb-0" style="text-align:left">
-      <h3 class="card-title" style="color:grey">Experience [Prior Experience in working for a NGO/CBO]</h3>
-      <div class="experience-box">
-          <ul class="experience-list">
-              <li>
-                  <div class="experience-user">
-                      <div class="before-circle"></div>
-                  </div>
-                  <div class="experience-content">
-                      <div class="timeline-content">
-                          <a class="name">${userInfo.exp}</a>
-                        
-                      </div>
-                  </div>
-              </li>
-             
-            
-          </ul>
-      </div>
-  </div>
-<br>
-<hr style="background-color: #009efb">
 
-  <div class="card-box mb-0" style="text-align:left; height:108px;">
-  <h3 class="card-title" style="color:white;float:left">Code of Ethics and Professional Conduct</h3>
-    
- <button style="width: 100px; background-color: #009efb;border-radius: 5px;padding: 10px;border: none;cursor: pointer;color: white;margin-right:13px;float:right" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=6af5a5ee-3079-45f1-a14e-0b35ccafe36c'"><i><img src="https://cdn-icons-png.flaticon.com/512/136/136522.png" style="height: 20px;"></i> View</button> 
+
+        </div>
+
+
+
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;">
+
+        <div class="row">
+        <div class="col-sm-12">
+            <h4 class="page-title" style="text-align:left">About me </h4>
+            <hr>
+        </div>
+        </div>
+
+
+        <div style="text-align:left">
+        <h4 style="font-size: 13px">Education Informations: <span style="color: #009efb">${userInfo.college}</span></h4>
+        <br>
+        <h4 style="font-size: 13px">Experience <span style="font-style: italic; color: grey">[Prior Experience in working for a NGO/CBO]</span> : <span style="color: #009efb">${userInfo.exp}</span></h4>
+       
+        </div>
+                               
+        </div>
+
+
+
+
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;">
+
+        <div class="row">
+        <div class="col-sm-12">
+            <h4 class="page-title" style="text-align:left">My Files </h4>
+            <hr>
+        </div>
+        </div>
+
+
+        <div style="text-align:left; cursor:pointer">
+        <h5 style="font-size: 13px" onclick="location.href='${userInfo.agreement}'">Agreement letter <a style="color: #009efb"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
+        <h5 style="font-size: 13px" onclick="location.href='${userInfo.certificate}'">Download your certificate <a style="color: #009efb"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>          
+        <h5 style="font-size: 13px" onclick="location.href='${userInfo.idcard}'">ID Card  <a style="color: #009efb"><i class="fa fa-hand-o-right" aria-hidden="true"></i> View</a></h5>
+        </div>
+                               
+        </div>
+
+
+
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;">
+
+        <div class="row">
+        <div class="col-sm-12">
+            <h4 class="page-title" style="text-align:left">Code of Ethics and Professional Conduct</h4>
+            <hr>
+        </div>
+        </div>
+
+
+        <div style="text-align:left; cursor:pointer">
+        <h5 style="font-size: 13px" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=6af5a5ee-3079-45f1-a14e-0b35ccafe36c'">Code of Ethics and Professional Conduct <a style="color: #009efb"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
+        </div>
+                               
+        </div>
+
+
+
+
+      
+
 
 </div>
 
