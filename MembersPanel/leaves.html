@@ -18,12 +18,12 @@
   
 </head>
 
-<body>
+<body style="background-color: rgb(238, 238, 238)">
     <div class="main-wrapper">
         <div class="header">
 			<div class="header-left">
 				<a href="main.html" class="logo">
-					<img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>WakeWithWellness</span>
+					<img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>Members Portal</span>
 				</a>
 			</div>
 			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
@@ -51,6 +51,10 @@
                          <li>
                           <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
                          </li>
+
+                         <li>
+                          <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
+                          </li>
                     
                           <li>
                               <a href="payments.html"><i class="fa fa-money"></i> <span>Payments</span></a>
@@ -115,31 +119,32 @@
     </div>
   </div>
         <div class="page-wrapper">
-            <div class="content">
+          <br> 
+
+          <div style="float: right; margin-right:15px">
+            <a onclick="FillTboxes(null)" type="button" data-toggle="modal" data-target="#exampleModalCenter" style="cursor:pointer;background-color:#009efb;padding:10px;color:white;border-radius: 4px"> <i class="fa fa-plus"></i> Add Leave</a>
+        
+          </div>
+
+
+              <div class="content"  style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1">
                 <div class="row">
-                    <div class="col-sm-8 col-6">
-                        <h4 class="page-title">Leave Request</h4>
-                    </div>
-                    
-                    <div class="col-sm-4 col-6 text-right m-b-30">
-                        <button onclick="FillTboxes(null)" type="button" class="btn btn-primary btn-rounded float-right" data-toggle="modal" data-target="#exampleModalCenter">
-                            <i class="fa fa-plus"></i> Add Leave
-                          </button>
-                    
-                    </div>
-                </div>
+                  <div class="col-sm-12">
+                      <h4 class="page-title">Leave Request</h4>
+                  </div>
+              </div>
                 
                 <div class="row">
                     
                     <div class="col-md-12">
-                        <div class="table-responsive">
+                      <div class="table-responsive">
+                          <table class="table table-bordered" id="myTable">
                            
-                            <table class="table custom-table" id="myTable" style="color: rgb(34, 34, 34);text-align: center;">
-                                <thead>
+                            <thead style="background-color: #f7f7f7">
                                     <tr style="text-align: left;"> 
                                     <th scope="col">SNo.</th> 
-                                    <th scope="col">Name.</th>
-                                    <th scope="col">Reason.</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Reason</th>
                                     <th scope="col">From</th>
                                     <th scope="col">To</th>
                                     <th scope="col">Status</th>
@@ -156,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><br><br><br>
           
         </div>
 		
@@ -259,7 +264,7 @@
             td4.innerHTML = to;
             td5.innerHTML = status;
             
-    
+           
      
             trow.appendChild(td0);
             trow.appendChild(td1); 
