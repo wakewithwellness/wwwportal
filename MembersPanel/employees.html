@@ -37,7 +37,7 @@
         <div class="header">
 			<div class="header-left">
 				<a href="main.html" class="logo">
-					<img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>WakeWithWellness</span>
+					<img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>Members Portal</span>
 				</a>
 			</div>
 			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
@@ -62,6 +62,10 @@
                         <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
                        </li>
                   
+                       <li>
+                        <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
+                       </li>
+
                        <li>
                        <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
                       </li>
@@ -105,7 +109,23 @@
 
                                 </tbody>
 
+                                <!-- <tbody>
+                                    <tr>
+                                        <td>
+											<img width="28" height="28" style="cursor: pointer;" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/profilepics-68390.appspot.com/o/profiles%2FSudhanshu.jpeg?alt=media&token=04516a71-20f1-42d1-bf9b-2f165151b8c5'" src="https://firebasestorage.googleapis.com/v0/b/profilepics-68390.appspot.com/o/profiles%2FSudhanshu.jpeg?alt=media&token=04516a71-20f1-42d1-bf9b-2f165151b8c5" class="rounded-circle" alt=""> <h2>Sudhanshu Borthakur</h2>
+										</td>
+                                        <td>21WWW0001</td>
+                                        <td><a href="" class="__cf_email__" data-cfemail="fb9a979992959a88929694959288bb9e839a968b979ed5989496">[email&#160;protected]</a></td>
+                                        <td><a href="" class="__cf_email__" data-cfemail="fb9a979992959a88929694959288bb9e839a968b979ed5989496">[contact&#160;protected]</a></td>
+                                        
+                                        <td>
+                                            <span class="custom-badge status-blue">Board Member</span>
+                                        </td>
+                                        <td><span class="custom-badge status-green">Active</span></td>
+                                    </tr>
                             
+                                    
+                                </tbody> -->
                             </table>
 						</div>
                     </div>
@@ -155,7 +175,7 @@
       db.settings({ timestampInSnapshots: true});
 
 
-      db.collection("users").orderBy('regno').get().then(querySnapshot=>{
+      db.collection("users").orderBy('role').get().then(querySnapshot=>{
       querySnapshot.forEach(doc=>{
           let data = doc.data();
           let row  = `<tr>
