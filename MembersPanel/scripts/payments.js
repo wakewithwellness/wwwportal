@@ -168,6 +168,7 @@ async function getuserInfoRealtime(userID){
 </div>
 </div>
 <div class="row">
+
 <div class="col-lg">
 <h5>Name: <span style="color: red">${userInfo.name}</span></h5>
 </div>
@@ -203,17 +204,17 @@ async function getuserInfoRealtime(userID){
                                 <thead style="background-color: #f7f7f7">
                                     <tr>
                                         <th>Receipt Number</th>
-                                        <th>Pupose</th>
+                                        <th style="min-width: 25vh">Pupose</th>
                                     
                                         <th>Transaction Date</th>
-                                        <th>Amount</th>
+                                        <th style="min-width: 17vh">Amount</th>
                                         <th>Refund Date</th>
-                                        <th>Refund Amount</th>
+                                        <th style="min-width: 17vh">Refund Amount</th>
                                        
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr display: ${userInfo.i1}>
                                         <td><a>${userInfo.i1}</a></td>
                                         <td>
                                             <h2><a>${userInfo.p1}</a></h2>
@@ -224,7 +225,7 @@ async function getuserInfoRealtime(userID){
                                         <td></td>
                                         <td>₹ .00</td>
                                     </tr>
-                                    <tr>
+                                    <tr display: ${userInfo.i2}>
                                         <td><a>${userInfo.i2}</a></td>
                                         <td>
                                             <h2><a>${userInfo.p2}</a></h2>
@@ -235,7 +236,7 @@ async function getuserInfoRealtime(userID){
                                         <td></td>
                                         <td>₹ .00</td>
                                     </tr>
-                                    <tr>
+                                    <tr display: ${userInfo.i3}>
                                         <td><a>${userInfo.i3}</a></td>
                                         <td>
                                             <h2><a>${userInfo.p3}</a></h2>
@@ -248,7 +249,7 @@ async function getuserInfoRealtime(userID){
                                     </tr>
 
 
-                                    <tr>
+                                    <tr display: ${userInfo.i4}>
                                     <td><a>${userInfo.i4}</a></td>
                                     <td>
                                         <h2><a>${userInfo.p4}</a></h2>
@@ -261,7 +262,7 @@ async function getuserInfoRealtime(userID){
                                 </tr>
 
 
-                                <tr>
+                                <tr display: ${userInfo.i5}>
                                     <td><a>${userInfo.i5}</a></td>
                                     <td>
                                         <h2><a>${userInfo.p5}</a></h2>
