@@ -212,12 +212,12 @@ table.table td h2 span {
 	color: #aaa;
 }
 .card-box {
-	background-color: rgb(22, 22, 22);
+	background-color: rgb(255, 255, 255);
 	border-radius: 4px;
 	margin-bottom: 30px;
 	padding: 20px;
 	position: relative;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+	
 }
 .card-title {
 	color: #333;
@@ -772,7 +772,7 @@ textarea.form-control {
 	top: 50px;
 	width: 230px;
 	z-index: 1039;
-	background-color: rgb(34, 34, 34);
+	background-color: #fff;
 	bottom: 0;
 	margin-top: 0px;
 	position: fixed;
@@ -796,7 +796,7 @@ textarea.form-control {
 }
 
 .sidebar-menu li  {
-	color: rgb(209, 209, 209);
+	color: rgb(160, 160, 160);
 
 }
 
