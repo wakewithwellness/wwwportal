@@ -9,6 +9,8 @@ function createUserCollection(user){
        uid:user.uid,
        name:user.displayName,
        email:user.email,
+       department:"",
+       phone:"",
        i1:"",
        i2:"",
        i3:"",
@@ -104,6 +106,8 @@ async function getuserInfoRealtime(userID){
                     if(userInfo){
                         userDetails.innerHTML = `
 
+                       
+
                         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
@@ -132,6 +136,10 @@ async function getuserInfoRealtime(userID){
            <li>
             <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
            </li>
+
+           <li>
+           <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
+          </li>
       
            <li>
            <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
@@ -146,30 +154,62 @@ async function getuserInfoRealtime(userID){
 
 
 <div class="page-wrapper">
-            <div class="content">
-            <div class="container-fluid" style="margin-bottom:40px;">
-            <buttom onclick="location.href='activities.html'" style="background-color:cornflowerblue;float:right;padding:7px;padding-left:10px;padding-right:10px;color:white;border"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
-            </div>
-            <div class="container-fluid" style="padding:15px;border: 1px solid #009efb;margin-bottom:15px">
-            <h3 class="user-name m-t-0 mb-0" style="color:white">${userInfo.name}<span style="font-weight:500;color:white;margin-left:12px;font-size:18px;color:#df0f00">${userInfo.regno}</span></h3>
+
+
+
+
+
+
+
+<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;padding: 20px">
+<div class="row">
+<div class="col-sm-12">
+    <h4 class="page-title">Member Details</h4>
+</div>
+</div>
+<div class="row">
+<div class="col-lg">
+<h5>Name: <span style="color: red">${userInfo.name}</span></h5>
+</div>
+
+
+
+
+
+<div class="col-lg">
+<h5>Registration no.: <span style="color: red">${userInfo.regno}</span></h5>
+</div>
+
+<div class="col-lg">
+<h5>Department: ${userInfo.department}</h5>
+</div>
+
+</div>
+
+
+</div>
+            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1">
            
-            </div>
+          
                 <div class="row">
                     <div class="col-sm-12">
                         <h4 class="page-title">Payments</h4>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
+                   
                         <div class="table-responsive">
-                            <table class="table table-striped custom-table datatable mb-0">
-                                <thead>
+                            <table class="table table-bordered"">
+                                <thead style="background-color: #f7f7f7">
                                     <tr>
-                                        <th>Invoice ID</th>
+                                        <th>Receipt Number</th>
                                         <th>Pupose</th>
                                     
-                                        <th>Paid Date</th>
-                                        <th>Paid Amount</th>
+                                        <th>Transaction Date</th>
+                                        <th>Amount</th>
+                                        <th>Refund Date</th>
+                                        <th>Refund Amount</th>
+                                       
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -180,7 +220,9 @@ async function getuserInfoRealtime(userID){
                                         </td>
                                   
                                         <td>${userInfo.d1}</td>
-                                        <td>${userInfo.a1}</td>
+                                        <td>₹ ${userInfo.a1}.00</td>
+                                        <td></td>
+                                        <td>₹ .00</td>
                                     </tr>
                                     <tr>
                                         <td><a>${userInfo.i2}</a></td>
@@ -189,7 +231,9 @@ async function getuserInfoRealtime(userID){
                                         </td>
                                     
                                         <td>${userInfo.d2}</td>
-                                        <td>${userInfo.a2}</td>
+                                        <td>₹ ${userInfo.a2}.00</td>
+                                        <td></td>
+                                        <td>₹ .00</td>
                                     </tr>
                                     <tr>
                                         <td><a>${userInfo.i3}</a></td>
@@ -198,7 +242,9 @@ async function getuserInfoRealtime(userID){
                                         </td>
                                     
                                         <td>${userInfo.d3}</td>
-                                        <td>${userInfo.a3}</td>
+                                        <td>₹ ${userInfo.a3}.00</td>
+                                        <td></td>
+                                        <td>₹ .00</td>
                                     </tr>
 
 
@@ -209,7 +255,9 @@ async function getuserInfoRealtime(userID){
                                     </td>
                                 
                                     <td>${userInfo.d4}</td>
-                                    <td>${userInfo.a4}</td>
+                                    <td>₹ ${userInfo.a4}.00</td>
+                                    <td></td>
+                                    <td>₹ .00</td>
                                 </tr>
 
 
@@ -220,17 +268,20 @@ async function getuserInfoRealtime(userID){
                                     </td>
                                 
                                     <td>${userInfo.d5}</td>
-                                    <td>${userInfo.a5}</td>
+                                    <td>₹ ${userInfo.a5}.00</td>
+                                    <td></td>
+                                    <td>₹ .00</td>
                                 </tr>
 
                                
                                 </tbody>
                             </table>
+                            
                         </div>
-                    </div>
+                     
                 </div>
             </div>
-         
+            <buttom onclick="location.href='activities.html'" style="background-color:cornflowerblue;float:right;padding:7px;padding-left:15px;padding-right:15px;color:white;border-radius:3px; margin-right: 15px; margin-top: 20px"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
         </div>
                        
                         `
