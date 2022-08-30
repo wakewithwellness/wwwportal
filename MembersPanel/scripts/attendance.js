@@ -152,12 +152,12 @@ async function getuserInfoRealtime(userID){
                         
                         <div class="testbox">
                         <form onsubmit="updateattendance(event)" id="attendanceform">
-                        <h1 style="color: #fff;text-align: center;">WEEKLY ATTENDANCE</h1>
+                        <h1 style="text-align: center;">WEEKLY ATTENDANCE</h1>
                        
                           <hr>
                           <p class="container-fluid" style="text-align: center;font-size: 20px;color: rgba(78, 207, 3, 0.979);border: 1px solid  rgba(78, 207, 3, 0.979);padding: 5px;" id="demo"></p>
                           
-                          <h5 style="color: white;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of August</span><br> <span style="font-size: 20px;color: #009efb;font-weight:600" id="date">[15/08/2022 - 30/08/2022]</span></h5>
+                          <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of August</span><br> <span style="font-size: 20px;color: #009efb;font-weight:600" id="date">[15/08/2022 - 30/08/2022]</span></h5>
                           <br><label style="text-align: left">Tasks Updates</label>
                         <textarea id="work" maxlength="300" style="padding: 1px;color:white;border: 1px solid  rgba(78, 207, 3, 0.979)" required ></textarea>
                           
@@ -168,14 +168,14 @@ async function getuserInfoRealtime(userID){
                                 <div class="alert">Attendance posted successfully</div>
                           <div class="btn-block">
                           
-                            <button style="background-color:rgba(78, 207, 3, 0.979); font-size:16px; font-weight:500" id="send" type="submit" >Post</button> 
+                            <button style="background-color:rgba(78, 207, 3, 0.979); font-size:16px; font-weight:500" id="send" type="submit" >Post Attendance</button> 
                              </div>
-                          <div class="container-fluid" style="margin-bottom:50px;">
+                          <div class="container-fluid" style="margin-bottom:30px;">
            
             </div>
                         </form>
 
-                        <button onclick="location.href='attenUpdates.html'" style="border: 1px solid white;background-color:black;color:#fff"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Updates</button>
+                        <button onclick="location.href='attenUpdates.html'" style="border: 1px solid white;background-color:orange;color:#fff;font-size:16px; font-weight:500"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Updates</button>
                       </div> 
                     
                     
