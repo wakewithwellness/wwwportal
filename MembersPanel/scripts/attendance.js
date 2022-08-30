@@ -157,7 +157,7 @@ async function getuserInfoRealtime(userID){
                           <hr>
                           <p class="container-fluid" style="text-align: center;font-size: 20px;color: rgba(78, 207, 3, 0.979);border: 1px solid  rgba(78, 207, 3, 0.979);padding: 5px;" id="demo"></p>
                           
-                          <h5 style="color: white;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of August</span><br> <span style="font-size: 20px;color: #009efb;font-weight:600">[15/08/2022 - 31/08/2022]</span></h5>
+                          <h5 style="color: white;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of August</span><br> <span style="font-size: 20px;color: #009efb;font-weight:600">[15/08/2022 - 30/08/2022]</span></h5>
                           <br><label style="text-align: left">Tasks Updates</label>
                         <textarea id="work" maxlength="300" style="padding: 1px;color:white;border: 1px solid  rgba(78, 207, 3, 0.979)" required ></textarea>
                           
@@ -292,7 +292,7 @@ function updateattendance(event){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("August 31, 2022 22:00:00").getTime();
+     var countDownDate = new Date("August 30, 2022 22:00:00").getTime();
      
      // Update the count down every 1 second
      var x = setInterval(function() {
