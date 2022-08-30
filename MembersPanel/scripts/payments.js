@@ -164,7 +164,7 @@ async function getuserInfoRealtime(userID){
 <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;padding: 20px">
 <div class="row">
 <div class="col-sm-12">
-    <h4 class="page-title">Member Details</h4>
+    <h4 class="page-title">Member Details</h4><hr>
 </div>
 </div>
 <div class="row">
@@ -182,7 +182,7 @@ async function getuserInfoRealtime(userID){
 </div>
 
 <div class="col-lg">
-<h5>Department: ${userInfo.department}</h5>
+<h5>Department: <span style="color: red">${userInfo.department}</span></h5>
 </div>
 
 </div>
