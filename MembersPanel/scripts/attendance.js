@@ -157,7 +157,7 @@ async function getuserInfoRealtime(userID){
                           <hr>
                           <p class="container-fluid" style="text-align: center;font-size: 20px;color: rgba(78, 207, 3, 0.979);border: 1px solid  rgba(78, 207, 3, 0.979); border-radius:5px;padding: 5px;" id="demo"></p>
                           
-                          <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of August</span><br> <span style="font-size: 20px;color: #009efb;font-weight:600" id="date">[15/08/2022 - 30/08/2022]</span></h5>
+                          <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of August</span><br> <span style="font-size: 20px;color: #009efb;font-weight:600" id="date">[Extended till 31st August]</span></h5>
                           <br><label style="text-align: left">Tasks Updates</label>
                         <textarea id="work" maxlength="300" style="padding: 5px;border: 1px solid  rgba(78, 207, 3, 0.979)" required ></textarea>
                           
