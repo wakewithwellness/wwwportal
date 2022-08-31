@@ -146,10 +146,10 @@ async function getuserInfoRealtime(userID){
 
 
 
-<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;padding: 20px">
+<div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #5793D1;padding: 20px;border-radius:5px">
 <div class="row">
 <div class="col-sm-12">
-    <h4 class="page-title">Attendance Updates</h4><hr>
+    <h4 class="page-title">Member Details</h4><hr>
 </div>
 </div>
 <div class="row">
@@ -174,12 +174,36 @@ async function getuserInfoRealtime(userID){
 
 
 </div>
-            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1">
+
+
+
+<div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #5793D1;padding: 20px;border-radius:5px">
+<div class="row">
+<div class="col-sm-12">
+    <h4 class="page-title">Attendance Percentage</h4><hr>
+</div>
+</div>
+<div class="row">
+
+<div class="col-lg">
+<h3 style="color: ${userInfo.status}; font-size:40px; text-align:center">${userInfo.AAper}</h3>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+            <div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #5793D1; border-radius:5px">
            
           
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">Updates</h4>
+                        <h4 class="page-title">Attendance Updates</h4>
                     </div>
                 </div>
                 <div class="row">
