@@ -144,17 +144,17 @@ async function getuserInfoRealtime(userID){
 
 
  <div class="page-wrapper">
-            <div class="content" style="background-color: #fff;margin-left: 12px;margin-right: 12px;margin-top: -8px;border-top: 3px solid #5793D1;padding: 18px">
 
-            <div class="row">
-            <div class="col-sm-12">
-            <h2 style="text-align: center;">WEEKLY ATTENDANCE</h2><hr>
-            </div>
-            </div>
-            <p class="container-fluid" style="text-align: center;font-size: 18px;color:#009e1a;border: 1px solid  #009e1a; border-radius:5px;padding: 5px;margin-top:-5px" id="demo"></p>
+<div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #5793D1;padding: 20px;border-radius: 5px;">
+<div class="row">
+<div class="col-sm-12">
+<h2 style="text-align: center;">WEEKLY ATTENDANCE</h2><hr>
+</div>
+</div>
 
-            <div class="alert">Attendance posted successfully</div>
-<div style="text-align: left; margin-bottom:5px">  <a onclick="location.href='attenUpdates.html'" style="color:#009efb;font-size:14px;text-align:left"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Updates</a></div>
+
+<div style="text-align: left; margin-bottom:5px">  
+<a onclick="location.href='attenUpdates.html'" style="color:#009efb;font-size:14px;text-align:left"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Updates</a></div>
 
             <div class="row">
           
@@ -192,8 +192,30 @@ async function getuserInfoRealtime(userID){
                 </table>
                 
             </div>
+
+
+            
+</div>
+
+
+</div>
+
+
+
+
+            <div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #5793D1;padding: 20px; max-height: 57vh; border-radius: 5px;">
+            <div class="row">
+            <div class="col-sm-12">
+            <h2 style="text-align: center;">POST ATTENDANCE</h2><hr>
+            </div>
+            </div>
+        
+            <p class="container-fluid" style="text-align: center;font-size: 18px;color:#009e1a;border: 1px solid  #009e1a; border-radius:5px;padding: 5px;margin-top:-5px" id="demo"></p>
+
+            <div class="alert">Attendance posted successfully</div>
+
          
-    </div>
+  
           
                 <div class="row">
                     <div class="col-lg-12">
@@ -228,6 +250,10 @@ async function getuserInfoRealtime(userID){
                     
                     
                     </div>
+                </div>
+
+
+
                 </div>
            
         </div>
