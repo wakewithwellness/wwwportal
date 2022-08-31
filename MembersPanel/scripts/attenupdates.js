@@ -198,10 +198,28 @@ async function getuserInfoRealtime(userID){
                                 </thead>
                                 <tbody>
 
-                              
+                                <tr display: ${userInfo.Oct22b}>
+                                <td><a>2022</a></td>
+                                <td>
+                                    <h2><a>October</a></h2>
+                                </td>
+                                <td><a>Second</a></td>
+                                <td>${userInfo.Oct22b}</td>
+                                <td>${userInfo.Oct22bf}</td>
+                                </tr>
+
+                                <tr display: ${userInfo.Oct22a}>
+                                <td><a>2022</a></td>
+                                <td>
+                                    <h2><a>October</a></h2>
+                                </td>
+                                <td><a>First</a></td>
+                                <td>${userInfo.Oct22a}</td>
+                                <td>${userInfo.Oct22af}</td>
+                                </tr>
 
 
-                                <tr display: ${userInfo.Sept22bf}>
+                                <tr display: ${userInfo.Sept22b}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>September</a></h2>
@@ -211,7 +229,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Sept22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Sept22af}>
+                                <tr display: ${userInfo.Sept22a}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>September</a></h2>
@@ -222,7 +240,7 @@ async function getuserInfoRealtime(userID){
                                 </tr>
 
 
-                                <tr display: ${userInfo.Aug22bf}>
+                                <tr display: ${userInfo.Aug22b}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>August</a></h2>
@@ -232,7 +250,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Aug22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Aug22af}>
+                                <tr display: ${userInfo.Aug22a}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>August</a></h2>
@@ -243,7 +261,7 @@ async function getuserInfoRealtime(userID){
                                 </tr>
 
 
-                                <tr display: ${userInfo.Jul22bf}>
+                                <tr display: ${userInfo.Jul22b}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>July</a></h2>
@@ -253,7 +271,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Jul22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Jul22af}>
+                                <tr display: ${userInfo.Jul22a}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>July</a></h2>
@@ -265,7 +283,7 @@ async function getuserInfoRealtime(userID){
 
                               
 
-                                <tr display: ${userInfo.Junf}>
+                                <tr display: ${userInfo.Jun}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>June</a></h2>
@@ -276,7 +294,7 @@ async function getuserInfoRealtime(userID){
                                 </tr>
 
 
-                                <tr display: ${userInfo.May2f}>
+                                <tr display: ${userInfo.May2}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>May</a></h2>
@@ -286,7 +304,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.May2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.May1f}>
+                                <tr display: ${userInfo.May1}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>May</a></h2>
@@ -297,7 +315,7 @@ async function getuserInfoRealtime(userID){
                                 </tr>
 
 
-                                <tr display: ${userInfo.Apr2f}>
+                                <tr display: ${userInfo.Apr2}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>April</a></h2>
@@ -307,7 +325,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Apr2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Apr1f}>
+                                <tr display: ${userInfo.Apr1}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>April</a></h2>
@@ -318,7 +336,7 @@ async function getuserInfoRealtime(userID){
                                 </tr>
 
 
-                                <tr display: ${userInfo.Mar2f}>
+                                <tr display: ${userInfo.Mar2}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>March</a></h2>
@@ -328,7 +346,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Mar2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Mar1f}>
+                                <tr display: ${userInfo.Mar1}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>March</a></h2>
@@ -339,7 +357,7 @@ async function getuserInfoRealtime(userID){
                                 </tr>
 
 
-                                <tr display: ${userInfo.Feb2f}>
+                                <tr display: ${userInfo.Feb2}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>February</a></h2>
@@ -349,7 +367,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Feb2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Feb1f}>
+                                <tr display: ${userInfo.Feb1}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>February</a></h2>
@@ -359,7 +377,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Feb1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Jan2f}>
+                                <tr display: ${userInfo.Jan2}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>January</a></h2>
@@ -369,7 +387,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Jan2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Jan1f}>
+                                <tr display: ${userInfo.Jan1}>
                                 <td><a>2022</a></td>
                                 <td>
                                     <h2><a>January</a></h2>
@@ -379,7 +397,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Jan1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Dec2f}>
+                                <tr display: ${userInfo.Dec2}>
                                 <td><a>2021</a></td>
                                 <td>
                                     <h2><a>December</a></h2>
@@ -389,7 +407,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Dec2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Dec1f}>
+                                <tr display: ${userInfo.Dec1}>
                                 <td><a>2021</a></td>
                                 <td>
                                     <h2><a>December</a></h2>
@@ -399,7 +417,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Dec1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Nov2f}>
+                                <tr display: ${userInfo.Nov2}>
                                 <td><a>2021</a></td>
                                 <td>
                                     <h2><a>November</a></h2>
@@ -409,7 +427,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Nov2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Nov1f}>
+                                <tr display: ${userInfo.Nov1}>
                                 <td><a>2021</a></td>
                                 <td>
                                     <h2><a>November</a></h2>
@@ -419,7 +437,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Nov1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Oct2f}>
+                                <tr display: ${userInfo.Oct2}>
                                 <td><a>2021</a></td>
                                 <td>
                                     <h2><a>October</a></h2>
@@ -429,7 +447,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Oct2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Oct1f}>
+                                <tr display: ${userInfo.Oct1}>
                                 <td><a>2021</a></td>
                                 <td>
                                     <h2><a>October</a></h2>
@@ -439,7 +457,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Oct1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Sept2f}>
+                                <tr display: ${userInfo.Sept2}>
                                 <td><a>2021</a></td>
                                 <td>
                                     <h2><a>September</a></h2>
@@ -449,7 +467,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Sept2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Sept1f}>
+                                <tr display: ${userInfo.Sept1}>
                                 <td><a>2021</a></td>
                                 <td>
                                     <h2><a>September</a></h2>
@@ -459,7 +477,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Sept1f}</td>
                                 </tr>
 
-                                    <tr display: ${userInfo.Aug2f}>
+                                    <tr display: ${userInfo.Aug2}>
                                         <td><a>2021</a></td>
                                         <td>
                                             <h2><a>August</a></h2>
@@ -469,7 +487,7 @@ async function getuserInfoRealtime(userID){
                                         <td>${userInfo.Aug2f}</td>
                                     </tr>
 
-                                    <tr display: ${userInfo.Aug1f}>
+                                    <tr display: ${userInfo.Aug1}>
                                         <td><a>2021</a></td>
                                         <td>
                                         <h2><a>August</a></h2>
@@ -479,7 +497,7 @@ async function getuserInfoRealtime(userID){
                                         <td>${userInfo.Aug1f}</td>
                                     </tr>
 
-                                    <tr display: ${userInfo.July3f}>
+                                    <tr display: ${userInfo.July3}>
                                         <td><a>2021</a></td>
                                         <td>
                                         <h2><a>July</a></h2>
@@ -490,7 +508,7 @@ async function getuserInfoRealtime(userID){
                                     </tr>
 
 
-                                    <tr display: ${userInfo.July2f}>
+                                    <tr display: ${userInfo.July2}>
                                     <td><a>2021</a></td>
                                     <td>
                                     <h2><a>July</a></h2>
@@ -501,7 +519,7 @@ async function getuserInfoRealtime(userID){
                                     </tr>
 
 
-                                   <tr display: ${userInfo.July1f}>
+                                   <tr display: ${userInfo.July1}>
                                     <td><a>2021</a></td>
                                     <td>
                                     <h2><a>July</a></h2>
