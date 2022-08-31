@@ -25,6 +25,7 @@ var firebaseConfig = {
                    <label>${data.regno}</label>
                  </th>
                      <td>${data.name}</td>
+                     <td style="color:${data.status}; font-weight:bold">${data.AAper}</td>
                      <td>${data.Sept22af}</td>
                      <td>${data.Sept22af}</td>
                      <td>${data.Aug22bf}</td>
@@ -40,14 +41,7 @@ var firebaseConfig = {
                      <td>${data.Mar1f}</td>
                      <td>${data.Feb2f}</td>
                      <td>${data.Feb1f}</td>
-                     <td>${data.May2f}</td>
-                     <td>${data.May1f}</td>
-                     <td>${data.Apr2f}</td>
-                     <td>${data.Apr1f}</td>
-                     <td>${data.Mar2f}</td>
-                     <td>${data.Mar1f}</td>
-                     <td>${data.Feb2f}</td>
-                     <td>${data.Feb1f}</td>
+                    
                      <td>${data.Jan2f}</td>
                      <td>${data.Jan1f}</td>
                      <td>${data.Dec2f}</td>
