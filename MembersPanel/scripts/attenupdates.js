@@ -198,7 +198,7 @@ async function getuserInfoRealtime(userID){
                                 </thead>
                                 <tbody>
 
-                                <tr display: ${userInfo.Oct22b}>
+                                <tr display: ${userInfo.Oct22bf}>
                                
                                 <td rowspan="2" id=month> <h4>October 2022</h4>
                                
@@ -208,7 +208,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Oct22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Oct22a}>
+                                <tr display: ${userInfo.Oct22af}>
                                
                                
                                 <td><a>First</a></td>
@@ -217,7 +217,7 @@ async function getuserInfoRealtime(userID){
                                 </tr>
 
 
-                                <tr display: ${userInfo.Sept22b}>
+                                <tr display: ${userInfo.Sept22bf}>
                               
                                 <td rowspan="2" id=month>
                                     <h4><a>September 2022</a></h4>
@@ -227,7 +227,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Sept22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Sept22a}>
+                                <tr display: ${userInfo.Sept22af}>
                                
                                 <td><a>First</a></td>
                                 <td>${userInfo.Sept22a}</td>
@@ -235,7 +235,7 @@ async function getuserInfoRealtime(userID){
                                 </tr>
 
 
-                                <tr display: ${userInfo.Aug22b}>
+                                <tr display: ${userInfo.Aug22bf}>
                                
                                 <td rowspan="2" id=month>
                                     <h4><a>August 2022</a></h4>
@@ -245,14 +245,14 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Aug22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Aug22a}>
+                                <tr display: ${userInfo.Aug22af}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Aug22a}</td>
                                 <td>${userInfo.Aug22af}</td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.Jul22b}>
+                                <tr display: ${userInfo.Jul22bf}>
                                
                                 <td rowspan="2" id=month>
                                     <h4><a>July 2022</a></h4>
@@ -262,7 +262,7 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Jul22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Jul22a}>
+                                <tr display: ${userInfo.Jul22af}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Jul22a}</td>
                                 <td>${userInfo.Jul22af}</td>
@@ -270,7 +270,7 @@ async function getuserInfoRealtime(userID){
 
                               
 
-                                <tr display: ${userInfo.Jun}>
+                                <tr display: ${userInfo.Junf}>
                                
                                 <td rowspan="2" id=month>
                                     <h4 ><a>June 2022</a></h4></td>
@@ -280,14 +280,14 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Junf}</td>
                                 </tr>
 
-                                <tr>
+                                <tr display: ${userInfo.Junf}>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.May2}>
+                                <tr display: ${userInfo.May2f}>
                                 <td rowspan="2" id=month>
                                     <h4><a>May 2022</a></h4>
                                 </td>
@@ -296,14 +296,14 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.May2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.May1}>
+                                <tr display: ${userInfo.May1f}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.May1}</td>
                                 <td>${userInfo.May1f}</td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.Apr2}>
+                                <tr display: ${userInfo.Apr2f}>
                                
                                 <td rowspan="2" id=month>
                                     <h4><a>April 2022</a></h4>
@@ -313,14 +313,14 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Apr2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Apr1}>
+                                <tr display: ${userInfo.Apr1f}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Apr1}</td>
                                 <td>${userInfo.Apr1f}</td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.Mar2}>
+                                <tr display: ${userInfo.Mar2f}>
                                
                                 <td rowspan="2" id=month>
                                     <h4><a>March 2022</a></h4>
@@ -330,14 +330,14 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Mar2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Mar1}>
+                                <tr display: ${userInfo.Mar1f}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Mar1}</td>
                                 <td>${userInfo.Mar1f}</td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.Feb2}>
+                                <tr display: ${userInfo.Feb2f}>
                                
                                 <td rowspan="2" id=month>
                                     <h4><a>February 2022</a></h4>
@@ -347,13 +347,13 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Feb2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Feb1}>
+                                <tr display: ${userInfo.Feb1f}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Feb1}</td>
                                 <td>${userInfo.Feb1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Jan2}> 
+                                <tr display: ${userInfo.Jan2f}> 
                                 <td rowspan="2" id=month>
                                     <h4><a>January 2022</a></h4>
                                 </td>
@@ -362,13 +362,13 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Jan2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Jan1}>
+                                <tr display: ${userInfo.Jan1f}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Jan1}</td>
                                 <td>${userInfo.Jan1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Dec2}>
+                                <tr display: ${userInfo.Dec2f}>
                                
                                 <td rowspan="2" id=month>
                                     <h4><a>December 2021</a></h4>
@@ -378,13 +378,13 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Dec2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Dec1}>
+                                <tr display: ${userInfo.Dec1f}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Dec1}</td>
                                 <td>${userInfo.Dec1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Nov2}>
+                                <tr display: ${userInfo.Nov2f}>
                                 <td rowspan="2" id=month>
                                     <h4><a>November 2021</a></h4>
                                 </td>
@@ -393,13 +393,13 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Nov2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Nov1}>
+                                <tr display: ${userInfo.Nov1f}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Nov1}</td>
                                 <td>${userInfo.Nov1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Oct2}>
+                                <tr display: ${userInfo.Oct2f}>
                                 <td rowspan="2" id=month>
                                     <h4><a>October 2021</a></h4>
                                 </td>
@@ -408,13 +408,13 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Oct2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Oct1}>
+                                <tr display: ${userInfo.Oct1f}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Oct1}</td>
                                 <td>${userInfo.Oct1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Sept2}>
+                                <tr display: ${userInfo.Sept2f}>
                                 <td rowspan="2" id=month>
                                     <h4><a>September 2021</a></h4>
                                 </td>
@@ -423,13 +423,13 @@ async function getuserInfoRealtime(userID){
                                 <td>${userInfo.Sept2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Sept1}>
+                                <tr display: ${userInfo.Sept1f}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Sept1}</td>
                                 <td>${userInfo.Sept1f}</td>
                                 </tr>
 
-                                    <tr display: ${userInfo.Aug2}>
+                                    <tr display: ${userInfo.Aug2f}>
                                        
                                         <td rowspan="2" id=month>
                                             <h4><a>August 2021</a></h4>
@@ -439,15 +439,15 @@ async function getuserInfoRealtime(userID){
                                         <td>${userInfo.Aug2f}</td>
                                     </tr>
 
-                                    <tr display: ${userInfo.Aug1}>
+                                    <tr display: ${userInfo.Aug1f}>
                                         <td><a>First</a></td>                        
                                         <td>${userInfo.Aug1}</td>
                                         <td>${userInfo.Aug1f}</td>
                                     </tr>
-
-                                    <tr display: ${userInfo.July3}>
+                        
+                                    <tr display: ${userInfo.July3f}>
                                       
-                                        <td rowspan="3" id=month>
+                                        <td rowspan="3" id=month >
                                         <h4><a>July 2021</a></h4>
                                         </td>   
                                         <td><a>Third</a></td>                                  
@@ -456,18 +456,19 @@ async function getuserInfoRealtime(userID){
                                     </tr>
 
 
-                                    <tr display: ${userInfo.July2}>   
+                                    <tr display: ${userInfo.July2f}>   
                                     <td><a>Second</a></td>                             
                                     <td>${userInfo.July2}</td>
                                     <td>${userInfo.July2f}</td>   
                                     </tr>
 
 
-                                   <tr display: ${userInfo.July1}>
+                                   <tr display: ${userInfo.July1f}>
                                     <td><a>First</a></td>                        
                                     <td>${userInfo.July1}</td>
                                     <td>${userInfo.July1f}</td>   
                                 </tr>
+                               
 
                                
                                 </tbody>
