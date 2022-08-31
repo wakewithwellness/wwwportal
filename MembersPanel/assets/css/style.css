@@ -808,10 +808,10 @@ textarea.form-control {
 	padding: 0 20px;
 }
 .sidebar-menu li a:hover {
-	color: #009efb;
+	color: #198754;
 }
 .sidebar-menu li.active a {
-	color: #009efb;
+	color: #198754;
 	background-color: #f3f3f3;
 }
 .menu-title {
