@@ -33,41 +33,30 @@ async function getuserInfo(userID){
        `
    }    
     }else{
-        Atten.innerHTML = `<div id="content_container" class="container" style=" width: 47vh;
-      height: 43vh;margin-top:180px">
-      
-      <div id="form_container" style="width: 100%;height: 100%;background-color: #222222;box-shadow: 0 0 50px -20px #000;border-radius: 2%;overflow: hidden;">
-      <div id="form_header_container" style="width: 100%;
-      height: 5%;display: flex; justify-content: center;align-items: center;float: left; padding: 20px;padding-bottom: 30px; padding-top: 30px;
-      border-bottom: 1px solid transparent; border-color: cornflowerblue;background: #000;">
-          <h2 id="form_header" style="display: inline-block; font-size: 15px;font-family: Bowlby One SC;
-          font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> MEMBERS PORTAL </h2>
-      </div>
+        Atten.innerHTML = `<div class="container-fluid" style="max-width: 80vh;margin-top:180px">
+        <div class="card" style="border-top: 3px solid #198754">
+        <div class="card-body" style="text-align: center">
+        <h5 class="card-title" style="text-align: center; color: #198754; font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
+<br>
+        <form autocomplete="off" onsubmit="login(event)">
+            <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
+            height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+          
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;margin-top:10px;
+            height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+            <br>
+            <div style="text-align:left"> <a style="text-decoration: none; color: #198754; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+            <br> 
+            <button type="submit" class="btn" style="width:17vh;background-color:#198754;color: #fff; padding-bottom:37px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            
+    </form>
+          <div>
 
-      <div id="form_content_container" style="width: 100%; height: 90%; float: left; display: flex;justify-content: center;align-items: center;padding-top: 30px;">
-          <div id="form_content_inner_container" style="width: 75%;height: 100%;float: left;">
-           
-          <form autocomplete="off" onsubmit="login(event)" >
-              
 
-            <input type="email" id="loginEmail" placeholder="Email" style="width: 100%;
-              height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-              font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-             
 
-              <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
-              height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-              font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-              <a class="modal-trigger" href="#modal2">Forgot Password</a><br>
-              <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 5px;" >
-                  <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
-                  font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
-                  
-              </div>
-           </form>
-          </div>
+         
+        </div>
       </div></div>
-  </div>
       `
     
        
@@ -145,7 +134,7 @@ async function getuserInfoRealtime(userID){
 
  <div class="page-wrapper">
 
-<div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #5793D1;padding: 20px;border-radius: 5px;">
+<div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #198754;padding: 20px;border-radius: 5px;">
 <div class="row">
 <div class="col-sm-12">
 <h2 style="text-align: center;">WEEKLY ATTENDANCE</h2><hr>
@@ -154,7 +143,7 @@ async function getuserInfoRealtime(userID){
 
 
 <div style="text-align: left; margin-bottom:5px">  
-<a onclick="location.href='attenUpdates.html'" style="color:#009efb;font-size:14px;text-align:left"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Updates</a></div>
+<a onclick="location.href='attenUpdates.html'" style="color:#198754;font-size:14px;text-align:left"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Updates</a></div>
 
             <div class="row">
           
@@ -203,7 +192,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-            <div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #5793D1;padding: 20px; max-height: 57vh; border-radius: 5px;">
+            <div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #198754;padding: 20px; max-height: 57vh; border-radius: 5px;">
             <div class="row">
             <div class="col-sm-12">
             <h2 style="text-align: center;">POST ATTENDANCE</h2><hr>
@@ -222,7 +211,7 @@ async function getuserInfoRealtime(userID){
 						
                     <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="font-weight: 500;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance 
                     from 
-                    <span style="font-size: 14px;color: #009efb;font-weight:600" id="date">01/09/2022 - 15/09/2022</span></h5>
+                    <span style="font-size: 14px;color: #198754;font-weight:600" id="date">01/09/2022 - 15/09/2022</span></h5>
                               <div class="testbox" >
                           
                                               <form onsubmit="updateattendance(event)" id="attendanceform">
@@ -237,7 +226,7 @@ async function getuserInfoRealtime(userID){
                                                      
 
                                                   <div class="btn-block">
-                                                  <button style="background-color:#009e1a; font-size:13px;font-weight:500; border-radius:5px" id="send" type="submit" >Post Attendance</button> 
+                                                  <button style="background-color:#198754; font-size:13px;font-weight:500; border-radius:5px" id="send" type="submit" >Post Attendance</button> 
                                                   </div>
 
                                                 <div class="container-fluid" style="margin-bottom:70px;">
@@ -276,44 +265,30 @@ async function getuserInfoRealtime(userID){
 
 
     }else{
-        Atten.innerHTML = `<div id="content_container" class="container" style=" width: 47vh;
-        height: 43vh;margin-top:180px">
-        
-        <div id="form_container" style="width: 100%;height: 100%;background-color: #222222;box-shadow: 0 0 50px -20px #000;border-radius: 2%;overflow: hidden;">
-        <div id="form_header_container" style="width: 100%;
-        height: 5%;display: flex; justify-content: center;align-items: center;float: left; padding: 20px;padding-bottom: 30px; padding-top: 30px;
-        border-bottom: 1px solid transparent; border-color: cornflowerblue;background: #000;">
-            <h2 id="form_header" style="display: inline-block; font-size: 15px;font-family: Bowlby One SC;
-            font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> MEMBERS PORTAL </h2>
+        Atten.innerHTML = `<div class="container-fluid" style="max-width: 80vh;margin-top:180px">
+        <div class="card" style="border-top: 3px solid #198754">
+        <div class="card-body" style="text-align: center">
+        <h5 class="card-title" style="text-align: center; color: #198754; font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
+<br>
+        <form autocomplete="off" onsubmit="login(event)">
+            <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
+            height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+          
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;margin-top:10px;
+            height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+            <br>
+            <div style="text-align:left"> <a style="text-decoration: none; color: #198754; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+            <br> 
+            <button type="submit" class="btn" style="width:17vh;background-color:#198754;color: #fff; padding-bottom:37px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            
+    </form>
+          <div>
+
+
+
+         
         </div>
-
-        <div id="form_content_container" style="width: 100%; height: 90%; float: left; display: flex;justify-content: center;align-items: center;padding-top: 30px;">
-            <div id="form_content_inner_container" style="width: 75%;height: 100%;float: left;">
-             
-            <form autocomplete="off" onsubmit="login(event)" >
-                
-
-              <input type="email" id="loginEmail" placeholder="Email" style="width: 100%;
-                height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-                font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-               
-
-                <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
-                height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-                font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-                <a class="modal-trigger" href="#modal2">Forgot Password</a><br>
-                
-                <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 5px;" >
-                    <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
-                    font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
-                    
-                </div>
-             </form>
-            </div>
-        </div></div>
-    </div>
-
-    </div></div>
+      </div></div>
 
 
     <div class="sidebar-overlay" data-reff=""></div>
