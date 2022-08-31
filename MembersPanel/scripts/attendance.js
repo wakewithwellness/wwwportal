@@ -101,7 +101,7 @@ async function getuserInfoRealtime(userID){
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
-                <li class="menu-title">Main</li>
+                <li class="menu-title" style="text-align: left">Main</li><hr>
 
                
 
@@ -144,45 +144,52 @@ async function getuserInfoRealtime(userID){
 
 
  <div class="page-wrapper">
-            <div class="content">
+            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;padding: 20px">
+
+            <div class="row">
+            <div class="col-sm-12">
+            <h1 style="text-align: center;">WEEKLY ATTENDANCE</h1><hr>
+            </div>
+            </div>
           
                 <div class="row">
                     <div class="col-lg-12">
 						
                         
-                        <div class="testbox">
-                        <form onsubmit="updateattendance(event)" id="attendanceform">
-                        <h1 style="text-align: center;">WEEKLY ATTENDANCE</h1>
-                       
-                          <hr>
-                          <p class="container-fluid" style="text-align: center;font-size: 20px;color: rgba(78, 207, 3, 0.979);border: 1px solid  rgba(78, 207, 3, 0.979); border-radius:5px;padding: 5px;" id="demo"></p>
-                          
-                          <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of August</span><br> <span style="font-size: 20px;color: #009efb;font-weight:600" id="date">[Extended till 31st August]</span></h5>
-                          <br><label style="text-align: left">Tasks Updates</label>
-                        <textarea id="work" maxlength="300" style="padding: 5px;border: 1px solid  rgba(78, 207, 3, 0.979)" required ></textarea>
-                          
-                          <select id="attend" style="color: white;font-weight: 400;">
-                            <option style="color: rgb(5, 216, 33);font-weight: 400;" value="Present">Present</option>
-                            <option style="color: red;font-weight: 400;" value="Absent">Absent</option>
-                          </select>
-                                <div class="alert">Attendance posted successfully</div>
-                          <div class="btn-block">
-                          
-                            <button style="background-color:rgba(78, 207, 3, 0.979); font-size:16px; font-weight:500; border-radius:5px" id="send" type="submit" >Post Attendance</button> 
-                             </div>
-                          <div class="container-fluid" style="margin-bottom:90px;">
-           
-            </div>
-                        </form>
+                              <div class="testbox">
+                                              <form onsubmit="updateattendance(event)" id="attendanceform">
+                                            
+                                                <p class="container-fluid" style="text-align: center;font-size: 20px;color:#009e1a;border: 1px solid  #009e1a; border-radius:5px;padding: 5px;" id="demo"></p>
+                                                
+                                                <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of August</span><br> <span style="font-size: 20px;color: #009efb;font-weight:600" id="date">[15/08/2022 - 31/08/2022]</span></h5>
+                                                <br><label style="text-align: left">Tasks Updates</label>
+                                                <textarea id="work" maxlength="300" style="padding: 5px;border: 1px solid  #009e1a" required ></textarea>
+                                                
+                                                <select id="attend" style="color: white;font-weight: 400;">
+                                                  <option style="color: rgb(5, 216, 33);font-weight: 400;" value="Present">Present</option>
+                                                  <option style="color: red;font-weight: 400;" value="Absent">Absent</option>
+                                                </select>
+                                                      <div class="alert">Attendance posted successfully</div>
 
-                        <button onclick="location.href='attenUpdates.html'" style="width: 50%;border: 1px solid white;background-color: white;border: 1px solid #009efb;color:#009efb; border-radius:5px;font-size:16px; font-weight:500"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Updates</button>
-                      </div> 
+                                                  <div class="btn-block">
+                                                  <button style="background-color:#009e1a; font-size:16px; font-weight:500; border-radius:5px" id="send" type="submit" >Post Attendance</button> 
+                                                  </div>
+
+                                                <div class="container-fluid" style="margin-bottom:70px;">
+                                
+                                              </div>
+                                              </form>
+
+                                            <button onclick="location.href='attenUpdates.html'" style="width: 50%;border: 1px solid white;background-color: white;border: 1px solid #009efb;color:#009efb; border-radius:5px;font-size:16px; font-weight:500"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Updates</button>
+                              </div> 
                     
                     
                     </div>
-            </div>
+                </div>
            
         </div>
+
+        <br> 
     </div>
          
         </div>
@@ -325,7 +332,7 @@ function updateattendance(event){
          document.getElementById("work").style.borderColor = "red";
          document.querySelector('#work').disabled = "disabled";
          document.querySelector('#send').style.color = "white";
-         document.querySelector('#send').style.background = "red";
+         document.querySelector('#send').style.background = "#fc5c3f";
          document.querySelector('#send').disabled = "disabled";
          document.querySelector('#send').style.cursor = "not-allowed";
          document.getElementById("send").innerHTML = "Locked";
