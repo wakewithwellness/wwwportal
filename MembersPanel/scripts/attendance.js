@@ -20,7 +20,7 @@ function createUserCollection(user){
 async function getuserInfo(userID){
     if(userID){
       const userInfoSnap = await  firebase.firestore()
-    .collection('users')
+    .collection('attendance')
     .doc(userID)
     .get()
 
@@ -81,7 +81,7 @@ async function getuserInfo(userID){
 async function getuserInfoRealtime(userID){
     if(userID){
       const userdocRef = await  firebase.firestore()
-        .collection('users')
+        .collection('attendance')
         .doc(userID)
         userdocRef.onSnapshot((doc)=>{
             if(doc.exists){
@@ -144,35 +144,78 @@ async function getuserInfoRealtime(userID){
 
 
  <div class="page-wrapper">
-            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;padding: 20px">
+            <div class="content" style="background-color: #fff;margin-left: 12px;margin-right: 12px;margin-top: -8px;border-top: 3px solid #5793D1;padding: 18px">
 
             <div class="row">
             <div class="col-sm-12">
-            <h1 style="text-align: center;">WEEKLY ATTENDANCE</h1><hr>
+            <h2 style="text-align: center;">WEEKLY ATTENDANCE</h2><hr>
             </div>
             </div>
+            <p class="container-fluid" style="text-align: center;font-size: 18px;color:#009e1a;border: 1px solid  #009e1a; border-radius:5px;padding: 5px;margin-top:-5px" id="demo"></p>
+
+            <div class="alert">Attendance posted successfully</div>
+<div style="text-align: left; margin-bottom:5px">  <a onclick="location.href='attenUpdates.html'" style="color:#009efb;font-size:14px;text-align:left"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Updates</a></div>
+
+            <div class="row">
+          
+            <div class="table-responsive">
+                <table class="table table-bordered" style="font-size: 12px">
+                    <thead style="background-color: #f7f7f7">
+                        <tr>
+                          
+                            <th style="width: 10vh">Month</th>
+                            <th style="width: 15vh">Week</th>
+                            <th style="width: 20vh">Status</th>
+                            <th>Activity</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                   
+                    <td rowspan="2" id=month> <h4>September 2022</h4>
+                   
+                    </td>
+                    <td id="datecolor2"><a>15/09/2022 to 30/09/2022</a></td>
+                    <td>${userInfo.Sept22b}</td>
+                    <td>${userInfo.Sept22bf}</td>
+                    </tr>
+
+                    <tr>
+                    <td id="datecolor1" style="color:black"><a>01/09/2022 to 15/09/2022</a></td>
+                    <td>${userInfo.Sept22a}</td>
+                    <td>${userInfo.Sept22af}</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                
+            </div>
+         
+    </div>
           
                 <div class="row">
                     <div class="col-lg-12">
 						
-                        
-                              <div class="testbox">
+                    <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="font-weight: 500;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance 
+                    from 
+                    <span style="font-size: 14px;color: #009efb;font-weight:600" id="date">01/09/2022 - 15/09/2022</span></h5>
+                              <div class="testbox" >
+                          
                                               <form onsubmit="updateattendance(event)" id="attendanceform">
                                             
-                                                <p class="container-fluid" style="text-align: center;font-size: 20px;color:#009e1a;border: 1px solid  #009e1a; border-radius:5px;padding: 5px;" id="demo"></p>
-                                                
-                                                <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="color:#009efb;font-weight:400;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance for the <span style="font-weight: 500;">second half of August</span><br> <span style="font-size: 20px;color: #009efb;font-weight:600" id="date">[15/08/2022 - 31/08/2022]</span></h5>
-                                                <br><label style="text-align: left">Tasks Updates</label>
-                                                <textarea id="work" maxlength="300" style="padding: 5px;border: 1px solid  #009e1a" required ></textarea>
+                                                <label style="text-align: left;margin-top: -5vh">Tasks Updates</label>
+                                                <textarea id="work" maxlength="300" style="padding: 5px;" required ></textarea>
                                                 
                                                 <select id="attend" style="color: white;font-weight: 400;">
                                                   <option style="color: rgb(5, 216, 33);font-weight: 400;" value="Present">Present</option>
-                                                  <option style="color: red;font-weight: 400;" value="Absent">Absent</option>
+                                                
                                                 </select>
-                                                      <div class="alert">Attendance posted successfully</div>
+                                                     
 
                                                   <div class="btn-block">
-                                                  <button style="background-color:#009e1a; font-size:16px; font-weight:500; border-radius:5px" id="send" type="submit" >Post Attendance</button> 
+                                                  <button style="background-color:#009e1a; font-size:13px;font-weight:500; border-radius:5px" id="send" type="submit" >Post Attendance</button> 
                                                   </div>
 
                                                 <div class="container-fluid" style="margin-bottom:70px;">
@@ -180,7 +223,7 @@ async function getuserInfoRealtime(userID){
                                               </div>
                                               </form>
 
-                                            <button onclick="location.href='attenUpdates.html'" style="width: 50%;border: 1px solid white;background-color: white;border: 1px solid #009efb;color:#009efb; border-radius:5px;font-size:16px; font-weight:500"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Updates</button>
+                                           
                               </div> 
                     
                     
@@ -268,13 +311,13 @@ async function getuserInfoRealtime(userID){
 
 function updateattendance(event){
   event.preventDefault()
-  var Aug22b = document.getElementById('attend').value
-  var Aug22bf = document.getElementById('work').value
+  var Sept22a = document.getElementById('attend').value
+  var Sept22af = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Aug22b:Aug22b,
-    Aug22bf:Aug22bf
+    Sept22a:Sept22a,
+    Sept22af:Sept22af
 
   },{ merge: true}).then(()=>{
     document.querySelector('.alert').style.display = 'block';
@@ -299,7 +342,7 @@ function updateattendance(event){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("August 31, 2022 21:59:00").getTime();
+     var countDownDate = new Date("September 15, 2022 22:00:00").getTime();
      
      // Update the count down every 1 second
      var x = setInterval(function() {
@@ -329,14 +372,15 @@ function updateattendance(event){
          document.getElementById("demo").innerHTML = "Attendance closed for the week";
          document.getElementById("demo").style.color = "red";
          document.getElementById("demo").style.borderColor = "red";
-         document.getElementById("work").style.borderColor = "red";
          document.querySelector('#work').disabled = "disabled";
+         document.querySelector('#work').style.cursor = "not-allowed";
          document.querySelector('#send').style.color = "white";
          document.querySelector('#send').style.background = "#fc5c3f";
          document.querySelector('#send').disabled = "disabled";
          document.querySelector('#send').style.cursor = "not-allowed";
          document.getElementById("send").innerHTML = "Locked";
          document.getElementById("date").style.color = "red";
+         document.getElementById("datecolor1").style.color = "red";
       
        }
      }, 1000);
