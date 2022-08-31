@@ -161,7 +161,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 20px">
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 20px;border-radius: 5px">
         
                  <div class="row">
                     <div class="col-sm-12">
@@ -195,7 +195,7 @@ async function getuserInfoRealtime(userID){
                     </div>
 
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">Registration no.: <span style="color: red">${userInfo.regno}</span></h4>
+                    <h4 style="font-size: 13px">Registration no.: <span style="color: #198754">${userInfo.regno}</span></h4>
                     </div>
 
                     <div class="col-lg">
@@ -262,7 +262,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;">
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius: 5px"">
 
         <div class="row">
         <div class="col-sm-12">
@@ -284,7 +284,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;">
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius: 5px"">
 
         <div class="row">
         <div class="col-sm-12">
@@ -304,7 +304,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;">
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius: 5px"">
 
         <div class="row">
         <div class="col-sm-12">
