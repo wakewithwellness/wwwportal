@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
+       <style>
         #myInput {
       background-image: url('/css/searchicon.png'); /* Add a search icon to input */
       background-position: 10px 12px; /* Position the search icon */
       background-repeat: no-repeat; /* Do not repeat the icon image */
       width: 100%; /* Full-width */
       font-size: 16px; /* Increase font-size */
-      padding: 12px 20px 12px 40px; /* Add some padding */
+      padding: 12px 10px 12px 20px; /* Add some padding */
       border: 1px solid #ddd; /* Add a grey border */
-      margin-bottom: 12px; /* Add some space below the input */
+      margin-bottom: 12px;
+      /* Add some space below the input */
       }
       
       </style>
@@ -79,17 +80,21 @@
             </div>
         </div>
         <div class="page-wrapper">
-            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 20px">
-                <div class="row">
+            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 5px;border-radius: 5px;">
+                <div class="row" style="padding: 15px">
                     <div class="col-sm-12">
                         <h4 class="page-title">Member List</h4><hr>
                     </div>
                     </div>
-                
+                    <div style="padding: 5px">
+                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by name...">
+
+                    </div>
+                    
                 <div class="row">
                     <div class="col-md-12">
 						<div class="table-responsive">
-                            <input type="text" id="myInput" onkeyup="myFunction()"  placeholder="Search by name...">
+                           
                             <table id="myTable" class="table table-striped custom-table">
                                 <thead>
                                     <tr>
@@ -179,7 +184,7 @@
       db.collection("users").orderBy('role').get().then(querySnapshot=>{
       querySnapshot.forEach(doc=>{
           let data = doc.data();
-          let row  = `<tr>
+          let row  = `<tr style="font-size: 13px;">
             
                             <td>
                             <img width="28" height="28" style="cursor: pointer;" onclick="location.href='${data.link}'" src="${data.link}" class="rounded-circle" alt=""> 
@@ -187,8 +192,8 @@
                             </td>
                          
                             <td>${data.regno}</td>
-                            <td><a href="" class="__cf_email__" data-cfemail="fb9a979992959a88929694959288bb9e839a968b979ed5989496">[email&#160;protected]</a></td>
-                            <td><a href="" class="__cf_email__" data-cfemail="fb9a979992959a88929694959288bb9e839a968b979ed5989496">[contact&#160;protected]</a></td>
+                            <td><a href="" style="color: #198754" class="__cf_email__" data-cfemail="fb9a979992959a88929694959288bb9e839a968b979ed5989496">[email&#160;protected]</a></td>
+                            <td><a href="" style="color: #198754" class="__cf_email__" data-cfemail="fb9a979992959a88929694959288bb9e839a968b979ed5989496">[contact&#160;protected]</a></td>
                             <td> <span class="custom-badge status-${data.color}">${data.role}</span></td>
                         
                             <td><span class="custom-badge status-${data.ccolor}">${data.status}</span></td>
