@@ -168,213 +168,280 @@ margin-bottom: 12px; /* Add some space below the input */
 
 </head>
 
-<body>
+<body style="background-color: rgb(238, 238, 238)">
 
-    <div class="header">
-        <div class="header-left">
-            <a href="main.html" class="logo">
-                <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>WakeWithWellness</span>
-            </a>
-        </div>
-        <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
-        <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
-      
-     
+
+    <div class="main-wrapper">
+      <div class="header">
+    <div class="header-left">
+      <a href="main.html" class="logo">
+        <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>Members Portal</span>
+      </a>
     </div>
-
-  <main id="main"> 
-    <div class="container-fluid" style="margin-top: 60px">
-      <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">ATTENDANCE UPDATES</h6>
-
-
-
-<div class="container">
-  <select style="width: 100%;height:30px;font-size: 12px;">
-    <option>Choose batch</option>
-    <option value="first1">First batch (July'2021-May'2022)</option>
-    <option value="first2">First batch (June'2022-May'2023)</option>
-    <option value="second1">Second batch (February'2022-January'2023)</option>
-    <option value="third1">Third batch (July'2022-June'2023)</option>
-    
-</select>
-</div><br>
-    
-
-
-
-
-<p>Last percentage updated on <span style="color: red; font-style:italic">27th August 2022</span></p>
-
-<div class="first1 batch">
-  <div class="table-responsive custom-table-responsive">
-
-    <input type="text" id="myInput" onkeyup="myFunction1()"  placeholder="Search by name...">
-      <table class="table custom-table" id="myTable" style="color: rgb(0, 0, 0);cursor: pointer;">
-            
-          <thead>
-              <tr style="background-color: #5793D1;color: #fff;"> 
-                <th scope="col">Reg No.</th>
-              <th scope="col">Name</th>
-              <th scope="col" style="text-align: center">Percentage</th>
-              <th scope="col">May2'22</th> 
-              <th scope="col">May1'22</th> 
-              <th scope="col">Apr2'22</th> 
-              <th scope="col">Apr1'22</th> 
-              <th scope="col">Mar2'22</th> 
-              <th scope="col">Mar1'22</th> 
-              <th scope="col">Feb2'22</th> 
-              <th scope="col">Feb1'22</th> 
-              <th scope="col">Jan2'22</th> 
-              <th scope="col">Jan1'22</th> 
-              <th scope="col">Dec2'21</th> 
-              <th scope="col">Dec1'21</th> 
-              <th scope="col">Nov2'21</th> 
-              <th scope="col">Nov1'21</th> 
-              <th scope="col">Oct2'21</th> 
-              <th scope="col">Oct1'21</th> 
-              <th scope="col">Sept2'21</th>
-              <th scope="col">Sept1'21</th>
-              <th scope="col">Aug2'21</th>
-              <th scope="col">Aug1'21</th>
-              <th scope="col">July3'21</th>
-              <th scope="col">July2'21</th>
-              <th scope="col">July1'21</th>
-             
-            
-           
+    <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+          <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+        
+      </div>
+      <div class="sidebar" id="sidebar">
+          <div class="sidebar-inner slimscroll">
+              <div id="sidebar-menu" class="sidebar-menu">
+                  <ul>
+                      <li class="menu-title">Main</li>
+                      <li>
+                        <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+                    </li>
+                
+                      <li >
+                        <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+                      </li>
+                     
               
+                     <li>
+                      <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
+                     </li>
+                
+                     <li>
+                      <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
+                     </li>
+
+                     <li>
+                     <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+                    </li>
+
+                    <li>
+                      <a href="payments.html"><i class="fa fa-money"></i> <span>Payments</span></a>
+                  </li>
+
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="page-wrapper">
+          <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;padding: 20px">
+                <div class="row">
+                  <div class="col-sm-12">
+                      <h4 class="page-title">Attendance Updates <a href="myupdates.html" style="font-size:12px;cursor: pointer;">[ <i class="fa fa-pencil-square-o" aria-hidden="true"></i> My Updates ]</a></h4><hr>
+                  </div>
+                </div>
               
-              
-              </tr>
-          </thead>
-          <tbody id="mytable">
-             
-
-          </tbody>
-      </table>
-  </div>
-</div>
+              <div class="row">
+                  <div class="col-md-12">
+         
 
 
-
-<div class="first2 batch">
-  <div class="table-responsive custom-table-responsive">
-
-    <input type="text" id="myInput3" onkeyup="myFunction3()"  placeholder="Search by name...">
-      <table class="table custom-table" id="myTable3" style="color: rgb(0, 0, 0);cursor: pointer;">
-            
-          <thead>
-              <tr style="background-color: #5793D1;color: #fff;"> 
-                <th scope="col">Reg No.</th>
-              <th scope="col">Name</th>
-              <th scope="col" style="text-align: center">Percentage</th>
-             <th scope="col">Sept2'22</th> 
-              <th scope="col">Sept1'22</th> 
-              <th scope="col">Aug2'22</th> 
-              <th scope="col">Aug1'22</th> 
-              <th scope="col">Jul2'22</th> 
-              <th scope="col">Jul1'22</th> 
-              <th scope="col">June'22</th> 
-             
-            
-              
-              </tr>
-          </thead>
-          <tbody id="mytable">
-             
-
-          </tbody>
-      </table>
-  </div>
-</div>
-       
-
-
-<div class="second1 batch">
-  <div class="table-responsive custom-table-responsive">
-     <input type="text" id="myInput2" onkeyup="myFunction2()"  placeholder="Search by name...">
-      <table class="table custom-table" id="myTable2" style="color: rgb(0, 0, 0);cursor: pointer;">
-            
-          <thead>
-              <tr style="background-color: #5793D1;color: #fff;"> 
-                <th scope="col">Reg No.</th>
-              <th scope="col">Name</th>
-              <th scope="col" style="text-align: center">Percentage</th>
-              <th scope="col">Sept2'22</th> 
-              <th scope="col">Sept1'22</th> 
-              <th scope="col">Aug2'22</th>  
-              <th scope="col">Aug1'22</th> 
-              <th scope="col">Jul2'22</th> 
-              <th scope="col">Jul1'22</th> 
-              <th scope="col">June'22</th> 
-              <th scope="col">May2'22</th> 
-              <th scope="col">May1'22</th> 
-              <th scope="col">Apr2'22</th> 
-              <th scope="col">Apr1'22</th> 
-              <th scope="col">Mar2'22</th> 
-              <th scope="col">Mar1'22</th> 
-              <th scope="col">Feb2'22</th> 
-              <th scope="col">Feb1'22</th> 
-
-              </tr>
-          </thead>
-          <tbody id="mytable">
-             
-
-          </tbody>
-      </table>
-  </div>
-</div>
-
-
-
-
-<div class="third1 batch">
-  <div class="table-responsive custom-table-responsive">
-    
-      <table class="table custom-table" id="myTable4" style="color: rgb(0, 0, 0);cursor: pointer;">
-            
-          <thead>
-              <tr style="background-color: #5793D1;color: #fff;"> 
-                <th scope="col">Reg No.</th>
-              <th scope="col">Name</th>
-              <th scope="col" style="text-align: center">Percentage</th>
-             <th scope="col">Sept2'22</th> 
-              <th scope="col">Sept1'22</th> 
-              <th scope="col">Aug2'22</th>
-              <th scope="col">Aug1'22</th> 
-              <th scope="col">Jul2'22</th> 
-       
-
-              </tr>
-          </thead>
-          <tbody id="mytable">
-             
-
-          </tbody>
-      </table>
-  </div>
-</div>
-
-
+                  
    
-    </div>
 
-</main>
+
+                      <div class="container">
+                        <select style="width: 100%;height:40px;font-size: 14px;padding:10px">
+                          <option>Choose batch</option>
+                          <option value="first1">First batch (July'2021-May'2022)</option>
+                          <option value="first2">First batch (June'2022-May'2023)</option>
+                          <option value="second1">Second batch (February'2022-January'2023)</option>
+                          <option value="third1">Third batch (July'2022-June'2023)</option>
+                          
+                      </select>
+                      </div><br>
+                          
+                      
+                      
+                      
+                      
+                      <p style="font-size:12px">Last percentage updated on <span style="color: red; font-style:italic">27th August 2022</span></p>
+                      
+                      <div class="first1 batch" >
+                        <input type="text" id="myInput" onkeyup="myFunction1()"  placeholder="Search by name...">
+                        <div class="table-responsive custom-table-responsive">
+                      
+                         
+                            <table class="table custom-table" id="myTable" style="color: rgb(0, 0, 0);cursor: pointer;">
+                                  
+                                <thead>
+                                    <tr style="background-color: #5793D1;color: #fff;"> 
+                                      <th scope="col">Reg No.</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col" style="text-align: center">Percentage</th>
+                                    <th scope="col">May2'22</th> 
+                                    <th scope="col">May1'22</th> 
+                                    <th scope="col">Apr2'22</th> 
+                                    <th scope="col">Apr1'22</th> 
+                                    <th scope="col">Mar2'22</th> 
+                                    <th scope="col">Mar1'22</th> 
+                                    <th scope="col">Feb2'22</th> 
+                                    <th scope="col">Feb1'22</th> 
+                                    <th scope="col">Jan2'22</th> 
+                                    <th scope="col">Jan1'22</th> 
+                                    <th scope="col">Dec2'21</th> 
+                                    <th scope="col">Dec1'21</th> 
+                                    <th scope="col">Nov2'21</th> 
+                                    <th scope="col">Nov1'21</th> 
+                                    <th scope="col">Oct2'21</th> 
+                                    <th scope="col">Oct1'21</th> 
+                                    <th scope="col">Sept2'21</th>
+                                    <th scope="col">Sept1'21</th>
+                                    <th scope="col">Aug2'21</th>
+                                    <th scope="col">Aug1'21</th>
+                                    <th scope="col">July3'21</th>
+                                    <th scope="col">July2'21</th>
+                                    <th scope="col">July1'21</th>
+                                   
+                                  
+                                 
+                                    
+                                    
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody id="mytable">
+                                   
+                      
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                      
+                      
+                      
+                      <div class="first2 batch">
+                        <input type="text" id="myInput3" onkeyup="myFunction3()"  placeholder="Search by name...">
+                        <div class="table-responsive custom-table-responsive">
+                      
+                         
+                            <table class="table custom-table" id="myTable3" style="color: rgb(0, 0, 0);cursor: pointer;">
+                                  
+                                <thead>
+                                    <tr style="background-color: #5793D1;color: #fff;"> 
+                                      <th scope="col">Reg No.</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col" style="text-align: center">Percentage</th>
+                                   <th scope="col">Sept2'22</th> 
+                                    <th scope="col">Sept1'22</th> 
+                                    <th scope="col">Aug2'22</th> 
+                                    <th scope="col">Aug1'22</th> 
+                                    <th scope="col">Jul2'22</th> 
+                                    <th scope="col">Jul1'22</th> 
+                                    <th scope="col">June'22</th> 
+                                   
+                                  
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody id="mytable">
+                                   
+                      
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                             
+                      
+                      
+                      <div class="second1 batch">
+                        <input type="text" id="myInput2" onkeyup="myFunction2()"  placeholder="Search by name...">
+                        <div class="table-responsive custom-table-responsive">
+                          
+                            <table class="table custom-table" id="myTable2" style="color: rgb(0, 0, 0);cursor: pointer;">
+                                  
+                                <thead>
+                                    <tr style="background-color: #5793D1;color: #fff;"> 
+                                      <th scope="col">Reg No.</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col" style="text-align: center">Percentage</th>
+                                    <th scope="col">Sept2'22</th> 
+                                    <th scope="col">Sept1'22</th> 
+                                    <th scope="col">Aug2'22</th>  
+                                    <th scope="col">Aug1'22</th> 
+                                    <th scope="col">Jul2'22</th> 
+                                    <th scope="col">Jul1'22</th> 
+                                    <th scope="col">June'22</th> 
+                                    <th scope="col">May2'22</th> 
+                                    <th scope="col">May1'22</th> 
+                                    <th scope="col">Apr2'22</th> 
+                                    <th scope="col">Apr1'22</th> 
+                                    <th scope="col">Mar2'22</th> 
+                                    <th scope="col">Mar1'22</th> 
+                                    <th scope="col">Feb2'22</th> 
+                                    <th scope="col">Feb1'22</th> 
+                      
+                                    </tr>
+                                </thead>
+                                <tbody id="mytable">
+                                   
+                      
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                      
+                      
+                      
+                      
+                      <div class="third1 batch">
+                        <div class="table-responsive custom-table-responsive">
+                          
+                            <table class="table custom-table" id="myTable4" style="color: rgb(0, 0, 0);cursor: pointer;">
+                                  
+                                <thead>
+                                    <tr style="background-color: #5793D1;color: #fff;"> 
+                                      <th scope="col">Reg No.</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col" style="text-align: center">Percentage</th>
+                                   <th scope="col">Sept2'22</th> 
+                                    <th scope="col">Sept1'22</th> 
+                                    <th scope="col">Aug2'22</th>
+                                    <th scope="col">Aug1'22</th> 
+                                    <th scope="col">Jul2'22</th> 
+                             
+                      
+                                    </tr>
+                                </thead>
+                                <tbody id="mytable">
+                                   
+                      
+                                </tbody>
+                            </table>
+                        </div>
+                      </div>
+                      
+                      
+                         
+                        
+
+                  </div>
+              </div>
+
+
+
+
+          </div>
+
+           
+          
+          <br>   <br>
+      
+      </div>
+
+  </div>
+
+
 
 
 
   
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <div class="sidebar-overlay" data-reff=""></div>
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.dataTables.min.js"></script>
+  <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+  <script src="assets/js/jquery.slimscroll.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="assets/js/app.js"></script>
 
 
 
