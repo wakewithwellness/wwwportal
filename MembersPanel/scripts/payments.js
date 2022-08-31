@@ -200,7 +200,7 @@ async function getuserInfoRealtime(userID){
                 <div class="row">
                    
                         <div class="table-responsive">
-                            <table class="table table-bordered"">
+                            <table class="table table-bordered">
                                 <thead style="background-color: #f7f7f7">
                                     <tr>
                                         <th>Receipt Number</th>
@@ -282,7 +282,7 @@ async function getuserInfoRealtime(userID){
                      
                 </div>
             </div>
-            <buttom onclick="location.href='activities.html'" style="background-color:cornflowerblue;float:right;padding:7px;padding-left:15px;padding-right:15px;color:white;border-radius:3px; margin-right: 15px; margin-top: 20px"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
+            <buttom onclick="location.href='main.html'" style="cursor:pointer;background-color:cornflowerblue;float:right;padding:7px;padding-left:15px;padding-right:15px;color:white;border-radius:3px; margin-right: 15px; margin-top: 20px"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
         </div>
                        
                         `
