@@ -150,7 +150,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1;padding: 20px">
+<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 20px">
 <div class="row">
 <div class="col-sm-12">
     <h4 class="page-title">Member Details</h4><hr>
@@ -159,7 +159,7 @@ async function getuserInfoRealtime(userID){
 <div class="row">
 
 <div class="col-lg">
-<h5>Name: <span style="color: red">${userInfo.name}</span></h5>
+<h5>Name: <span style="color: #198754">${userInfo.name}</span></h5>
 </div>
 
 
@@ -167,18 +167,18 @@ async function getuserInfoRealtime(userID){
 
 
 <div class="col-lg">
-<h5>Registration no.: <span style="color: red">${userInfo.regno}</span></h5>
+<h5>Registration no.: <span style="color: #198754">${userInfo.regno}</span></h5>
 </div>
 
 <div class="col-lg">
-<h5>Department: <span style="color: red">${userInfo.department}</span></h5>
+<h5>Department: <span style="color: #198754">${userInfo.department}</span></h5>
 </div>
 
 </div>
 
 
 </div>
-            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #5793D1">
+            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754">
            
           
                 <div class="row">
@@ -271,7 +271,7 @@ async function getuserInfoRealtime(userID){
                      
                 </div>
             </div>
-            <buttom onclick="location.href='main.html'" style="cursor:pointer;background-color:cornflowerblue;float:right;padding:7px;padding-left:15px;padding-right:15px;color:white;border-radius:3px; margin-right: 15px; margin-top: 20px"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
+            <buttom onclick="location.href='main.html'" style="cursor:pointer;background-color:#198754;float:right;padding:7px;padding-left:15px;padding-right:15px;color:white;border-radius:3px; margin-right: 15px; margin-top: 20px"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
         </div>
                        
                         `
