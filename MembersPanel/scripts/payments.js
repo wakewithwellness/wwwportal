@@ -9,7 +9,7 @@ function createUserCollection(user){
        uid:user.uid,
        name:user.displayName,
        email:user.email,
-       department:"",
+       dept:"",
        phone:"",
        i1:"",
        i2:"",
@@ -150,7 +150,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 20px">
+<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 20px;border-radius:5px">
 <div class="row">
 <div class="col-sm-12">
     <h4 class="page-title">Member Details</h4><hr>
@@ -171,14 +171,14 @@ async function getuserInfoRealtime(userID){
 </div>
 
 <div class="col-lg">
-<h5>Department: <span style="color: #198754">${userInfo.department}</span></h5>
+<h5>Department: <span style="color: #198754">${userInfo.dept}</span></h5>
 </div>
 
 </div>
 
 
 </div>
-            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754">
+            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius:5px">
            
           
                 <div class="row">
