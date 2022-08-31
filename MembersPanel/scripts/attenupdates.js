@@ -185,11 +185,11 @@ async function getuserInfoRealtime(userID){
                 <div class="row">
                    
                         <div class="table-responsive">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered" style="font-size: 12px">
                                 <thead style="background-color: #f7f7f7">
                                     <tr>
-                                        <th style="width: 12vh">Year</th>
-                                        <th style="width: 15vh">Month</th>
+                                      
+                                        <th style="width: 10vh">Month</th>
                                         <th style="width: 15vh">Week</th>
                                         <th style="width: 20vh">Status</th>
                                         <th>Activity</th>
@@ -198,84 +198,71 @@ async function getuserInfoRealtime(userID){
                                 </thead>
                                 <tbody>
 
-                                <tr display: ${userInfo.Oct22bf}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>October</a></h2>
+                                <tr display: ${userInfo.Oct22b}>
+                               
+                                <td rowspan="2" id=month> <h4>October 2022</h4>
+                               
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Oct22b}</td>
                                 <td>${userInfo.Oct22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Oct22af}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>October</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Oct22a}>
+                               
+                               
                                 <td><a>First</a></td>
                                 <td>${userInfo.Oct22a}</td>
                                 <td>${userInfo.Oct22af}</td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.Sept22bf}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>September</a></h2>
+                                <tr display: ${userInfo.Sept22b}>
+                              
+                                <td rowspan="2" id=month>
+                                    <h4><a>September 2022</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Sept22b}</td>
                                 <td>${userInfo.Sept22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Sept22af}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>September</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Sept22a}>
+                               
                                 <td><a>First</a></td>
                                 <td>${userInfo.Sept22a}</td>
                                 <td>${userInfo.Sept22af}</td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.Aug22bf}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>August</a></h2>
+                                <tr display: ${userInfo.Aug22b}>
+                               
+                                <td rowspan="2" id=month>
+                                    <h4><a>August 2022</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Aug22b}</td>
                                 <td>${userInfo.Aug22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Aug22af}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>August</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Aug22a}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Aug22a}</td>
                                 <td>${userInfo.Aug22af}</td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.Jul22bf}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>July</a></h2>
+                                <tr display: ${userInfo.Jul22b}>
+                               
+                                <td rowspan="2" id=month>
+                                    <h4><a>July 2022</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Jul22b}</td>
                                 <td>${userInfo.Jul22bf}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Jul22af}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>July</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Jul22a}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Jul22a}</td>
                                 <td>${userInfo.Jul22af}</td>
@@ -283,224 +270,185 @@ async function getuserInfoRealtime(userID){
 
                               
 
-                                <tr display: ${userInfo.Junf}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>June</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Jun}>
+                               
+                                <td rowspan="2" id=month>
+                                    <h4 ><a>June 2022</a></h4></td>
+                                
                                 <td><a>First</a></td>
                                 <td>${userInfo.Jun}</td>
                                 <td>${userInfo.Junf}</td>
                                 </tr>
 
+                                <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                </tr>
 
-                                <tr display: ${userInfo.May2f}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>May</a></h2>
+
+                                <tr display: ${userInfo.May2}>
+                                <td rowspan="2" id=month>
+                                    <h4><a>May 2022</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.May2}</td>
                                 <td>${userInfo.May2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.May1f}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>May</a></h2>
-                                </td>
+                                <tr display: ${userInfo.May1}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.May1}</td>
                                 <td>${userInfo.May1f}</td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.Apr2f}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>April</a></h2>
+                                <tr display: ${userInfo.Apr2}>
+                               
+                                <td rowspan="2" id=month>
+                                    <h4><a>April 2022</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Apr2}</td>
                                 <td>${userInfo.Apr2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Apr1f}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>April</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Apr1}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Apr1}</td>
                                 <td>${userInfo.Apr1f}</td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.Mar2f}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>March</a></h2>
+                                <tr display: ${userInfo.Mar2}>
+                               
+                                <td rowspan="2" id=month>
+                                    <h4><a>March 2022</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Mar2}</td>
                                 <td>${userInfo.Mar2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Mar1f}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>March</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Mar1}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Mar1}</td>
                                 <td>${userInfo.Mar1f}</td>
                                 </tr>
 
 
-                                <tr display: ${userInfo.Feb2f}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>February</a></h2>
+                                <tr display: ${userInfo.Feb2}>
+                               
+                                <td rowspan="2" id=month>
+                                    <h4><a>February 2022</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Feb2}</td>
                                 <td>${userInfo.Feb2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Feb1f}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>February</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Feb1}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Feb1}</td>
                                 <td>${userInfo.Feb1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Jan2f}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>January</a></h2>
+                                <tr display: ${userInfo.Jan2}> 
+                                <td rowspan="2" id=month>
+                                    <h4><a>January 2022</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Jan2}</td>
                                 <td>${userInfo.Jan2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Jan1f}>
-                                <td><a>2022</a></td>
-                                <td>
-                                    <h2><a>January</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Jan1}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Jan1}</td>
                                 <td>${userInfo.Jan1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Dec2f}>
-                                <td><a>2021</a></td>
-                                <td>
-                                    <h2><a>December</a></h2>
+                                <tr display: ${userInfo.Dec2}>
+                               
+                                <td rowspan="2" id=month>
+                                    <h4><a>December 2021</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Dec2}</td>
                                 <td>${userInfo.Dec2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Dec1f}>
-                                <td><a>2021</a></td>
-                                <td>
-                                    <h2><a>December</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Dec1}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Dec1}</td>
                                 <td>${userInfo.Dec1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Nov2f}>
-                                <td><a>2021</a></td>
-                                <td>
-                                    <h2><a>November</a></h2>
+                                <tr display: ${userInfo.Nov2}>
+                                <td rowspan="2" id=month>
+                                    <h4><a>November 2021</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Nov2}</td>
                                 <td>${userInfo.Nov2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Nov1f}>
-                                <td><a>2021</a></td>
-                                <td>
-                                    <h2><a>November</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Nov1}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Nov1}</td>
                                 <td>${userInfo.Nov1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Oct2f}>
-                                <td><a>2021</a></td>
-                                <td>
-                                    <h2><a>October</a></h2>
+                                <tr display: ${userInfo.Oct2}>
+                                <td rowspan="2" id=month>
+                                    <h4><a>October 2021</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Oct2}</td>
                                 <td>${userInfo.Oct2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Oct1f}>
-                                <td><a>2021</a></td>
-                                <td>
-                                    <h2><a>October</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Oct1}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Oct1}</td>
                                 <td>${userInfo.Oct1f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Sept2f}>
-                                <td><a>2021</a></td>
-                                <td>
-                                    <h2><a>September</a></h2>
+                                <tr display: ${userInfo.Sept2}>
+                                <td rowspan="2" id=month>
+                                    <h4><a>September 2021</a></h4>
                                 </td>
                                 <td><a>Second</a></td>
                                 <td>${userInfo.Sept2}</td>
                                 <td>${userInfo.Sept2f}</td>
                                 </tr>
 
-                                <tr display: ${userInfo.Sept1f}>
-                                <td><a>2021</a></td>
-                                <td>
-                                    <h2><a>September</a></h2>
-                                </td>
+                                <tr display: ${userInfo.Sept1}>
                                 <td><a>First</a></td>
                                 <td>${userInfo.Sept1}</td>
                                 <td>${userInfo.Sept1f}</td>
                                 </tr>
 
-                                    <tr display: ${userInfo.Aug2f}>
-                                        <td><a>2021</a></td>
-                                        <td>
-                                            <h2><a>August</a></h2>
+                                    <tr display: ${userInfo.Aug2}>
+                                       
+                                        <td rowspan="2" id=month>
+                                            <h4><a>August 2021</a></h4>
                                         </td>
                                         <td><a>Second</a></td>
                                         <td>${userInfo.Aug2}</td>
                                         <td>${userInfo.Aug2f}</td>
                                     </tr>
 
-                                    <tr display: ${userInfo.Aug1f}>
-                                        <td><a>2021</a></td>
-                                        <td>
-                                        <h2><a>August</a></h2>
-                                        </td>   
+                                    <tr display: ${userInfo.Aug1}>
                                         <td><a>First</a></td>                        
                                         <td>${userInfo.Aug1}</td>
                                         <td>${userInfo.Aug1f}</td>
                                     </tr>
 
-                                    <tr display: ${userInfo.July3f}>
-                                        <td><a>2021</a></td>
-                                        <td>
-                                        <h2><a>July</a></h2>
+                                    <tr display: ${userInfo.July3}>
+                                      
+                                        <td rowspan="3" id=month>
+                                        <h4><a>July 2021</a></h4>
                                         </td>   
                                         <td><a>Third</a></td>                                  
                                         <td>${userInfo.July3}</td>   
@@ -508,22 +456,14 @@ async function getuserInfoRealtime(userID){
                                     </tr>
 
 
-                                    <tr display: ${userInfo.July2f}>
-                                    <td><a>2021</a></td>
-                                    <td>
-                                    <h2><a>July</a></h2>
-                                    </td>    
+                                    <tr display: ${userInfo.July2}>   
                                     <td><a>Second</a></td>                             
                                     <td>${userInfo.July2}</td>
                                     <td>${userInfo.July2f}</td>   
                                     </tr>
 
 
-                                   <tr display: ${userInfo.July1f}>
-                                    <td><a>2021</a></td>
-                                    <td>
-                                    <h2><a>July</a></h2>
-                                    </td>  
+                                   <tr display: ${userInfo.July1}>
                                     <td><a>First</a></td>                        
                                     <td>${userInfo.July1}</td>
                                     <td>${userInfo.July1f}</td>   
