@@ -16,7 +16,7 @@ var firebaseConfig = {
 
 
 // Batch1 (1st Year) batch
- db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=>{
+ db.collection("attendance").orderBy('regno').get().then(querySnapshot=>{
  querySnapshot.forEach(doc=>{
      let data = doc.data();
      let row  = `<tr>
@@ -25,9 +25,23 @@ var firebaseConfig = {
                    <label>${data.regno}</label>
                  </th>
                      <td>${data.name}</td>
-                   
-                         <td>${data.May2f}</td>
-                         <td>${data.May1f}</td>
+                     <td>${data.Sept22af}</td>
+                     <td>${data.Sept22af}</td>
+                     <td>${data.Aug22bf}</td>
+                    <td>${data.Aug22af}</td>
+                    <td>${data.Jul22bf}</td>
+                    <td>${data.Jul22af}</td>
+                     <td>${data.Junf}</td>
+                     <td>${data.May2f}</td>
+                     <td>${data.May1f}</td>
+                     <td>${data.Apr2f}</td>
+                     <td>${data.Apr1f}</td>
+                     <td>${data.Mar2f}</td>
+                     <td>${data.Mar1f}</td>
+                     <td>${data.Feb2f}</td>
+                     <td>${data.Feb1f}</td>
+                     <td>${data.May2f}</td>
+                     <td>${data.May1f}</td>
                      <td>${data.Apr2f}</td>
                      <td>${data.Apr1f}</td>
                      <td>${data.Mar2f}</td>
@@ -55,113 +69,3 @@ var firebaseConfig = {
  })
 })
 
-
-
-
-// Batch2 (1st Year) batch
-db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW0066').get().then(querySnapshot=>{
-     querySnapshot.forEach(doc=>{
-         let data = doc.data();
-         let row  = `<tr>
-           
-                    <th scope="row" >
-                       <label>${data.regno}</label>
-                     </th>
-                         <td>${data.name}</td>
-                      
-                         <td>${data.Sept22af}</td>
-                         <td>${data.Sept22af}</td>
-                         <td>${data.Aug22bf}</td>
-                        <td>${data.Aug22af}</td>
-                        <td>${data.Jul22bf}</td>
-                        <td>${data.Jul22af}</td>
-                         <td>${data.Junf}</td>
-                         <td>${data.May2f}</td>
-                         <td>${data.May1f}</td>
-                         <td>${data.Apr2f}</td>
-                         <td>${data.Apr1f}</td>
-                         <td>${data.Mar2f}</td>
-                         <td>${data.Mar1f}</td>
-                         <td>${data.Feb2f}</td>
-                         <td>${data.Feb1f}</td>
-                    
-                   </tr>`;
-         let table = document.getElementById('myTable2')
-         table.innerHTML += row
-     })
-    })
-    
-
-
-.catch(err=>{
- console.log(`Error: ${err}`)
-});
-
-
-
-
-// Batch1 (2nd Year) batch
-db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=>{
-    querySnapshot.forEach(doc=>{
-        let data = doc.data();
-        let row  = `<tr>
-          
-                   <th scope="row">
-                      <label>${data.regno}</label>
-                    </th>
-                        <td>${data.name}</td>
-                    
-                        <td>${data.Sept22af}</td>
-                        <td>${data.Sept22af}</td>
-                        <td>${data.Aug22bf}</td>
-                        <td>${data.Aug22af}</td>
-                        <td>${data.Jul22bf}</td>
-                        <td>${data.Jul22af}</td>
-                        <td>${data.Junf}</td>
-                     
-                       
-                     
-                  </tr>`;
-        let table = document.getElementById('myTable3')
-        table.innerHTML += row
-    })
-   })
-    
-
-
-.catch(err=>{
- console.log(`Error: ${err}`)
-});
-
-
-
-
-
-// Third batch
-db.collection("attendance").orderBy('regno').limitToLast(4).get().then(querySnapshot=>{
-    querySnapshot.forEach(doc=>{
-        let data = doc.data();
-        let row  = `<tr>
-          
-                   <th scope="row">
-                      <label>${data.regno}</label>
-                    </th>
-                        <td>${data.name}</td>
-                        <td>${data.Sept22af}</td>
-                        <td>${data.Sept22af}</td>
-                        <td>${data.Aug22bf}</td>
-                       <td>${data.Aug22af}</td>
-                       <td>${data.Jul22bf}</td>
-                      
-                   
-                  </tr>`;
-        let table = document.getElementById('myTable4')
-        table.innerHTML += row
-    })
-   })
-   
-
-
-.catch(err=>{
-console.log(`Error: ${err}`)
-});
