@@ -25,7 +25,7 @@ var firebaseConfig = {
                    <label>${data.regno}</label>
                  </th>
                      <td>${data.name}</td>
-                     <td style="text-align:center;font-weight:800;color: ${data.status1}">${data.AAper}</td>
+                     <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
                          <td>${data.May2}</td>
                          <td>${data.May1}</td>
                      <td>${data.Apr2}</td>
