@@ -69,7 +69,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Leave Application</h5>
+          <h5 class="modal-title" id="exampleModalLongTitle" style="color:#198754">Leave Application</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -78,9 +78,9 @@
             <form id="leaveform">
                
         
-                <input type="text" id="NameMod" style="width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" placeholder="Name" required><br><br>
+                <input type="text" id="NameMod" style="width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);padding:15px" placeholder="Name" required><br><br>
                 <label style="color: rgb(94, 94, 94);">Reason :</label>
-                <select id="ReasonMod" name="Reason" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);">
+                <select id="ReasonMod" name="Reason" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);padding:5px;color: black">
                     <option value="Select your reason" disabled>Select your reason</option>
           <option value="Sick Leave">Sick Leave</option>
           <option value="Academic Leave">Academic Leave</option>  
@@ -92,9 +92,9 @@
             
         
                 <label style="margin-top: 20px;color: rgb(94, 94, 94);">From :</label><br>
-                   <input type="date" placeholder="DD-MM-YYYY" id="FromMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required><br><br>
+                   <input type="date" placeholder="DD-MM-YYYY" id="FromMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);padding:15px" required><br><br>
                 <label style="color: rgb(94, 94, 94);">To :</label>   <br>
-                  <input type="date" placeholder="DD-MM-YYYY" id="ToMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required>
+                  <input type="date" placeholder="DD-MM-YYYY" id="ToMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);padding:15px" required>
        
        
                   <select id="StatusMod" style="display: none;">
@@ -107,7 +107,7 @@
                 
                 <div class="modal-footer" style="margin-top: 20px;">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()">Apply</button>
+                    <button id="AddModBtn" type="button" class="btn" style="background-color: #198754;color: white" onclick="AddStd()">Apply</button>
                      <button id="UpdModBtn" type="button" class="btn btn-success"  onclick="UpdStd()">Update Record</button>
                      <button id="DelModBtn" type="button" class="btn btn-danger"  onclick="DelStd()">Delete</button>
                   
