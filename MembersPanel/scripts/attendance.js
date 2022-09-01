@@ -322,7 +322,7 @@ function updateattendance(event){
    
 
      // Show alert
-     M.toast({html:`<i style="margin-right:1px" class="fa fa-check-circle" aria-hidden="true"></i> Attendance posted successfully`,classes:"green"})
+     M.toast({html:`<i class="fa fa-check-circle" aria-hidden="true"></i> Attendance posted successfully`,classes:"green"})
 
 
 
