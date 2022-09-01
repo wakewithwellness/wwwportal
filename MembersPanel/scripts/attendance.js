@@ -84,8 +84,6 @@ async function getuserInfoRealtime(userID){
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 
-    
-
     <div class="sidebar" id="sidebar">
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
@@ -201,7 +199,7 @@ async function getuserInfoRealtime(userID){
         
             <p class="container-fluid" style="text-align: center;font-size: 18px;color:#009e1a;border: 1px solid  #009e1a; border-radius:5px;padding: 5px;margin-top:-5px" id="demo"></p>
 
-            <div class="alert">Attendance posted successfully</div>
+   
 
          
   
@@ -321,19 +319,19 @@ function updateattendance(event){
     Sept22af:Sept22af
 
   },{ merge: true}).then(()=>{
-    document.querySelector('.alert').style.display = 'block';
+   
 
      // Show alert
- document.querySelector('.alert').style.display = 'block';
+     M.toast({html:`<i style="margin-right:5px" class="fa fa-check-circle" aria-hidden="true"></i> Attendance posted successfully`,classes:"green"})
 
- // Hide alert after 3 seconds
- setTimeout(function(){
-   document.querySelector('.alert').style.display = 'none';
- },5000);
+
 
  // Clear form
  document.getElementById('attendanceform').reset();
 
+  }).catch((err) => {
+    console.log(err)
+    M.toast({html:`Error ! Attendance not posted`,classes:"red"})
   });
 }
 
