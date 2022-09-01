@@ -13,7 +13,65 @@
     <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
    
-  
+    <style>
+      .alert{
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            background:#79c879;
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            display: none;
+          }
+      
+          
+    
+          .forgot{
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            background:#ff8811;
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            display: none;
+          }
+    
+    
+    
+          /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #2e2e2e00;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgb(207, 207, 207);
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgb(185, 185, 185);
+      }
+    
+      #inputboxform{
+      width: 100%;
+      padding: 12px;
+      color:#0d6efd;
+      border: 1px solid #0d6efd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    
+    
+      </style>
             
 </head>
 <body  style="overflow-x: hidden;background-color: rgb(238, 238, 238)">
@@ -42,11 +100,8 @@
 
 
           <div class="dropdown mobile-user-menu float-right" id="logoutli" style="display: none;">
-              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-              <div class="dropdown-menu dropdown-menu-right">
-                <button type="button" style="width: 100%;" onclick="location.href='admins.html'" class="btn btn-primary">Board</button>
-                <button type="button" style="width: 100%;" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">LogOut</button>
-              </div>
+             
+              
           </div>
       </div>
 
@@ -81,28 +136,77 @@
          
  
     <!--edit profile -->
-  <div id="modal3" class="modal">
+  <div id="modal3" class="modal" style="padding: 10px; max-width: 120vh;max-height: 81vh;overflow-y:visible;">
     <div class="modal-content">
-      <h4 >Edit your details</h4>
-      <div class="file-field input-field">
-        <div class="btn #fbc02d yellow darken-2">
-          <span>File</span>
-          <input type="file" accept="image/*" onchange="uploadImage(event)" />
+  
+      <h5 style="text-align:center;"><img src="../assets/img/profileedit.jpg" style="width: 30vh; height: auto"></h5>
+      <h3 style="text-align:center;">Profile Update</h3>
+     <div style="height: 2px; background-color:rgb(197, 197, 197)"></div>
+      <form autocomplete="off" id="editProfile" style="margin-top: 30px;" onsubmit="updateUserProfile(event)">
+      
+
+        <div class="form-group row">
+          <label class="col-form-label col-md-2">Name : </label>
+          <div class="col-md-10">
+              <input id="inputboxform" type="text" name="name" class="form-control">
+          </div>
         </div>
-        <div class="file-path-wrapper">
-          <input class="file-path validate" type="text">
+
+
+        <div class="form-group row">
+          <label class="col-form-label col-md-2">Email : </label>
+          <div class="col-md-10">
+            <input id="inputboxform" type="email" style="border: 1px solid #adadad;color:#adadad; cursor: not-allowed" disabled name="profileEmail" placeholder="email" class="form-control"/>
+             
+          </div>
+        </div>
+
+      
+        <div class="form-group row">
+          <label class="col-form-label col-md-2">Registration ID : </label>
+          <div class="col-md-10">
+              <input id="inputboxform" type="text" style="border: 1px solid #adadad;color:#adadad; cursor: not-allowed" disabled name="regno" class="form-control">
+          </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label class="col-form-label col-md-2">Department I :</label>
+        <div class="col-md-10">
+            <input id="inputboxform" type="text" style="border: 1px solid #adadad;color:#adadad; cursor: not-allowed" disabled name="department" class="form-control">
         </div>
       </div>
-      <form autocomplete="off" id="editProfile" onsubmit="updateUserProfile(event)">
-        <input type="email" name="profileEmail" placeholder="email" />
-        <input type="text" name="name" placeholder="name" />
-        <input type="number" name="phoneno" placeholder="phoneno" />
-        <input type="number" name="whatsapp" placeholder="whatsapp" />
-        <input type="text" name="college" placeholder="College" />
-        <input type="text" name="department" placeholder="Department" />
-        <input type="text" name="status" placeholder="Status" />
+    
+      <div class="form-group row">
+        <label class="col-form-label col-md-2">Phone no. : </label>
+        <div class="col-md-10">
+            <input id="inputboxform" type="text" name="phoneno" class="form-control">
+        </div>
+    </div>
+    
+    <div class="form-group row">
+      <label class="col-form-label col-md-2">Whatsapp no. : </label>
+      <div class="col-md-10">
+          <input id="inputboxform" type="text" name="whatsapp" class="form-control">
+      </div>
+    </div>
 
-        <button class="btn waves-effect #fbc02d yellow darken-2" type="submit">submit</button>   
+  <div class="form-group row">
+  <label class="col-form-label col-md-2">Address : </label>
+  <div class="col-md-10">
+    <textarea id="inputboxform" rows="3" type="text" name="address" class="form-control"></textarea>
+  </div>
+</div>
+
+      
+
+
+<div class="alert">Updated successfully</div>
+
+  
+
+        <button style="width: 100%;background-color: #0d6efd;padding: 10px;border: none;cursor: pointer;color: white;border-radius: 5px;"  type="submit">Update</button> 
+        
       </form>
   
       
@@ -115,6 +219,37 @@
     <div class="userDetails"></div>
   </div>
          
+  <!--edit profile Picture -->
+
+  <div id="modal4" class="modal container" style="padding: 10px; max-width: 120vh;height: auto;overflow-y: scroll;">
+    <div class="modal-content">
+      <h4 >Update Profile Picture</h4>
+      <p style="color: red;font-style: italic;">File size must be less than 2MB</p>
+  
+      <div class="file-field input-field">
+        <div class="btn" style="background-color: #0d6efd; color: white">
+          <span>Choose file</span>
+          <input type="file" id="file1" max-size="2000" accept="image/*" onchange="uploadImage(event)" />
+         
+        </div>
+        
+        <div class="file-path-wrapper">
+          <input class="file-path validate"  type="text">
+        </div>
+
+        <br><br>
+          <p style="text-align:right" class="prog"></p>
+        <progress  style="width: 100%;height: 25px;margin-top: -10vh;background: #0d6efd;" role="progressbar" value="0" max="100" id="uploader">0%</progress>
+      
+        <div class="success" style="color: #0d6efd;text-align: center;font-size: 20px;" ></div>
+       
+      
+      
+      </div>
+    </div>
+  </div> 
+
+
  
 
 
