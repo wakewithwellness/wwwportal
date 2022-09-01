@@ -52,8 +52,7 @@ async function getuserInfo(userID){
 
           <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
-          <br>
-          <div style="text-align:left"> <a style="text-decoration: none; color: #0d6efd; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+
           <br>
           <button type="submit" class="btn" style="background-color:#0d6efd;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
           
@@ -578,8 +577,7 @@ async function getuserInfoRealtime(userID){
             <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
             <br>
-            <div style="text-align:left"> <a style="text-decoration: none; color: #0d6efd; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
-            <br>
+           
             <button type="submit" class="btn" style="background-color:#0d6efd;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
             
     </form>
@@ -720,5 +718,41 @@ function () {
   
 );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
