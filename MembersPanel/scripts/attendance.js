@@ -217,7 +217,7 @@ async function getuserInfoRealtime(userID){
                                               <form onsubmit="updateattendance(event)" id="attendanceform">
                                             
                                                 <label style="text-align: left;margin-top: -5vh">Tasks Updates</label>
-                                                <textarea id="work" maxlength="300" style="padding: 5px;" required ></textarea>
+                                                <textarea id="work" maxlength="500" style="padding: 5px;" minlength="5" required ></textarea>
                                                 
                                                 <select id="attend" style="color: white;font-weight: 400;">
                                                   <option style="color: rgb(5, 216, 33);font-weight: 400;" value="Present">Present</option>
