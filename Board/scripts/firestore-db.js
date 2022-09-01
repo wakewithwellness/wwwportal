@@ -97,31 +97,32 @@ async function getuserInfoRealtime(userID){
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
-                        <li class="menu-title">Admins Panel</li>
+                        <li class="menu-title" style="text-align: left">Boards Panel</li>
 
                        
 
-                        <li>
-                            <a href="main.html"><i class="fa fa-user"></i> <span>Home</span></a>
-                        </li>
-
-                        <li >
-                        <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
-                    </li>
-
                     <li >
                     <a href="adminattendance.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
-                </li>
+                    </li>
+
+
+                    <li>
+                    <a href="members.html"><i  class="fa fa-users"></i> <span>Members</span></a>
+                   </li>
 
   
 
                        <li>
-                       <a href="../leavepanel.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+                       <a href="leavepanel.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
                       </li>
 
                       <li>
                       <a href="payments.html"><i  class="fa fa-money"></i> <span>Payments</span></a>
                      </li>
+
+                     <li>
+                     <a href="recruitments.html"><i  class="fa fa-user"></i> <span>Registrations</span></a>
+                    </li>
           
 
                        
@@ -136,147 +137,104 @@ async function getuserInfoRealtime(userID){
 
 
         
-        <div class="page-wrapper" style="background-color:white">
+        <div class="page-wrapper">
 
-		<div class="content">
-			<div class="row">
-			    <div class="col-sm-7 col-6">
-				   <h4 class="page-title" style="text-align:left;background-color:rgb(231, 231, 231);padding:8px">My Profile</h4>
-			    </div>
+        <div style="float: right; margin-right:15px">
+        <a type="button" style="background-color:red;padding:8.5px;color:white;margin-left: 5px; border-radius: 4px; cursor: pointer" data-toggle="modal" data-target="#staticBackdrop"> <i class="fa fa-sign-out"></i> SignOut</a>
+        
+       
+      </div>
 
-			 
-			</div>
-			<div class="card-box profile-header" style="background-color:white">
-			    <div class="row">
-				   <div class="col-md-12">
-					  <div class="profile-view">
-                      <div class="profile-img-wrap" style="height:25vh;width:24vh" >
-                      <div class="profile-img">
-                          <img id="proimg"  class="pic circle modal-trigger" href="#modal4" src="../assets/user.png" alt=""><br>
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 20px;border-radius: 5px">
+        
+        <div class="row">
+           <div class="col-sm-12">
+               <h4 class="page-title" style="float:left">My Profile <a style="font-size: 15px;color: #0d6efd" class="modal-trigger" href="#modal3">[ <i class="fa fa-pencil" aria-hidden="true"></i> Edit ]</a></h4><br><br>
+               <hr>
+           </div>
+           </div>
 
-                          <i href="#modal4" class="fa fa-camera upload-button modal-trigger">Upload</i>
-                      </div>
-                      
-                  </div>
-						 <div class="profile-basic">
-							<div class="row">
-							    <div class="col-md-5">
-								   <div class="profile-info-left" style="text-align:left">
-									  <h3 class="user-name m-t-0 mb-0">${userInfo.name}</h3>
-									  <small class="text-muted" style="font-size:15px;">${userInfo.department}</small>
-									  <div class="staff-id">Registration ID : ${userInfo.regno}</div>
-									  
-								   </div>
-							    </div>
-							    <div class="col-md-7">
-								   <ul class="personal-info" style="text-align:left">
-									  <li>
-										 <span class="title">Phone:</span>
-										 <span class="text"><a href="">${userInfo.phone}</a></span>
-									  </li>
-									  <li>
-										 <span class="title">Email:</span>
-										 <span class="text"><a href=""><span class="__cf_email__" data-cfemail="97f4e5fee4e3fef9f6f0e5f8e1f2e4d7f2eff6fae7fbf2b9f4f8fa">${userInfo.email}</span></a></span>
-									  </li>
-									 
-									  <li>
-										 <span class="title">Address:</span>
-										 <span class="text">${userInfo.address}</span>
-									  </li>
-									  <li>
-										 <span class="title">Gender:</span>
-										 <span class="text">${userInfo.gender}</span>
-									  </li>
-								   </ul>
 
-                                
+           <div class="row">
+           <div class="col-lg-2"> 
+          
+           <div class="profile-view">
+                   <div class="profile-img-wrap" style="height:25vh;width:24vh" >
+                       <div class="profile-img">
+                           <img id="proimg" class="pic modal-trigger" style="border-radius: 10px" href="#modal4" src="../assets/user.png" alt=""><br>
 
-							    </div>
-							</div>
-                            
-						 </div>
-					  </div>     <span class="btn btn-secondary" onclick="location.href='${userInfo.agreement}'"><i class="fa fa-download" aria-hidden="true"></i> Agreement</span>
-                      <span class="btn btn-secondary" onclick="location.href='${userInfo.idcard}'"><i class="fa fa-download" aria-hidden="true"></i> Identity Card</span>
-                      <span class="btn btn-success my-2" onclick="location.href='${userInfo.certificate}'"><i class="fa fa-download" aria-hidden="true"></i> Certificate</span>
+                           <i href="#modal4" class="fa fa-upload modal-trigger" style="margin-top: 10px"> Upload</i>
+                       </div>
+                       
+                   </div>
+           </div>
+           
+       </div>
+           <div class="col-lg"> 
+           <div class="row" style="text-align:left">
+
+
+           <div class="col-lg">
+           <h4 style="font-size: 13px">Name: <span style="color: #0d6efd">${userInfo.name}</span></h4>
+           </div>
+
+           <div class="col-lg">
+           <h4 style="font-size: 13px">Registration no.: <span style="color: #0d6efd">${userInfo.regno}</span></h4>
+           </div>
+
+           <div class="col-lg">
+           <h4 style="font-size: 13px">E-mail: <span style="color: #0d6efd">${userInfo.email}</span></h4>
+           </div>
+
          
-				   </div>
-                   
-			    </div>
-			</div>
-			 
-		 </div>
+
+           </div>
+
+
+           <div class="row" style="text-align:left">
+
+           <div class="col-lg">
+           <h4 style="font-size: 13px">Contact no.: <span style="color: #0d6efd">${userInfo.phone}</span></h4>
+           </div>
+
+           <div class="col-lg">
+           <h4 style="font-size: 13px">Whatsapp no.: <span style="color: #0d6efd">${userInfo.whatsapp}</span></h4>
+           </div>
+
+           <div class="col-lg">
+           <h4 style="font-size: 13px">Department: <span style="color: #0d6efd">${userInfo.department}</span></h4>
+           </div>
+
+           </div>
+
+
+           <div class="row" style="text-align:left">
+           <div class="col-lg">
+           <h4 style="font-size: 13px">Address: <span style="color: #0d6efd">${userInfo.address}</span></h4>
+           </div>
+
+           </div>
+
+           </div>
+           </div>
+
+</div>
 
 
 
 
-            <div class="content">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                        <div class="dash-widget">
-							<span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-							<div class="dash-widget-info text-right">
-								<h3>16</h3>
-								<span class="widget-title1">Curation <i class="fa fa-check" aria-hidden="true"></i></span>
-							</div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                        <div class="dash-widget">
-                            <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
-                            <div class="dash-widget-info text-right">
-                                <h3>15</h3>
-                                <span class="widget-title2">Editorial <i class="fa fa-check" aria-hidden="true"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                        <div class="dash-widget">
-                            <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                            <div class="dash-widget-info text-right">
-                                <h3>14</h3>
-                                <span class="widget-title3">Public Relation <i class="fa fa-check" aria-hidden="true"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                        <div class="dash-widget">
-                            <span class="dash-widget-bg4"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                            <div class="dash-widget-info text-right">
-                                <h3>12</h3>
-                                <span class="widget-title4">Events <i class="fa fa-check" aria-hidden="true"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                         <div class="dash-widget">
-                             <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                             <div class="dash-widget-info text-right">
-                                 <h3>7</h3>
-                                 <span class="widget-title3">Design & Media<i class="fa fa-check" aria-hidden="true"></i></span>
-                             </div>
-                         </div>
-                     </div>
 
-                     <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-                         <div class="dash-widget">
-                                    <span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
-                                    <div class="dash-widget-info text-right">
-                                         <h3>6</h3>
-                                         <span class="widget-title1">Marketing<i class="fa fa-check" aria-hidden="true"></i></span>
-                                    </div>
-                         </div>
-                     </div>
-                </div>
-				
-				<div class="row">
-					<div class="col-12 col-md-6 col-lg-8 col-xl-8">
-						<div class="card">
-							<div class="card-header">
-								<h4 class="card-title d-inline-block">MEMBER'S PANEL</h4> 
-							</div>
-							<div class="card-body p-0">
-								<div class="table-responsive">
-									<table class="table mb-0">
+
+<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;border-radius: 5px"">
+
+
+
+<div class="row">
+<div class="col-lg">
+<h4 class="page-title" style="text-align:left">Members Panel</h4>
+<hr>
+<div class="table-responsive" style="margin-bottom: 15px;overflow-x: hidden">
+						<table class="table mb-0">
 									
 										<tbody>
 											<tr>
@@ -323,181 +281,147 @@ async function getuserInfoRealtime(userID){
 												</td>
 											</tr>
 
-                                            <tr>
-                                            <td style="min-width: 200px;">
-                                                
+                                        <tr>
+                                            <td style="min-width: 200px;">    
                                                 <h2><a href="payments.html">Payments</a></h2>
                                             </td>                 
-                
                                             <td class="text-right">
                                                 <a href="payments.html" class="btn btn-outline-primary take-btn">View</a>
                                             </td>
                                         </tr>
 
-                                            <tr>
-												<td style="min-width: 200px;">
-													
-													<h2><a href="membersfeedback.html">Member's Feedbacks</a></h2>
-												</td>                 
 
-												<td class="text-right">
-													<a href="membersfeedback.html" class="btn btn-outline-danger take-btn">View</a>
-												</td>
-											</tr>
-
+                                        <tr>
+											<td style="min-width: 200px;">	
+												<h2><a href="membersfeedback.html">Member's Feedbacks</a></h2>
+											</td>                 
+											<td class="text-right">
+												<a href="membersfeedback.html" class="btn btn-outline-danger take-btn">View</a>
+											</td>
+										</tr>
 
 				
-											<tr>
-												<td style="min-width: 200px;">
-													
-													<h2><a href="leavepanel.html">Leave Requests</a></h2>
-												</td>                 
-					
-												<td class="text-right">
-													<a href="leavepanel.html" class="btn btn-outline-primary take-btn">View</a>
-												</td>
-											</tr>
-
-                                 
+										<tr>
+											<td style="min-width: 200px;">
+												<h2><a href="leavepanel.html">Leave Requests</a></h2>
+											</td>                 
+											<td class="text-right">
+												<a href="leavepanel.html" class="btn btn-outline-primary take-btn">View</a>
+											</td>
+										</tr>
 
 
-                             
-
-                                            <tr>
-                                            <td style="min-width: 200px;">
-                                                
+                                        <tr>
+                                            <td style="min-width: 200px;"> 
                                                 <h2><a href="../MembersPanel/agreement.html">Member Agreement Form</a></h2>
                                             </td>                 
-                
                                             <td class="text-right">
                                                 <a href="../MembersPanel/agreement.html" class="btn btn-outline-primary take-btn">View</a>
                                             </td>
                                         </tr>
 
 
-
                                         <tr>
-                                        <td style="min-width: 200px;">
-                                            
-                                            <h2><a href="attenUpdates.html">Attendance Details</a></h2>
-                                        </td>                 
-            
-                                        <td class="text-right">
-                                            <a href="attenUpdates.html" class="btn btn-outline-primary take-btn">View</a>
-                                        </td>
-                                    </tr>
-
-
-
-                 
-
-                                        
+                                            <td style="min-width: 200px;">
+                                                <h2><a href="attenUpdates.html">Attendance Details</a></h2>
+                                            </td>                 
+                                            <td class="text-right">
+                                                <a href="attenUpdates.html" class="btn btn-outline-primary take-btn">View</a>
+                                            </td>
+                                        </tr>
 
 										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
+						</table>
+			</div>
+            <hr>
+     </div>
 
+
+
+
+
+
+
+    <div class="col-lg">
+    <h4 class="page-title" style="text-align:left">Data Panel</h4>
+<hr>
+            <div class="table-responsive" style="margin-bottom: 15px;overflow-x: hidden">
+            <table class="table mb-0">
+            
+                <tbody>
+
+                <tr>
+                <td style="min-width: 200px;">
                     
+                    <h2><a href="bloodneeded.html"  >Blood Request</a></h2>
+                </td>                 
 
-                  
-                
-				</div>
+                <td class="text-right">
+                    <a href="bloodneeded.html"  class="btn btn-danger take-btn">View</a>
+                </td>
+            </tr>
 
 
 
-                <div class="col-12 col-md-6 col-lg-8 col-xl-8">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title d-inline-block">EXTRA PANEL</h4> 
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="table-responsive">
-                            <table class="table mb-0">
+                    <tr>
+                    <td style="min-width: 200px;">
+                        
+                        <h2><a href="BloodCamp.html"  >Blood Camp Data</a></h2>
+                    </td>                 
+
+                    <td class="text-right">
+                        <a href="BloodCamp.html"  class="btn btn-primary take-btn">View</a>
+                    </td>
+                </tr>
+
+
+                <tr>
+                        <td style="min-width: 200px;">
                             
-                                <tbody>
+                            <h2><a href="volunteershipadmin.html"  >Volunteership Program</a></h2>
+                        </td>                 
 
-                                <tr>
-                                <td style="min-width: 200px;">
-                                    
-                                    <h2><a href="bloodneeded.html"  >Blood Request</a></h2>
-                                </td>                 
+                        <td class="text-right">
+                            <a href="volunteershipadmin.html"  class="btn btn-outline-primary take-btn">View</a>
+                        </td>
+                    </tr>
 
-                                <td class="text-right">
-                                    <a href="bloodneeded.html"  class="btn btn-danger take-btn">View</a>
-                                </td>
-                            </tr>
+                
+                <tr>
+                <td style="min-width: 200px;">
+                    
+                    <h2><a href="wellnessfund.html"  >Wellness Fundraiser</a></h2>
+                </td>                 
 
-    
-
-                                    <tr>
-                                    <td style="min-width: 200px;">
-                                        
-                                        <h2><a href="BloodCamp.html"  >Blood Camp Data</a></h2>
-                                    </td>                 
-
-                                    <td class="text-right">
-                                        <a href="BloodCamp.html"  class="btn btn-primary take-btn">View</a>
-                                    </td>
-                                </tr>
-
-    
-                                <tr>
-                                        <td style="min-width: 200px;">
-                                            
-                                            <h2><a href="volunteershipadmin.html"  >Volunteership Program</a></h2>
-                                        </td>                 
-
-                                        <td class="text-right">
-                                            <a href="volunteershipadmin.html"  class="btn btn-outline-primary take-btn">View</a>
-                                        </td>
-                                    </tr>
-
-                                   
-                                <tr>
-                                <td style="min-width: 200px;">
-                                    
-                                    <h2><a href="wellnessfund.html"  >Wellness Fundraiser</a></h2>
-                                </td>                 
-
-                                <td class="text-right">
-                                    <a href="wellnessfund.html"  class="btn btn-outline-primary take-btn">View</a>
-                                </td>
-                            </tr>
+                <td class="text-right">
+                    <a href="wellnessfund.html"  class="btn btn-outline-primary take-btn">View</a>
+                </td>
+            </tr>
 
 
 
-                            <tr>
-                            <td style="min-width: 200px;">
-                                
-                                <h2><a href="finance.html"  >Finance Updates</a></h2>
-                            </td>                 
+            <tr>
+            <td style="min-width: 200px;">
+                
+                <h2><a href="finance.html"  >Finance Updates</a></h2>
+            </td>                 
 
-                            <td class="text-right">
-                                <a href="finance.html"  class="btn btn-outline-primary take-btn">View</a>
-                            </td>
-                        </tr>
+            <td class="text-right">
+                <a href="finance.html"  class="btn btn-outline-primary take-btn">View</a>
+            </td>
+        </tr>
 
 
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-				
+                </tbody>
+            </table>
+        </div>
 
-                    <div class="row">
-					<div class="col-12 col-md-6 col-lg-8 col-xl-8">
-						<div class="card">
-							<div class="card-header">
-								<h4 class="card-title d-inline-block">INTERNS'S PANEL</h4> 
-							</div>
-							<div class="card-body p-0">
-								<div class="table-responsive">
+<hr>
+        <h4 class="page-title" style="text-align:left;">Intern's Panel</h4>
+        <hr>
+
+        <div class="table-responsive" style="overflow-x: hidden">
 									<table class="table mb-0">
 									
 										<tbody>
@@ -520,23 +444,129 @@ async function getuserInfoRealtime(userID){
 										</tbody>
 									</table>
 								</div>
+
+
+
+    </div>
+
+</div>
+                      
+</div>
+
+
+
+
+
+
+
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                        <div class="dash-widget" style="border-top: 3px solid #0d6efd;border-radius: 5px">
+							<span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+							<div class="dash-widget-info text-right">
+								<h3>16</h3>
+								<span class="widget-title1">Curation <i class="fa fa-check" aria-hidden="true"></i></span>
 							</div>
-						</div>
-					</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                        <div class="dash-widget" style="border-top: 3px solid #0d6efd;border-radius: 5px">
+                            <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>15</h3>
+                                <span class="widget-title2">Editorial <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                        <div class="dash-widget" style="border-top: 3px solid #0d6efd;border-radius: 5px">
+                            <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>14</h3>
+                                <span class="widget-title3">Public Relation <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                        <div class="dash-widget" style="border-top: 3px solid #0d6efd;border-radius: 5px">
+                            <span class="dash-widget-bg4"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>12</h3>
+                                <span class="widget-title4">Events <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4" >
+                         <div class="dash-widget" style="border-top: 3px solid #0d6efd;border-radius: 5px">
+                             <span class="dash-widget-bg3"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                             <div class="dash-widget-info text-right">
+                                 <h3>7</h3>
+                                 <span class="widget-title3">Design & Media<i class="fa fa-check" aria-hidden="true"></i></span>
+                             </div>
+                         </div>
+                     </div>
 
-                        
-                  
-                        
+                     <div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
+                         <div class="dash-widget" style="border-top: 3px solid #0d6efd;border-radius: 5px">
+                                    <span class="dash-widget-bg1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+                                    <div class="dash-widget-info text-right">
+                                         <h3>6</h3>
+                                         <span class="widget-title1">Marketing<i class="fa fa-check" aria-hidden="true"></i></span>
+                                    </div>
+                         </div>
+                     </div>
+                </div>
+				
+                </div>
+
+                
+
+<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;border-radius: 5px">
+
+<div class="row">
+<div class="col-sm-12">
+   <h4 class="page-title" style="text-align:left">My Files </h4>
+   <hr>
+</div>
+</div>
+
+
+<div style="text-align:left; cursor:pointer">
+<h5 style="font-size: 13px" onclick="location.href='${userInfo.agreement}'">Agreement letter <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
+<h5 style="font-size: 13px" onclick="location.href='${userInfo.certificate}'">Download your certificate <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>          
+<h5 style="font-size: 13px" onclick="location.href='${userInfo.idcard}'">ID Card  <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> View</a></h5>
+</div>
+                      
+</div>
 
 
 
-                                   
-     
-                                        
+<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;border-radius: 5px"">
 
-            </div>
+<div class="row">
+<div class="col-sm-12">
+   <h4 class="page-title" style="text-align:left">Code of Ethics and Professional Conduct</h4>
+   <hr>
+</div>
+</div>
+
+
+<div style="text-align:left; cursor:pointer">
+<h5 style="font-size: 13px" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=6af5a5ee-3079-45f1-a14e-0b35ccafe36c'">Code of Ethics and Professional Conduct <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
+</div>
+                      
+</div>
+
+
+
+<br><br>
+
+
+
+
            
-        </div>
+   
 
 
 
@@ -548,11 +578,14 @@ async function getuserInfoRealtime(userID){
                         `
                         editProfile["name"].value = userInfo.name
                         editProfile["profileEmail"].value = userInfo.email
+                        editProfile["regno"].value = userInfo.regno
+                        editProfile["department"].value = userInfo.department
                         editProfile["phoneno"].value = userInfo.phone
                         editProfile["whatsapp"].value = userInfo.whatsapp
-                        editProfile["college"].value = userInfo.college
-                        editProfile["department"].value = userInfo.department
-                        editProfile["status"].value = userInfo.status
+                        editProfile["address"].value = userInfo.address
+                       
+                      
+                       
 
                         if(firebase.auth().currentUser.photoURL){
                             document.querySelector('#proimg').src = firebase.auth().currentUser.photoURL
@@ -718,38 +751,6 @@ function () {
   
 );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
