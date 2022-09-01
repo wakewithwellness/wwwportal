@@ -44,7 +44,7 @@ async function getuserInfo(userID){
       userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
       <div class="card" style="border-top: 3px solid #0d6efd">
       <div class="card-body" style="text-align: center">
-      <h5 class="card-title" style="text-align: center; color: #0d6efd; font-weight: 700; font-size:30px">MEMBERS PORTAL</h5><hr>
+      <h5 class="card-title" style="text-align: center; color: #0d6efd; font-weight: 700; font-size:30px">BOARD PORTAL</h5><hr>
 <br>
       <form autocomplete="off" onsubmit="login(event)">
           <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -568,7 +568,7 @@ async function getuserInfoRealtime(userID){
         userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
         <div class="card" style="border-top: 3px solid #0d6efd">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: #0d6efd; font-weight: 700; font-size:30px">MEMBERS PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: #0d6efd; font-weight: 700; font-size:30px">BOARD PORTAL</h5><hr>
   <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
