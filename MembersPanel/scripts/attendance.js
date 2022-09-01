@@ -322,7 +322,7 @@ function updateattendance(event){
    
 
      // Show alert
-     M.toast({html:`Attendance posted successfully`,classes:"green"})
+     M.toast({html:`<div><i style="font-size: 20px" class="fa fa-check-circle" aria-hidden="true"></i> Attendance posted successfully</div>`,classes:"green"})
 
 
 
@@ -331,7 +331,7 @@ function updateattendance(event){
 
   }).catch((err) => {
     console.log(err)
-    M.toast({html:`Error ! Attendance not posted`,classes:"red"})
+    M.toast({html:`<div><i style="font-size: 20px" class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error ! Attendance not posted</div>`,classes:"red"})
   });
 }
 
