@@ -43,42 +43,32 @@ async function getuserInfo(userID){
        `
    }    
     }else{
-      userDetails.innerHTML = `<div id="content_container" class="container" style=" width: 47vh;
-      height: 50vh;margin-top:80px">
-      
-      <div id="form_container" style="width: 100%;height: 100%;background-color: #222222;box-shadow: 0 0 50px -20px #000;border-radius: 2%;overflow: hidden;">
-      <div id="form_header_container" style="width: 100%;
-      height: 5%;display: flex; justify-content: center;align-items: center;float: left; padding: 20px;padding-bottom: 30px; padding-top: 30px;
-      border-bottom: 1px solid transparent; border-color: cornflowerblue;background: #000;">
-          <h2 id="form_header" style="display: inline-block; font-size: 15px;font-family: Bowlby One SC;
-          font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> INTERN'S PORTAL </h2>
+      userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
+      <div class="card" style="border-top: 3px solid #ffc107">
+      <div class="card-body" style="text-align: center">
+      <h5 class="card-title" style="text-align: center; color: #ffc107; font-weight: 700; font-size:30px">INTERN'S PORTAL</h5><hr>
+<br>
+      <form autocomplete="off" onsubmit="login(event)">
+          <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
+          height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+
+          <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
+          height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+
+         
+          <br>
+          <div style="text-align:left"> <a style="text-decoration: none; color: #ffc107; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+          <br>
+          <button type="submit" class="btn" style="background-color:#ffc107;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+          
+  </form>
+        <div>
+
+
+
+       
       </div>
-
-      <div id="form_content_container" style="width: 100%; height: 90%; float: left; display: flex;justify-content: center;align-items: center;padding-top: 30px;">
-          <div id="form_content_inner_container" style="width: 75%;height: 100%;float: left;">
-           
-          <form autocomplete="off" onsubmit="login(event)" >
-              
-
-            <input type="email" id="loginEmail" placeholder="Email" style="width: 100%;
-              height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-              font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-             
-
-              <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
-              height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-              font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-
-              <a href="#" onclick="forgotPass()">Forgot Password</a><br>
-              <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 15px;" >
-                  <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
-                  font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
-                  
-              </div>
-           </form>
-          </div>
-      </div></div>
-  </div>
+    </div></div>
       `
     
        
@@ -290,44 +280,32 @@ async function getuserInfoRealtime(userID){
 
 
     }else{
-        userDetails.innerHTML = `<div id="content_container" class="container" style=" width: 47vh;
-        height: 50vh;margin-top:80px">
-        
-        <div id="form_container" style="width: 100%;height: 100%;background-color: #222222;box-shadow: 0 0 50px -20px #000;border-radius: 2%;overflow: hidden;">
-        <div id="form_header_container" style="width: 100%;
-        height: 5%;display: flex; justify-content: center;align-items: center;float: left; padding: 20px;padding-bottom: 30px; padding-top: 30px;
-        border-bottom: 1px solid transparent; border-color: cornflowerblue;background: #000;">
-            <h2 id="form_header" style="display: inline-block; font-size: 15px;font-family: Bowlby One SC;
-            font-weight: 900;  text-transform: uppercase;letter-spacing: 1px; background-color: rgb(255, 255, 255);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"> INTERN'S PORTAL </h2>
+        userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
+        <div class="card" style="border-top: 3px solid #ffc107">
+        <div class="card-body" style="text-align: center">
+        <h5 class="card-title" style="text-align: center; color: #ffc107; font-weight: 700; font-size:30px">INTERN'S PORTAL</h5><hr>
+  <br>
+        <form autocomplete="off" onsubmit="login(event)">
+            <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
+            height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+  
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
+            height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+  
+           
+            <br>
+            <div style="text-align:left"> <a style="text-decoration: none; color: #ffc107; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+            <br>
+            <button type="submit" class="btn" style="background-color:#ffc107;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            
+    </form>
+          <div>
+  
+  
+  
+         
         </div>
-
-        <div id="form_content_container" style="width: 100%; height: 90%; float: left; display: flex;justify-content: center;align-items: center;padding-top: 30px;">
-            <div id="form_content_inner_container" style="width: 75%;height: 100%;float: left;">
-             
-            <form autocomplete="off" onsubmit="login(event)" >
-                
-
-              <input type="email" id="loginEmail" placeholder="Email" style="width: 100%;
-                height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-                font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-               
-
-                <input type="password" id="loginPassword" placeholder="Password" style="width: 100%;
-                height: 40px;padding-left: 10px;margin-bottom: 20px;background: #000;font-family: Montserrat;font-weight: 500;color: #fff;
-                font-size: 12px; border-bottom: 2px solid transparent;border-top-left-radius: 2%; border-top-right-radius: 2%;border-color: cornflowerblue;">
-
-                <a href="#" onclick="forgotPass()">Forgot Password</a><br>
-                <div id="button_container" style="width: 100%;height: 45px;background-color: cornflowerblue;color: #fff;margin-top: 15px;" >
-                    <button type="submit" style="width: 100%;height: 100%;background: transparent;color: inherit;font-family: Montserrat;letter-spacing: 1px;
-                    font-weight: 900;font-size: 12px;cursor: pointer;align-items: center;">Login</button>
-                    
-                </div>
-             </form>
-            </div>
-        </div></div>
-    </div>
-
-    </div></div>
+      </div></div>
 
 
     <div class="sidebar-overlay" data-reff=""></div>
@@ -375,6 +353,10 @@ setTimeout(function(){
 },3000);
   
 }
+
+
+
+
 
 function uploadImage(e){
     console.log(e.target.files[0])
