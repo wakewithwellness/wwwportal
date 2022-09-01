@@ -363,7 +363,7 @@
                             alert("Record was not added, there was some problem");
                        }
                        else{
-                            alert("Leave request was sent!");
+                            alert("Leave request is sent!");
                             SelectAllData();
                             
                         
@@ -394,7 +394,7 @@
                             alert("Record was not updated, there was some problem");
                        }
                        else{
-                            alert("Leave request was updated!");
+                            alert("Leave request is updated!");
                             SelectAllData();
                             
                             
@@ -411,7 +411,7 @@
              
              firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).remove().then(
              function(){
-              alert("Leave request was deleted");
+              alert("Leave request is deleted");
               SelectAllData();
               
              }
