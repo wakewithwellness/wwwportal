@@ -145,7 +145,7 @@
                                     <th scope="col">SNo.</th> 
                                     <th scope="col" style="min-width: 22vh">Name</th>
                                     <th scope="col" style="min-width: 20vh">Reason</th>
-                                   <th scope="col" style="min-width: 20vh">From<span style="font-size:10px;color:grey"> [YYYY-MM-DD]</span></th>
+                                    <th scope="col" style="min-width: 20vh">From<span style="font-size:10px;color:grey"> [YYYY-MM-DD]</span></th>
                                     <th scope="col" style="min-width: 18vh">To<span style="font-size:10px;color:grey"> [YYYY-MM-DD]</span></th>
                                     <th scope="col">Status</th>
                                     
@@ -202,7 +202,17 @@
         firebase.initializeApp(firebaseConfig);
     
 
+        const auth=firebase.auth();
+        const db=firebase.database();
 
+
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+  } else {
+    window.location.href = './main.html'; 
+  }
+});
 
 
         //GET ALL DATAzz
