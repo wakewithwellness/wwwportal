@@ -553,7 +553,8 @@ async function getuserInfoRealtime(userID){
 
 
 <div style="text-align:left; cursor:pointer">
-<h5 style="font-size: 13px" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=6af5a5ee-3079-45f1-a14e-0b35ccafe36c'">Code of Ethics and Professional Conduct <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
+
+<h4 style="font-size: 13px" class="modal-trigger" href="#exampleModal">Code of Ethics and Professional Conduct <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h4>
 </div>
                       
 </div>
@@ -751,8 +752,6 @@ function () {
   
 );
 }
-
-
 
 
 
