@@ -48,6 +48,12 @@ function submitForm(e){
 
  // Show alert
  document.querySelector('.alert').style.display = 'block';
+ document.getElementById("submit").innerHTML = "Submitted";
+ document.querySelector('#submit').disabled = "disabled";
+ document.querySelector('#submit').style.cursor = "not-allowed";
+ document.querySelector('#submit').style.background = "#70c6ff";
+ document.querySelector('#submit').style.border = "none";
+ 
 
  // Hide alert after 3 seconds
  setTimeout(function(){
@@ -56,6 +62,7 @@ function submitForm(e){
 
  // Clear form
  document.getElementById('extraForm').reset();
+
 }
 
 // Function to get get form values
