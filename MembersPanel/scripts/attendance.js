@@ -141,7 +141,7 @@ async function getuserInfoRealtime(userID){
 
 
 <div style="text-align: left; margin-bottom:5px">  
-<a onclick="location.href='attenUpdates.html'" style="color:#198754;font-size:14px;text-align:left"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Updates</a></div>
+<a onclick="location.href='attenUpdates.html'" style="color:#198754;font-size:14px;text-align:left;cursor: pointer"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Updates</a></div>
 
             <div class="row">
           
