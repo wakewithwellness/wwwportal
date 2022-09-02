@@ -102,7 +102,7 @@ async function getuserInfoRealtime(userID){
                        
 
                     <li >
-                    <a href="attenUpdates.html.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
+                    <a href="attenUpdates.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
                     </li>
 
 
@@ -156,7 +156,7 @@ async function getuserInfoRealtime(userID){
 
 
            <div class="row">
-           <div class="col-lg-2"> 
+           <div class="col-sm-2"> 
           
            <div class="profile-view">
                    <div class="profile-img-wrap" style="height:25vh;width:24vh" >
@@ -169,20 +169,20 @@ async function getuserInfoRealtime(userID){
                    </div>
            </div>
            
-       </div>
-           <div class="col-lg"> 
+           </div>
+           <div class="col-sm"> 
            <div class="row" style="text-align:left">
 
 
-           <div class="col-lg">
+           <div class="col-sm">
            <h4 style="font-size: 13px">Name: <span style="color: #0d6efd">${userInfo.name}</span></h4>
            </div>
 
-           <div class="col-lg">
+           <div class="col-sm">
            <h4 style="font-size: 13px">Registration no.: <span style="color: #0d6efd">${userInfo.regno}</span></h4>
            </div>
 
-           <div class="col-lg">
+           <div class="col-sm">
            <h4 style="font-size: 13px">E-mail: <span style="color: #0d6efd">${userInfo.email}</span></h4>
            </div>
 
@@ -193,15 +193,15 @@ async function getuserInfoRealtime(userID){
 
            <div class="row" style="text-align:left">
 
-           <div class="col-lg">
+           <div class="col-sm">
            <h4 style="font-size: 13px">Contact no.: <span style="color: #0d6efd">${userInfo.phone}</span></h4>
            </div>
 
-           <div class="col-lg">
+           <div class="col-sm">
            <h4 style="font-size: 13px">Whatsapp no.: <span style="color: #0d6efd">${userInfo.whatsapp}</span></h4>
            </div>
 
-           <div class="col-lg">
+           <div class="col-sm">
            <h4 style="font-size: 13px">Department: <span style="color: #0d6efd">${userInfo.department}</span></h4>
            </div>
 
@@ -209,7 +209,7 @@ async function getuserInfoRealtime(userID){
 
 
            <div class="row" style="text-align:left">
-           <div class="col-lg">
+           <div class="col-sm">
            <h4 style="font-size: 13px">Address: <span style="color: #0d6efd">${userInfo.address}</span></h4>
            </div>
 
@@ -240,11 +240,11 @@ async function getuserInfoRealtime(userID){
 											<tr>
 												<td style="min-width: 200px;">
 													
-													<h2><a href="../MembersPanel/attenUpdates.html"  style="color: green;font-weight: 500;">Attendance</a></h2>
+													<h2><a href="attenUpdates.html"  style="color: green;font-weight: 500;">Attendance</a></h2>
 												</td>                 
 
 												<td class="text-right">
-													<a href="../MembersPanel/attenUpdates.html"  class="btn btn-outline-success take-btn">View</a>
+													<a href="attenUpdates.html"  class="btn btn-outline-success take-btn">View</a>
 												</td>
 											</tr>
 											<tr>
