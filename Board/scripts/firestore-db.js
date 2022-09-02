@@ -102,7 +102,7 @@ async function getuserInfoRealtime(userID){
                        
 
                     <li >
-                    <a href="adminattendance.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
+                    <a href="attenUpdates.html.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
                     </li>
 
 
