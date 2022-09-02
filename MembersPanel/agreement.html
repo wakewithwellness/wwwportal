@@ -16,9 +16,21 @@
    
 </head>
 
+<script>
+  var password ;
+  var pass="852963";
+  password = prompt('Restricted! Please enter the passcode', '');
+  if (password ==pass)
+  console.log('Accessed')
+  else{
+    alert('Error !');
+    window.location="./agreementincorrect.html";
+  }
+</script>
+
 <style>
 
-.alert{
+.alert{ 
     text-align: center;
     padding: 15px;
     background:#79c879;
@@ -42,6 +54,8 @@
 </style>
 
 <body style="background-color: rgb(238, 238, 238)" oncontextmenu="return false">
+
+ 
 
             <div class="header" style="background-color: #333333">
               <div class="header-left">
