@@ -118,6 +118,11 @@ async function getuserInfoRealtime(userID){
            <li>
            <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
           </li>
+
+          <li>
+          <a href="payments.html"><i class="fa fa-money active"></i> <span>Payments</span></a>
+      </li>
+      
         </ul>
         </div>
     </div>
