@@ -533,8 +533,8 @@ async function getuserInfoRealtime(userID){
 
 
 <div style="text-align:left; cursor:pointer">
-<h5 style="font-size: 13px" onclick="location.href='${userInfo.agreement}'">Agreement letter <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
-<h5 style="font-size: 13px" onclick="location.href='${userInfo.certificate}'">Download your certificate <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>          
+<h5 style="font-size: 13px" href="#" onclick="window.open('${userInfo.agreement}', '_blank', 'fullscreen=yes'); return false;">Agreement letter <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
+<h5 style="font-size: 13px" href="#" onclick="window.open('${userInfo.certificate}', '_blank', 'fullscreen=yes'); return false;">Download your certificate <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>          
 <h5 style="font-size: 13px" onclick="location.href='${userInfo.idcard}'">ID Card  <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> View</a></h5>
 </div>
                       
@@ -554,7 +554,7 @@ async function getuserInfoRealtime(userID){
 
 <div style="text-align:left; cursor:pointer">
 
-<h4 style="font-size: 13px" class="modal-trigger" href="#exampleModal">Code of Ethics and Professional Conduct <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h4>
+<h4 style="font-size: 13px" href="#" onclick="window.open('https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=6af5a5ee-3079-45f1-a14e-0b35ccafe36c', '_blank', 'fullscreen=yes'); return false;">Code of Ethics and Professional Conduct <a style="color: #0d6efd"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h4>
 </div>
                       
 </div>
@@ -752,7 +752,3 @@ function () {
   
 );
 }
-
-
-
-
