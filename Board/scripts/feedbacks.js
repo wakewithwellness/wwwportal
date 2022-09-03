@@ -51,17 +51,17 @@ db.collection('feedbacks').orderBy('status').get().then((s) => {
                    </div>
 
                    <div class="row" style="margin-left: 10px">
-                   <div class="col"><p>Rudra Nath : <span style="color:#0d6efd">`+ x.data().rudra +`</span></p></div>
-                   <div class="col"> <p>Rahul kar : <span style="color:#0d6efd">`+ x.data().rahul +`</span></p></div>
-                   <div class="col"> <p>Jimpi Deka : <span style="color:#0d6efd">`+ x.data().jimpi +`</span></p></div>
-                   <div class="col"><p>Krishnakshi Majumdar : <span style="color:#0d6efd">`+ x.data().krishnakshi +`</span></p></div>
+                   <div class="col-lg"><p>Rudra Nath : <span style="color:#0d6efd">`+ x.data().rudra +`</span></p></div>
+                   <div class="col-lg"> <p>Rahul kar : <span style="color:#0d6efd">`+ x.data().rahul +`</span></p></div>
+                   <div class="col-lg"> <p>Jimpi Deka : <span style="color:#0d6efd">`+ x.data().jimpi +`</span></p></div>
+                   <div class="col-lg"><p>Krishnakshi Majumdar : <span style="color:#0d6efd">`+ x.data().krishnakshi +`</span></p></div>
                    </div>
 
                    <div class="row" style="margin-left: 10px">
-                   <div class="col">  <p>Shruti Tater : <span style="color:#0d6efd">`+ x.data().shruti +`</span></p></div>
-                   <div class="col"> <p>Jaidhitya Jonna : <span style="color:#0d6efd">`+ x.data().jai +`</span></p></div>
-                   <div class="col"> <p>Vedant Rasal : <span style="color:#0d6efd">`+ x.data().vedant +`</span></p></div>
-                   <div class="col"> <p>Amit Debbarma : <span style="color:#0d6efd">`+ x.data().amit +`</span></p></div>
+                   <div class="col-lg">  <p>Shruti Tater : <span style="color:#0d6efd">`+ x.data().shruti +`</span></p></div>
+                   <div class="col-lg"> <p>Jaidhitya Jonna : <span style="color:#0d6efd">`+ x.data().jai +`</span></p></div>
+                   <div class="col-lg"> <p>Vedant Rasal : <span style="color:#0d6efd">`+ x.data().vedant +`</span></p></div>
+                   <div class="col-lg"> <p>Amit Debbarma : <span style="color:#0d6efd">`+ x.data().amit +`</span></p></div>
                    </div>
 
           
