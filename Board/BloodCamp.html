@@ -9,74 +9,59 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-
   <link href="../assets/img/favicon.png" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <link href="../MembersPanel/assets/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
+  
+  <link href="../MembersPanel/assets/img/favicon.png" rel="icon">
+<link href="../MembersPanel/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 
-  <link href="../assets/css/style.css" rel="stylesheet">
 
-  <style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    td, th {
-      border: 1px solid #d4d4d4;
-      text-align: left;
-      padding: 8px;
-      font-size: 12px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #e4e4e4;
-    }
-    </style>
-  
 
-  <style>
-    /* Add a black background color to the top navigation */
-  .topnav {
-    background-color: #009ce7;
-    overflow: hidden;
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
   }
   
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  td, th {
+    border: 1px solid #d4d4d4;
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
   }
   
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: rgb(27, 27, 27);
-    color: rgb(235, 235, 235);
+  tr:nth-child(even) {
+    background-color: #e1e1e1;
   }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
+
+ 
   </style>
+
 
 <style>
   #myInput {
@@ -178,234 +163,302 @@ margin-bottom: 12px; /* Add some space below the input */
   </script>
 
 
+
+
+
+
 </head>
 
-<body>
+<body style="background-color: rgb(238, 238, 238)">
 
 
-  <div class="topnav" style="width: 100%;">
-    <div>
-      <img src="../assets/img/logoonly.png" style="width: 160px;float: left;padding: 10px;">
+    <div class="main-wrapper">
+      <div class="header"  style="background-color: #0d6efd;">
+    <div class="header-left">
+      <a href="main.html" class="logo">
+        <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>Boards Portal</span>
+      </a>
+    </div>
+    <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+          <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+        
+      </div>
+      <div class="sidebar" id="sidebar">
+          <div class="sidebar-inner slimscroll">
+              <div id="sidebar-menu" class="sidebar-menu">
+                  <ul>
+                      <li class="menu-title">Boards Panel</li>
+
+                      <li >
+                        <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+                        </li>
+
+                        
+                      <li >
+                        <a href="attenUpdates.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
+                        </li>
+    
+    
+                        <li>
+                        <a href="members.html"><i  class="fa fa-users"></i> <span>Members</span></a>
+                       </li>
+    
       
-    </div> 
-  </div> 
-
-  <main id="main">
-
     
+                           <li>
+                           <a href="leavepanel.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+                          </li>
+    
+                          <li>
+                          <a href="payments.html"><i  class="fa fa-money"></i> <span>Payments</span></a>
+                         </li>
+    
+                         <li>
+                         <a href="recruitments.html"><i  class="fa fa-user"></i> <span>Registrations</span></a>
+                        </li>
+              
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="page-wrapper">
+          <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;">
+                <div class="row"  style="padding: 15px">
+                  <div class="col-sm-12">
+                      <h4 class="page-title">Blood For Life [Blood Camp]</h4><hr>
+                  </div>
+                </div>
 
-        <div class="container-fluid" style="margin-top: 10px">
-          <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">BLOOD FOR LIFE DETAILS</h6>
-
-            <div class="table-responsive custom-table-responsive">
-              <input type="text" id="myInput" onkeyup="myFunction1()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Blood Group...">
-              <input type="text" id="myInput2" onkeyup="myFunction2()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Permanent city...">
-              <input type="text" id="myInput3" onkeyup="myFunction3()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Temporary city...">
-                <table class="table custom-table" id="myTable" style="color: black;">
-                    <thead>
-                        <tr  style="background-color: #5793D1;color: #fff;"> 
-                        <th scope="col">SNo.</th> 
-                        <th scope="col" style="min-width: 25vh">Name.</th>
-                        <th scope="col" style="min-width: 30vh">Email</th>
-                        <th scope="col">Contact</th>
-                        <th scope="col">Whatsapp</th>
-                        <th scope="col" style="background-color:darkorange">BloodGroup</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Height</th>
-                        <th scope="col">Weight</th>
-                        <th scope="col">BMI</th>
-                        <th scope="col" style="background-color:#04AA6D">Status</th>
-                        <th scope="col" style="min-width: 15vh">Identity</th>
-                        <th scope="col">IDNumber</th>
-                        <th scope="col" style="min-width: 35vh">Permanent Address</th>
-                        <th scope="col">State</th>
-                        <th scope="col">Pincode</th>
-                        <th scope="col">City</th>
-                        <th scope="col" style="min-width: 35vh">Temporary Address</th>
-                        <th scope="col">State</th>
-                        <th scope="col">Pincode</th>
-                        <th scope="col">City</th>
-                     
-
+                <div style="padding: 15px; margin-top: -25px;">
+                  <input type="text" id="myInput" onkeyup="myFunction1()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Blood Group...">
+                  <input type="text" id="myInput2" onkeyup="myFunction2()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Permanent city...">
+                  <input type="text" id="myInput3" onkeyup="myFunction3()" style="position: relative;padding: 5px;margin: 10px;" placeholder="Temporary city...">
                   
-                        </tr>
-                    </thead>
-                    <tbody id="tbody1">
-                       
+                </div>
+              
+              <div class="row">
+                  <div class="col-md-12">
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                    <!-- Main content -->
+                    <div class="table-responsive custom-table-responsive">
+                         <table class="table custom-table" id="myTable" style="color: black;">
+                            <thead>
+                                <tr  style="background-color: #0d6efd;color: #fff;"> 
+                                <th scope="col">SNo.</th> 
+                                <th scope="col" style="min-width: 25vh">Name.</th>
+                                <th scope="col" style="min-width: 30vh">Email</th>
+                                <th scope="col">Contact</th>
+                                <th scope="col">Whatsapp</th>
+                                <th scope="col">BloodGroup</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Height</th>
+                                <th scope="col">Weight</th>
+                                <th scope="col">BMI</th>
+                                <th scope="col">Status</th>
+                                <th scope="col" style="min-width: 15vh">Identity</th>
+                                <th scope="col">IDNumber</th>
+                                <th scope="col" style="min-width: 35vh">Permanent Address</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Pincode</th>
+                                <th scope="col">City</th>
+                                <th scope="col" style="min-width: 35vh">Temporary Address</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Pincode</th>
+                                <th scope="col">City</th>
+                             
+        
+                          
+                                </tr>
+                            </thead>
+                            <tbody id="tbody1">
+                               
+        
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Main content -->
+                </div>
+              </div>
+
+          </div>
+          <br>   <br>
+      
+      </div>
+
+  </div>
 
 
-    
-   </main>
+
+
 
   
-
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <div class="sidebar-overlay" data-reff=""></div>
+  <script src="../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../MembersPanel/assets/js/popper.min.js"></script>
+  <script src="../MembersPanel/assets/js/bootstrap.min.js"></script>
+  <script src="../MembersPanel/assets/js/jquery.dataTables.min.js"></script>
+  <script src="../MembersPanel/assets/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../MembersPanel/assets/js/jquery.slimscroll.js"></script>
+  <script src="../MembersPanel/assets/js/select2.min.js"></script>
+  <script src="../MembersPanel/assets/js/moment.min.js"></script>
+  <script src="../MembersPanel/assets/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="../MembersPanel/assets/js/app.js"></script>
+
 
 
   <script src="../assets/js/main.js"></script>
 
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
 
   <script id="MainScript">
-      //Connection
-        var firebaseConfig = {
-           apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
-            authDomain: "members-76725.firebaseapp.com",
-            databaseURL: "https://members-76725-default-rtdb.firebaseio.com",
-            projectId: "members-76725",
-            storageBucket: "members-76725.appspot.com",
-            messagingSenderId: "734645197873",
-            appId: "1:734645197873:web:808127fdb4d643d4d24910",
-            measurementId: "G-7LYZ3R48GT"
-        };
+    //Connection
+      var firebaseConfig = {
+         apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+          authDomain: "members-76725.firebaseapp.com",
+          databaseURL: "https://members-76725-default-rtdb.firebaseio.com",
+          projectId: "members-76725",
+          storageBucket: "members-76725.appspot.com",
+          messagingSenderId: "734645197873",
+          appId: "1:734645197873:web:808127fdb4d643d4d24910",
+          measurementId: "G-7LYZ3R48GT"
+      };
 
-        //Init Firebase
-        firebase.initializeApp(firebaseConfig);
-
-
+      //Init Firebase
+      firebase.initializeApp(firebaseConfig);
 
 
-        //GET ALL DATA
 
-        function SelectAllData(){
-            firebase.database().ref('blooddonation').once('value',
-            function(AllRecords){
-                AllRecords.forEach(
-                    function(CurrentRecord){
-                        var name = CurrentRecord.val().name;
-                        var email = CurrentRecord.val().email;
-                        var phone = CurrentRecord.val().phone;
-                        var whatsapp = CurrentRecord.val().whatsapp;
-                        var bloodg = CurrentRecord.val().bloodg;
-                  
-                        var age = CurrentRecord.val().age;
-                        var height = CurrentRecord.val().height;
-                        var weight = CurrentRecord.val().weight;
-                        var bmi = CurrentRecord.val().bmi;
-                        var info = CurrentRecord.val().info;
-                        var identity = CurrentRecord.val().identity;
-                        var idnumber = CurrentRecord.val().idnumber;
-                        var address1 = CurrentRecord.val().address1;
-                        var state = CurrentRecord.val().state;
-                        var zipcode = CurrentRecord.val().zipcode;
-                        var city = CurrentRecord.val().city;
-                      
-                        var address2 = CurrentRecord.val().address2;
-                        var state2 = CurrentRecord.val().state2;
-                        var zipcode2 = CurrentRecord.val().zipcode2;
-                        var city2 = CurrentRecord.val().city2;
-                       
-                        AddItemsToTable(name,email,phone,whatsapp,bloodg,age,height,weight,bmi,info,identity,idnumber,address1,state,zipcode,city,address2,state2,zipcode2,city2);
 
-                    }
-                );
+      //GET ALL DATA
 
-            });
-        }
+      function SelectAllData(){
+          firebase.database().ref('blooddonation').once('value',
+          function(AllRecords){
+              AllRecords.forEach(
+                  function(CurrentRecord){
+                      var name = CurrentRecord.val().name;
+                      var email = CurrentRecord.val().email;
+                      var phone = CurrentRecord.val().phone;
+                      var whatsapp = CurrentRecord.val().whatsapp;
+                      var bloodg = CurrentRecord.val().bloodg;
+                
+                      var age = CurrentRecord.val().age;
+                      var height = CurrentRecord.val().height;
+                      var weight = CurrentRecord.val().weight;
+                      var bmi = CurrentRecord.val().bmi;
+                      var info = CurrentRecord.val().info;
+                      var identity = CurrentRecord.val().identity;
+                      var idnumber = CurrentRecord.val().idnumber;
+                      var address1 = CurrentRecord.val().address1;
+                      var state = CurrentRecord.val().state;
+                      var zipcode = CurrentRecord.val().zipcode;
+                      var city = CurrentRecord.val().city;
+                    
+                      var address2 = CurrentRecord.val().address2;
+                      var state2 = CurrentRecord.val().state2;
+                      var zipcode2 = CurrentRecord.val().zipcode2;
+                      var city2 = CurrentRecord.val().city2;
+                     
+                      AddItemsToTable(name,email,phone,whatsapp,bloodg,age,height,weight,bmi,info,identity,idnumber,address1,state,zipcode,city,address2,state2,zipcode2,city2);
 
-        window.onload = SelectAllData;
+                  }
+              );
 
-        //Filling the table
-        var stdNo = 0;
-        function AddItemsToTable(name,email,phone,whatsapp,bloodg,age,height,weight,bmi,info,identity,idnumber,address1,state,zipcode,city,address2,state2,zipcode2,city2){
-            var tbody = document.getElementById('tbody1');
-            var trow = document.createElement('tr');
-            var td1 = document.createElement('td');
-            var td2 = document.createElement('td');
-            var td3 = document.createElement('td');
-            var td4 = document.createElement('td');
-            var td5 = document.createElement('td');
-            var td6 = document.createElement('td');
-            var td7 = document.createElement('td');
-            var td8 = document.createElement('td');
-            var td9 = document.createElement('td');
-            var td10 = document.createElement('td');
-            var td11 = document.createElement('td');
-            var td12 = document.createElement('td');
-            var td13 = document.createElement('td');
-            var td14 = document.createElement('td');
-            var td15 = document.createElement('td');
-            var td16 = document.createElement('td');
-            var td17 = document.createElement('td');
-            var td18 = document.createElement('td');
-            var td19 = document.createElement('td');
-            var td20 = document.createElement('td');
-            var td21 = document.createElement('td');
-       
+          });
+      }
+
+      window.onload = SelectAllData;
+
+      //Filling the table
+      var stdNo = 0;
+      function AddItemsToTable(name,email,phone,whatsapp,bloodg,age,height,weight,bmi,info,identity,idnumber,address1,state,zipcode,city,address2,state2,zipcode2,city2){
+          var tbody = document.getElementById('tbody1');
+          var trow = document.createElement('tr');
+          var td1 = document.createElement('td');
+          var td2 = document.createElement('td');
+          var td3 = document.createElement('td');
+          var td4 = document.createElement('td');
+          var td5 = document.createElement('td');
+          var td6 = document.createElement('td');
+          var td7 = document.createElement('td');
+          var td8 = document.createElement('td');
+          var td9 = document.createElement('td');
+          var td10 = document.createElement('td');
+          var td11 = document.createElement('td');
+          var td12 = document.createElement('td');
+          var td13 = document.createElement('td');
+          var td14 = document.createElement('td');
+          var td15 = document.createElement('td');
+          var td16 = document.createElement('td');
+          var td17 = document.createElement('td');
+          var td18 = document.createElement('td');
+          var td19 = document.createElement('td');
+          var td20 = document.createElement('td');
+          var td21 = document.createElement('td');
+     
+
+          
+          td1.innerHTML = ++stdNo;
+          td2.innerHTML = name;
+          td3.innerHTML = email;
+          td4.innerHTML = phone;
+          td5.innerHTML = whatsapp;
+          td6.innerHTML = bloodg;
+          td7.innerHTML = age;
+          td8.innerHTML = height;
+          td9.innerHTML = weight;
+          td10.innerHTML = bmi;
+          td11.innerHTML = info;
+          td12.innerHTML = identity;
+          td13.innerHTML = idnumber;
+          td14.innerHTML = address1;
+          td15.innerHTML = state;
+          td16.innerHTML = zipcode;
+          td17.innerHTML = city;
+          td18.innerHTML = address2;
+          td19.innerHTML = state2;
+          td20.innerHTML = zipcode2;
+          td21.innerHTML = city2;
   
-            
-            td1.innerHTML = ++stdNo;
-            td2.innerHTML = name;
-            td3.innerHTML = email;
-            td4.innerHTML = phone;
-            td5.innerHTML = whatsapp;
-            td6.innerHTML = bloodg;
-            td7.innerHTML = age;
-            td8.innerHTML = height;
-            td9.innerHTML = weight;
-            td10.innerHTML = bmi;
-            td11.innerHTML = info;
-            td12.innerHTML = identity;
-            td13.innerHTML = idnumber;
-            td14.innerHTML = address1;
-            td15.innerHTML = state;
-            td16.innerHTML = zipcode;
-            td17.innerHTML = city;
-            td18.innerHTML = address2;
-            td19.innerHTML = state2;
-            td20.innerHTML = zipcode2;
-            td21.innerHTML = city2;
-    
 
 
-            trow.appendChild(td1); 
-            trow.appendChild(td2); 
-            trow.appendChild(td3); 
-            trow.appendChild(td4); 
-            trow.appendChild(td5); 
-            trow.appendChild(td6); 
-            trow.appendChild(td7); 
-            trow.appendChild(td8); 
-            trow.appendChild(td9);
-            trow.appendChild(td10); 
-            trow.appendChild(td11); 
-            trow.appendChild(td12); 
-            trow.appendChild(td13); 
-            trow.appendChild(td14); 
-            trow.appendChild(td15); 
-            trow.appendChild(td16); 
-            trow.appendChild(td17); 
-            trow.appendChild(td18); 
-            trow.appendChild(td19); 
-            trow.appendChild(td20); 
-            trow.appendChild(td21); 
+          trow.appendChild(td1); 
+          trow.appendChild(td2); 
+          trow.appendChild(td3); 
+          trow.appendChild(td4); 
+          trow.appendChild(td5); 
+          trow.appendChild(td6); 
+          trow.appendChild(td7); 
+          trow.appendChild(td8); 
+          trow.appendChild(td9);
+          trow.appendChild(td10); 
+          trow.appendChild(td11); 
+          trow.appendChild(td12); 
+          trow.appendChild(td13); 
+          trow.appendChild(td14); 
+          trow.appendChild(td15); 
+          trow.appendChild(td16); 
+          trow.appendChild(td17); 
+          trow.appendChild(td18); 
+          trow.appendChild(td19); 
+          trow.appendChild(td20); 
+          trow.appendChild(td21); 
 
 
- 
-            
-            tbody.appendChild(trow);
-            
-        }
+
+          
+          tbody.appendChild(trow);
+          
+      }
 
 
-  </script>
+</script>
+
 
 
 </body>
