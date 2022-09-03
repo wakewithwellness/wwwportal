@@ -15,7 +15,7 @@ db.collection('feedbacks').orderBy('status').get().then((s) => {
                 <div class="col-md-12">
                
 
-                <h4 id="namefeed" class="mb-0 text"`+ n+`">`+ x.data().name + `  <span style="color: red">`+ x.data().status +`</span></h4><hr>
+                <h2 id="namefeed" class="mb-0 text"`+ n+`">`+ x.data().name + `  <span style="color: red; font-size: 16px">`+ x.data().status +`</span></h4><hr>
                    <div class="container-fluid" style="margin-left: 4px">
                    
                    <div class="row" style="font-size: 14px">
@@ -39,15 +39,16 @@ db.collection('feedbacks').orderBy('status').get().then((s) => {
                    <p>7. How much would you rate the overall functioning of the current board? : <span style="color:#0d6efd">`+ x.data().f7 +`</span></p>
                    <p>8. Are you willing to continue in WWW for the coming years? : <span style="color:#0d6efd">`+ x.data().f8 +`</span></p>
                    <p>9. Are you interested in managing the board of WWW anytime in the future? : <span style="color:#0d6efd">`+ x.data().f9 +`</span></p>
-                <hr>
-                   <p style="color:green">Board Members Feedback :</p>
+               
 
+                <div style="margin-left: -4px;" `+ x.data().h +` >
+                <hr>
+                  <p style="color:green">Board Members Feedback :</p>
                    <div class="row" style="margin-left: 10px">
                    <div class="col-lg"><p>Sudhanshu Borthakur : <span style="color:#0d6efd">`+ x.data().sudhanshu +`</span></p></div>
                    <div class="col-lg"><p>Arnavraj Baruah : <span style="color:#0d6efd">`+ x.data().arnav +`</span></p></div>
                    <div class="col-lg"><p>Ankur Jyoti Dutta : <span style="color:#0d6efd">`+ x.data().ankur +`</span></p></div>
-                   <div class="col-lg"> <p>Sanjushree Bharadwaj : <span style="color:#0d6efd">`+ x.data().sanjushree +`</span></p></div>
-               
+                   <div class="col-lg"> <p>Sanjushree Bharadwaj : <span style="color:#0d6efd">`+ x.data().sanjushree +`</span></p></div>              
                    </div>
 
                    <div class="row" style="margin-left: 10px">
@@ -64,6 +65,7 @@ db.collection('feedbacks').orderBy('status').get().then((s) => {
                    <div class="col-lg"> <p>Amit Debbarma : <span style="color:#0d6efd">`+ x.data().amit +`</span></p></div>
                    </div>
 
+                   </div>
           
                    </div>
                  
