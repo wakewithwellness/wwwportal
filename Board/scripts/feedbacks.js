@@ -6,44 +6,77 @@ db.collection('feedbacks').orderBy('name').get().then((s) => {
      $("#station_box").html(""); // This will empty your station box
      var n = 0;
      s.forEach(function(x){
-        $("#accordion").append(`
-  <div class="card">
-    <div class="card-header" id="heading`+ n +`">
-        
-            <p style="cursor: pointer; font-weight: bold" class="mb-0 text" data-toggle="collapse" data-target="#collapse`+ n+`">`+ x.data().name +`</p>
-       
-     </div>
+        $("#feedbackk").append(`
+ 
+   
   
-     <div id="collapse`+ n +`" class="collapse" data-parent="#accordion">
-        <div class="card-body">
-           <p>Registration no. : <span style="font-weight: bold">`+ x.data().regno +`</span></p>
-           <p>Email ID : <span style="font-weight: bold">`+ x.data().email +`</span></p><hr>
-           <ol>
-           <li>Are the tasks or events held to contribute to the development of society? : <span style="font-weight: bold">`+ x.data().f1 +`</span></li><hr>
-           <li>Is WWW helping in developing your social and management skills ? : <span style="font-weight: bold">`+ x.data().f2 +`</span></li><hr>
-           <li>Is WWW meeting your expectations as a social welfare organization? : <span style="font-weight: bold">`+ x.data().f3 +`</span></li><hr>
-           <li>Is our official website user friendly? : <span style="font-weight: bold">`+ x.data().f4 +`</span></li><hr>
-           <li>What are the necessary changes we need to make if any ? (Give any necessary input) : <span style="font-weight: bold">`+ x.data().f5 +`</span></li><hr>
-           <li>How much would you rate the overall functioning of departments? : <span style="font-weight: bold">`+ x.data().f6 +`</span></li><hr>
-           <li>How much would you rate the overall functioning of the current board? : <span style="font-weight: bold">`+ x.data().f7 +`</span></li><hr>
-           <li>Are you willing to continue in WWW for the coming years? : <span style="font-weight: bold">`+ x.data().f8 +`</p><hr>
-           <li>Are you interested in managing the board of WWW anytime in the future? : <span style="font-weight: bold">`+ x.data().f9 +`</span></li><hr>
-           <li>Sudhanshu Borthakur : <span style="font-weight: bold">`+ x.data().sudhanshu +`</span></li><hr>
-           <li>Arnavraj Baruah : <span style="font-weight: bold">`+ x.data().arnav +`</span></li><hr>
-           <li>Ankur Jyoti Dutta : <span style="font-weight: bold">`+ x.data().ankur +`</span></li><hr>
-           <li>Sanjushree Bharadwaj : <span style="font-weight: bold">`+ x.data().sanjushree +`</span></li><hr>
-           <li>Rudra Nath : <span style="font-weight: bold">`+ x.data().rudra +`</span></li><hr>
-           <li>Rahul kar : <span style="font-weight: bold">`+ x.data().rahul +`</span></li><hr>
-           <li>Jimpi Deka : <span style="font-weight: bold">`+ x.data().jimpi +`</span></li><hr>
-           <li>Krishnakshi Majumdar : <span style="font-weight: bold">`+ x.data().krishnakshi +`</span></li><hr>
-           <li>Jaidhitya Jonna : <span style="font-weight: bold">`+ x.data().jai +`</span></li><hr>
-           <li>Vedant Rasal : <span style="font-weight: bold">`+ x.data().vedant +`</span></li><hr>
-           <li>Amit Debbarma : <span style="font-weight: bold">`+ x.data().amit +`</span></li><hr>
-           <li>Shruti Tater : <span style="font-weight: bold">`+ x.data().shruti +`</span></li>
-           </ol>
-        </div>
-     </div>
-  </div>
+                <div class="content" id="feeditem" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;padding: 15px">
+                <div class="row">
+                <div class="col-md-12">
+               
+
+                <h4 id="namefeed" class="mb-0 text"`+ n+`">`+ x.data().name + `  <span style="color: red">`+ x.data().status +`</span></h4><hr>
+                   <div class="container-fluid" style="margin-left: 4px">
+                   
+                   <div class="row" style="font-size: 14px">
+                   <div class="col-lg">
+                   <p>E-mail: <span style="color:#0d6efd">`+ x.data().email +`</span></p>
+                   </div>
+                   <div class="col-lg">
+                   <p>Registration no: <span style="color:#0d6efd">`+ x.data().regno +`</span></p>
+                   </div>
+                   </div>
+                
+                 
+                   <div style="margin-left: -4px;" `+ x.data().hide +` >
+                   <hr>
+                   <p>1. Are the tasks or events held to contribute to the development of society? : <span style="color:#0d6efd">`+ x.data().f1 +`</span></p>
+                   <p>2. Is WWW helping in developing your social and management skills ? : <span style="color:#0d6efd">`+ x.data().f2 +`</span></p>
+                   <p>3. Is WWW meeting your expectations as a social welfare organization? : <span style="color:#0d6efd">`+ x.data().f3 +`</span></p>
+                   <p>4. Is our official website user friendly? : <span style="color:#0d6efd">`+ x.data().f4 +`</span></p>
+                   <p>5. What are the necessary changes we need to make if any ? (Give any necessary input) : <span style="color:#0d6efd">`+ x.data().f5 +`</span></p>
+                   <p>6. How much would you rate the overall functioning of departments? : <span style="color:#0d6efd">`+ x.data().f6 +`</span></p>
+                   <p>7. How much would you rate the overall functioning of the current board? : <span style="color:#0d6efd">`+ x.data().f7 +`</span></p>
+                   <p>8. Are you willing to continue in WWW for the coming years? : <span style="color:#0d6efd">`+ x.data().f8 +`</span></p>
+                   <p>9. Are you interested in managing the board of WWW anytime in the future? : <span style="color:#0d6efd">`+ x.data().f9 +`</span></p>
+                <hr>
+                   <p style="color:green">Board Members Feedback :</p>
+
+                   <div class="row" style="margin-left: 10px">
+                   <div class="col-lg"><p>Sudhanshu Borthakur : <span style="color:#0d6efd">`+ x.data().sudhanshu +`</span></p></div>
+                   <div class="col-lg"><p>Arnavraj Baruah : <span style="color:#0d6efd">`+ x.data().arnav +`</span></p></div>
+                   <div class="col-lg"><p>Ankur Jyoti Dutta : <span style="color:#0d6efd">`+ x.data().ankur +`</span></p></div>
+                   <div class="col-lg"> <p>Sanjushree Bharadwaj : <span style="color:#0d6efd">`+ x.data().sanjushree +`</span></p></div>
+               
+                   </div>
+
+                   <div class="row" style="margin-left: 10px">
+                   <div class="col"><p>Rudra Nath : <span style="color:#0d6efd">`+ x.data().rudra +`</span></p></div>
+                   <div class="col"> <p>Rahul kar : <span style="color:#0d6efd">`+ x.data().rahul +`</span></p></div>
+                   <div class="col"> <p>Jimpi Deka : <span style="color:#0d6efd">`+ x.data().jimpi +`</span></p></div>
+                   <div class="col"><p>Krishnakshi Majumdar : <span style="color:#0d6efd">`+ x.data().krishnakshi +`</span></p></div>
+                   </div>
+
+                   <div class="row" style="margin-left: 10px">
+                   <div class="col">  <p>Shruti Tater : <span style="color:#0d6efd">`+ x.data().shruti +`</span></p></div>
+                   <div class="col"> <p>Jaidhitya Jonna : <span style="color:#0d6efd">`+ x.data().jai +`</span></p></div>
+                   <div class="col"> <p>Vedant Rasal : <span style="color:#0d6efd">`+ x.data().vedant +`</span></p></div>
+                   <div class="col"> <p>Amit Debbarma : <span style="color:#0d6efd">`+ x.data().amit +`</span></p></div>
+                   </div>
+
+          
+                   </div>
+                 
+                 
+           
+
+
+                </div> 
+                </div>  
+                </div>
+
+     
+
   `);
   
         n += 1;
