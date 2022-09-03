@@ -5,14 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Leave Panel</title>
+  <title>Leaves</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -25,9 +24,24 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/css/style.css" rel="stylesheet">
 
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../MembersPanel/assets/img/favicon.png" rel="icon">
+<link href="../MembersPanel/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -36,431 +50,488 @@
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-  <style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    td, th {
-      border: 1px solid #d4d4d4;
-      text-align: left;
-      padding: 8px;
-      font-size: 12px;
-    }
-   
-    
-    tr:nth-child(even) {
-      background-color: #e4e4e4;
-   
-    }
-    </style>
-  
 
-  <style>
-    /* Add a black background color to the top navigation */
-  .topnav {
-    background-color: #009ce7;
-    overflow: hidden;
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
   }
   
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  td, th {
+    border: 1px solid #d4d4d4;
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
   }
   
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: rgb(27, 27, 27);
-    color: rgb(235, 235, 235);
+  tr:nth-child(even) {
+    background-color: #e1e1e1;
   }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  </style>
-</head>
-
-<body>
-
-
-  <div class="topnav" style="width: 100%;">
-    <div>
-     <img src="../assets/img/logoonly.png" style="width: 160px;float: left;padding: 10px;">
-    </div> 
-  </div> 
-
-  <main id="main">
-
-  
-     
-
-
-
-    <div class="container-fluid" style="margin-top: 10px">
-      <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">MEMBER'S LEAVE REQUESTS</h6>
-       <div class="table-responsive custom-table-responsive">
 
  
-            <table class="table custom-table" id="myTable" style="color: black">
-                <thead>
-                    <tr style="background-color: #5793D1;color: #fff;"> 
-                   
-                    <th scope="col">Action</th>
-                    <th scope="col">S No.</th> 
-                    <th scope="col">Name</th>
-                    <th scope="col">Reason</th>
-                    <th scope="col">From</th>
-                    <th scope="col">To</th>
-                    <th scope="col">Status</th>
-                   
-                
-
-                    </tr>
-                </thead>
-                <tbody id="tbody1">
-                   
-
-                </tbody>
-            </table>
-        </div>
+  </style>
 
 
-      
+<style>
+  #myInput {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
+</style>
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
- <div class="modal-dialog modal-dialog-centered" role="document">
-   <div class="modal-content">
-     <div class="modal-header">
-       <h5 class="modal-title" id="exampleModalLongTitle">Control Panel</h5>
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         <span aria-hidden="true">&times;</span>
-       </button>
-     </div>
-     <div class="modal-body">
-
-
-      <input type="text" id="NameMod" style="width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" placeholder="Name" required><br><br>
-                
-      <label style="color: rgb(94, 94, 94);">Reason :</label>
-      <select id="ReasonMod" name="Reason" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);">
-          <option value="Select your reason" disabled>Select your reason</option>
-          <option value="Sick Leave">Sick Leave</option>
-          <option value="Academic Leave">Academic Leave</option>  
-          <option value="Personal Leave">Personal Leave</option>        
-           <option value="Out of Station">Out of Station</option>
-          <option value="Others">Others</option>
-
-      </select>
-  
-
-      <label style="margin-top: 20px;color: rgb(94, 94, 94);">From :</label><br>
-         <input type="text" placeholder="DD-MM-YYYY" id="FromMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required><br><br>
-      <label style="color: rgb(94, 94, 94);">To :</label>   <br>
-        <input type="text" placeholder="DD-MM-YYYY" id="ToMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required>
 
 
 
-        <label style="margin-top: 20px;color: rgb(94, 94, 94);" class="labs" >Status:</label><br>
-        <select id="StatusMod" style="cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);">
-          <option value="Pending" style="color: rgb(209, 209, 0);">Pending</option>
-          <option value="Approved" style="color: green;">Approved</option>
-          <option value="Cancelled" style="color: rgb(255, 123, 0);">Cancelled</option>
-          <option value="Declined" style="color: red;">Declined</option>
-          <option value="Over">Over</option>
-          <option value="Extended">Extend</option>
-        </select>
-    
+</head>
+
+<body style="background-color: rgb(238, 238, 238)">
+
+
+    <div class="main-wrapper">
+      <div class="header"  style="background-color: #0d6efd;">
+    <div class="header-left">
+      <a href="main.html" class="logo">
+        <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>Boards Portal</span>
+      </a>
+    </div>
+    <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+          <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
         
       </div>
-      
-     </div>
-     <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()">Add New Record</button>
-       <button id="UpdModBtn" type="button" class="btn btn-success"  onclick="UpdStd()">Update Record</button>
-       <button id="DelModBtn" type="button" class="btn btn-danger"  onclick="DelStd()">Delete</button>
+      <div class="sidebar" id="sidebar">
+          <div class="sidebar-inner slimscroll">
+              <div id="sidebar-menu" class="sidebar-menu">
+                  <ul>
+                      <li class="menu-title">Boards Panel</li>
+
+                      <li >
+                        <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+                        </li>
+
+                        
+                      <li >
+                        <a href="attenUpdates.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
+                        </li>
     
-     </div>
-   </div>
- </div>
-</div>
+    
+                        <li>
+                        <a href="members.html"><i  class="fa fa-users"></i> <span>Members</span></a>
+                       </li>
+    
+      
+    
+                           <li>
+                           <a href="leavepanel.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+                          </li>
+    
+                          <li>
+                          <a href="payments.html"><i  class="fa fa-money"></i> <span>Payments</span></a>
+                         </li>
+    
+                         <li>
+                         <a href="recruitments.html"><i  class="fa fa-user"></i> <span>Registrations</span></a>
+                        </li>
+              
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="page-wrapper">
+          <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;">
+                <div class="row"  style="padding: 15px">
+                  <div class="col-sm-12">
+                      <h4 class="page-title">Member's Leaves</h4><hr>
+                  </div>
+                </div>
+
+               
+              <div class="row">
+                  <div class="col-md-12">
+
+                    <!-- Main content -->
+                    <div class="table-responsive custom-table-responsive">
+
+ 
+                      <table class="table custom-table" id="myTable" style="color: black">
+                          <thead>
+                              <tr style="background-color: #0d6efd;color: #fff;"> 
+                             
+                           
+                              <th scope="col" style="width: 7vh;">S No.</th> 
+                                 <th scope="col" style="width: 10vh;">Action</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">Reason</th>
+                              <th scope="col">From [YYYY-MM-DD]</th>
+                              <th scope="col">To [YYYY-MM-DD]</th>
+                              <th scope="col">Status</th>
+                             
+                             
+                          
+          
+                              </tr>
+                          </thead>
+                          <tbody id="tbody1">
+                             
+          
+                          </tbody>
+                      </table>
+                  </div>
 
 
 
 
+                 
+
+
+
+                    <!-- Main content -->
+                </div>
+              </div>
+
+
+
+               <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #0d6efd; text-align: center;color: white;">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="font-size:20px; font-weight:bold">LEAVE REQUEST UPDATE</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+ 
+ 
+       <input type="text" id="NameMod" style="padding:10px;width: 100%;height: auto;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" placeholder="Name" required><br><br>
+                 
+       <label style="color: rgb(94, 94, 94);">Reason :</label>
+       <select id="ReasonMod" name="Reason" style="padding:10px;cursor: pointer;width: 100%;height: auto;border-radius: 5px;border: 1px solid rgb(136, 136, 136);">
+           <option value="Select your reason" disabled>Select your reason</option>
+           <option value="Sick Leave">Sick Leave</option>
+           <option value="Academic Leave">Academic Leave</option>  
+           <option value="Personal Leave">Personal Leave</option>        
+            <option value="Out of Station">Out of Station</option>
+           <option value="Others">Others</option>
+ 
+       </select>
+   
+ 
+       <label style="margin-top: 20px;color: rgb(94, 94, 94);">From :</label><br>
+          <input type="text" placeholder="DD-MM-YYYY" id="FromMod" style="padding:10px;cursor: pointer;width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required><br><br>
+       <label style="color: rgb(94, 94, 94);">To :</label>   <br>
+         <input type="text" placeholder="DD-MM-YYYY" id="ToMod" style="padding:10px;cursor: pointer;width: 100%;height: auto;border-radius: 5px;border: 1px solid rgb(136, 136, 136);" required>
+ 
+ 
+ 
+         <label style="margin-top: 20px;color: rgb(94, 94, 94);" class="labs" >Status:</label><br>
+         <select id="StatusMod" style="padding:10px;cursor: pointer;width: 100%;height: auto;border-radius: 5px;border: 1px solid rgb(136, 136, 136);">
+           <option value="Pending" style="color: rgb(209, 209, 0);">Pending</option>
+           <option value="Approved" style="color: green;">Approved</option>
+           <option value="Cancelled" style="color: rgb(255, 123, 0);">Cancelled</option>
+           <option value="Declined" style="color: red;">Declined</option>
+           <option value="Over">Over</option>
+           <option value="Extended">Extend</option>
+         </select>
+     
+         
+       </div>
+       
+     
+      <div class="modal-footer">
+        <button id="DelModBtn" type="button" class="btn btn-danger"  onclick="DelStd()" style="float: left;">Delete</button>
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()">Add New Record</button>
+        <button id="UpdModBtn" type="button" class="btn btn-success"  onclick="UpdStd()">Update Record</button>
+        
+     
+      </div>
     </div>
-</main>
+  </div></div>
+
+
+
+
+
+
+
+          </div>
+          <br>   <br>
+      
+      </div>
+
+  </div>
+
+
+
+
 
   
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
+  <div class="sidebar-overlay" data-reff=""></div>
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.dataTables.min.js"></script>
+  <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+  <script src="assets/js/jquery.slimscroll.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="assets/js/app.js"></script>
 
   <script src="assets/js/main.js"></script>
 
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
+  <script>
 
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+      authDomain: "members-76725.firebaseapp.com",
+      projectId: "members-76725",
+      storageBucket: "members-76725.appspot.com",
+      messagingSenderId: "734645197873",
+      appId: "1:734645197873:web:808127fdb4d643d4d24910",
+      measurementId: "G-7LYZ3R48GT"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 
-      <script>
+//GET ALL DATA
+var stdNo;
+    function SelectAllData(){
+      document.getElementById('tbody1').innerHTML="";
 
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
-          authDomain: "members-76725.firebaseapp.com",
-          projectId: "members-76725",
-          storageBucket: "members-76725.appspot.com",
-          messagingSenderId: "734645197873",
-          appId: "1:734645197873:web:808127fdb4d643d4d24910",
-          measurementId: "G-7LYZ3R48GT"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+      stdNo=0;
+        firebase.database().ref('leaverequest').orderByChild('status').once('value',
+        function(AllRecords){
+            AllRecords.forEach(
+                function(CurrentRecord){
+       
+                    var name = CurrentRecord.val().name;
+                    var reason = CurrentRecord.val().reason;
+                    var from = CurrentRecord.val().from;
+                    var to = CurrentRecord.val().to;
+                    var status = CurrentRecord.val().status;
+                    
+                    
+                    
+                    
+                    AddItemsToTable(name,reason,from,to,status);
+
+                }
+            );
+
+        });
+    }
+
+    window.onload = SelectAllData;
+
+    //Filling the table
     
- //GET ALL DATA
- var stdNo;
-        function SelectAllData(){
-          document.getElementById('tbody1').innerHTML="";
+    var stdList = [];
+    function AddItemsToTable(name,reason,from,to,status){
+        var tbody = document.getElementById('tbody1');
+        var trow = document.createElement('tr');
+        var td0 = document.createElement('td');
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+        var td3 = document.createElement('td');
+        var td4 = document.createElement('td');
+        var td5 = document.createElement('td');
 
-          stdNo=0;
-            firebase.database().ref('leaverequest').orderByChild('from').once('value',
-            function(AllRecords){
-                AllRecords.forEach(
-                    function(CurrentRecord){
-           
-                        var name = CurrentRecord.val().name;
-                        var reason = CurrentRecord.val().reason;
-                        var from = CurrentRecord.val().from;
-                        var to = CurrentRecord.val().to;
-                        var status = CurrentRecord.val().status;
-                        
-                        
-                        
-                        
-                        AddItemsToTable(name,reason,from,to,status);
+     
 
-                    }
-                );
+  
 
-            });
-        }
 
-        window.onload = SelectAllData;
-
-        //Filling the table
+      stdList.push([name,reason,from,to,status])
+ 
+ 
+       
+        td0.innerHTML = ++stdNo;
+        td1.innerHTML = name;
+        td2.innerHTML = reason;
+        td3.innerHTML = from;
+        td4.innerHTML = to;
+        td5.innerHTML = status;
         
-        var stdList = [];
-        function AddItemsToTable(name,reason,from,to,status){
-            var tbody = document.getElementById('tbody1');
-            var trow = document.createElement('tr');
-            var td0 = document.createElement('td');
-            var td1 = document.createElement('td');
-            var td2 = document.createElement('td');
-            var td3 = document.createElement('td');
-            var td4 = document.createElement('td');
-            var td5 = document.createElement('td');
-   
+
+        trow.appendChild(td0);
+      
+        var ControlDiv = document.createElement("div");
+       
+       ControlDiv.innerHTML = '<button type="button" class="btn btn-danger my-2 ml-2" style="height:30px;margin-left:5px;margin-top:2px;font-size:12px;" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes('+stdNo+')"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>'
+    
+       trow.appendChild(ControlDiv);
+    
+        trow.appendChild(td1); 
+        trow.appendChild(td2); 
+        trow.appendChild(td3); 
+        trow.appendChild(td4); 
+        trow.appendChild(td5);
+    
+  
+       
+       
+
+       
+
+        tbody.appendChild(trow);
+        
+    }
+
+    var ModName = document.getElementById('NameMod');
+    var ModReason = document.getElementById('ReasonMod');
+    var ModFrom = document.getElementById('FromMod');
+    var ModTo = document.getElementById('ToMod');
+    var ModStatus = document.getElementById('StatusMod');
+  
+    var AddModBtn = document.getElementById('AddModBtn');
+    var UpdModBtn = document.getElementById('UpdModBtn');
+    var DelModBtn = document.getElementById('DelModBtn');
+
+
+    function FillTboxes(index){
+
+      if(index==null){
+
+        ModName.value = "";
+        ModReason.value = "";
+        ModFrom.value = "";
+        ModTo.value = "";
+        ModStatus.value = "";
          
 
+        ModName.disabled=false;
+
+        ModFrom.disabled=false;
+        ModTo.disabled=false;
       
-
-
-          stdList.push([name,reason,from,to,status])
-     
-     
-           
-            td0.innerHTML = ++stdNo;
-            td1.innerHTML = name;
-            td2.innerHTML = reason;
-            td3.innerHTML = from;
-            td4.innerHTML = to;
-            td5.innerHTML = status;
-            
-    
-     
           
-            var ControlDiv = document.createElement("div");
-           
-           ControlDiv.innerHTML = '<button type="button" class="btn btn-warning my-2 ml-2" style="height:30px;margin-left:5px;margin-top:2px;font-size:12px;" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes('+stdNo+')"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>'
-        
-           trow.appendChild(ControlDiv);
-           trow.appendChild(td0);
-            trow.appendChild(td1); 
-            trow.appendChild(td2); 
-            trow.appendChild(td3); 
-            trow.appendChild(td4); 
-            trow.appendChild(td5);
+           AddModBtn.style.display='inline-block';
+           UpdModBtn.style.display='none';
+           DelModBtn.style.display='none';
 
-           
+      }
+      else{
+           --index;
+     
+           ModName.value = stdList[index][0];
+           ModReason.value = stdList[index][1];
+           ModFrom.value = stdList[index][2];
+           ModTo.value = stdList[index][3];
+           ModStatus.value = stdList[index][4];
+
+
+ 
+          ModName.disabled=true;
+
+           ModFrom.disabled=true;
+           ModTo.disabled=true;
       
-           
-           
-  
-           
-
-            tbody.appendChild(trow);
-            
-        }
-
-        var ModName = document.getElementById('NameMod');
-        var ModReason = document.getElementById('ReasonMod');
-        var ModFrom = document.getElementById('FromMod');
-        var ModTo = document.getElementById('ToMod');
-        var ModStatus = document.getElementById('StatusMod');
-      
-        var AddModBtn = document.getElementById('AddModBtn');
-        var UpdModBtn = document.getElementById('UpdModBtn');
-        var DelModBtn = document.getElementById('DelModBtn');
-
-
-        function FillTboxes(index){
-
-          if(index==null){
-
-            ModName.value = "";
-            ModReason.value = "";
-            ModFrom.value = "";
-            ModTo.value = "";
-            ModStatus.value = "";
-             
-  
-            ModName.disabled=false;
-
-            ModFrom.disabled=false;
-            ModTo.disabled=false;
-          
-              
-               AddModBtn.style.display='inline-block';
-               UpdModBtn.style.display='none';
-               DelModBtn.style.display='none';
-
-          }
-          else{
-               --index;
          
-               ModName.value = stdList[index][0];
-               ModReason.value = stdList[index][1];
-               ModFrom.value = stdList[index][2];
-               ModTo.value = stdList[index][3];
-               ModStatus.value = stdList[index][4];
+           AddModBtn.style.display='none';
+           UpdModBtn.style.display='inline-block';
+           DelModBtn.style.display='inline-block';
 
+      }
+    }
 
-     
-              ModName.disabled=true;
+    function AddStd(){
+         
+         firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).set(
+              {
+           
+                name: ModName.value,
+                reason: ModReason.value,
+                from: ModFrom.value,
+                to: ModTo.value,
+                status: ModStatus.value
+                
 
-               ModFrom.disabled=true;
-               ModTo.disabled=true;
-          
-             
-               AddModBtn.style.display='none';
-               UpdModBtn.style.display='inline-block';
-               DelModBtn.style.display='inline-block';
-
-          }
-        }
-
-        function AddStd(){
-             
-             firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).set(
-                  {
-               
-                    name: ModName.value,
-                    reason: ModReason.value,
-                    from: ModFrom.value,
-                    to: ModTo.value,
-                    status: ModStatus.value
+              },
+              (error)=>{
+                   if(error){
+                        alert("Record was not added, there was some problem");
+                   }
+                   else{
+                        alert("Record was added");
+                        SelectAllData();
+                        
                     
 
-                  },
-                  (error)=>{
-                       if(error){
-                            alert("Record was not added, there was some problem");
-                       }
-                       else{
-                            alert("Record was added");
-                            SelectAllData();
-                            
                         
-
-                            
-                            
-                       }
-                  }
-             )
-        }
+                        
+                   }
+              }
+         )
+    }
 
 
 
-        function UpdStd(){
-             
-             firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).update(
-                  {
+    function UpdStd(){
          
-                    name: ModName.value,
-                    reason: ModReason.value,
-                    from: ModFrom.value,
-                    to: ModTo.value,
-                    status: ModStatus.value
+         firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).update(
+              {
+     
+                name: ModName.value,
+                reason: ModReason.value,
+                from: ModFrom.value,
+                to: ModTo.value,
+                status: ModStatus.value
 
-                  },
-                  (error)=>{
-                       if(error){
-                            alert("Record was not updated, there was some problem");
-                       }
-                       else{
-                            alert("Record was updated");
-                            SelectAllData();
-                            
-                            
-                            
-                       }
-                  }
-             )
-        }
-
-
-
-
-        function DelStd(){
-             
-             firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).remove().then(
-             function(){
-              alert("Record was deleted");
-              SelectAllData();
-              
-             }
-             )
-        }
+              },
+              (error)=>{
+                   if(error){
+                        alert("Record was not updated, there was some problem");
+                   }
+                   else{
+                        alert("Updated successfully");
+                        SelectAllData();
+                        
+                        
+                        
+                   }
+              }
+         )
+    }
 
 
 
 
-  </script>
+    function DelStd(){
+         
+         firebase.database().ref("leaverequest/" +ModName.value +ModFrom.value).remove().then(
+         function(){
+          alert("Deleted successfully");
+        
+          SelectAllData();
+          
+         }
+         )
+    }
+
+
+
+
+</script>
+
 
 
 </body>
