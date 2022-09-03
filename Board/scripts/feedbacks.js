@@ -1,7 +1,7 @@
 
 
 
-db.collection('feedbacks').orderBy('name').get().then((s) => {
+db.collection('feedbacks').orderBy('status').get().then((s) => {
      $("#station").html(""); // This will empty your station button
      $("#station_box").html(""); // This will empty your station box
      var n = 0;
