@@ -9,7 +9,7 @@ function createUserCollection(user){
        uid:user.uid,
        name:user.displayName,
        email:user.email,
-       dept:"",
+       department:"",
        phone:"",
        i1:"",
        i2:"",
@@ -26,7 +26,8 @@ function createUserCollection(user){
        d1:"",
        d2:"",
        d3:"",
-       d4:""
+       d4:"",
+       hide:""
 
        
 
@@ -188,7 +189,7 @@ async function getuserInfoRealtime(userID){
                 </div>
                 <div class="row">
                    
-                        <div class="table-responsive">
+                        <div class="table-responsive" ${userInfo.i1}>
                             <table class="table table-bordered">
                                 <thead style="background-color: #f7f7f7">
                                     <tr>
@@ -203,6 +204,7 @@ async function getuserInfoRealtime(userID){
                                     </tr>
                                 </thead>
                                 <tbody>
+                               
                                     <tr display: ${userInfo.i1}>
                                         <td><a>${userInfo.i1}</a></td>
                                         <td>
@@ -265,9 +267,11 @@ async function getuserInfoRealtime(userID){
 
                                
                                 </tbody>
+                               
                             </table>
-                            
-                        </div>
+                          
+                           
+                        </div>  <div class="container" style="text-align:center; color: red;" ${userInfo.hide}> <h4>No Payments Found</h4></div>
                      
                 </div>
             </div>
