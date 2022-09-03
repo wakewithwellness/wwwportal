@@ -323,10 +323,10 @@ async function getuserInfoRealtime(userID){
 
                                         <tr>
                                             <td style="min-width: 200px;">
-                                                <h2><a href="attenUpdates.html">Attendance Details</a></h2>
+                                                <h2><a href="detailUpdates.html">Attendance Details</a></h2>
                                             </td>                 
                                             <td class="text-right">
-                                                <a href="attenUpdates.html" class="btn btn-outline-primary take-btn">View</a>
+                                                <a href="detailUpdates.html" class="btn btn-outline-primary take-btn">View</a>
                                             </td>
                                         </tr>
 
