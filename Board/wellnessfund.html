@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Volunteership</title>
+  <title>Wellness Fundraiser</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -140,7 +140,7 @@ margin-bottom: 12px; /* Add some space below the input */
           <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;">
                 <div class="row"  style="padding: 15px">
                   <div class="col-sm-12">
-                      <h4 class="page-title">Volunteership Program</h4><hr>
+                      <h4 class="page-title">Wellness Fundraiser</h4><hr>
                   </div>
                 </div>
 
@@ -153,31 +153,24 @@ margin-bottom: 12px; /* Add some space below the input */
 
                     <!-- Main content -->
                     <div class="table-responsive custom-table-responsive">
-    
-                      <table class="table custom-table" id="myTable" style="color: black;">
-                          <thead>
-                              <tr style="background-color: #0d6efd;color: #fff;"> 
-                               <th scope="col">SNo.</th> 
-                        
-                               <th scope="col" style="min-width: 20vh">Name</th>
-                               <th scope="col">Email</th>
-                               <th scope="col">Contact</th>
-                               <th scope="col">Whatsapp</th>
-                               <th scope="col" style="min-width: 19vh">Qualification</th>
-                               <th scope="col" style="min-width: 19vh">WorkPlace</th>
-                               <th scope="col">Experience</th>
-                               <th scope="col">Agreement</th>
-                               <th scope="col">Status</th>
-      
-                        
-                              </tr>
-                          </thead>
-                          <tbody id="tbody1">
-                             
-      
-                          </tbody>
-                      </table>
-                  </div>
+                        <table class="table custom-table" id="myTable" style="color: rgb(0, 0, 0);">
+                            <thead>
+                                <tr style="background-color: #0d6efd;color: #fff;"> 
+                                  <th scope="col" style="min-width: 20vh">Name</th>
+                                <th scope="col">Contact</th>
+                                <th scope="col" style="min-width: 12vh">Date</th>
+                                <th scope="col">Purpose</th>
+                                <th scope="col" style="min-width: 12vh">Amount</th>
+                            
+            
+                                </tr>
+                            </thead>
+                            <tbody id="mytable">
+                               
+            
+                            </tbody>
+                        </table>
+                    </div>
                     <!-- Main content -->
                 </div>
               </div>
@@ -208,111 +201,55 @@ margin-bottom: 12px; /* Add some space below the input */
   <script src="../MembersPanel/assets/js/bootstrap-datetimepicker.min.js"></script>
   <script src="../MembersPanel/assets/js/app.js"></script>
 
-  <script src="../assets/js/main.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
 
 
 
-<script id="MainScript">
+<script>
   //Connection
+      // Your web app's Firebase configuration
     var firebaseConfig = {
-      apiKey: "AIzaSyBTOvD0aod-fntZ0VYbT6EAp9z1L_bqKwY",
-authDomain: "website-818ed.firebaseapp.com",
-databaseURL: "https://website-818ed-default-rtdb.firebaseio.com",
-projectId: "website-818ed",
-storageBucket: "website-818ed.appspot.com",
-messagingSenderId: "542030860652",
-appId: "1:542030860652:web:ee0bef0509915aa1da2349",
-measurementId: "G-2VWCQ9QR4S"
+        apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+        authDomain: "members-76725.firebaseapp.com",
+        projectId: "members-76725",
+        storageBucket: "members-76725.appspot.com",
+        messagingSenderId: "734645197873",
+        appId: "1:734645197873:web:808127fdb4d643d4d24910",
+        measurementId: "G-7LYZ3R48GT"
     };
-
-    //Init Firebase
+    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({ timestampInSnapshots: true});
 
 
-
-
-    //GET ALL DATA
-
-    function SelectAllData(){
-        firebase.database().ref('VolunteershipP').once('value',
-        function(AllRecords){
-            AllRecords.forEach(
-                function(CurrentRecord){
-                     var name = CurrentRecord.val().name;
-                    var email = CurrentRecord.val().email;
-                    var phone = CurrentRecord.val().phone;
-                    var whatsapp = CurrentRecord.val().whatsapp;
-                    var qualification = CurrentRecord.val().qualification;
-                    var work = CurrentRecord.val().work;
-                    var exp = CurrentRecord.val().exp;
-                    var checkbox = CurrentRecord.val().checkbox;
-                    var status = CurrentRecord.val().status;
-
-
-                    AddItemsToTable(name,email,phone,whatsapp,qualification,work,exp,checkbox,status);
-
-                }
-            );
-
-        });
-    }
-
-    window.onload = SelectAllData;
-
-    //Filling the table
-    var stdNo = 0;
-    function AddItemsToTable(name,email,phone,whatsapp,qualification,work,exp,checkbox,status){
-      var tbody = document.getElementById('tbody1');
-        var trow = document.createElement('tr');
-        var td0 = document.createElement('td');
-        var td1 = document.createElement('td');
-        var td2 = document.createElement('td');
-        var td3 = document.createElement('td');
-        var td4 = document.createElement('td');
-        var td5 = document.createElement('td');
-        var td6 = document.createElement('td');
-        var td7 = document.createElement('td');
-        var td8 = document.createElement('td');
-        var td9 = document.createElement('td');
-
-
-
-        
-        td0.innerHTML = ++stdNo;
-        td1.innerHTML = name;
-        td2.innerHTML = email;
-        td3.innerHTML = phone;
-        td4.innerHTML = whatsapp;
-        td5.innerHTML = qualification;
-        td6.innerHTML = work;
-        td7.innerHTML = exp;
-        td8.innerHTML = checkbox;
-        td9.innerHTML = status;
-        
-
- 
-        trow.appendChild(td0);
-        trow.appendChild(td1); 
-        trow.appendChild(td2); 
-        trow.appendChild(td3); 
-        trow.appendChild(td4); 
-        trow.appendChild(td5);
-        trow.appendChild(td6);
-        trow.appendChild(td7);
-        trow.appendChild(td8);
-        trow.appendChild(td9);
-
-        
-        tbody.appendChild(trow);
-        
-    }
-
+    db.collection("Funds").orderBy('date').get().then(querySnapshot=>{
+    querySnapshot.forEach(doc=>{
+        let data = doc.data();
+        let row  = `<tr>
+          
+                   
+                        <td>${data.name}</td>
+                        <td>${data.phone}</td>
+                        <td>${data.date}</td>
+                        <td>${data.purpose}</td>
+                        <td style="color:green; font-size: 13px; font-weight: 800">₹ ${data.amount}.00</td>
+                       
+                  </tr>`;
+        let table = document.getElementById('myTable')
+        table.innerHTML += row
+    })
+})
+.catch(err=>{
+    console.log(`Error: ${err}`)
+});
 
 </script>
+
+
 
 <script>
   function myFunction() {
@@ -325,7 +262,7 @@ measurementId: "G-2VWCQ9QR4S"
   
     // Loop through all table rows, and hide those who don't match the search query
     for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[1];
+      td = tr[i].getElementsByTagName("td")[0];
       if (td) {
         txtValue = td.textContent || td.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
