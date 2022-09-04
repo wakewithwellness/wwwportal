@@ -148,7 +148,7 @@ db.collection("attendance").orderBy('regno').limitToLast(11).get().then(querySna
                     </th>
                         <td>${data.name}</td>
                         <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
-                        <td>${data.Sept22a}</td>
+                        <td>${data.Sept22b}</td>
                         <td>${data.Sept22a}</td>
                         <td ${data.Aug22bf}>${data.Aug22b}</td>
                        <td ${data.Aug22af}>${data.Aug22a}</td>
