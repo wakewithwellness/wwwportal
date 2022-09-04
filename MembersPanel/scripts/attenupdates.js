@@ -208,8 +208,8 @@ async function getuserInfoRealtime(userID){
                                     <tr>
                                       
                                         <th style="width: 10vh">Month</th>
-                                        <th style="width: 15vh">Week</th>
-                                        <th style="width: 20vh">Status</th>
+                                        <th style="width: 10vh">Week</th>
+                                        <th style="width: auto">Status</th>
                                         <th>Activity</th>
                                        
                                     </tr>
@@ -221,16 +221,16 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month> <h4>October 2022</h4>
                                
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Oct22b}</td>
+                                <td><a id="dateee">15/10/22 <br>-<br> 31/10/22</a></td>
+                                <td id="statuss">${userInfo.Oct22b}</td>
                                 <td>${userInfo.Oct22bf}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Oct22af}>
                                
                                
-                                <td><a>First</a></td>
-                                <td>${userInfo.Oct22a}</td>
+                                <td><a id="dateee">01/10/22 <br>-<br> 15/10/22</a></td>
+                                <td id="statuss">${userInfo.Oct22a}</td>
                                 <td>${userInfo.Oct22af}</td>
                                 </tr>
 
@@ -240,15 +240,15 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>September 2022</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Sept22b}</td>
+                                <td><a id="dateee">15/09/22 <br>-<br> 30/09/22</a></td>
+                                <td id="statuss">${userInfo.Sept22b}</td>
                                 <td>${userInfo.Sept22bf}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Sept22af}>
                                
-                                <td><a>First</a></td>
-                                <td>${userInfo.Sept22a}</td>
+                                <td><a id="dateee">01/09/22 <br>-<br> 15/09/22</a></td>
+                                <td id="statuss">${userInfo.Sept22a}</td>
                                 <td>${userInfo.Sept22af}</td>
                                 </tr>
 
@@ -258,14 +258,14 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>August 2022</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Aug22b}</td>
+                                <td><a id="dateee">15/08/22 <br>-<br> 31/08/22</a></td>
+                                <td id="statuss">${userInfo.Aug22b}</td>
                                 <td>${userInfo.Aug22bf}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Aug22af}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.Aug22a}</td>
+                                <td><a id="dateee">01/08/22 <br>-<br> 15/08/22</a></td>
+                                <td id="statuss">${userInfo.Aug22a}</td>
                                 <td>${userInfo.Aug22af}</td>
                                 </tr>
 
@@ -275,14 +275,14 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>July 2022</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Jul22b}</td>
+                                <td><a id="dateee">15/07/22 <br>-<br> 31/07/22</a></td>
+                                <td id="statuss">${userInfo.Jul22b}</td>
                                 <td>${userInfo.Jul22bf}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Jul22af}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.Jul22a}</td>
+                                <td><a id="dateee">01/07/22 <br>-<br> 15/07/22</a></td>
+                                <td id="statuss">${userInfo.Jul22a}</td>
                                 <td>${userInfo.Jul22af}</td>
                                 </tr>
 
@@ -293,8 +293,8 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4 ><a>June 2022</a></h4></td>
                                 
-                                <td><a>First</a></td>
-                                <td>${userInfo.Jun}</td>
+                                <td><a id="dateee">01/06/22 <br>-<br> 30/06/22</a></td>
+                                <td id="statuss">${userInfo.Jun}</td>
                                 <td>${userInfo.Junf}</td>
                                 </tr>
 
@@ -309,14 +309,14 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>May 2022</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.May2}</td>
+                                <td><a id="dateee">15/05/22 <br>-<br> 31/05/22</a></td>
+                                <td id="statuss">${userInfo.May2}</td>
                                 <td>${userInfo.May2f}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.May1f}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.May1}</td>
+                                <td><a id="dateee">01/05/22 <br>-<br> 15/05/22</a></td>
+                                <td id="statuss">${userInfo.May1}</td>
                                 <td>${userInfo.May1f}</td>
                                 </tr>
 
@@ -326,14 +326,14 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>April 2022</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Apr2}</td>
+                                <td><a id="dateee">15/04/22 <br>-<br> 30/04/22</a></td>
+                                <td id="statuss">${userInfo.Apr2}</td>
                                 <td>${userInfo.Apr2f}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Apr1f}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.Apr1}</td>
+                                <td><a id="dateee">01/04/22 <br>-<br> 15/04/22</a></td>
+                                <td id="statuss">${userInfo.Apr1}</td>
                                 <td>${userInfo.Apr1f}</td>
                                 </tr>
 
@@ -343,14 +343,14 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>March 2022</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Mar2}</td>
+                                <td><a id="dateee">15/03/22 <br>-<br> 31/03/22</a></td>
+                                <td id="statuss">${userInfo.Mar2}</td>
                                 <td>${userInfo.Mar2f}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Mar1f}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.Mar1}</td>
+                                <td><a id="dateee">01/03/22 <br>-<br> 15/03/22</a></td>
+                                <td id="statuss">${userInfo.Mar1}</td>
                                 <td>${userInfo.Mar1f}</td>
                                 </tr>
 
@@ -360,14 +360,14 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>February 2022</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Feb2}</td>
+                                <td><a id="dateee">15/02/22 <br>-<br> 28/02/22</a></td>
+                                <td id="statuss">${userInfo.Feb2}</td>
                                 <td>${userInfo.Feb2f}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Feb1f}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.Feb1}</td>
+                                <td><a id="dateee">01/02/22 <br>-<br> 15/02/22</a></td>
+                                <td id="statuss">${userInfo.Feb1}</td>
                                 <td>${userInfo.Feb1f}</td>
                                 </tr>
 
@@ -375,30 +375,30 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>January 2022</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Jan2}</td>
+                                <td><a id="dateee">15/01/22 <br>-<br> 31/01/22</a></td>
+                                <td id="statuss">${userInfo.Jan2}</td>
                                 <td>${userInfo.Jan2f}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Jan1f}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.Jan1}</td>
+                                <td><a id="dateee">01/01/22 <br>-<br> 15/01/22</a></td>
+                                <td id="statuss">${userInfo.Jan1}</td>
                                 <td>${userInfo.Jan1f}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Dec2f}>
                                
                                 <td rowspan="2" id=month>
-                                    <h4><a>December 2021</a></h4>
+                                <h4><a>December 2021</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Dec2}</td>
+                                <td><a id="dateee">15/12/21 <br>-<br> 31/12/21</a></td>
+                                <td id="statuss">${userInfo.Dec2}</td>
                                 <td>${userInfo.Dec2f}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Dec1f}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.Dec1}</td>
+                                <td><a id="dateee">01/12/21 <br>-<br> 15/12/21</a></td>
+                                <td id="statuss">${userInfo.Dec1}</td>
                                 <td>${userInfo.Dec1f}</td>
                                 </tr>
 
@@ -406,14 +406,14 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>November 2021</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Nov2}</td>
+                                <td><a id="dateee">15/11/21 <br>-<br> 30/11/21</a></td>
+                                <td id="statuss">${userInfo.Nov2}</td>
                                 <td>${userInfo.Nov2f}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Nov1f}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.Nov1}</td>
+                                <td><a id="dateee">01/11/21 <br>-<br> 15/11/21</a></td>
+                                <td id="statuss">${userInfo.Nov1}</td>
                                 <td>${userInfo.Nov1f}</td>
                                 </tr>
 
@@ -421,14 +421,14 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>October 2021</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Oct2}</td>
+                                <td><a id="dateee">15/10/21 <br>-<br> 31/10/21</a></td>
+                                <td id="statuss">${userInfo.Oct2}</td>
                                 <td>${userInfo.Oct2f}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Oct1f}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.Oct1}</td>
+                                <td><a id="dateee">01/10/21 <br>-<br> 15/10/21</a></td>
+                                <td id="statuss">${userInfo.Oct1}</td>
                                 <td>${userInfo.Oct1f}</td>
                                 </tr>
 
@@ -436,14 +436,14 @@ async function getuserInfoRealtime(userID){
                                 <td rowspan="2" id=month>
                                     <h4><a>September 2021</a></h4>
                                 </td>
-                                <td><a>Second</a></td>
-                                <td>${userInfo.Sept2}</td>
+                                <td><a id="dateee">15/09/21 <br>-<br> 30/09/21</a></td>
+                                <td id="statuss">${userInfo.Sept2}</td>
                                 <td>${userInfo.Sept2f}</td>
                                 </tr>
 
                                 <tr display: ${userInfo.Sept1f}>
-                                <td><a>First</a></td>
-                                <td>${userInfo.Sept1}</td>
+                                <td><a id="dateee">01/09/21 <br>-<br> 15/09/21</a></td>
+                                <td id="statuss">${userInfo.Sept1}</td>
                                 <td>${userInfo.Sept1f}</td>
                                 </tr>
 
@@ -452,14 +452,14 @@ async function getuserInfoRealtime(userID){
                                         <td rowspan="2" id=month>
                                             <h4><a>August 2021</a></h4>
                                         </td>
-                                        <td><a>Second</a></td>
-                                        <td>${userInfo.Aug2}</td>
+                                        <td><a id="dateee">15/08/21 <br>-<br> 31/08/21</a></td>
+                                        <td id="statuss">${userInfo.Aug2}</td>
                                         <td>${userInfo.Aug2f}</td>
                                     </tr>
 
                                     <tr display: ${userInfo.Aug1f}>
-                                        <td><a>First</a></td>                        
-                                        <td>${userInfo.Aug1}</td>
+                                        <td><a id="dateee">01/08/21 <br>-<br> 15/08/21</a></td>                        
+                                        <td id="statuss">${userInfo.Aug1}</td>
                                         <td>${userInfo.Aug1f}</td>
                                     </tr>
                         
@@ -468,22 +468,22 @@ async function getuserInfoRealtime(userID){
                                         <td rowspan="3" id=month >
                                         <h4><a>July 2021</a></h4>
                                         </td>   
-                                        <td><a>Third</a></td>                                  
-                                        <td>${userInfo.July3}</td>   
+                                        <td><a id="dateee">20/07/21 <br>-<br> 31/07/21</a></td>                                  
+                                        <td id="statuss">${userInfo.July3}</td>   
                                         <td>${userInfo.July3f}</td>   
                                     </tr>
 
 
                                     <tr display: ${userInfo.July2f}>   
-                                    <td><a>Second</a></td>                             
-                                    <td>${userInfo.July2}</td>
+                                    <td><a id="dateee">10/07/21 <br>-<br> 20/07/21</a></td>                             
+                                    <td id="statuss">${userInfo.July2}</td>
                                     <td>${userInfo.July2f}</td>   
                                     </tr>
 
 
                                    <tr display: ${userInfo.July1f}>
-                                    <td><a>First</a></td>                        
-                                    <td>${userInfo.July1}</td>
+                                    <td><a id="dateee">01/07/21 <br>-<br> 10/07/21</a></td>                        
+                                    <td id="statuss">${userInfo.July1}</td>
                                     <td>${userInfo.July1f}</td>   
                                 </tr>
                                
