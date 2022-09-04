@@ -38,17 +38,17 @@ var firebaseConfig = {
                      <td>${data.Jan1}</td>
                      <td>${data.Dec2}</td>
                      <td>${data.Dec1}</td>
-                     <td>${data.Nov2}</td>
-                     <td>${data.Nov1}</td>
-                     <td>${data.Oct2}</td>
-                     <td>${data.Oct1}</td>
-                     <td>${data.Sept2}</td>
-                     <td>${data.Sept1}</td>
-                     <td>${data.Aug2}</td>
-                     <td>${data.Aug1}</td>
-                     <td>${data.July3}</td>
-                     <td>${data.July2}</td>
-                     <td>${data.July1}</td>
+                     <td ${data.Nov2f}>${data.Nov2}</td>
+                     <td ${data.Nov1f}>${data.Nov1}</td>
+                     <td ${data.Oct2f}>${data.Oct2}</td>
+                     <td ${data.Oct1f}>${data.Oct1}</td>
+                     <td ${data.Sept2f}>${data.Sept2}</td>
+                     <td ${data.Sept1f}>${data.Sept1}</td>
+                     <td ${data.Aug2f}>${data.Aug2}</td>
+                     <td ${data.Aug1f}>${data.Aug1}</td>
+                     <td ${data.July3f}>${data.July3}</td>
+                     <td ${data.July2f}>${data.July2}</td>
+                     <td ${data.July1f}>${data.July1}</td>
                </tr>`;
      let table = document.getElementById('myTable')
      table.innerHTML += row
@@ -150,9 +150,9 @@ db.collection("attendance").orderBy('regno').limitToLast(11).get().then(querySna
                         <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
                         <td>${data.Sept22a}</td>
                         <td>${data.Sept22a}</td>
-                        <td>${data.Aug22b}</td>
-                       <td>${data.Aug22a}</td>
-                       <td>${data.Jul22b}</td>
+                        <td ${data.Aug22bf}>${data.Aug22b}</td>
+                       <td ${data.Aug22af}>${data.Aug22a}</td>
+                       <td ${data.Jul22bf}>${data.Jul22b}</td>
                       
                    
                   </tr>`;
