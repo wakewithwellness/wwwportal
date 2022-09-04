@@ -62,7 +62,7 @@ var firebaseConfig = {
 db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW0066').get().then(querySnapshot=>{
      querySnapshot.forEach(doc=>{
          let data = doc.data();
-         let row  = `<tr>
+         let row  = `<tr style="display: ${data.hide1}">
            
                     <th scope="row" >
                        <label>${data.regno}</label>
@@ -104,7 +104,7 @@ db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW00
 db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=>{
     querySnapshot.forEach(doc=>{
         let data = doc.data();
-        let row  = `<tr>
+        let row  = `<tr style="display: ${data.hide1}">
           
                    <th scope="row">
                       <label>${data.regno}</label>
