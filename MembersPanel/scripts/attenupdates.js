@@ -181,6 +181,11 @@ async function getuserInfoRealtime(userID){
 
 <div class="col-lg">
 <h3 style="color: ${userInfo.status}; font-size:40px; text-align:center">${userInfo.AAper}</h3>
+<div style="height: 25px" class="progress">
+  <div  class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${userInfo.AAper};background-color:${userInfo.status}">
+  </div>
+</div>
 </div>
 
 
