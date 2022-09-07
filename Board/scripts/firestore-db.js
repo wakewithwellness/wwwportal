@@ -19,6 +19,7 @@ function createUserCollection(user){
        agreement: "",
        idcard:"",
        certificate:"",
+       depthref:"",
      
 
    })
@@ -247,6 +248,19 @@ async function getuserInfoRealtime(userID){
 													<a href="attenUpdates.html"  class="btn btn-outline-success take-btn">View</a>
 												</td>
 											</tr>
+
+                                            <tr>
+												<td style="min-width: 200px;">
+													
+													<h2><a href="./Meeting/${userInfo.depthref}.html"  style="color: red;font-weight: 500;">Meeting Attendance</a></h2>
+												</td>                 
+
+												<td class="text-right">
+													<a href="./Meeting/${userInfo.depthref}.html"  class="btn btn-outline-success take-btn">View</a>
+												</td>
+											</tr>
+
+
 											<tr>
 												<td style="min-width: 200px;">
 												
