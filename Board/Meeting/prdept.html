@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PR Department</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="../../MembersPanel/assets/img/favicon.png" rel="icon">
+  <link href="../../MembersPanel/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="./assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="./assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="./assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="./assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="./assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <link href="../../MembersPanel/assets/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #d4d4d4;
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #e1e1e1;
+  }
+
+ 
+  </style>
+
+
+<style>
+  #myInput {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
+</style>
+
+
+
+
+
+
+</head>
+
+<body style="background-color: rgb(238, 238, 238)">
+
+
+    <div class="main-wrapper">
+      <div class="header"  style="background-color: #0d6efd;">
+    <div class="header-left">
+      <a href="main.html" class="logo">
+        <img src="../../assets/img/favicon.png" width="35" height="35" alt=""> <span>Boards Portal</span>
+      </a>
+    </div>
+    <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+          <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+        
+      </div>
+      <div class="sidebar" id="sidebar">
+          <div class="sidebar-inner slimscroll">
+              <div id="sidebar-menu" class="sidebar-menu">
+                  <ul>
+                      <li class="menu-title">Boards Panel</li>
+
+                      <li >
+                        <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+                        </li>
+
+                        
+                      <li >
+                        <a href="attenUpdates.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
+                        </li>
+    
+    
+                        <li>
+                        <a href="members.html"><i  class="fa fa-users"></i> <span>Members</span></a>
+                       </li>
+    
+      
+    
+                           <li>
+                           <a href="leavepanel.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+                          </li>
+    
+                          <li>
+                          <a href="payments.html"><i  class="fa fa-money"></i> <span>Payments</span></a>
+                         </li>
+    
+                         <li>
+                         <a href="recruitments.html"><i  class="fa fa-user"></i> <span>Registrations</span></a>
+                        </li>
+              
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="page-wrapper">
+          <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;">
+                <div class="row"  style="padding: 15px">
+                  <div class="col-sm-12">
+                      <h4 class="page-title">Public Relations Department</h4><hr>
+                  </div>
+                </div>
+
+        
+              
+              <div class="row">
+                  <div class="col-md-12">
+
+                    <!-- Main content -->
+
+                    <div class="container-fluid">
+                       
+                         <div class="container-fluid">
+                           <button style="margin-bottom: 5px" type="button" class="btn btn-secondary" onclick="location.href='prdept.html'"><i class="fa fa-spinner"></i> Refresh Page</button>
+                           <button style="margin-bottom: 5px;float: right;margin-right: -15px;background-color: #3D8361;color: white;" type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes(null)"><i class="fa fa-plus"></i> Add Attendance</button>
+                         </div>
+                          <div class="table-responsive custom-table-responsive">
+                   
+                    
+                               <table class="table custom-table" id="myTable" style="color: black">
+                                   <thead>
+                                       <tr style="background-color: #0d6efd;color: #fff;"> 
+                                         <th style="width: 90px" scope="col">S No.</th> 
+                                         <th scope="col" style="width: 200px">Date</th> 
+                                         <th scope="col">Agenda</th>
+                                         <th scope="col" style="width: 150px" >Attendance</th>
+                                   
+                   
+                                       </tr>
+                                   </thead>
+                                   <tbody id="tbody1">
+                                      
+                   
+                                   </tbody>
+                               </table>
+                           </div>
+                   
+                   
+                         
+                          
+                   
+                   <!-- Modal -->
+                   <div class="modal fade container" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                     <div class="modal-dialog modal-dialog-centered" role="document">
+                       <div class="modal-content">
+                         <div class="modal-header" style="background-color:#0d6efd">
+                           <h5 class="modal-title" id="exampleModalLongTitle" style="font-size: 20px; text-align: center;font-weight: bold;color:white">Attendance (PR Department)</h5>
+                           <button type="button" class="close" onclick="location.href='PRdept.html'" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                           </button>
+                         </div>
+                         <div class="modal-body">
+                    <form id="modal">
+                         
+                    
+                    
+                          <div class="row">
+                    
+                              <div class="col-md-4">
+                                  <label style="margin-top: 10px;color: rgb(94, 94, 94);">Date :</label>
+                              </div>
+                              <div class="col-md-8">
+                                  <input type="date" id="DateMod" style="width: 100%;height: 35px;border-radius: 5px;border: 1px solid rgb(136, 136, 136)">
+                              </div>
+                      
+                             </div>
+                    
+                    <br>
+                             <div class="row">
+                    
+                              <div class="col-md-4">
+                                  <label style="margin-top: 10px;color: rgb(94, 94, 94);">Agenda :</label>
+                              </div>
+                              <div class="col-md-8">
+                                   <textarea id="NameMod" maxlength="500" style="width: 100%;padding:8px;border-radius: 5px;border: 1px solid rgb(136, 136, 136)" required ></textarea>
+                              </div>
+                      
+                             </div>
+                    <br>
+                    
+                    <div class="row" style="margin-left: 5px;">
+                             
+                      <div class="col-md-4">
+                        <input type="text" style="height: 35px;border-radius: 5px;border: 1px solid rgb(137, 137, 137);margin-bottom: 4px;font-weight: bold;padding-left: 7px;" id="name" onkeyup="myFunction()"  placeholder="Search by name...">
+                      </div>
+                      <div class="col-md-8" style="text-align: left">
+                     
+                        <input type="text" style="height: 35px;border-radius: 5px;border: 1px solid rgb(137, 137, 137);margin-bottom: 4px;font-weight: bold;padding-left: 7px;" id="regno" onkeyup="myReg()"  placeholder="Search by reg no...">
+                     
+                      </div>
+                    
+                     </div>
+                    
+                    
+                          <table id="atten">
+                              <tr>
+                                <th>Reg No.</th>
+                                <th>Name</th>
+                                <th>Status</th>
+                              </tr>
+                              <tr>
+                                <td>21WWW0031</td>
+                                <td>Rudrani Garg</td>
+                                <td><select class="form-control" id="Mod21WWW0031">
+                                   <option value="Present">Present</option>
+                                   <option value="Absent">Absent</option>
+                              </select></td>
+                              </tr>
+
+                              <tr>
+                                   <td>21WWW0032</td>
+                                   <td>Tanaya Goswami</td>
+                                   <td><select class="form-control" id="Mod21WWW0032">
+                                      <option value="Present">Present</option>
+                                      <option value="Absent">Absent</option>
+                                 </select></td>
+                                 </tr>
+
+
+                              <tr>
+                                <td>21WWW0033</td>
+                                <td>Tinashree Chamuah</td>
+                                <td><select class="form-control" id="Mod21WWW0033">
+                                   <option value="Present">Present</option>
+                                   <option value="Absent">Absent</option>
+                              </select></td>
+                              </tr>
+                    
+                                <tr>
+                                   <td>21WWW0037</td>
+                                   <td>Preeyamjit kalita</td>
+                                   <td><select class="form-control" id="Mod21WWW0037">
+                                        <option value="Present">Present</option>
+                                        <option value="Absent">Absent</option>
+                                   </select></td>
+                                 </tr>
+
+
+                                 <tr>
+                                   <td>21WWW0039</td>
+                                   <td>Prakriti Prasad</td>
+                                   <td><select class="form-control" id="Mod21WWW0039">
+                                        <option value="Present">Present</option>
+                                        <option value="Absent">Absent</option>
+                                   </select></td>
+                                 </tr>
+
+
+                                 <tr>
+                                   <td>22WWW0061</td>
+                                   <td>Mani Bharathi.S</td>
+                                   <td><select class="form-control" id="Mod22WWW0061">
+                                        <option value="Present">Present</option>
+                                        <option value="Absent">Absent</option>
+                                   </select></td>
+                                 </tr>
+
+
+                                 <tr>
+                                   <td>22WWW0062</td>
+                                   <td>ANKITA BARMAN ROY</td>
+                                   <td><select class="form-control" id="Mod22WWW0062">
+                                        <option value="Present">Present</option>
+                                        <option value="Absent">Absent</option>
+                                   </select></td>
+                                 </tr>
+
+
+                                 <tr>
+                                   <td>22WWW0063</td>
+                                   <td>Archita Das</td>
+                                   <td><select class="form-control" id="Mod22WWW0063">
+                                        <option value="Present">Present</option>
+                                        <option value="Absent">Absent</option>
+                                   </select></td>
+                                 </tr>
+
+                                 <tr>
+                                   <td>22WWW0065</td>
+                                   <td>Bandip Jyoti Medhi</td>
+                                   <td><select class="form-control" id="Mod22WWW0065">
+                                        <option value="Present">Present</option>
+                                        <option value="Absent">Absent</option>
+                                   </select></td>
+                                 </tr>
+
+                                 <tr>
+                                   <td>22WWW0075</td>
+                                   <td>Pritom Das</td>
+                                   <td><select class="form-control" id="Mod22WWW0075">
+                                        <option value="Present">Present</option>
+                                        <option value="Absent">Absent</option>
+                                   </select></td>
+                                 </tr>
+
+                                 <tr>
+                                   <td>22WWW0076</td>
+                                   <td>Nawajuddin Ahmed</td>
+                                   <td><select class="form-control" id="Mod22WWW0076">
+                                        <option value="Present">Present</option>
+                                        <option value="Absent">Absent</option>
+                                   </select></td>
+                                 </tr>
+                    
+                               
+                            </table>
+                    
+                    
+                    
+                    </form>
+                    
+                        
+                            
+                          </div>
+
+                          <div class="alert alert-success" style="display:none" id="added" role="alert">Success! Attendance added successfully.</div>
+                          <div class="alert alert-warning" style="display:none" id="updated" role="alert">Success! Attendance updated successfully.</div>
+                          <div class="alert alert-danger" style="display:none" id="deleted" role="alert">Success! Attendance deleted successfully.</div>
+                          <div class="alert alert-danger" style="display:none" id="error" role="alert">Error! Record was not added, there was some problem.</div>
+                          
+                         </div>
+                         <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" onclick="location.href='prdept.html'">Close</button>
+                           <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()">Post</button>
+                            <button id="UpdModBtn" type="button" class="btn" style="background-color: #3D8361; color: #FFFFFF"  onclick="UpdStd()">Update</button>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                   
+                 
+                    <!-- Main content -->
+                </div>
+              </div>
+
+          </div>
+          <br>   <br>
+      
+      </div>
+
+  </div>
+
+
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <script src="./assets/vendor/aos/aos.js"></script>
+  <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="./assets/vendor/isotope-layout/isotope.pmarks_kgd.min.js"></script>
+  <script src="./assets/vendor/php-email-form/validate.js"></script>
+  <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="./assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+
+  <script src="./assets/js/main.js"></script>
+  
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+
+  <script>
+
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+          apiKey: "AIzaSyBTOvD0aod-fntZ0VYbT6EAp9z1L_bqKwY",
+          authDomain: "website-818ed.firebaseapp.com",
+          databaseURL: "https://website-818ed-default-rtdb.firebaseio.com",
+          projectId: "website-818ed",
+          storageBucket: "website-818ed.appspot.com",
+          messagingSenderId: "542030860652",
+          appId: "1:542030860652:web:ee0bef0509915aa1da2349",
+          measurementId: "G-2VWCQ9QR4S"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  
+
+// const auth=firebase.auth();
+// const db=firebase.database();
+
+
+// firebase.auth().onAuthStateChanged(function(user) {
+// if (user) {
+// // User is signed in.
+// } else {
+// window.location.href = '../main.html'; 
+// }
+// });
+
+
+//GET ALL DATA
+var stdNo;
+    function SelectAllData(){
+      document.getElementById('tbody1').innerHTML="";
+
+      stdNo=0;
+        firebase.database().ref('/Attendance/PRdept').orderByChild('date').once('value',
+        function(AllRecords){
+            AllRecords.forEach(
+                function(CurrentRecord){
+       
+                    var date = CurrentRecord.val().date;
+                    var name = CurrentRecord.val().name;
+                    var a21WWW0031 = CurrentRecord.val().a21WWW0031;
+                    var a21WWW0032 = CurrentRecord.val().a21WWW0032;
+                    var a21WWW0033 = CurrentRecord.val().a21WWW0033;
+                    var a21WWW0037 = CurrentRecord.val().a21WWW0037;
+                    var a21WWW0039 = CurrentRecord.val().a21WWW0039;
+                    var a22WWW0061 = CurrentRecord.val().a22WWW0061;
+                    var a22WWW0062 = CurrentRecord.val().a22WWW0062;
+                    var a22WWW0063 = CurrentRecord.val().a22WWW0063;
+                    var a22WWW0065 = CurrentRecord.val().a22WWW0065;
+                    var a22WWW0075 = CurrentRecord.val().a22WWW0075;
+                    var a22WWW0076 = CurrentRecord.val().a22WWW0076;
+                  
+                    
+                    
+                    AddItemsToTable(date,name,a21WWW0031,a21WWW0032,a21WWW0033,a21WWW0037,a21WWW0039,a22WWW0061,a22WWW0062,a22WWW0063,a22WWW0065,a22WWW0075,a22WWW0076);
+             
+
+                }
+            );
+
+        });
+    }
+
+    window.onload = SelectAllData;
+
+    //Filling the table
+    
+    var stdList = [];
+    function AddItemsToTable(date,name,a21WWW0031,a21WWW0032,a21WWW0033,a21WWW0037,a21WWW0039,a22WWW0061,a22WWW0062,a22WWW0063,a22WWW0065,a22WWW0075,a22WWW0076){
+        var tbody = document.getElementById('tbody1');
+        var trow = document.createElement('tr');
+        var td0 = document.createElement('td');
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+        var td3 = document.createElement('td');
+        var td4 = document.createElement('td');
+        var td5 = document.createElement('td');
+        var td6 = document.createElement('td');
+        var td7 = document.createElement('td');
+        var td8 = document.createElement('td');
+        var td9 = document.createElement('td');
+        var td10 = document.createElement('td');
+        var td11 = document.createElement('td');
+        var td12 = document.createElement('td');
+        var td13 = document.createElement('td');
+
+
+
+      stdList.push([date,name,a21WWW0031,a21WWW0032,a21WWW0033,a21WWW0037,a21WWW0039,a22WWW0061,a22WWW0062,a22WWW0063,a22WWW0065,a22WWW0075,a22WWW0076])
+ 
+ 
+       
+        td0.innerHTML = ++stdNo;
+        td1.innerHTML = date;
+        td2.innerHTML = name;
+     
+       
+
+        trow.appendChild(td0);
+        trow.appendChild(td1); 
+        trow.appendChild(td2); 
+    
+    
+
+
+        var ControlDiv = document.createElement("div");
+       
+        ControlDiv.innerHTML = '<button type="button" class="btn btn-primary my-2 ml-2" style="width:95%;height:35px;margin: 3px;color:white;margin-top:2px;font-size:12px;" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes('+stdNo+')">View</button>'
+     
+        trow.appendChild(ControlDiv);
+
+        tbody.appendChild(trow);
+        
+    }
+
+   
+    var DateMod = document.getElementById('DateMod')
+    var ModName = document.getElementById('NameMod');
+    var Mod21WWW0031 = document.getElementById('Mod21WWW0031');
+    var Mod21WWW0032 = document.getElementById('Mod21WWW0032');
+    var Mod21WWW0033 = document.getElementById('Mod21WWW0033');
+    var Mod21WWW0037 = document.getElementById('Mod21WWW0037');
+    var Mod21WWW0039 = document.getElementById('Mod21WWW0039');
+    var Mod22WWW0061 = document.getElementById('Mod22WWW0061');
+    var Mod22WWW0063 = document.getElementById('Mod22WWW0063');
+    var Mod22WWW0065 = document.getElementById('Mod22WWW0065');
+    var Mod22WWW0075 = document.getElementById('Mod22WWW0075');
+    var Mod22WWW0076 = document.getElementById('Mod22WWW0076');
+
+  
+  
+    var AddModBtn = document.getElementById('AddModBtn');
+    var UpdModBtn = document.getElementById('UpdModBtn');
+    var DelModBtn = document.getElementById('DelModBtn');
+
+
+    function FillTboxes(index){
+
+      if(index==null){
+
+        DateMod.value = "";
+        ModName.value = "";
+        Mod21WWW0031.value = "Present";
+        Mod21WWW0032.value = "Present";
+        Mod21WWW0033.value = "Present";
+        Mod21WWW0037.value = "Present";
+        Mod21WWW0039.value = "Present";
+        Mod22WWW0061.value = "Present";
+        Mod22WWW0063.value = "Present";
+        Mod22WWW0065.value = "Present";
+        Mod22WWW0075.value = "Present";
+        Mod22WWW0076.value = "Present";
+      
+       
+          
+           AddModBtn.style.display='inline-block';
+           UpdModBtn.style.display='none';
+           DelModBtn.style.display='none';
+
+      }
+      else{
+           --index;
+     
+          
+           DateMod.value = stdList[index][0];
+           ModName.value = stdList[index][1];
+           Mod21WWW0031.value = stdList[index][2];
+           Mod21WWW0032.value = stdList[index][3];
+           Mod21WWW0033.value = stdList[index][4];
+           Mod21WWW0037.value = stdList[index][5];
+           Mod21WWW0039.value = stdList[index][6];
+           Mod22WWW0061.value = stdList[index][7];
+           Mod22WWW0063.value = stdList[index][8];
+           Mod22WWW0065.value = stdList[index][9];
+           Mod22WWW0075.value = stdList[index][10];
+           Mod22WWW0076.value = stdList[index][11];
+          
+  
+           DateMod.disabled=false;
+           ModName.disabled=false;
+          
+      
+         
+           AddModBtn.style.display='none';
+           UpdModBtn.style.display='inline-block';
+           DelModBtn.style.display='inline-block';
+
+      }
+    }
+
+    function AddStd(){
+         
+         firebase.database().ref("/Attendance/PRdept/" +DateMod.value).set(
+              {
+          
+              
+               
+               date: DateMod.value,
+               name: ModName.value,
+               a21WWW0031: Mod21WWW0031.value,
+               a21WWW0032: Mod21WWW0032.value,
+               a21WWW0033: Mod21WWW0033.value,
+               a21WWW0037: Mod21WWW0037.value,
+               a21WWW0039: Mod21WWW0039.value,
+               a22WWW0061: Mod22WWW0061.value,
+               a22WWW0063: Mod22WWW0063.value,
+               a22WWW0065: Mod22WWW0065.value,
+               a22WWW0075: Mod22WWW0075.value,
+               a22WWW0076: Mod22WWW0076.value,          
+           
+              
+
+              },
+              (error)=>{
+                   if(error){ 
+                    document.querySelector('#error').style.display = 'block';
+
+                    setTimeout(function(){
+                    document.querySelector('#error').style.display = 'none';
+                    },3000);
+
+                    DateMod.value == exists
+                   }
+
+                   else{
+                        document.querySelector('#added').style.display = 'block';
+
+                        setTimeout(function(){
+                        document.querySelector('#added').style.display = 'none';
+                        },3000);
+
+
+                        SelectAllData();
+               
+
+                        // Clear form
+                        document.getElementById('modal').reset();
+                                            
+                    
+
+                        
+                        
+                   }
+              }
+         )
+    }
+
+
+
+    function UpdStd(){
+         
+         firebase.database().ref("/Attendance/PRdept/" +DateMod.value).update(
+              {
+     
+               date: DateMod.value,
+               name: ModName.value,
+               a21WWW0031: Mod21WWW0031.value,
+               a21WWW0032: Mod21WWW0032.value,
+               a21WWW0033: Mod21WWW0033.value,
+               a21WWW0037: Mod21WWW0037.value,
+               a21WWW0039: Mod21WWW0039.value,
+               a22WWW0061: Mod22WWW0061.value,
+               a22WWW0063: Mod22WWW0063.value,
+               a22WWW0065: Mod22WWW0065.value,
+               a22WWW0075: Mod22WWW0075.value,
+               a22WWW0076: Mod22WWW0076.value, 
+          
+               
+              },
+              (error)=>{
+                   if(error){
+                    document.querySelector('#error').style.display = 'block';
+
+                    setTimeout(function(){
+                    document.querySelector('#error').style.display = 'none';
+                    },3000);
+
+                   }
+                   else{
+                       
+                    document.querySelector('#updated').style.display = 'block';
+
+                    setTimeout(function(){
+                    document.querySelector('#updated').style.display = 'none';
+                    },3000);
+
+
+                    SelectAllData();
+
+
+                    // Clear form
+                    document.getElementById('modal').reset();
+                        
+                        
+                        
+                   }
+              }
+         )
+    }
+
+
+
+
+
+
+
+
+</script>
+
+<script>
+     function myFunction() {
+       // Declare variables
+       var input, filter, table, tr, td, i, txtValue;
+       input = document.getElementById("name");
+       filter = input.value.toUpperCase();
+       table = document.getElementById("atten");
+       tr = table.getElementsByTagName("tr");
+     
+       // Loop through all table rows, and hide those who don't match the search query
+       for (i = 0; i < tr.length; i++) {
+         td = tr[i].getElementsByTagName("td")[1];
+    
+         if (td) {
+           txtValue = td.textContent || td.innerText;
+           if (txtValue.toUpperCase().indexOf(filter) > -1) {
+             tr[i].style.display = "";
+           } else {
+             tr[i].style.display = "none";
+           }
+         }
+       }
+     }
+     </script>
+   
+   <script>
+     function myReg() {
+       // Declare variables
+       var input, filter, table, tr, td, i, txtValue;
+       input = document.getElementById("regno");
+       filter = input.value.toUpperCase();
+       table = document.getElementById("atten");
+       tr = table.getElementsByTagName("tr");
+     
+       // Loop through all table rows, and hide those who don't match the search query
+       for (i = 0; i < tr.length; i++) {
+         td = tr[i].getElementsByTagName("td")[0];
+    
+         if (td) {
+           txtValue = td.textContent || td.innerText;
+           if (txtValue.toUpperCase().indexOf(filter) > -1) {
+             tr[i].style.display = "";
+           } else {
+             tr[i].style.display = "none";
+           }
+         }
+       }
+     }
+     </script>
+   
+
+</body>
+
+</html>
