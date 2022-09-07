@@ -252,11 +252,11 @@ async function getuserInfoRealtime(userID){
                                             <tr>
 												<td style="min-width: 200px;">
 													
-													<h2><a href="./Meeting/${userInfo.depthref}.html"  style="color: red;font-weight: 500;">Meeting Attendance</a></h2>
+													<h2><a href="./Meeting/meeting.html"  style="color: red;font-weight: 500;">Meeting Attendance</a></h2>
 												</td>                 
 
 												<td class="text-right">
-													<a href="./Meeting/${userInfo.depthref}.html"  class="btn btn-outline-success take-btn">View</a>
+													<a href="./Meeting/meeting.html"  class="btn btn-outline-success take-btn">View</a>
 												</td>
 											</tr>
 
