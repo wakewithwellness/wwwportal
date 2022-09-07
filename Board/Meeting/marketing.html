@@ -511,7 +511,7 @@ var stdNo;
   
           
   
-           DateMod.disabled=false;
+           DateMod.disabled=true;
            ModName.disabled=false;
           
       
@@ -691,6 +691,24 @@ var stdNo;
        }
      }
      </script>
+
+
+<script >
+  let input = document.querySelector("#DateMod");
+let button = document.querySelector("#AddModBtn");
+
+button.disabled = true; //setting button state to disabled
+
+input.addEventListener("change", stateHandle);
+
+function stateHandle() {
+  if (document.querySelector("#DateMod").value === "") {
+      button.disabled = true; //button remains disabled
+  } else {
+      button.disabled = false; //button is enabled
+  }
+}
+</script>
    
 
 </body>
