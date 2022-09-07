@@ -163,7 +163,7 @@ margin-bottom: 12px; /* Add some space below the input */
                                          <th style="width: 90px" scope="col">S No.</th> 
                                          <th scope="col" style="width: 200px">Date</th> 
                                          <th scope="col">Agenda</th>
-                                         <th scope="col" style="width: 150px" >Attendance</th>
+                                         <th scope="col" style="width: 150px; text-align: center" >Status</th>
                                    
                    
                                        </tr>
@@ -212,7 +212,7 @@ margin-bottom: 12px; /* Add some space below the input */
                                   <label style="margin-top: 10px;color: rgb(94, 94, 94);">Agenda :</label>
                               </div>
                               <div class="col-md-8">
-                                   <textarea id="NameMod" maxlength="500" style="width: 100%;padding:8px;border-radius: 5px;border: 1px solid rgb(136, 136, 136)" required ></textarea>
+                                   <textarea id="NameMod" maxlength="500" rows="5" style="width: 100%;padding:8px;border-radius: 5px;border: 1px solid rgb(136, 136, 136)" required ></textarea>
                               </div>
                       
                              </div>
@@ -298,7 +298,7 @@ margin-bottom: 12px; /* Add some space below the input */
 
                                  <tr>
                                    <td>22WWW0062</td>
-                                   <td>ANKITA BARMAN ROY</td>
+                                   <td>Ankita Barman Roy</td>
                                    <td><select class="form-control" id="Mod22WWW0062">
                                         <option value="Present">Present</option>
                                         <option value="Absent">Absent</option>
@@ -424,17 +424,17 @@ margin-bottom: 12px; /* Add some space below the input */
     firebase.initializeApp(firebaseConfig);
   
 
-// const auth=firebase.auth();
-// const db=firebase.database();
+const auth=firebase.auth();
+const db=firebase.database();
 
 
-// firebase.auth().onAuthStateChanged(function(user) {
-// if (user) {
-// // User is signed in.
-// } else {
-// window.location.href = '../main.html'; 
-// }
-// });
+firebase.auth().onAuthStateChanged(function(user) {
+if (user) {
+// User is signed in.
+} else {
+window.location.href = '../main.html'; 
+}
+});
 
 
 //GET ALL DATA
@@ -517,7 +517,7 @@ var stdNo;
 
         var ControlDiv = document.createElement("div");
        
-        ControlDiv.innerHTML = '<button type="button" class="btn btn-primary my-2 ml-2" style="width:95%;height:35px;margin: 3px;color:white;margin-top:2px;font-size:12px;" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes('+stdNo+')">View</button>'
+        ControlDiv.innerHTML = '<button type="button" class="btn btn-danger my-2 ml-2" style="width:95%;height:35px;margin: 3px;color:white;margin-top:2px;font-size:12px;" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes('+stdNo+')">View</button>'
      
         trow.appendChild(ControlDiv);
 
@@ -534,6 +534,7 @@ var stdNo;
     var Mod21WWW0037 = document.getElementById('Mod21WWW0037');
     var Mod21WWW0039 = document.getElementById('Mod21WWW0039');
     var Mod22WWW0061 = document.getElementById('Mod22WWW0061');
+    var Mod22WWW0062 = document.getElementById('Mod22WWW0062');
     var Mod22WWW0063 = document.getElementById('Mod22WWW0063');
     var Mod22WWW0065 = document.getElementById('Mod22WWW0065');
     var Mod22WWW0075 = document.getElementById('Mod22WWW0075');
@@ -558,6 +559,7 @@ var stdNo;
         Mod21WWW0037.value = "Present";
         Mod21WWW0039.value = "Present";
         Mod22WWW0061.value = "Present";
+        Mod22WWW0062.value = "Present";
         Mod22WWW0063.value = "Present";
         Mod22WWW0065.value = "Present";
         Mod22WWW0075.value = "Present";
@@ -582,10 +584,11 @@ var stdNo;
            Mod21WWW0037.value = stdList[index][5];
            Mod21WWW0039.value = stdList[index][6];
            Mod22WWW0061.value = stdList[index][7];
-           Mod22WWW0063.value = stdList[index][8];
-           Mod22WWW0065.value = stdList[index][9];
-           Mod22WWW0075.value = stdList[index][10];
-           Mod22WWW0076.value = stdList[index][11];
+           Mod22WWW0062.value = stdList[index][8];
+           Mod22WWW0063.value = stdList[index][9];
+           Mod22WWW0065.value = stdList[index][10];
+           Mod22WWW0075.value = stdList[index][11];
+           Mod22WWW0076.value = stdList[index][12];
           
   
            DateMod.disabled=false;
@@ -615,6 +618,7 @@ var stdNo;
                a21WWW0037: Mod21WWW0037.value,
                a21WWW0039: Mod21WWW0039.value,
                a22WWW0061: Mod22WWW0061.value,
+               a22WWW0062: Mod22WWW0062.value,
                a22WWW0063: Mod22WWW0063.value,
                a22WWW0065: Mod22WWW0065.value,
                a22WWW0075: Mod22WWW0075.value,
@@ -672,6 +676,7 @@ var stdNo;
                a21WWW0037: Mod21WWW0037.value,
                a21WWW0039: Mod21WWW0039.value,
                a22WWW0061: Mod22WWW0061.value,
+               a22WWW0062: Mod22WWW0062.value,
                a22WWW0063: Mod22WWW0063.value,
                a22WWW0065: Mod22WWW0065.value,
                a22WWW0075: Mod22WWW0075.value,
