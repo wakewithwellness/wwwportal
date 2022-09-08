@@ -103,26 +103,26 @@ async function getuserInfoRealtime(userID){
                        
 
                     <li >
-                    <a href="attenUpdates.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
+                    <a href="../attenUpdates.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
                     </li>
 
 
                     <li>
-                    <a href="members.html"><i  class="fa fa-users"></i> <span>Members</span></a>
+                    <a href="../members.html"><i  class="fa fa-users"></i> <span>Members</span></a>
                    </li>
 
   
 
                        <li>
-                       <a href="leavepanel.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+                       <a href="../leavepanel.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
                       </li>
 
                       <li>
-                      <a href="payments.html"><i  class="fa fa-money"></i> <span>Payments</span></a>
+                      <a href="../payments.html"><i  class="fa fa-money"></i> <span>Payments</span></a>
                      </li>
 
                      <li>
-                     <a href="recruitments.html"><i  class="fa fa-user"></i> <span>Registrations</span></a>
+                     <a href="../recruitments.html"><i  class="fa fa-user"></i> <span>Registrations</span></a>
                     </li>
           
 
@@ -161,15 +161,15 @@ async function getuserInfoRealtime(userID){
 
 
            <div class="col-sm">
-           <h4 style="font-size: 15px">Name: <span style="color: #0d6efd">${userInfo.name}</span></h4>
+           <h4 style="font-size: 14px">Name: <span style="color: #0d6efd">${userInfo.name}</span></h4>
            </div>
 
            <div class="col-sm">
-           <h4 style="font-size: 15px">Registration no.: <span style="color: #0d6efd">${userInfo.regno}</span></h4>
+           <h4 style="font-size: 14px">Registration no.: <span style="color: #0d6efd">${userInfo.regno}</span></h4>
            </div>
 
            <div class="col-sm">
-           <h4 style="font-size: 15px">Department: <span style="color: #0d6efd">${userInfo.department}</span></h4>
+           <h4 style="font-size: 14px">Department: <span style="color: #0d6efd">${userInfo.department}</span></h4>
            </div>
 
          
@@ -196,24 +196,24 @@ async function getuserInfoRealtime(userID){
                                                     <div class="row">
   
                                                     <div class="col" >
-                                                      <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;border-top: 3px solid #16213E">
+                                                      <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;">
                                                        
                                                         <div class="card-body" style="text-align: center">
-                                                          <h5 class="card-title" style="color: #16213E">Curation Department</h5>
+                                                          <h4 style="color: #16213E">Curation Department</h4>
                                                           <p class="card-text"></p>
-                                                          <a href="${userInfo.curation}.html" style="width: 120px; background-color:  #16213E;color: #fff;display: ${userInfo.permittedC}" class="btn">Visit</a>
+                                                          <a href="${userInfo.curation}.html" style="width: 120px; background-color:  #0d6efd;color: #fff;display: ${userInfo.permittedC}" class="btn">View</a>
                                                           <h4 style="text-align: center;color:red;display: ${userInfo.permitC}">(Not permitted)</h4>
                                                         </div>
                                                       </div>
                                                     </div>
                                                 
                                                     <div class="col">
-                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;border-top: 3px solid #16213E">
+                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;">
                                                       
                                                         <div class="card-body" style="text-align: center">
-                                                          <h5 class="card-title" style="color: #16213E">Editorial Department</h5>
+                                                          <h4 style="color: #16213E">Editorial Department</h4>
                                                           <p class="card-text" ></p>
-                                                          <a href="${userInfo.editorial}.html" style="width: 120px; background-color: #16213E;color: #fff;display: ${userInfo.permittedEd}" class="btn">Visit</a>
+                                                          <a href="${userInfo.editorial}.html" style="width: 120px; background-color: #0d6efd;color: #fff;display: ${userInfo.permittedEd}" class="btn">View</a>
                                                           <h4 style="text-align: center;color:red;display: ${userInfo.permitEd}">(Not permitted)</h4>
                                                           </div>
                                                       </div>
@@ -221,12 +221,12 @@ async function getuserInfoRealtime(userID){
                                                 
                                                 
                                                     <div class="col">
-                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;border-top: 3px solid #16213E">
+                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff">
                                                      
                                                         <div class="card-body" style="text-align: center">
-                                                          <h5 class="card-title" style="color: #16213E;margin-top:28px">PR Department</h5>
+                                                          <h4 style="color: #16213E">PR Department</h4>
                                                           <p class="card-text"></p>
-                                                          <a href="${userInfo.pr}.html" style="width: 120px; background-color: #16213E; color: #fff;display: ${userInfo.permittedP}" class="btn">Visit</a>
+                                                          <a href="${userInfo.pr}.html" style="width: 120px; background-color: #0d6efd; color: #fff;display: ${userInfo.permittedP}" class="btn">View</a>
                                                           <h4 style="text-align: center;color:red;display: ${userInfo.permitP}">(Not permitted)</h4>
                                                           </div>
                                                       </div>
@@ -234,12 +234,12 @@ async function getuserInfoRealtime(userID){
                                                 
                                                 
                                                     <div class="col">
-                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;border-top: 3px solid #16213E">
+                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff">
                                                       
                                                         <div class="card-body" style="text-align: center">
-                                                          <h5 class="card-title" style="color: #16213E">Events Department</h5>
+                                                          <h4 style="color: #16213E">Events Department</h4>
                                                           <p class="card-text"></p>
-                                                          <a href="${userInfo.events}.html" style="width: 120px; background-color: #16213E; color: #fff;display: ${userInfo.permittedEv}" class="btn">Visit</a>
+                                                          <a href="${userInfo.events}.html" style="width: 120px; background-color: #0d6efd; color: #fff;display: ${userInfo.permittedEv}" class="btn">View</a>
                                                           <h4 style="text-align: center;color:red;display: ${userInfo.permitEv}">(Not permitted)</h4>
                                                           </div>
                                                       </div>
@@ -247,12 +247,12 @@ async function getuserInfoRealtime(userID){
                                                 
 
                                                     <div class="col">
-                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;border-top: 3px solid #16213E">
+                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff">
                                                     
                                                       <div class="card-body" style="text-align: center">
-                                                        <h5 class="card-title" style="color: #16213E">Marketing Department</h5>
+                                                        <h4 style="color: #16213E">Marketing Department</h4>
                                                         <p class="card-text"></p>
-                                                        <a href="${userInfo.marketing}.html" style="width: 120px; background-color: #16213E; color: #fff;display: ${userInfo.permittedM}" class="btn">Visit</a>
+                                                        <a href="${userInfo.marketing}.html" style="width: 120px; background-color: #0d6efd; color: #fff;display: ${userInfo.permittedM}" class="btn">View</a>
                                                         <h4 style="text-align: center;color:red;display: ${userInfo.permitM}">(Not permitted)</h4>
                                                         </div>
                                                     </div>
