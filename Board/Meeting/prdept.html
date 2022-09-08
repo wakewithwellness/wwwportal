@@ -161,9 +161,9 @@ margin-bottom: 12px; /* Add some space below the input */
                                    <thead>
                                        <tr style="background-color: #0d6efd;color: #fff;"> 
                                          <th style="width: 90px" scope="col">S No.</th> 
-                                         <th scope="col" style="width: 200px">Date</th> 
+                                         <th scope="col">Date</th> 
                                          <th scope="col">Agenda</th>
-                                         <th scope="col" style="width: 150px; text-align: center" >Status</th>
+                                         <th scope="col" style="width: 80px;text-align: center" >Status</th>
                                    
                    
                                        </tr>
@@ -358,12 +358,13 @@ margin-bottom: 12px; /* Add some space below the input */
                           <div class="alert alert-danger" style="display:none" id="deleted" role="alert">Success! Attendance deleted successfully.</div>
                           <div class="alert alert-danger" style="display:none" id="error" role="alert">Error! Record was not added, there was some problem.</div>
                           
-                         </div>
+                        
                          <div class="modal-footer">
                            <button type="button" class="btn btn-secondary" onclick="location.href='prdept.html'">Close</button>
-                           <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()">Post</button>
-                            <button id="UpdModBtn" type="button" class="btn" style="background-color: #3D8361; color: #FFFFFF"  onclick="UpdStd()">Update</button>
+                           <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()" style="width:100px"><i class="fa fa-check-square" aria-hidden="true"></i> Post</button>
+                            <button id="UpdModBtn" type="button" class="btn" style="background-color: #3D8361; color: #FFFFFF;width:100px" onclick="UpdStd()"><i class="fa fa-check-square" aria-hidden="true"></i> Update</button>
                          </div>
+                        </div>
                        </div>
                      </div>
                    </div>
@@ -505,6 +506,9 @@ var stdNo;
         td0.innerHTML = ++stdNo;
         td1.innerHTML = date;
         td2.innerHTML = name;
+        td1.style.fontWeight = "600";
+        td1.style.fontSize = "14px"
+        td2.style.fontSize = "12px"
      
        
 
@@ -517,7 +521,7 @@ var stdNo;
 
         var ControlDiv = document.createElement("div");
        
-        ControlDiv.innerHTML = '<button type="button" class="btn btn-danger my-2 ml-2" style="width:95%;height:35px;margin: 3px;color:white;margin-top:2px;font-size:12px;" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes('+stdNo+')">View</button>'
+        ControlDiv.innerHTML = '<button type="button" class="btn btn-danger my-2 ml-2" style="margin: 3px;color:white;font-size:12px;" data-toggle="modal" data-target="#exampleModalCenter" onclick="FillTboxes('+stdNo+')"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button>'
      
         trow.appendChild(ControlDiv);
 
