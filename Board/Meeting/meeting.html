@@ -67,7 +67,7 @@
       </style>
             
 </head>
-<body  style="overflow-x: hidden;background-color: rgb(238, 238, 238)">
+<body oncontextmenu="return false"  style="overflow-x: hidden;background-color: rgb(238, 238, 238)">
 
   <div class="topnav" style="width: 100%;">
    
@@ -180,7 +180,31 @@
     <script src="../../MembersPanel/assets/js/chart.js"></script>
     <script src="../../MembersPanel/assets/js/app.js"></script>
 
-
+    <script>
+    
+      document.onkeydown=function(e)
+      {
+        if (event.keyCode == 123) 
+        {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+        {
+          return false;
+        }
+    
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
+        {
+          return false;
+        }
+    
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
+        {
+          return false;
+        }
+      }
+    
+    </script>
 
 </body>
 </html>
