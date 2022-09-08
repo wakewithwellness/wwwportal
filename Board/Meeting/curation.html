@@ -161,7 +161,7 @@ margin-bottom: 12px; /* Add some space below the input */
                                    <thead>
                                        <tr style="background-color: #0d6efd;color: #fff;"> 
                                          <th style="width: 90px" scope="col">S No.</th> 
-                                         <th scope="col" style="width: 200px">Date</th> 
+                                         <th scope="col">Date</th> 
                                          <th scope="col">Agenda</th>
                                          <th scope="col" style="width: 150px; text-align: center" >Status</th>
                                    
@@ -361,11 +361,11 @@ margin-bottom: 12px; /* Add some space below the input */
                           <div class="alert alert-danger" style="display:none" id="deleted" role="alert">Success! Attendance deleted successfully.</div>
                           <div class="alert alert-danger" style="display:none" id="error" role="alert">Error! Record was not added, there was some problem.</div>
                           
-                         </div>
-                         <div class="modal-footer">
-                           <button type="button" class="btn btn-secondary" onclick="location.href='curation.html'">Close</button>
-                           <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()">Post</button>
-                            <button id="UpdModBtn" type="button" class="btn" style="background-color: #3D8361; color: #FFFFFF"  onclick="UpdStd()">Update</button>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" onclick="location.href='prdept.html'">Close</button>
+                            <button id="AddModBtn" type="button" class="btn btn-primary" onclick="AddStd()" style="width:100px"><i class="fa fa-check-square" aria-hidden="true"></i> Post</button>
+                             <button id="UpdModBtn" type="button" class="btn" style="background-color: #3D8361; color: #FFFFFF;width:100px" onclick="UpdStd()"><i class="fa fa-check-square" aria-hidden="true"></i> Update</button>
+                          </div>
                          </div>
                        </div>
                      </div>
@@ -510,7 +510,9 @@ var stdNo;
         td0.innerHTML = ++stdNo;
         td1.innerHTML = date;
         td2.innerHTML = name;
-     
+        td1.style.fontWeight = "600";
+        td1.style.fontSize = "14px"
+        td2.style.fontSize = "12px"
        
 
         trow.appendChild(td0);
