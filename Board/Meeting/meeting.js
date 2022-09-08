@@ -154,22 +154,22 @@ async function getuserInfoRealtime(userID){
            </div>
 
 
-           <div class="row">
+           <div class="row" style="margin-top: -15px;margin-bottom:-15px">
           
            <div class="col-sm"> 
            <div class="row" style="text-align:left">
 
 
            <div class="col-sm">
-           <h4 style="font-size: 14px">Name: <span style="color: #0d6efd">${userInfo.name}</span></h4>
+           <h4 style="font-size: 13px">Name: <span style="color: #0d6efd">${userInfo.name}</span></h4>
            </div>
 
            <div class="col-sm">
-           <h4 style="font-size: 14px">Registration no.: <span style="color: #0d6efd">${userInfo.regno}</span></h4>
+           <h4 style="font-size: 13px">Registration no.: <span style="color: #0d6efd">${userInfo.regno}</span></h4>
            </div>
 
            <div class="col-sm">
-           <h4 style="font-size: 14px">Department: <span style="color: #0d6efd">${userInfo.department}</span></h4>
+           <h4 style="font-size: 13px">Department: <span style="color: #0d6efd">${userInfo.department}</span></h4>
            </div>
 
          
@@ -184,7 +184,18 @@ async function getuserInfoRealtime(userID){
 
 
 
-                
+<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 20px;border-radius: 5px">
+        
+<div class="row" style="margin-left:20px;color: red; font-size:12.5px; margin-bottom:-10px">
+<p><i class="fa fa-eercast" aria-hidden="true"></i> Minimum 70% attendance is required.</p>
+   </div>
+
+
+  
+
+</div>
+
+
 
 
 
@@ -196,8 +207,8 @@ async function getuserInfoRealtime(userID){
                                                     <div class="row">
   
                                                     <div class="col" >
-                                                      <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;">
-                                                       
+                                                      <div class="card" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;">
+
                                                         <div class="card-body" style="text-align: center">
                                                           <h4 style="color: #16213E">Curation Department</h4>
                                                           <p class="card-text"></p>
@@ -208,7 +219,7 @@ async function getuserInfoRealtime(userID){
                                                     </div>
                                                 
                                                     <div class="col">
-                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;">
+                                                    <div class="card" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff;">
                                                       
                                                         <div class="card-body" style="text-align: center">
                                                           <h4 style="color: #16213E">Editorial Department</h4>
@@ -221,7 +232,7 @@ async function getuserInfoRealtime(userID){
                                                 
                                                 
                                                     <div class="col">
-                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff">
+                                                    <div class="card" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff">
                                                      
                                                         <div class="card-body" style="text-align: center">
                                                           <h4 style="color: #16213E">PR Department</h4>
@@ -234,7 +245,7 @@ async function getuserInfoRealtime(userID){
                                                 
                                                 
                                                     <div class="col">
-                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff">
+                                                    <div class="card" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff">
                                                       
                                                         <div class="card-body" style="text-align: center">
                                                           <h4 style="color: #16213E">Events Department</h4>
@@ -247,7 +258,7 @@ async function getuserInfoRealtime(userID){
                                                 
 
                                                     <div class="col">
-                                                    <div class="card content" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff">
+                                                    <div class="card" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff">
                                                     
                                                       <div class="card-body" style="text-align: center">
                                                         <h4 style="color: #16213E">Marketing Department</h4>
