@@ -256,9 +256,21 @@ async function getuserInfoRealtime(userID){
 												</td>                 
 
 												<td class="text-right">
-													<a href="./Meeting/meeting.html"  class="btn btn-outline-success take-btn">View</a>
+													<a href="./Meeting/meeting.html"  class="btn btn-outline-danger take-btn">View</a>
 												</td>
 											</tr>
+
+                                            <tr>
+                                            <td style="min-width: 200px;">
+                                                
+                                                <h2><a href="./filesUpload.html"  style="color: blue;font-weight: 500;">Contents Uploaded</a></h2>
+                                            </td>                 
+
+                                            <td class="text-right">
+                                                <a href="./filesUpload.html"  class="btn btn-outline-primary take-btn">View</a>
+                                            </td>
+                                        </tr>
+
 
 
 											<tr>
