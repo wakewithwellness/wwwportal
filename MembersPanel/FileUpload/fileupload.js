@@ -209,7 +209,7 @@ async function getuserInfoRealtime(userID){
                          <td style="font-weight: 400">${userInfo.a1}</td>
                          <td style="font-weight: 500" id="date1">${userInfo.d1}</td>
                          <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload1}" href="#modal1" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
-                         <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileI" style="color: #198754;" href="${firebase.auth().currentUser.photoURL}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                         <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileI" style="color: #198754;" href="${userInfo.file1}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                        
                     </tr>
                     <tr style="display: ${userInfo.a1}">
