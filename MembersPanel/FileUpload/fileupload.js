@@ -212,7 +212,7 @@ async function getuserInfoRealtime(userID){
                          <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileI" style="color: #198754;" href="${userInfo.file1}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                        
                     </tr>
-                    <tr style="display: ${userInfo.a1}">
+                    <tr style="display: ${userInfo.a2}">
                          <td>2</td>
                          <td style="font-weight: 400">${userInfo.a2}</td>
                          <td style="font-weight: 500" id="date2">${userInfo.d2}</td>
