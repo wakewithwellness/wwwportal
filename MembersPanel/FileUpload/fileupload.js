@@ -41,7 +41,6 @@ async function getuserInfo(userID){
       <form autocomplete="off" onsubmit="login(event)">
           <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
-
           <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
           <br>
@@ -51,9 +50,6 @@ async function getuserInfo(userID){
           
   </form>
         <div>
-
-
-
        
       </div>
     </div></div>
@@ -81,13 +77,8 @@ async function getuserInfoRealtime(userID){
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
     
-
-
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
-
     
                         <div class="sidebar" id="sidebar">
             <div class="sidebar-inner slimscroll">
@@ -111,7 +102,6 @@ async function getuserInfoRealtime(userID){
                        <li>
                         <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
                         </li>
-
                        <li>
                        <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
                       </li>
@@ -125,69 +115,36 @@ async function getuserInfoRealtime(userID){
         
         
         <div class="page-wrapper">
-
-
         <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 20px;border-radius: 5px">
         
-                 <div class="row" >
-                    <div class="col-sm-12">
-                        <h4 class="page-title" style="float:left">My Profile </h4><br><br>
-                        <hr>
-                    </div>
-                    </div>
-
-
-                    <div class="row" style="margin-top:-10px;margin-bottom: -20px">
+                    <div class="row" style="margin-bottom: -20px">
               
                     <div class="col-lg"> 
                     <div class="row" style="text-align:left">
-
-
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">Name: <span style="color: #198754">${userInfo.name}</span></h4>
+                    <h4 style="font-size: 13px">Name : <span style="color: #198754">${userInfo.name}</span></h4>
                     </div>
-
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">Registration no.: <span style="color: #198754">${userInfo.regno}</span></h4>
+                    <h4 style="font-size: 13px">Registration no. : <span style="color: #198754">${userInfo.regno}</span></h4>
                     </div>
-
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">E-mail: <span style="color: #198754">${userInfo.department}</span></h4>
+                    <h4 style="font-size: 13px">Department : <span style="color: #198754">${userInfo.department}</span></h4>
                     </div>
-
                     
-
                
                     </div>
-
                     </div>
                     </div>
-
                    
-
-
         </div>
-
-
-
   
-
-
-
-
-
-
-
         <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius: 5px"">
-
         <div class="row">
         <div class="col-sm-12">
             <h4 class="page-title" style="text-align:left">Upload File</h4>
             <hr>
         </div>
         </div>
-
-
  
         <div class="table-responsive">
         <table class="table table-bordered" id="myTable">
@@ -208,7 +165,7 @@ async function getuserInfoRealtime(userID){
                          <td>1</td>
                          <td style="font-weight: 400">${userInfo.a1}</td>
                          <td style="font-weight: 500" id="date1">${userInfo.d1}</td>
-                         <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload1}" href="#modal1" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
+                         <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload1}; font-size: 20px" href="#modal1" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
                          <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileI" style="color: #198754;" href="${userInfo.file1}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                        
                     </tr>
@@ -216,40 +173,36 @@ async function getuserInfoRealtime(userID){
                          <td>2</td>
                          <td style="font-weight: 400">${userInfo.a2}</td>
                          <td style="font-weight: 500" id="date2">${userInfo.d2}</td>
-                         <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload2}" href="#modal3" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
+                         <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload2}; font-size: 20px" href="#modal3" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
                          <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileII" style="color: #198754" href="${userInfo.file2}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                          </tr>
-
                          <tr style="display: ${userInfo.a3}">
                          <td>2</td>
                          <td style="font-weight: 400">${userInfo.a3}</td>
                          <td style="font-weight: 500" id="date2">${userInfo.d3}</td>
-                         <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload3}" href="#modal4" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
+                         <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload3}; font-size: 20px" href="#modal4" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
                          <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileIII" style="color: #198754" href="${userInfo.file3}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                          </tr>
-
               </tbody>
           </table>
       </div>
   
                                
         </div>
-
-
-
-
       
-
-
 </div>
-
-
-
     </div>
         </div><br>
 
+        <script src="countdown">  var countDownDate = new Date("September 09, 2022 22:00:00").getTime();
+        
+        
+        
+        
+        
+        
+        </script>
     
-
     
       
                        
@@ -281,7 +234,6 @@ async function getuserInfoRealtime(userID){
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
-
             <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
             <br>
@@ -291,16 +243,11 @@ async function getuserInfoRealtime(userID){
             
     </form>
           <div>
-
-
-
          
         </div>
       </div></div>
         
         
-
-
     <div class="sidebar-overlay" data-reff=""></div>
     <script src="../assets/js/jquery-3.2.1.min.js"></scri>
 	<script src="../assets/js/popper.min.js"></script>
@@ -314,32 +261,6 @@ async function getuserInfoRealtime(userID){
 }
 
 
-function updateUserProfile(e){
-    e.preventDefault()
-    const userDocRef =  firebase.firestore()
-    .collection('files')
-    .doc(firebase.auth().currentUser.uid)
-
-
-    userDocRef.update({
-        name:editProfile["name"].value,
-        email:editProfile["profileEmail"].value,
-        regno:editProfile["regno"].value,
-        department:editProfile["department"].value,
-   
-
-    })
-    document.querySelector('.alert').style.display = 'block';
-
-    // Show alert
-document.querySelector('.alert').style.display = 'block';
-
-// Hide alert after 3 seconds
-setTimeout(function(){
-  document.querySelector('.alert').style.display = 'none';
-},3000);
-  
-}
 
 
 
@@ -548,7 +469,5 @@ function () {
 );
 }
 
- 
- 
- 
- 
+
+
