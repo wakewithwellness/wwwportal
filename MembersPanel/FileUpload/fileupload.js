@@ -402,10 +402,7 @@ function () {
     uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
       console.log('File available at', downloadURL);
      
-      document.querySelector('#fileI').src = downloadURL
-      firebase.auth().currentUser.updateProfile({
-        photoURL: downloadURL
-      })
+ 
     });
   }
 
@@ -474,9 +471,7 @@ function uploadImageII(e){
      uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
        console.log('File available at', downloadURL);
        document.querySelector('#fileII').src = downloadURL
-       firebase.auth().currentUser.updateProfile({
-          photoURL: downloadURL
-       })
+      
      });
    }
  
@@ -544,9 +539,7 @@ function () {
   
   uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
     document.querySelector('#fileIII').src = downloadURL
-    firebase.auth().currentUser.updateProfile({
-       photoURL: downloadURL
-    })
+   
   });
 }
 
