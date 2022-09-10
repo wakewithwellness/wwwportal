@@ -170,7 +170,7 @@ async function getuserInfoRealtime(userID){
                          <td style="font-weight: 400">${userInfo.a1}</td>
                          <td style="font-weight: 500" id="date1">${userInfo.d1}</td>
                          <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload1}; font-size: 20px" href="#modal1" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
-                         <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileI" style="display: ${userInfo.down1};color: #198754;" href="${userInfo.file1}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                         <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileI" style="display: ${userInfo.down1};color: #198754;font-size: 18px" href="${userInfo.file1}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                          <td><p style="font-weight: 500; color: green;text-align:center;display: ${userInfo.down1};">Submitted</p></td>
                     </tr>
                     <tr style="display: ${userInfo.a2}">
@@ -178,7 +178,7 @@ async function getuserInfoRealtime(userID){
                          <td style="font-weight: 400">${userInfo.a2}</td>
                          <td style="font-weight: 500" id="date2">${userInfo.d2}</td>
                          <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload2}; font-size: 20px" href="#modal3" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
-                         <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileII" style="display: ${userInfo.down2};color: #198754" href="${userInfo.file2}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                         <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileII" style="display: ${userInfo.down2};color: #198754;font-size: 18px" href="${userInfo.file2}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                          <td><p style="font-weight: 500; color: green;text-align:center;display: ${userInfo.down2};">Submitted</p></td>
                          </tr>
                          <tr style="display: ${userInfo.a3}">
@@ -186,7 +186,7 @@ async function getuserInfoRealtime(userID){
                          <td style="font-weight: 400">${userInfo.a3}</td>
                          <td style="font-weight: 500" id="date2">${userInfo.d3}</td>
                          <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload3}; font-size: 20px" href="#modal4" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
-                         <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileIII" style="display: ${userInfo.down3};color: #198754" href="${userInfo.file3}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                         <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileIII" style="display: ${userInfo.down3};color: #198754;font-size: 18px" href="${userInfo.file3}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                          <td><p style="font-weight: 500; color: green;text-align:center;display: ${userInfo.down3};">Submitted</p></td>
                          </tr>
               </tbody>
