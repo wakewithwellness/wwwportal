@@ -1,7 +1,7 @@
 const userDetails  = document.querySelector('.userDetails')
 const editProfileI  = document.querySelector('#editProfileI')
 const editProfileII  = document.querySelector('#editProfileII')
-
+const editProfileIII  = document.querySelector('#editProfileIII')
 
 function createUserCollection(user){
    firebase.firestore().collection('files')
@@ -13,6 +13,8 @@ function createUserCollection(user){
        regno:"",
        department:"",
        upload1:"",
+       upload2:"",
+       upload3:"",
        
 
    })
@@ -156,9 +158,9 @@ async function getuserInfoRealtime(userID){
                   <th scope="col">SNo.</th> 
                   <th scope="col" style="min-width: 22vh">Title</th>
                   <th scope="col" style="min-width: 20vh">Due Date</th>
-                  <th scope="col" style="width: 15vh">Upload/Edit</th>
-                  <th scope="col" style="width: 15vh">Download</th>
-               
+                  <th scope="col" style="width: 15vh;text-align:center">Upload/Edit</th>
+                  <th scope="col" style="width: 15vh;text-align:center">Download</th>
+                  <th scope="col" style="width: 15vh;text-align:center">Status</th>
                
                   </tr>
               </thead>
@@ -169,7 +171,7 @@ async function getuserInfoRealtime(userID){
                          <td style="font-weight: 500" id="date1">${userInfo.d1}</td>
                          <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload1}; font-size: 20px" href="#modal1" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
                          <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileI" style="display: ${userInfo.down1};color: #198754;" href="${userInfo.file1}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                       
+                         <td><p style="font-weight: 500; color: green;text-align:center;display: ${userInfo.down1};">Submitted</p></td>
                     </tr>
                     <tr style="display: ${userInfo.a2}">
                          <td>2</td>
@@ -177,6 +179,7 @@ async function getuserInfoRealtime(userID){
                          <td style="font-weight: 500" id="date2">${userInfo.d2}</td>
                          <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload2}; font-size: 20px" href="#modal3" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
                          <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileII" style="display: ${userInfo.down2};color: #198754" href="${userInfo.file2}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                         <td><p style="font-weight: 500; color: green;text-align:center;display: ${userInfo.down2};">Submitted</p></td>
                          </tr>
                          <tr style="display: ${userInfo.a3}">
                          <td>2</td>
@@ -184,6 +187,7 @@ async function getuserInfoRealtime(userID){
                          <td style="font-weight: 500" id="date2">${userInfo.d3}</td>
                          <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload3}; font-size: 20px" href="#modal4" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
                          <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileIII" style="display: ${userInfo.down3};color: #198754" href="${userInfo.file3}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                         <td><p style="font-weight: 500; color: green;text-align:center;display: ${userInfo.down3};">Submitted</p></td>
                          </tr>
               </tbody>
           </table>
@@ -211,8 +215,7 @@ async function getuserInfoRealtime(userID){
                         `
                         editProfileI["down1"].value = userInfo.down1
                         editProfileII["down2"].value = userInfo.down2
-                       
-
+                        editProfileIII["down3"].value = userInfo.down3
 
         
 
@@ -271,21 +274,15 @@ function updateUserProfileI(e){
      
 
   })
-  document.querySelector('.alert').style.display = 'block';
+  document.querySelector('.alert1').style.display = 'block';
 
   // Show alert
-document.querySelector('.alert').style.display = 'block';
+document.querySelector('.alert1').style.display = 'block';
 document.querySelector('#submit1').disabled = "disabled";
-document.querySelector('#submit1').style.cursor = "not-allowed";
-document.querySelector('#submit1').style.background = "#adadad";
-document.querySelector('#submit1').style.border = "none";
+document.querySelector('#submit1').style.display = 'none';
 
 
 }
-
-
-
-
 
 
 function updateUserProfileII(e){
@@ -300,14 +297,35 @@ function updateUserProfileII(e){
      
 
   })
-  document.querySelector('.alert').style.display = 'block';
+  document.querySelector('.alert2').style.display = 'block';
 
   // Show alert
-document.querySelector('.alert').style.display = 'block';
-document.querySelector('#submit2').disabled = "disabled";
-document.querySelector('#submit2').style.cursor = "not-allowed";
-document.querySelector('#submit2').style.background = "#adadad";
-document.querySelector('#submit2').style.border = "none";
+  document.querySelector('.alert2').style.display = 'block';
+  document.querySelector('#submit2').disabled = "disabled";
+  document.querySelector('#submit2').style.display = 'none';
+
+
+}
+
+
+function updateUserProfileIII(e){
+  e.preventDefault()
+  const userDocRef =  firebase.firestore()
+  .collection('files')
+  .doc(firebase.auth().currentUser.uid)
+
+
+  userDocRef.update({
+    down3:editProfileIII["down3"].value,
+     
+
+  })
+  document.querySelector('.alert3').style.display = 'block';
+
+  // Show alert
+  document.querySelector('.alert3').style.display = 'block';
+  document.querySelector('#submit3').disabled = "disabled";
+  document.querySelector('#submit3').style.display = 'none';
 
 
 }
@@ -374,6 +392,8 @@ function () {
       console.log('File available at', downloadURL);
       document.querySelector('#submit1').style.display = 'block';
       document.querySelector('.success').style.display='none';
+      document.querySelector('#uploadform1').style.display = 'none';
+      
  
     });
   }
@@ -397,7 +417,7 @@ function uploadImageII(e){
      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
      if(progress=='100') 
       // Show alert
-      document.querySelector('.successII').innerHTML=`<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
+      document.querySelector('.successII').innerHTML=`<i class="fa fa-spinner" aria-hidden="true"></i> Please wait...`;
                
       // Hide alert after 10 seconds
  setTimeout(function(){
@@ -416,7 +436,7 @@ function uploadImageII(e){
            break;
       case firebase.storage.TaskState.RUNNING: // or 'running'
            console.log('Upload is running');
-           
+           document.querySelector('.successII').innerHTML=`<i class="fa fa-spinner" aria-hidden="true"></i> Please wait...`;
            break;
  }
  }, function (error) {
@@ -442,7 +462,9 @@ function uploadImageII(e){
      
      uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
        console.log('File available at', downloadURL);
-       document.querySelector('#fileII').src = downloadURL
+       document.querySelector('#submit2').style.display = 'block';
+       document.querySelector('.successII').style.display='none';
+       document.querySelector('#uploadform2').style.display = 'none';
       
      });
    }
@@ -466,7 +488,7 @@ function uploadImageIII(e){
   var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
   if(progress=='100') 
    // Show alert
-   document.querySelector('.successIII').innerHTML=`<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
+   document.querySelector('.successIII').innerHTML=`<i class="fa fa-spinner" aria-hidden="true"></i> Please wait...`;
             
    // Hide alert after 10 seconds
 setTimeout(function(){
@@ -485,7 +507,7 @@ switch (snapshot.state) {
         break;
    case firebase.storage.TaskState.RUNNING: // or 'running'
         console.log('Upload is running');
-        
+        document.querySelector('.successIII').innerHTML=`<i class="fa fa-spinner" aria-hidden="true"></i> Please wait...`;
         break;
 }
 }, function (error) {
@@ -510,7 +532,10 @@ switch (error.code) {
 function () {
   
   uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-    document.querySelector('#fileIII').src = downloadURL
+       console.log('File available at', downloadURL);
+       document.querySelector('#submit3').style.display = 'block';
+       document.querySelector('.successIII').style.display='none';
+       document.querySelector('#uploadform3').style.display = 'none';
    
   });
 }
