@@ -235,8 +235,11 @@ margin-bottom: 12px; /* Add some space below the input */
                             <th scope="col" style="min-width: 20vh;">Name</th>
                             <th scope="col" style="min-width: 17vh;">Department</th>
                             <th scope="col" style="min-width: 20vh;">Assignment1</th> 
+                       
                             <th scope="col" style="min-width: 20vh;">Assignment2</th> 
+                       
                             <th scope="col" style="min-width: 20vh;">Assignment3</th> 
+                     
       
                           </tr>
                       </thead>
@@ -318,9 +321,12 @@ margin-bottom: 12px; /* Add some space below the input */
                               <td style="font-size: 12px; font-weight: bold">
                                 ${data.department}
                               </td>
-                              <td><p style="display: ${data.a1}"><a>${data.a1}</a> [ <a style="color: #198754;font-weight:bold;display:${data.down1}" href="${data.file1}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Download</a> ]<br><span style="color: red; font-weight: 700; font-size: 12.5px;">${data.d1}</span></p></td>
-                              <td><p style="display: ${data.a2}"><a>${data.a2}</a> [ <a style="color: #198754;font-weight:bold;display:${data.down2}" href="${data.file2}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Download</a> ]<br><span style="color: red; font-weight: 700; font-size: 12.5px;">${data.d2}</span></p></td>
-                              <td><p style="display: ${data.a3}"><a>${data.a3}</a> [ <a style="color: #198754;font-weight:bold;display:${data.down3}" href="${data.file3}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Download</a> ]<br><span style="color: red; font-weight: 700; font-size: 12.5px;">${data.d3}</span></p></td>
+                              <td><p style="display: ${data.a1}"><a>${data.a1}</a> [ <a style="color: #198754;font-weight:bold;display:${data.down1}" href="${data.file1}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Download</a> ][<a style="color: blue;display: ${data.upload1}"><i class="fa fa-eye" aria-hidden="true"></i></a>]<br><span style="color: red; font-weight: 700; font-size: 12.5px;">${data.d1}</span></p></td>
+                              
+                              <td><p style="display: ${data.a2}"><a>${data.a2}</a> [ <a style="color: #198754;font-weight:bold;display:${data.down2}" href="${data.file2}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Download</a> ][<a style="color: blue;display: ${data.upload2}"><i class="fa fa-eye" aria-hidden="true"></i></a>]<br><span style="color: red; font-weight: 700; font-size: 12.5px;">${data.d2}</span></p></td>
+                           
+                              <td><p style="display: ${data.a3}"><a>${data.a3}</a> [ <a style="color: #198754;font-weight:bold;display:${data.down3}" href="${data.file3}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i> Download</a> ][<a style="color: blue;display: ${data.upload3}"><i class="fa fa-eye" aria-hidden="true"></i></a>]<br><span style="color: red; font-weight: 700; font-size: 12.5px;">${data.d3}</span></p></td>
+                             
                               </tr>
 
 
