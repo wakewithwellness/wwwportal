@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>EventsList</title>
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+</head>
+
+
+<body style="background-color: rgb(238, 238, 238)">
+
+
+    <div class="topnav" style="width: 100%;">
+   
+        <div style="float: right"> 
+          <a class="modal-trigger" href="#modal2" id="loginli" style="visibility: collapse;color:#5793D1;">Login</a>
+          <a class="modal-trigger" href="#modal1" id="signupli" style="visibility: collapse;"></a>
+         
+    
+        </div>
+      
+      </div>
+    
+    
+      <div class="header" style="background-color: #16151a;">
+        <div class="header-left">
+          <a class="logo" style="margin-left: -15px;">
+            <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>Volunteer Portal</span>
+          </a>
+        </div>
+        <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+              <ul class="nav user-menu float-right" id="logoutli" style="display: none;"> 
+              </ul>
+              <div class="dropdown mobile-user-menu float-right" id="logoutli" style="display: none;">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>                 
+              </div>
+          </div>
+    
+    
+
+    
+    <div style="margin-top: 20px;"></div>
+    
+
+      <div id="logindata"></div>
+             
+
+    
+      <div class="center">
+        <div class="userDetails"></div>
+      </div>
+             
+
+
+
+
+
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../MembersPanel/assets/js/popper.min.js"></script>
+    <script src="../MembersPanel/assets/js/bootstrap.min.js"></script>
+    <script src="../MembersPanel/assets/js/jquery.dataTables.min.js"></script>
+    <script src="../MembersPanel/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../MembersPanel/assets/js/jquery.slimscroll.js"></script>
+    <script src="../MembersPanel/assets/js/app.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDA9d5s_dvWlu8z5_n4XHwYwGBo5DIR7VY",
+  authDomain: "volunteers-2ddcc.firebaseapp.com",
+  projectId: "volunteers-2ddcc",
+  storageBucket: "volunteers-2ddcc.appspot.com",
+  messagingSenderId: "883437128120",
+  appId: "1:883437128120:web:5630bee115d8ca26aba74d",
+  measurementId: "G-5K86CCM7ZV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+      <script src="./scripts/auth.js"></script>
+      <script src="./scripts/events.js" ></script>
+
+
+</body>
+
+</html>
