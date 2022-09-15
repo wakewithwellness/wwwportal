@@ -176,21 +176,56 @@ async function getuserInfoRealtime(userID){
                                         <th style="min-width: 20vh">Event Date</th>
                                         <th style="min-width: 20vh">Venue</th>
                                         <th style="text-align: center">Attendance</th>
-                                        <th style="text-align: center">Register</th>
+                                        <th style="text-align: center">Registration</th>
                                        
                                     </tr>
                                 </thead>
                                 <tbody>
                                
                                     <tr>
-                                        <td><a>1</a></td>
+                                        <td><a>5</a></td>
                                         <td><h2><a>Cleanliness Drive</a></h2></td>
-                                  
-                                        <td style="color: red">25th September 2022</td>
+                                        <td>25th September 2022</td>
                                         <td>Yet to decide</td>
                                         <td style="text-align: center">${userInfo.event1}</td>
                                         <td  style="text-align: center"><button onclick="location.href='registrations.html'" class="btn btn-dark">Register</button></td>
                                     </tr>
+
+                                    <tr>
+                                        <td><a>4</a></td>
+                                        <td><h2><a>Wellness Drive - Medical & Health CheckUp</a></h2></td>
+                                        <td>14th March 2021</td>
+                                        <td>Jesthakunja Oldage Home, Dhemaji</td>
+                                        <td style="text-align: center">-</td>
+                                        <td style="text-align: center; color: red">Registration closed</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><a>3</a></td>
+                                        <td><h2><a>Wellness Drive - Clothes & Books Donation</a></h2></td>
+                                        <td>20th February 2022</td>
+                                        <td>Enajori Children home, Dhemaji</td>
+                                        <td style="text-align: center">-</td>
+                                        <td style="text-align: center; color: red">Registration closed</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><a>2</a></td>
+                                        <td><h2><a>Prabhati - A Dawn of a Vital Outlook</a></h2></td>
+                                        <td>29th November 2021</td>
+                                        <td>Jalukbari Girls High School</td>
+                                        <td style="text-align: center">-</td>
+                                        <td style="text-align: center; color: red">Registration closed</td>
+                                   </tr>
+
+                                    <tr>
+                                        <td><a>1</a></td>
+                                        <td><h2><a>Wellness Drive</a></h2></td>
+                                        <td>26th September 2021</td>
+                                        <td>Paltan bazar</td>
+                                        <td style="text-align: center">-</td>
+                                        <td style="text-align: center; color: red">Registration closed</td>
+                                   </tr>
                           
 
                                
