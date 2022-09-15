@@ -247,23 +247,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;border-radius: 5px"">
-
-        <div class="row">
-        <div class="col-sm-12">
-            <h4 class="page-title" style="text-align:left">My Files </h4>
-            <hr>
-        </div>
-        </div>
-
-
-        <div style="text-align:left; cursor:pointer">
-        <h5 style="font-size: 13px" onclick="location.href='${userInfo.agreement}'">Agreement letter <a style="color: #16151a"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
-        <h5 style="font-size: 13px" onclick="location.href='${userInfo.certificate}'">Download your certificate <a style="color: #16151a"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>          
-        <h5 style="font-size: 13px" onclick="location.href='${userInfo.idcard}'">ID Card  <a style="color: #16151a"><i class="fa fa-hand-o-right" aria-hidden="true"></i> View</a></h5>
-        </div>
-                               
-        </div>
+    
 
 
 
