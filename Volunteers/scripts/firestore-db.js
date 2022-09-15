@@ -22,9 +22,8 @@ function createUserCollection(user){
        state:"",
        pincode:"",
        exp:"",
-       agreement: "",
-       idcard:"",
-       certificate:"",
+   
+    
   
 
    })
@@ -128,7 +127,7 @@ async function getuserInfoRealtime(userID){
                                    </li>
                        
                                    <li>
-                                   <a href="volunteers.html"><i class="fa fa-users"></i> <span>Members List</span></a>
+                                   <a href="volunteers.html"><i class="fa fa-users"></i> <span>Volunteers List</span></a>
                                    </li>
                      
                    
@@ -206,9 +205,17 @@ async function getuserInfoRealtime(userID){
                     <h4 style="font-size: 13px">Address: <span style="color: #16151a">${userInfo.address}, ${userInfo.state}, ${userInfo.pincode}</span></h4>
                     </div>
 
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">Referral code: </h4><p><input name="myvalue" readonly id="myvalue" style="color: blue;width:30vh;border: 1px solid blue; padding-left: 8px;height:24px" value="${userInfo.referral}"/>  <input type="button" value="Copy" onclick="copyToClipboard('#myvalue')"/></p>
+
                     </div>
 
                     </div>
+
+                    </div>
+
+
+
                     </div>
 
                    
@@ -216,7 +223,7 @@ async function getuserInfoRealtime(userID){
 
         </div>
 
-
+   
 
         <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;border-radius: 5px"">
 
@@ -468,6 +475,8 @@ function () {
 
 
 
-
-
-
+function copyToClipboard() {
+  var textBox = document.getElementById("myvalue");
+  textBox.select();
+  document.execCommand("copy");
+}
