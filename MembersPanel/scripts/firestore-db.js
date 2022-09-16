@@ -150,17 +150,20 @@ async function getuserInfoRealtime(userID){
         <div class="page-wrapper">
 
 
+
+        
+
+
+
+
+
+
+
        <div style="float: right; margin-right:15px">
         <a href="activities.html" style="background-color:#198754;padding:10px;color:white;border-radius: 4px">Dashboard</a>
         <a type="button" style="background-color:red;padding:8.5px;color:white;margin-left: 5px; border-radius: 4px; cursor: pointer" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-sign-out"></i> SignOut</a>
-        
-       
+           
       </div>
-
-
-
-
-
         <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 20px;border-radius: 5px">
         
                  <div class="row">
@@ -324,6 +327,19 @@ async function getuserInfoRealtime(userID){
 
 
       
+        <div class="container-fluid" id="footerbar">
+        <div class="row">
+        <div class="col"><a href="./activities.html"><i class="fa fa-bell" aria-hidden="true"></i></a></div>
+        <div class="col"><a href="./payment.html"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></div>
+        <div class="col"><a href="./attendance.html"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></a></div>
+        <div class="col"><a><i style="font-size: 24px" class="fa fa-home" aria-hidden="true"></i></a></div>
+        
+        </div>
+        </div>
+
+
+
+
 
 
 </div>
