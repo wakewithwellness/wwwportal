@@ -4869,3 +4869,39 @@ blockquote p {
 		margin-bottom: 10px;
 	}
 }
+
+
+
+
+
+
+	   @media (min-width: 575px) {
+
+		#footerbar{
+			display: none;
+		}
+
+	   }
+
+	   @media (max-width: 575px) {
+
+		#footerbar{
+			background-color: #198754;
+			height: 40px;
+			position: fixed;
+			bottom: 0;
+			font-size: 18px;
+			padding-top: 7px;
+			border-top: 1px solid grey;
+			
+			
+		}
+
+		#footerbar a{
+			color: white;
+		}
+
+	   }
+
+
+
