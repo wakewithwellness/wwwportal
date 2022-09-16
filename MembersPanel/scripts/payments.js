@@ -275,7 +275,18 @@ async function getuserInfoRealtime(userID){
                      
                 </div>
             </div>
-            <buttom onclick="location.href='main.html'" style="cursor:pointer;background-color:#198754;float:right;padding:7px;padding-left:15px;padding-right:15px;color:white;border-radius:3px; margin-right: 15px; margin-top: 20px"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
+            <br><br>
+
+      
+            <div class="container-fluid" id="footerbar">
+            <div class="row">
+            <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="./assets/img/notifications.png" alt=""/></a></div>
+            <div class="col"><a ><img style="width:54px; height:auto" src="./assets/img/payments.png" alt=""/></a></div>
+            <div class="col"><a href="./attendance.html"><img style="width:54px; height:auto" src="./assets/img/attendance.png" alt=""/></a></div>
+            <div class="col"><a href="./main.html"><img style="width:54px; height:auto" src="./assets/img/home.png" alt=""/></a></div>
+            
+            </div>
+            </div>
         </div>
                        
                         `
