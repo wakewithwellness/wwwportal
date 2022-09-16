@@ -324,13 +324,13 @@ async function getuserInfoRealtime(userID){
         </div>
 
 
-
+<br>
 
       
         <div class="container-fluid" id="footerbar">
         <div class="row">
         <div class="col"><a href="./activities.html"><i class="fa fa-bell" aria-hidden="true"></i></a></div>
-        <div class="col"><a href="./payment.html"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></div>
+        <div class="col"><a href="./payments.html"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></div>
         <div class="col"><a href="./attendance.html"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></a></div>
         <div class="col"><a><i style="font-size: 24px" class="fa fa-home" aria-hidden="true"></i></a></div>
         
