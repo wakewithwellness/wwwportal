@@ -324,7 +324,7 @@ async function getuserInfoRealtime(userID){
         </div>
 
 
-<br>
+<br><br>
 
       
         <div class="container-fluid" id="footerbar">
