@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #myInput {
+      background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+      background-position: 10px 12px; /* Position the search icon */
+      background-repeat: no-repeat; /* Do not repeat the icon image */
+      width: 100%; /* Full-width */
+      font-size: 16px; /* Increase font-size */
+      padding: 12px 10px 12px 20px; /* Add some padding */
+      border: 1px solid #ddd; /* Add a grey border */
+      margin-bottom: 12px;
+      /* Add some space below the input */
+      }
+      
+      </style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>WWW Coordinators</title>
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
+
+   
+    <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    
+</head>
+
+<body style="background-color: rgb(238, 238, 238)">
+    <div class="main-wrapper">
+        <div class="header" style="background-color: #16151a;">
+			<div class="header-left">
+				<a href="main.html" class="logo">
+					<img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span style="font-size: 16px">Coordinator Portal</span>
+				</a>
+			</div>
+			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+          
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li><hr>
+                        <li>
+                          <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+                      </li>
+
+                      <li>
+                        <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+                        </li>
+
+                  
+                      <li>
+                        <a href="events.html"><i class="fa fa-users"></i> <span>Events</span></a>
+                        </li>
+            
+                      
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;padding: 5px;border-radius: 5px;">
+                    <div class="row" style="padding: 15px">
+                            <div class="col-sm-12">
+                                <h4 class="page-title">Coordinators List</h4><hr>
+                            </div>
+                    </div>
+                    <div style="padding: 5px">
+                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by name...">
+
+                    </div>
+                    
+                <div class="row">
+                    <div class="col-md-12">
+						<div class="table-responsive">
+                           
+                            <table id="myTable" class="table table-striped custom-table">
+                                <thead>
+                                    <tr>
+                                        <th style="min-width:200px;">Name</th>
+                                        <th>Volunteer ID</th>
+                                        <th>Email</th>
+                                        <th>Mobile</th>
+                                        <th>Status</th>
+        
+                                    </tr>
+                                </thead>
+
+                                <tbody id="mytable">
+                   
+
+                                </tbody>
+
+                         
+                            </table>
+						</div>
+                    </div>
+                </div>
+            </div>
+
+            <br>   <br>
+        
+        </div>
+	
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../MembersPanel/assets/js/popper.min.js"></script>
+    <script src="../MembersPanel/assets/js/bootstrap.min.js"></script>
+    <script src="../MembersPanel/assets/js/jquery.dataTables.min.js"></script>
+    <script src="../MembersPanel/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../MembersPanel/assets/js/jquery.slimscroll.js"></script>
+    <script src="../MembersPanel/assets/js/select2.min.js"></script>
+    <script src="../MembersPanel/assets/js/moment.min.js"></script>
+    <script src="../MembersPanel/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../MembersPanel/assets/js/app.js"></script>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+
+
+<script>
+    //Connection
+        // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDA9d5s_dvWlu8z5_n4XHwYwGBo5DIR7VY",
+  authDomain: "volunteers-2ddcc.firebaseapp.com",
+  projectId: "volunteers-2ddcc",
+  storageBucket: "volunteers-2ddcc.appspot.com",
+  messagingSenderId: "883437128120",
+  appId: "1:883437128120:web:5630bee115d8ca26aba74d",
+  measurementId: "G-5K86CCM7ZV"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      db.settings({ timestampInSnapshots: true});
+
+
+      db.collection("users").orderBy('regno').get().then(querySnapshot=>{
+      querySnapshot.forEach(doc=>{
+          let data = doc.data();
+          let row  = `<tr style="font-size: 13px;">
+            
+                            <td>
+                            <h2>${data.name}</h2>
+                            </td>
+                         
+                            <td>${data.regno}</td>
+                            <td><a href="" style="color: #198754" class="__cf_email__" data-cfemail="fb9a979992959a88929694959288bb9e839a968b979ed5989496">[email&#160;protected]</a></td>
+                            <td><a href="" style="color: #198754" class="__cf_email__" data-cfemail="fb9a979992959a88929694959288bb9e839a968b979ed5989496">[contact&#160;protected]</a></td>
+                            <td><span class="custom-badge status-${data.ccolor}">${data.status}</span></td>
+                      
+                  
+                    </tr>`;
+          let table = document.getElementById('myTable')
+          table.innerHTML += row
+      })
+  })
+  .catch(err=>{
+      console.log(`Error: ${err}`)
+  });
+
+</script>
+
+
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+<script src="./scripts/auth.js"></script>
+<script>
+
+
+
+    const auth=firebase.auth();
+    const database=firebase.database();
+
+
+firebase.auth().onAuthStateChanged(function(user) {
+if (user) {
+// User is signed in.
+} else {
+window.location.href = './main.html'; 
+}
+});
+</script>
+
+
+
+</body>
+
+</html>
