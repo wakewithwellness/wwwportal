@@ -4887,11 +4887,11 @@ blockquote p {
 
 		#footerbar{
 			background-color: #198754;
-			height: 40px;
+			height: 48px;
 			position: fixed;
 			bottom: 0;
 			font-size: 18px;
-			padding-top: 7px;
+			padding-top: 0.8px;
 			border-top: 1px solid grey;
 			
 			
