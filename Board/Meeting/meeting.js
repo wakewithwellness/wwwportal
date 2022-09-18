@@ -255,6 +255,19 @@ async function getuserInfoRealtime(userID){
                                                           </div>
                                                       </div>
                                                     </div>
+						    
+						    
+						        <div class="col">
+                                                    <div class="card" style="background-color: #fff;margin: 5px;border-top: 3px solid #0d6efd;border-radius: 5px" style="background-color: #fff">
+                                                      
+                                                        <div class="card-body" style="text-align: center">
+                                                          <h4 style="color: #16213E">Design Department</h4>
+                                                          <p class="card-text"></p>
+                                                          <a href="${userInfo.design}.html" style="width: 120px; background-color: #0d6efd; color: #fff;display: ${userInfo.permittedD}" class="btn">View</a>
+                                                          <h4 style="text-align: center;color:red;display: ${userInfo.permitD}">(Not permitted)</h4>
+                                                          </div>
+                                                      </div>
+                                                    </div>
                                                 
 
                                                     <div class="col">
