@@ -81,10 +81,10 @@
         </div>
         <div class="page-wrapper">
             <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 5px;border-radius: 5px;">
-                <div class="row" style="padding: 15px">
-                    <div class="col-sm-12">
-                        <h4 class="page-title">Member List</h4><hr>
-                    </div>
+                    <div class="row" style="padding: 15px">
+                            <div class="col-sm-12">
+                                <h4 class="page-title">Member List</h4><hr>
+                            </div>
                     </div>
                     <div style="padding: 5px">
                         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by name...">
@@ -100,6 +100,7 @@
                                     <tr>
                                         <th style="min-width:200px;">Name</th>
                                         <th>Member ID</th>
+                                        <th>Rating</th>
                                         <th>Email</th>
                                         <th>Mobile</th>
                                         <th>Role</th>
@@ -136,7 +137,7 @@
                 </div>
             </div>
 
-              <br><br>
+            <br><br>
 
       
             <div class="container-fluid" id="footerbar">
@@ -203,6 +204,7 @@
                             </td>
                          
                             <td>${data.regno}</td>
+                            <td style="font-size:20px;color:#198754"><div style="color:#d6d6d6">★★★★★</div><div style="color:#198754; margin-top:-30px">${data.stars}</div></td>
                             <td><a href="" style="color: #198754" class="__cf_email__" data-cfemail="fb9a979992959a88929694959288bb9e839a968b979ed5989496">[email&#160;protected]</a></td>
                             <td><a href="" style="color: #198754" class="__cf_email__" data-cfemail="fb9a979992959a88929694959288bb9e839a968b979ed5989496">[contact&#160;protected]</a></td>
                             <td> <span class="custom-badge status-${data.color}">${data.role}</span></td>
