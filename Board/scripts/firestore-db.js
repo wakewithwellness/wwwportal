@@ -399,6 +399,19 @@ async function getuserInfoRealtime(userID){
                         <a href="BloodCamp.html"  class="btn btn-primary take-btn">View</a>
                     </td>
                 </tr>
+		
+		
+		
+                <tr>
+                <td style="min-width: 200px;">
+                    
+                    <h2><a href="blogwriting.html"  >Blog Writing Competition</a></h2>
+                </td>                 
+
+                <td class="text-right">
+                    <a href="blogwriting.html"  class="btn btn-outline-danger take-btn">View</a>
+                </td>
+            </tr>
 
 
                 <tr>
