@@ -110,6 +110,16 @@ async function getuserInfoRealtime(userID){
         -o-object-position: center;
         object-position: center;
       }
+
+      #cameraicon{
+        margin-right: 22px
+      }
+
+      @media (max-width: 557px) {
+        #cameraicon{
+          margin-right: -10px
+        }
+      }
     </style>
     
                         <div class="sidebar" id="sidebar">
@@ -180,9 +190,13 @@ async function getuserInfoRealtime(userID){
                     <div class="profile-view">
                             <div class="profile-img-wrap" style="height:25vh;width:24vh" >
                                 <div class="profile-img">
-                                    <img id="proimg" class="pic modal-trigger" style="border-radius: 10px" href="#modal4" src="../assets/user.png" alt=""><br>
- 
-                                    <i href="#modal4" class="fa fa-upload modal-trigger" style="margin-top: 10px"> Upload</i>
+                             
+                                    <img id="proimg" class="pic modal-trigger" style="border-radius: 10px" href="#modal4" src="../assets/user.png" alt="">
+                                    
+                                 
+                                  
+                                    <div id="cameraicon" style="color: white; margin-top: -18px; text-align: right;"><i href="#modal4" class="fa fa-camera modal-trigger" ></i></div>
+                                    <div class="container" style="text-align: center; margin-top:8px"><p>⭐⭐⭐⭐⭐</p></div>
                                 </div>
                                 
                             </div>
@@ -329,11 +343,10 @@ async function getuserInfoRealtime(userID){
       
         <div class="container-fluid" id="footerbar">
         <div class="row">
-       <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="./assets/img/notifications.png" alt=""/></a></div>
+        <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="./assets/img/notifications.png" alt=""/></a></div>
         <div class="col"><a href="./payments.html"><img style="width:54px; height:auto" src="./assets/img/payments.png" alt=""/></a></div>
         <div class="col"><a href="./attendance.html"><img style="width:54px; height:auto" src="./assets/img/attendance.png" alt=""/></a></div>
         <div class="col"><a><img style="width:54px; height:auto" src="./assets/img/home.png" alt=""/></a></div>
-        
         
         </div>
         </div>
