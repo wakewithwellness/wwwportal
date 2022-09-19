@@ -123,11 +123,11 @@ async function getuserInfoRealtime(userID){
         }
 
         #stars{
-          margin-left: -15px
+          margin-left: -15.5px
         }
 
         #rating{
-          margin-right: -15px
+          margin-right: -18px
         }
       }
     </style>
