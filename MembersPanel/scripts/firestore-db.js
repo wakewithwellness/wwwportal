@@ -98,6 +98,8 @@ async function getuserInfoRealtime(userID){
 
     
 
+    
+
 
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
@@ -118,6 +120,14 @@ async function getuserInfoRealtime(userID){
       @media (max-width: 557px) {
         #cameraicon{
           margin-right: -10px
+        }
+
+        #stars{
+          margin-left: -15px
+        }
+
+        #rating{
+          margin-right: -15px
         }
       }
     </style>
@@ -171,8 +181,8 @@ async function getuserInfoRealtime(userID){
 
        <div style="float: right; margin-right:15px">
         <a href="activities.html" style="background-color:#198754;padding:10px;color:white;border-radius: 4px">Dashboard</a>
-        <a type="button" style="background-color:red;padding:8.5px;color:white;margin-left: 5px; border-radius: 4px; cursor: pointer" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-sign-out"></i> SignOut</a>
-           
+        <a type="button" style="background-color:red;padding:8.5px;color:white;margin-left: 5px; border-radius: 4px; cursor: pointer" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-sign-out"></i></a>
+
       </div>
         <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 20px;border-radius: 5px">
         
@@ -196,8 +206,10 @@ async function getuserInfoRealtime(userID){
                                  
                                   
                                     <div id="cameraicon" style="color: white; margin-top: -18px; text-align: right;"><i href="#modal4" class="fa fa-camera modal-trigger" ></i></div>
-                                    <div class="container" style="text-align: center; margin-top:8px"><p>⭐⭐⭐⭐⭐</p></div>
-                                </div>
+                                   <div id="stars" class="container" style="text-align: center;color:#198754; font-size: 28px;"><p>${userInfo.stars}</p></div>
+                                   <div id="rating" style="margin-top:-23px;color: grey"><a> (Rating)</a></div>
+                                
+                                   </div>
                                 
                             </div>
                     </div>
