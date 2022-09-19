@@ -205,10 +205,7 @@ async function getuserInfoRealtime(userID){
                     <h4 style="font-size: 13px">Address: <span style="color: #16151a">${userInfo.address}, ${userInfo.state}, ${userInfo.pincode}</span></h4>
                     </div>
 
-                    <div class="col-lg">
-                    <h4 style="font-size: 13px">Referral code: </h4><p><input name="myvalue" readonly id="myvalue" style="color: blue;width:30vh;border: 1px solid blue; padding-left: 8px;height:24px" value="${userInfo.referral}"/>  <input type="button" value="Copy" onclick="copyToClipboard('#myvalue')"/></p>
-
-                    </div>
+               
 
                     </div>
 
