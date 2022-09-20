@@ -124,13 +124,7 @@ async function getuserInfoRealtime(userID){
           margin-right: -10px
         }
 
-        #stars{
-          margin-left: -15.5px
-        }
-
-        #rating{
-          margin-right: -18px
-        }
+        
       }
     </style>
     
@@ -163,6 +157,10 @@ async function getuserInfoRealtime(userID){
                         <li>
                             <a href="payments.html"><i class="fa fa-money"></i> <span>Payments</span></a>
                         </li>
+
+                        <li>
+                        <a style="color: red" href="FileUpload/fileupload.html"><i class="fa fa-upload"></i> <span>Upload File</span></a>
+                    </li>
                     </ul>
                 </div>
             </div>
@@ -208,11 +206,11 @@ async function getuserInfoRealtime(userID){
                                  
                                   
                                     <div id="cameraicon" style="color: white; margin-top: -18px; text-align: right;"><i href="#modal4" class="fa fa-camera modal-trigger" ></i></div>
-                                    <div id="stars" class="container" style="text-align: left;color:#d6d6d6;font-size: 28px;"><p>★★★★★</p></div>
-                                   <div id="stars" class="container" style="text-align: left;color:#198754; font-size: 28px;margin-top:-56px"><p>${userInfo.stars}</p></div>
+                                  
+                                 
                                   
   
-                                   <div id="rating" style="margin-top:-23px;color: grey"><a> (Rating)</a></div>
+                                
                                 
                                    </div>
                                 
