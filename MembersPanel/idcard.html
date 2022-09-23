@@ -97,27 +97,8 @@
                       
 
                         <form id="idreg">
-                            <div class="form-group">
-                              <label for="exampleInputName">Full Name</label>
-                              <input required id="name" required  placeholder="Enter full name"class="form-control" type="text" class="form-control">
-                            </div>
-
-                            <div class="form-group">
-                              <label for="exampleInputEmail">Email address</label>
-                              <input required id="email" required  type="email" class="form-control" placeholder="Enter Email">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleInputEmail">Contact no.</label>
-                                <input required id="contact" type="tel" class="form-control" placeholder="Enter Contact no.">
-                              </div>
-
-
-                              <div class="form-group">
-                                <label for="exampleInputEmail">Blood Group</label>
-                                <input required id="blood" type="text" class="form-control" placeholder="Enter Blood group">
-                              </div>
-
+                      
+                          <h4 style="color: orange">Upload Documents</h4><br>
                               <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg">
@@ -138,48 +119,19 @@
 
                              
 
-                              <div class="form-group">
-                                <label for="exampleInputEmail">Address</label>
-                                <textarea required id="address" rows="5" cols="5" placeholder="Enter delivery address" class="form-control" ></textarea>
-                               
-                              </div>
+                       
 
 
                          
 
-                              <div class="form-group">
-                                <label for="exampleInputEmail">Place</label>
-                               <select id="amount" class="form-control">
-                                <option value="0">-Select place-</option>
-                                <option value="50">Guwahati (Assam)</option>
-                                <option value="80">Outside Guwahati (Assam)</option>
-                                <option value="100">Out of Assam</option>
-                                <option value="20">E-card (Only for members outside Assam)</option>
-                               </select>
-                              </div>
-<br><br>
-                             <div class="text-center">
-                              <div  class="0 batch"> 
-                                <input type="submit" class="btn btn-secondary" value="Pay Now">
-                              </div>
 
-
-
+                             <div class="text-right">
+        
                               <div  class="50 batch"> 
-                                <input type="submit" onclick="location.href='https://rzp.io/i/LQoLwm6S5'" class="btn btn-success" id="submit" value="Pay Now">
+                                <input type="submit" style="width: 90px; display: none" onclick="location.href='https://www.wakewithwellness.in/membersPortal_Id_card_Registration'" class="btn btn-success" id="submit" value="Next">
                               </div>
 
-                              <div  class="80 batch"> 
-                                <input type="submit" onclick="location.href='https://rzp.io/i/fWO0Xt8E'" class="btn btn-success" id="submit" value="Pay Now">
-                              </div>
-
-                              <div  class="100 batch"> 
-                                <input type="submit" onclick="location.href='https://rzp.io/i/RJlz2TwnY'"  class="btn btn-success" id="submit" value="Pay Now">
-                              </div>
-
-                              <div  class="20 batch"> 
-                                <input type="submit" onclick="location.href='https://rzp.io/i/pQ7IO2kS'" class="btn btn-success" id="submit" value="Pay Now">
-                              </div>
+                            
                            
                             </div>
                           </form>            
@@ -400,6 +352,8 @@ signaturefile.addEventListener('change', function (e) {
                // save this link somewhere, e.g. put it in an input field
                var downloadURL = uploadTask.snapshot.downloadURL;
                console.log('downloadURL', downloadURL);
+              
+               document.querySelector('#submit').style.display = "block";
           });
 
 });
@@ -409,7 +363,7 @@ signaturefile.addEventListener('change', function (e) {
     </script>
 
 
-</script> <script src="idcard.js"></script>
+</script> 
 
 </body>
 
