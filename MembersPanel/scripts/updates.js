@@ -26,7 +26,7 @@ var firebaseConfig = {
                  </th>
                      <td>${data.name}</td>
                          <td ><p style="color:${data.status}; font-weight:900;margin-bottom:0px; font-size: 15px">${data.AAper}</p>
-                         <div class="progress" style="border: 0.5px solid ${data.status};display: ${data.hide1}">
+                         <div class="progress" style="border: 0.5px solid ${data.status};display: ${data.bar}">
                             <div  class="progress-bar progress-bar-success" role="progressbar"
                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${data.AAper};background-color:${data.status}">
                            </div> 
@@ -82,7 +82,7 @@ db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW00
                      </th>
                          <td>${data.name}</td>
                          <td><p style="color:${data.status}; font-weight:900;margin-bottom:0px; font-size: 15px">${data.AAper}</p>
-                         <div class="progress" style="border: 0.5px solid ${data.status};display: ${data.hide1}">
+                         <div class="progress" style="border: 0.5px solid ${data.status};display: ${data.bar}">
                             <div  class="progress-bar progress-bar-success" role="progressbar"
                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${data.AAper};background-color:${data.status}">
                            </div> 
@@ -129,7 +129,7 @@ db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=
                     </th>
                         <td>${data.name}</td>
                         <td><p style="color:${data.status}; font-weight:900;margin-bottom:0px; font-size: 15px">${data.AAper}</p>
-                        <div class="progress" style="border: 0.5px solid ${data.status};display: ${data.hide1}">
+                        <div class="progress" style="border: 0.5px solid ${data.status};display: ${data.bar}">
                            <div  class="progress-bar progress-bar-success" role="progressbar"
                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${data.AAper};background-color:${data.status}">
                           </div> 
@@ -171,7 +171,7 @@ db.collection("attendance").orderBy('regno').limitToLast(11).get().then(querySna
                     </th>
                         <td>${data.name}</td>
                         <td><p style="color:${data.status}; font-weight:900;margin-bottom:0px; font-size: 15px">${data.AAper}</p>
-                        <div class="progress" style="border: 0.5px solid ${data.status};display: ${data.hide1}">
+                        <div class="progress" style="border: 0.5px solid ${data.status};display: ${data.bar}">
                            <div  class="progress-bar progress-bar-success" role="progressbar"
                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${data.AAper};background-color:${data.status}">
                           </div> 
