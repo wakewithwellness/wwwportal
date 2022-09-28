@@ -207,7 +207,7 @@ async function getuserInfoRealtime(userID){
         <div class="row">
         <div class="col-sm-12">
             <h4 class="page-title" style="text-align:left">Payments</h4>
-	    <p style="font-size: 11px; color: red">Your details are saved. You can pay the fee before 30th September 2022</p>
+	    <p style="font-size: 11px; color: red; text-align: left; margin-top: -10px">Your details are saved. You can pay the fee before 30th September 2022</p>
             <hr>
         </div>
         </div>
