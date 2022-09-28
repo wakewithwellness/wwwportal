@@ -169,7 +169,7 @@ async function getuserInfoRealtime(userID){
          
           <thead style="background-color: #f7f7f7">
                   <tr style="text-align: left;"> 
-                  <th scope="col">SNo.</th> 
+                 
                   <th scope="col" style="min-width: 22vh">Title</th>
                   <th scope="col" style="width: 15vh;text-align:center">Upload/Edit</th>
                   <th scope="col" style="width: 20vh;text-align:center">Status</th>
@@ -178,7 +178,7 @@ async function getuserInfoRealtime(userID){
               </thead>
               <tbody >
                     <tr>
-                         <td>1</td>
+                     
                          <td style="font-weight: 400">Upload a recent photo</td>
                        
                          <td style="text-align: center;color:#198754;cursor:pointer" ><i style="display: ${userInfo.upload1}; font-size: 18px" href="#modal1" class="fa fa-upload modal-trigger" aria-hidden="true"></i></td>
@@ -186,7 +186,7 @@ async function getuserInfoRealtime(userID){
                          <td><p style="font-weight: 500; color: green;text-align:center;display: ${userInfo.down1}">Submitted</p></td>
                     </tr>
                     <tr>
-                         <td>2</td>
+                        
                          <td style="font-weight: 400">Upload your signature (On a white paper)</td>
                       
                          <td style="text-align: center;color:#198754;cursor:pointer" ><i style="display: ${userInfo.upload2}; font-size: 18px" href="#modal3" class="fa fa-upload modal-trigger" aria-hidden="true"></i></td>
