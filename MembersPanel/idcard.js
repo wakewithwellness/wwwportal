@@ -119,6 +119,31 @@ async function getuserInfoRealtime(userID){
         
         
         <div class="page-wrapper">
+
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius: 5px;display: ${userInfo.down2}">
+        <div class="row">
+        <div class="col-sm-12">
+            <h4 class="page-title" style="text-align:left">Payments</h4>
+	    <p style="font-size: 11px; color: red; text-align: left; margin-top: -10px">Your details are saved. You can pay the fee before 30th September 2022</p>
+            <hr>
+        </div>
+        </div>
+
+      
+     
+
+        <div class="text-center">
+        <button class="btn" style="width:50%;color: white;font-weight: 500;background-color: #198754" onclick="location.href=' ${userInfo.link}'">Pay Now</button>
+        </div>
+        
+        
+       
+        </div>
+  
+
+
+
+
         <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;padding: 20px;border-radius: 5px">
         <div class="row">
         <div class="col-sm-12">
@@ -203,26 +228,6 @@ async function getuserInfoRealtime(userID){
 
 
 
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius: 5px;display: ${userInfo.down2}">
-        <div class="row">
-        <div class="col-sm-12">
-            <h4 class="page-title" style="text-align:left">Payments</h4>
-	    <p style="font-size: 11px; color: red; text-align: left; margin-top: -10px">Your details are saved. You can pay the fee before 30th September 2022</p>
-            <hr>
-        </div>
-        </div>
-
-        <div class="row" style="text-align: left">
-        <div class="col-lg">
-        <h4 style="font-size: 13px">ID Card type: <span style="color: #198754"> ${userInfo.type}</span></h4></div>
-        </div>
-
-        <div class="col-lg">
-        <button class="btn btn-dark" onclick="location.href=' ${userInfo.link}'">Continue to Payment</button>
-        </div>
-        
-        
-        </div>
 
 
 
@@ -231,8 +236,6 @@ async function getuserInfoRealtime(userID){
 
 
 
-      
-</div>
     </div>
         </div>    <br><br><br><br>
 
