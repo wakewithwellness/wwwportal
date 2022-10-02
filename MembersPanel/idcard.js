@@ -174,7 +174,7 @@ async function getuserInfoRealtime(userID){
 
        </div> 
        <a style="display:  ${userInfo.ii};font-size: 15px;color: red" class="modal-trigger" href="#modal5">[ <i class="fa fa-pencil" aria-hidden="true"></i> Fill up the form ]</a>
-<a style="display: ${userInfo.i} ;font-size: 15px;color: red" class="modal-trigger" href="#modal4">[ <i class="fa fa-pencil" aria-hidden="true"></i> Update the form ]</a>
+<a style="display: ${userInfo.i} ;display: ${userInfo.link};font-size: 15px;color: red" class="modal-trigger" href="#modal4">[ <i class="fa fa-pencil" aria-hidden="true"></i> Update the form ]</a>
 
 
 <br>
