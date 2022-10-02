@@ -134,7 +134,7 @@ async function getuserInfoRealtime(userID){
 
         <div class="text-center">
         <button class="btn" style="width:50%;color: white;font-weight: 500;background-color: #198754; display: ${userInfo.link}" onclick="location.href=' ${userInfo.link}'">Pay Now</button>
-        <h4 style="color: red; display: ${userInfo.paid}">${userInfo.paid}</h4>
+        <h4 style="color: white;background-color: red;padding:8px; max-width: 300px ;display: ${userInfo.paid}">${userInfo.paid}</h4>
         </div>
         
         
