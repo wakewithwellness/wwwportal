@@ -124,7 +124,7 @@ async function getuserInfoRealtime(userID){
         <div class="row">
         <div class="col-sm-12">
             <h4 class="page-title" style="text-align:left">Payments</h4>
-	    <p style="font-size: 11px; color: red; text-align: left; margin-top: -10px">Your details are saved. You can pay the fee before 30th September 2022</p>
+	    <p style="font-size: 11px; color: red; text-align: left; margin-top: -10px">Your details are saved. You can pay the fee before 2nd October 2022</p>
             <hr>
         </div>
         </div>
@@ -133,7 +133,8 @@ async function getuserInfoRealtime(userID){
      
 
         <div class="text-center">
-        <button class="btn" style="width:50%;color: white;font-weight: 500;background-color: #198754" onclick="location.href=' ${userInfo.link}'">Pay Now</button>
+        <button class="btn" style="width:50%;color: white;font-weight: 500;background-color: #198754; display: ${userInfo.link}" onclick="location.href=' ${userInfo.link}'">Pay Now</button>
+        <h4 style="color: red; display: ${userInfo.paid}">${userInfo.paid}</h4>
         </div>
         
         
