@@ -183,7 +183,7 @@ async function getuserInfoRealtime(userID){
                    
         </div>
   
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius: 5px;" >
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius: 5px;display: ${userInfo.i}" >
         <div class="row">
         <div class="col-sm-12">
             <h4 class="page-title" style="text-align:left">Upload File</h4>
