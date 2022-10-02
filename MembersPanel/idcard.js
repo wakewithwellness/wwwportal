@@ -133,6 +133,7 @@ async function getuserInfoRealtime(userID){
      
 
         <div class="text-center">
+        
         <button class="btn" style="width:50%;color: white;font-weight: 500;background-color: #198754; display: ${userInfo.link}" onclick="location.href=' ${userInfo.link}'">Pay Now</button>
         <h4 style="color: white;background-color: red;padding:8px; max-width: 500px ;display: ${userInfo.paid}">${userInfo.paid}</h4>
         </div>
@@ -164,7 +165,7 @@ async function getuserInfoRealtime(userID){
 
        <div class="col-lg">
        <h4 style="font-size: 13px">Blood Group: <span style="color: #198754"> ${userInfo.blood}</span></h4>
-       <h4 style="font-size: 13px">Type: <span style="color: #198754"> ${userInfo.type}</span></h4>
+     
        <h4 style="font-size: 13px">Address: <span style="color: #198754"> ${userInfo.address}</span></h4>
       
        </div>
@@ -262,7 +263,7 @@ async function getuserInfoRealtime(userID){
                         editProfile["contact"].value = userInfo.contact
                         editProfile["blood"].value = userInfo.blood
                         editProfile["address"].value = userInfo.address
-                        editProfile["type"].value = userInfo.type
+                
                         editProfile["link"].value = userInfo.link
                         editProfile["i"].value = "block"
                         editProfile["ii"].value = "none"
@@ -274,7 +275,7 @@ async function getuserInfoRealtime(userID){
                         editProfileI["contact"].value = " "
                         editProfileI["blood"].value = " "
                         editProfileI["address"].value = " "
-                        editProfileI["type"].value = " "
+                      
                         editProfileI["link"].value = userInfo.link
                         editProfileI["i"].value = "block"
                         editProfileI["ii"].value = "none"
@@ -341,7 +342,7 @@ function updateUserProfileI(e){
       contact:editProfileI["contact"].value,
       blood:editProfileI["blood"].value,
       address:editProfileI["address"].value,
-      type:editProfileI["type"].value,
+    
       link:editProfileI["link"].value,
       i:editProfileI["i"].value,
       ii:editProfileI["ii"].value,
@@ -387,7 +388,7 @@ function updateUserProfile(e){
       contact:editProfile["contact"].value,
       blood:editProfile["blood"].value,
       address:editProfile["address"].value,
-      type:editProfile["type"].value,
+    
       link:editProfile["link"].value,
     
     
@@ -603,4 +604,6 @@ function uploadImageII(e){
  );
  }
  
+
+
 
