@@ -161,18 +161,18 @@ async function getuserInfoRealtime(userID){
 
                     <tr>
                    
-                    <td rowspan="2" id=month> <h4>September 2022</h4>
+                    <td rowspan="2" id=month> <h4>October 2022</h4>
                    
                     </td>
-                    <td id="datecolor2"><a>15/09/2022 to 30/09/2022</a></td>
-                    <td>${userInfo.Sept22b}</td>
-                    <td>${userInfo.Sept22bf}</td>
+                    <td id="datecolor2"><a>15/10/2022 to 31/10/2022</a></td>
+                    <td>${userInfo.Oct22b}</td>
+                    <td>${userInfo.Oct22bf}</td>
                     </tr>
 
-                    <tr style="color: red">
-                    <td id="datecolor1"><a>01/09/2022 to 15/09/2022</a></td>
-                    <td>${userInfo.Sept22a}</td>
-                    <td>${userInfo.Sept22af}</td>
+                    <tr>
+                    <td id="datecolor1"><a>01/10/2022 to 15/10/2022</a></td>
+                    <td>${userInfo.Oct22a}</td>
+                    <td>${userInfo.Oct22af}</td>
                     </tr>
 
                     </tbody>
@@ -209,7 +209,7 @@ async function getuserInfoRealtime(userID){
 						
                     <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="font-weight: 500;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance 
                     from 
-                    <span style="font-size: 14px;color: #198754;font-weight:600" id="date">15/09/2022 - 30/09/2022</span></h5>
+                    <span style="font-size: 14px;color: #198754;font-weight:600" id="date">01/10/2022 - 15/10/2022</span></h5>
                               <div class="testbox" >
                           
                                               <form onsubmit="updateattendance(event)" id="attendanceform">
@@ -325,13 +325,13 @@ async function getuserInfoRealtime(userID){
 
 function updateattendance(event){
   event.preventDefault()
-  var Sept22b = document.getElementById('attend').value
-  var Sept22bf = document.getElementById('work').value
+  var Oct22a = document.getElementById('attend').value
+  var Oct22af = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Sept22b:Sept22b,
-    Sept22bf:Sept22bf
+    Oct22a:Oct22a,
+    Oct22af:Oct22af
 
   },{ merge: true}).then(()=>{
    
@@ -356,7 +356,7 @@ function updateattendance(event){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("September 30, 2022 22:00:00").getTime();
+     var countDownDate = new Date("October 15, 2022 22:00:00").getTime();
      
      // Update the count down every 1 second
      var x = setInterval(function() {
@@ -394,7 +394,7 @@ function updateattendance(event){
          document.querySelector('#send').style.cursor = "not-allowed";
          document.getElementById("send").innerHTML = "Locked";
          document.getElementById("date").style.color = "red";
-         document.getElementById("datecolor2").style.color = "red";
+         document.getElementById("datecolor1").style.color = "red";
       
        }
      }, 1000);
