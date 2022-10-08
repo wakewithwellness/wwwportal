@@ -187,7 +187,7 @@ async function getuserInfoRealtime(userID){
                                         <td><a>5</a></td>
                                         <td><h2><a>Swachh Prayaakh - Cleanliness Drive 1</a></h2></td>
                                         <td>9th October 2022</td>
-                                        <td>Yet to decide</td>
+                                        <td>Uzanbazar Ghat</td>
                                         <td style="text-align: center">${userInfo.event1}</td>
                                         <td  style="text-align: center"><button onclick="location.href='registrations.html'" class="btn btn-dark">Register</button></td>
                                     </tr>
