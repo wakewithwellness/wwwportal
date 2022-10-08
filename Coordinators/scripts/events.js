@@ -162,6 +162,7 @@ async function getuserInfoRealtime(userID){
                 <div class="row">
                     <div class="col-sm-12">
                         <h4 class="page-title">Events</h4>
+                        <p style="color: red;font-size:12px">Note: Minimum attendance for the event will be 70%</p>
                     </div>
                 </div>
                 <div class="row">
@@ -184,8 +185,8 @@ async function getuserInfoRealtime(userID){
                                
                                     <tr>
                                         <td><a>5</a></td>
-                                        <td><h2><a>Cleanliness Drive</a></h2></td>
-                                        <td>25th September 2022</td>
+                                        <td><h2><a>Swachh Prayaakh - Cleanliness Drive 1</a></h2></td>
+                                        <td>9th October 2022</td>
                                         <td>Yet to decide</td>
                                         <td style="text-align: center">${userInfo.event1}</td>
                                         <td  style="text-align: center"><button onclick="location.href='registrations.html'" class="btn btn-dark">Register</button></td>
