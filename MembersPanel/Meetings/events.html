@@ -177,7 +177,7 @@ var stdNo;
                     var date = CurrentRecord.val().date;
                     var name = CurrentRecord.val().name;
                     var a21WWW0017 = CurrentRecord.val().a21WWW0017;
-                    var a21WWW0020 = CurrentRecord.val().a21WWW0020;
+                    var a21WWW0030 = CurrentRecord.val().a21WWW0030;
                     var a21WWW0037 = CurrentRecord.val().a21WWW0037;
                     var a22WWW0062 = CurrentRecord.val().a22WWW0062;
                     var a22WWW0064 = CurrentRecord.val().a22WWW0064;
@@ -189,7 +189,7 @@ var stdNo;
                   
                     
                     
-                    AddItemsToTable(date,name,a21WWW0017,a21WWW0020,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078);
+                    AddItemsToTable(date,name,a21WWW0017,a21WWW0030,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078);
              
 
                               }
@@ -203,7 +203,7 @@ var stdNo;
                   //Filling the table
 
                   var stdList = [];
-                  function AddItemsToTable(date,name,a21WWW0017,a21WWW0020,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078){
+                  function AddItemsToTable(date,name,a21WWW0017,a21WWW0030,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078){
                       var tbody = document.getElementById('tbody1');
                       var trow = document.createElement('tr');
                       var td0 = document.createElement('td');
@@ -222,7 +222,7 @@ var stdNo;
 
 
 
-                    stdList.push([date,name,a21WWW0017,a21WWW0020,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078])
+                    stdList.push([date,name,a21WWW0017,a21WWW0030,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078])
 
 
 
@@ -235,7 +235,7 @@ var stdNo;
                         td2.style.color = "#198754";
                         td2.style.fontSize = "13px"
                         td3.innerHTML = a21WWW0017;
-                        td4.innerHTML = a21WWW0020;
+                        td4.innerHTML = a21WWW0030;
                         td5.innerHTML = a21WWW0037;
                         td6.innerHTML = a22WWW0062;
                         td7.innerHTML = a22WWW0064;
