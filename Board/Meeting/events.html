@@ -250,9 +250,9 @@ margin-bottom: 12px; /* Add some space below the input */
 
 
                               <tr>
-                                <td>21WWW0020</td>
-                                <td>SRII SWATHISH R</td>
-                                <td><select class="form-control" id="Mod21WWW0020">
+                                <td>21WWW0030</td>
+                                <td>Trishna Das</td>
+                                <td><select class="form-control" id="Mod21WWW0030">
                                    <option value="Present">Present</option>
                                    <option value="Absent">Absent</option>
                               </select></td>
@@ -436,7 +436,7 @@ var stdNo;
                     var date = CurrentRecord.val().date;
                     var name = CurrentRecord.val().name;
                     var a21WWW0017 = CurrentRecord.val().a21WWW0017;
-                    var a21WWW0020 = CurrentRecord.val().a21WWW0020;
+                    var a21WWW0030 = CurrentRecord.val().a21WWW0030;
                     var a21WWW0037 = CurrentRecord.val().a21WWW0037;
                     var a22WWW0062 = CurrentRecord.val().a22WWW0062;
                     var a22WWW0064 = CurrentRecord.val().a22WWW0064;
@@ -448,7 +448,7 @@ var stdNo;
                   
                     
                     
-                    AddItemsToTable(date,name,a21WWW0017,a21WWW0020,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078);
+                    AddItemsToTable(date,name,a21WWW0017,a21WWW0030,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078);
              
 
                 }
@@ -462,7 +462,7 @@ var stdNo;
     //Filling the table
     
     var stdList = [];
-    function AddItemsToTable(date,name,a21WWW0017,a21WWW0020,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078){
+    function AddItemsToTable(date,name,a21WWW0017,a21WWW0030,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078){
         var tbody = document.getElementById('tbody1');
         var trow = document.createElement('tr');
         var td0 = document.createElement('td');
@@ -481,7 +481,7 @@ var stdNo;
 
 
 
-      stdList.push([date,name,a21WWW0017,a21WWW0020,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078])
+      stdList.push([date,name,a21WWW0017,a21WWW0030,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078])
  
  
        
@@ -514,7 +514,7 @@ var stdNo;
     var DateMod = document.getElementById('DateMod')
     var ModName = document.getElementById('NameMod');
     var Mod21WWW0017 = document.getElementById('Mod21WWW0017');
-    var Mod21WWW0020 = document.getElementById('Mod21WWW0020');
+    var Mod21WWW0030 = document.getElementById('Mod21WWW0030');
     var Mod21WWW0037 = document.getElementById('Mod21WWW0037');
     var Mod22WWW0062 = document.getElementById('Mod22WWW0062');
     var Mod22WWW0064 = document.getElementById('Mod22WWW0064');
@@ -538,7 +538,7 @@ var stdNo;
         DateMod.value = "";
         ModName.value = "";
         Mod21WWW0017.value = "Present";
-        Mod21WWW0020.value = "Present";
+        Mod21WWW0030.value = "Present";
         Mod21WWW0037.value = "Present";
         Mod22WWW0062.value = "Present";
         Mod22WWW0064.value = "Present";
@@ -561,7 +561,7 @@ var stdNo;
            DateMod.value = stdList[index][0];
            ModName.value = stdList[index][1];
            Mod21WWW0017.value = stdList[index][2];
-           Mod21WWW0020.value = stdList[index][3];
+           Mod21WWW0030.value = stdList[index][3];
            Mod21WWW0037.value = stdList[index][4];
            Mod22WWW0062.value = stdList[index][5];
            Mod22WWW0064.value = stdList[index][6];
@@ -594,7 +594,7 @@ var stdNo;
                date: DateMod.value,
                name: ModName.value,
                a21WWW0017: Mod21WWW0017.value,
-               a21WWW0020: Mod21WWW0020.value,
+               a21WWW0030: Mod21WWW0030.value,
                a21WWW0037: Mod21WWW0037.value,
                a22WWW0062: Mod22WWW0062.value,
                a22WWW0064: Mod22WWW0064.value,
@@ -653,7 +653,7 @@ var stdNo;
                date: DateMod.value,
                name: ModName.value,
                a21WWW0017: Mod21WWW0017.value,
-               a21WWW0020: Mod21WWW0020.value,
+               a21WWW0030: Mod21WWW0030.value,
                a21WWW0037: Mod21WWW0037.value,
                a22WWW0062: Mod22WWW0062.value,
                a22WWW0064: Mod22WWW0064.value,
