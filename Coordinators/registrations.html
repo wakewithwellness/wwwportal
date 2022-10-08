@@ -83,8 +83,8 @@
 
           <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;padding: 20px;border-radius: 5px;">
           <div class="container" style="text-align: center;">
-               <h2>Cleanliness Drive</h2>
-               <h5 style="color: red">25th September 2022</h5>
+               <h2>Swachh Prayaakh -Cleanliness Drive</h2>
+               <h5 style="color: red">9th October 2022</h5>
           </div>
           
           </div>
@@ -93,7 +93,7 @@
  
                  <div class="row">
                      <div class="col-sm-12">
-                         <h4 class="page-title">Registration Form [<span style="font-weight: 700;color:#009e1a;" id="demo"></span>]</h4><hr>
+                         <h4 class="page-title">Registration [<span style="font-weight: 700;color:#009e1a;" id="demo"></span>]</h4><hr>
                      </div>
                  </div>
                  <div class="row">
@@ -128,7 +128,7 @@
                                       
                                         <div class="form-group">
                                           <label>Event Date</label>
-                                          <input type="text" id="eventdate" name="name" value="25th September 2022" readonly class="form-control">
+                                          <input type="text" id="eventdate" name="name" value="9th October 2022" readonly class="form-control">
                                       </div>
     
                                     </div>
@@ -187,7 +187,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // Reference messages collection
-var dataRef = firebase.database().ref('EventsRegistrations/2022/Cleanliness_Drive_25_September');
+var dataRef = firebase.database().ref('EventsRegistrations/2022/Cleanliness_Drive_9_October');
 
 // Listen for form submit
 document.getElementById('extraForm2').addEventListener('submit', submitForm);
@@ -254,7 +254,7 @@ function saveData(Membername,Contact, Whatsapp, eventname, eventdate){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("September 23, 2022 23:59:00").getTime();
+     var countDownDate = new Date("October 8, 2022 20:00:00").getTime();
      
      // Update the count down every 1 second
      var x = setInterval(function() {
