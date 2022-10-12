@@ -87,6 +87,8 @@ db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW00
                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${data.AAper};background-color:${data.status}">
                            </div> 
                           </div></td>
+                          <td>${data.Oct22b}</td>
+                          <td>${data.Oct22a}</td>
                          <td>${data.Sept22b}</td>
                          <td>${data.Sept22a}</td>
                          <td>${data.Aug22b}</td>
@@ -134,6 +136,8 @@ db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=
                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${data.AAper};background-color:${data.status}">
                           </div> 
                          </div></td>
+                         <td>${data.Oct22b}</td>
+                         <td>${data.Oct22a}</td>
                         <td>${data.Sept22b}</td>
                         <td>${data.Sept22a}</td>
                         <td>${data.Aug22b}</td>
@@ -176,6 +180,8 @@ db.collection("attendance").orderBy('regno').limitToLast(11).get().then(querySna
                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${data.AAper};background-color:${data.status}">
                           </div> 
                          </div></td>
+                         <td>${data.Oct22b}</td>
+                         <td>${data.Oct22a}</td>
                         <td>${data.Sept22b}</td>
                         <td>${data.Sept22a}</td>
                         <td ${data.Aug22bf}>${data.Aug22b}</td>
