@@ -42,9 +42,9 @@
   }
 </style>
 
-<body style="background-color: rgb(238, 238, 238)" >
+<body style="background-color: rgb(238, 238, 238)" oncontextmenu="return false">
 
-  <!-- oncontextmenu="return false" -->
+  <!--  -->
 
             <div class="header" style="background-color: #333333">
               <div class="header-left">
@@ -170,6 +170,40 @@
           </div>
 
           <br>
+
+
+
+
+          <div class="content" style="background-color: #fff;border-top: 3px solid #333333;padding: 15px;border-radius: 5px;margin-top: 20px;">
+
+
+            <div>
+              <h4 class="container-fluid" >Payment Process</h4>
+            
+              <div class="row">
+               
+               
+                
+                <div class="col-lg" style="margin-top: 40px"><h4 style="background-color:#cce3f2; padding:8px;color:#0072bc">UPI ID: </h4><input class="form-control" type="text" readonly value="7086952212@okbizaxis" id="myInput"><button class="btn btn-primary" onclick="myFunction()">Copy UPI ID</button></div>
+                
+                <div class="col-lg-2" style="margin-top: 40px"><h4 style="background-color:#cce3f2; padding:8px;color:#0072bc">QR CODE: </h4><h4><img style="width:100%" src="./assets/img/qr.jpeg"/></h4></div>
+                <div class="col-lg" style="margin-top: 40px"><h4 style="background-color:#cce3f2; padding:8px;color:#0072bc">Account Details:</h4>
+                <p style="margin-left: 10px;">Account No.: <strong>6782561097</strong><br>
+                  IFSC: <strong>IDIB000V086</strong><br>
+                Account holder: <strong>Ankur Jyoti Dutta</strong><br>
+              MICR code: <strong>632019008</strong><br>
+            Bank: <strong>Indian Bank</strong></p></div>
+             
+              </div>
+              
+          </div>
+
+        </div>
+        <br>  
+        <h4 style="background-color:#fbccca; padding:8px;color:#f01f0c">Send a screenshot of the payment reciept on the Wake With Wellness Official whatsapp number. (6385334226)</h4>
+
+        <br><br> 
+       
            
         </div>
  
@@ -189,7 +223,22 @@
 
   <script src="./scripts/tshirt.js"></script>
 
+<script>
+  function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
 
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>
 
   <script>
     
