@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>T-Shirts</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link href="../MembersPanel/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../MembersPanel/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <link href="../MembersPanel/assets/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
+  
+  <link href="../MembersPanel/assets/img/favicon.png" rel="icon">
+<link href="../MembersPanel/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+
+
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #d4d4d4;
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #e1e1e1;
+  }
+
+ 
+  </style>
+
+
+<style>
+  #myInput {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
+</style>
+
+
+
+
+
+
+</head>
+
+<body style="background-color: rgb(238, 238, 238)">
+
+
+    <div class="main-wrapper">
+      <div class="header"  style="background-color: #0d6efd;">
+    <div class="header-left">
+      <a href="main.html" class="logo">
+        <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>Boards Portal</span>
+      </a>
+    </div>
+    <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+          <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+        
+      </div>
+      <div class="sidebar" id="sidebar">
+          <div class="sidebar-inner slimscroll">
+              <div id="sidebar-menu" class="sidebar-menu">
+                  <ul>
+                      <li class="menu-title">Boards Panel</li>
+
+                      <li >
+                        <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+                        </li>
+
+                        
+                      <li >
+                        <a href="attenUpdates.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
+                        </li>
+    
+    
+                        <li>
+                        <a href="members.html"><i  class="fa fa-users"></i> <span>Members</span></a>
+                       </li>
+    
+      
+    
+                           <li>
+                           <a href="leavepanel.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+                          </li>
+    
+                          <li>
+                          <a href="payments.html"><i  class="fa fa-money"></i> <span>Payments</span></a>
+                         </li>
+    
+                         <li>
+                         <a href="recruitments.html"><i  class="fa fa-user"></i> <span>Registrations</span></a>
+                        </li>
+              
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="page-wrapper">
+          <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;">
+                <div class="row"  style="padding: 15px">
+                  <div class="col-sm-12">
+                      <h4 class="page-title">T-shirt orders</h4><hr>
+                  </div>
+                </div>
+
+                <div style="margin-top: -15px">
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by name...">
+                </div>
+              
+              <div class="row">
+                  <div class="col-md-12">
+
+                    <!-- Main content -->
+                    <div class="table-responsive custom-table-responsive">
+    
+                      <table class="table custom-table" id="myTable" style="color: black;">
+                          <thead>
+                              <tr style="background-color: #0d6efd;color: #fff;"> 
+                               <th scope="col">SNo.</th> 
+                        
+                               <th scope="col" style="min-width: 20vh">Name</th>
+                               <th scope="col">Email</th>
+                               <th scope="col">Type</th>
+                               <th scope="col">Size</th>  <th scope="col" style="min-width: 19vh">Address</th>
+                             
+                               <th scope="col">Payment</th> 
+                               <th scope="col">Delivery</th> 
+      
+                        
+                              </tr>
+                          </thead>
+                          <tbody id="tbody1">
+                             
+      
+                          </tbody>
+                      </table>
+                  </div>
+                    <!-- Main content -->
+                </div>
+              </div>
+
+          </div>
+          <br>   <br>
+      
+      </div>
+
+  </div>
+
+
+
+
+
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div class="sidebar-overlay" data-reff=""></div>
+  <script src="../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../MembersPanel/assets/js/popper.min.js"></script>
+  <script src="../MembersPanel/assets/js/bootstrap.min.js"></script>
+  <script src="../MembersPanel/assets/js/jquery.dataTables.min.js"></script>
+  <script src="../MembersPanel/assets/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../MembersPanel/assets/js/jquery.slimscroll.js"></script>
+  <script src="../MembersPanel/assets/js/select2.min.js"></script>
+  <script src="../MembersPanel/assets/js/moment.min.js"></script>
+  <script src="../MembersPanel/assets/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="../MembersPanel/assets/js/app.js"></script>
+
+  <script src="../assets/js/main.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+
+<script id="MainScript">
+  //Connection
+    var firebaseConfig = {
+      apiKey: "AIzaSyBTOvD0aod-fntZ0VYbT6EAp9z1L_bqKwY",
+authDomain: "website-818ed.firebaseapp.com",
+databaseURL: "https://website-818ed-default-rtdb.firebaseio.com",
+projectId: "website-818ed",
+storageBucket: "website-818ed.appspot.com",
+messagingSenderId: "542030860652",
+appId: "1:542030860652:web:ee0bef0509915aa1da2349",
+measurementId: "G-2VWCQ9QR4S"
+    };
+
+    //Init Firebase
+    firebase.initializeApp(firebaseConfig);
+
+
+
+
+    //GET ALL DATA
+
+    function SelectAllData(){
+        firebase.database().ref('tshirts').once('value',
+        function(AllRecords){
+            AllRecords.forEach(
+                function(CurrentRecord){
+                     var Membername = CurrentRecord.val().Membername;
+                    var Email = CurrentRecord.val().Email;
+                    var type = CurrentRecord.val().type;
+                    var size = CurrentRecord.val().size;
+                    var address = CurrentRecord.val().address;
+                  
+                    var p = CurrentRecord.val().p;
+                    var d = CurrentRecord.val().d;
+
+                    AddItemsToTable(Membername,Email,type,size,address,p,d);
+
+                }
+            );
+
+        });
+    }
+
+    window.onload = SelectAllData;
+
+    //Filling the table
+    var stdNo = 0;
+    function AddItemsToTable(Membername,Email,type,size,address,p,d){
+      var tbody = document.getElementById('tbody1');
+        var trow = document.createElement('tr');
+        var td0 = document.createElement('td');
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+        var td3 = document.createElement('td');
+        var td4 = document.createElement('td');
+        var td5 = document.createElement('td');
+        var td6 = document.createElement('td');
+        var td7 = document.createElement('td');
+   
+
+
+        
+        td0.innerHTML = ++stdNo;
+        td1.innerHTML = Membername;
+        td2.innerHTML = Email;
+        td3.innerHTML = type;
+        td4.innerHTML = size;
+        td5.innerHTML = address;
+        td6.innerHTML = p;
+        td7.innerHTML = d;
+
+ 
+        trow.appendChild(td0);
+        trow.appendChild(td1); 
+        trow.appendChild(td2); 
+        trow.appendChild(td3); 
+        trow.appendChild(td4); 
+        trow.appendChild(td5);
+        trow.appendChild(td6);
+        trow.appendChild(td7);
+
+
+        
+        tbody.appendChild(trow);
+        
+    }
+
+
+</script>
+
+
+
+</body>
+
+</html>
