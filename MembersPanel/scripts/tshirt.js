@@ -29,9 +29,10 @@ function submitForm(e){
   var address = getInputVal('address');
   var type = getInputVal('type')
   var size = getInputVal('size');
+  var tname = getInputVal('tname')
 
   // Save message
-  saveData(Membername, Email, address, type,size);
+  saveData(Membername, Email, address, type,size,tname);
 
 
  // Show alert
@@ -55,7 +56,7 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveData(Membername, Email, address, type, size){
+function saveData(Membername, Email, address, type, size,tname){
   var newDataRef = dataRef.push();
   newDataRef.set({
     Membername: Membername,
@@ -63,6 +64,7 @@ function saveData(Membername, Email, address, type, size){
     address:address,
     type:type,
     size:size,
+    tname:tname,
 
 
   });
@@ -76,8 +78,8 @@ function saveData(Membername, Email, address, type, size){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("October 16, 2022 18:00:00").getTime();
-    
+     var countDownDate = new Date("October 16, 2022 18:59:00").getTime();
+     
      // Update the count down every 1 second
      var x = setInterval(function() {
      
