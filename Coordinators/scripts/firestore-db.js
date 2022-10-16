@@ -49,7 +49,7 @@ async function getuserInfo(userID){
       userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
       <div class="card" style="border-top: 3px solid #16151a">
       <div class="card-body" style="text-align: center">
-      <h5 class="card-title" style="text-align: center; color: #16151a; font-weight: 700; font-size:30px">VOLUNTEERS PORTAL</h5><hr>
+      <h5 class="card-title" style="text-align: center; color: #16151a; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
 <br>
       <form autocomplete="off" onsubmit="login(event)">
           <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -119,22 +119,22 @@ async function getuserInfoRealtime(userID){
                        
                   
                                   <li>
-							<a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
-						    </li>
+                                <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+                                  </li>
 
-                                   <li>
-                                   <a href="events.html"><i class="fa fa-users"></i> <span>Events</span></a>
-                                   </li>
-                       
-                                   <li>
-                                   <a href="coordinators.html"><i class="fa fa-users"></i> <span>Coordinators List</span></a>
-                                   </li>
-                     
-                   
-                    </ul>
-                </div>
-            </div>
-        </div>
+                                                    <li>
+                                                    <a href="events.html"><i class="fa fa-users"></i> <span>Events</span></a>
+                                                    </li>
+                                        
+                                                    <li>
+                                                    <a href="coordinators.html"><i class="fa fa-users"></i> <span>Coordinators List</span></a>
+                                                    </li>
+                                      
+                                    
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
         
         
                     <div class="page-wrapper">
@@ -205,7 +205,7 @@ async function getuserInfoRealtime(userID){
                     <h4 style="font-size: 13px">Address: <span style="color: #16151a">${userInfo.address}, ${userInfo.state}, ${userInfo.pincode}</span></h4>
                     </div>
 
-               
+              
 
                     </div>
 
@@ -310,7 +310,7 @@ async function getuserInfoRealtime(userID){
         <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
         <div class="card" style="border-top: 3px solid #16151a">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: #16151a; font-weight: 700; font-size:25px">VOLUNTEERS PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: #16151a; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
 <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
