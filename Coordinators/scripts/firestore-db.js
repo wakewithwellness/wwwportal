@@ -130,6 +130,9 @@ async function getuserInfoRealtime(userID){
                                                     <a href="coordinators.html"><i class="fa fa-users"></i> <span>Coordinators List</span></a>
                                                     </li>
                                       
+                                                    <li>
+                                                    <a href="payments.html"><i class="fa fa-money"></i> <span>Payment History</span></a>
+                                                    </li>
                                     
                                       </ul>
                                   </div>
