@@ -139,11 +139,100 @@
                   
                     <div class="card-box" id="tshirtform"> 
                      
-                        <form style="font-size:13px;text-align: justify;">
-                          <h4 class="card-title" style="text-align: center; color: red">Registrations Closed</h4>
-                         
+                        <form id="extraForm" style="font-size:13px;text-align: justify;">
+                          <h4 class="card-title">Personal Details :</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" id="Membername" name="name" placeholder="Your name.." required class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" id="Email" name="email" placeholder="Your e-mail.." required class="form-control">
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label>Address</label>
+                                  <textarea id="address" name="address" style="height:15vh" placeholder="Your address.." required class="form-control"></textarea>
+                                </div>
+                              
+
+                                    
+                                   
+                                </div>
+                            </div>
+                            <br>
+                          
+                            <div class="row">
+
+                              <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label>T-shirt type</label>
+                                    <select id="type" name="type" class="form-control" required>
+                                      <option value="" disabled selected>Select t-shirt type</option>
+                                      <option value="Round Neck">Round Neck (₹369)</option>
+                                      <option value="Polo tshirt">Polo tshirt (₹499)</option>
+                                      <option value="Polo tshirt">Round Neck + Polo tshirt (₹839)</option>
+                             
+                                    
+                                     
+                                    </select>
+                                </div>
+                               
+                             
                             </div>
 
+                      
+                                <div class="col-md-6">
+
+                                    <div class="form-group">
+                                        <label>Size</label>
+
+                                      
+
+                                     <div class="row">
+                                       <div class="col-lg-8">
+                                        <select id="size" name="size" class="form-control" required>
+                                          <option value="" disabled selected>Select your size</option>
+                                          <option value="S">Small (S)</option>
+                                          <option value="M">Medium (M)</option>
+                                          <option value="L">Large (L)</option>
+                                          <option value="XL">XLarge(XL)</option>
+                                          <option value="XXL">XXLarge (XXL)</option>
+                                        </select>
+                                       </div>
+                                       <div class="col-lg">
+                                        <button type="button" class="btn btn-secondary my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                          Size chart
+                                         </button>
+                                       </div>
+                                     </div>
+
+                                      
+                                    </div>
+                                   
+                                 
+                                </div>
+
+                                <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>T-shirt name</label>
+                                  <input type="tname" id="tname" name="text" placeholder="Your T-shirt name.." required class="form-control">
+                              </div>   </div>
+
+                              </div>
+
+                            <br>
+                     <hr>
+                   
+                              <div class="alert"><i class="fa fa-check-circle" aria-hidden="true"></i> Form submitted successfully. <span style="color: red">Please complete your payment</span></div>
+                            <div class="text-center">
+                                <input type="submit" id="submit" value="Submit" style="width: 30vh;height: 6vh" class="btn btn-primary">
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -156,7 +245,39 @@
 
 
 
-    
+          <div class="content" style="background-color: #fff;border-top: 3px solid #333333;padding: 15px;border-radius: 5px;margin-top: 20px;">
+
+
+            <div>
+              <h4 class="container-fluid" >Payment Process</h4>
+
+
+              <div class="row">
+               
+               
+                
+                <div class="col-lg" style="margin-top: 40px"><h4 style="background-color:#cce3f2; padding:8px;color:#0072bc">UPI ID: </h4><input class="form-control" type="text" readonly value="7086952212@okbizaxis" id="myInput"><button class="btn btn-primary" onclick="myFunction()">Copy UPI ID</button></div>
+                
+                <div class="col-lg-2" style="margin-top: 40px"><h4 style="background-color:#cce3f2; padding:8px;color:#0072bc">QR CODE: </h4><h4><img style="width:100%" src="./assets/img/qr.jpeg"/></h4></div>
+                <div class="col-lg" style="margin-top: 40px"><h4 style="background-color:#cce3f2; padding:8px;color:#0072bc">Account Details:</h4>
+                <p style="margin-left: 10px;">Account No.: <strong>6782561097</strong><br>
+                  IFSC: <strong>IDIB000V086</strong><br>
+                Account holder: <strong>Ankur Jyoti Dutta</strong><br>
+              MICR code: <strong>632019008</strong><br>
+            Bank: <strong>Indian Bank</strong></p></div>
+             
+              </div>
+              
+          </div>
+
+        </div>
+        <br>  
+        <h4 style="background-color:#fbccca; padding:8px;color:#f01f0c">Send a screenshot of the payment reciept on the Wake With Wellness Official whatsapp number. (6385334226)</h4>
+
+        <br><br> 
+       
+           
+        </div>
  
     <div class="sidebar-overlay" data-reff=""></div>
     <script src="assets/js/jquery-3.2.1.min.js"></script>
@@ -174,7 +295,22 @@
 
   <script src="./scripts/tshirt.js"></script>
 
+<script>
+  function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
 
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>
 
   <script>
     
