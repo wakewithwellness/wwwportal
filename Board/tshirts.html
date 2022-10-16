@@ -160,7 +160,8 @@ margin-bottom: 12px; /* Add some space below the input */
                                <th scope="col">SNo.</th> 
                         
                                <th scope="col" style="min-width: 20vh">Name</th>
-                               <th scope="col">Email</th>
+                               <th scope="col">Tshirt_Name</th>
+                               <th scope="col"  style="min-width: 20vh">Email</th>
                                <th scope="col">Type</th>
                                <th scope="col">Size</th>  <th scope="col" style="min-width: 19vh">Address</th>
                              
@@ -236,11 +237,12 @@ measurementId: "G-2VWCQ9QR4S"
     //GET ALL DATA
 
     function SelectAllData(){
-        firebase.database().ref('tshirts').once('value',
+        firebase.database().ref('tshirts').orderByChild('p').once('value',
         function(AllRecords){
             AllRecords.forEach(
                 function(CurrentRecord){
                      var Membername = CurrentRecord.val().Membername;
+                     var tname = CurrentRecord.val().tname;
                     var Email = CurrentRecord.val().Email;
                     var type = CurrentRecord.val().type;
                     var size = CurrentRecord.val().size;
@@ -249,7 +251,7 @@ measurementId: "G-2VWCQ9QR4S"
                     var p = CurrentRecord.val().p;
                     var d = CurrentRecord.val().d;
 
-                    AddItemsToTable(Membername,Email,type,size,address,p,d);
+                    AddItemsToTable(Membername,tname,Email,type,size,address,p,d);
 
                 }
             );
@@ -261,7 +263,7 @@ measurementId: "G-2VWCQ9QR4S"
 
     //Filling the table
     var stdNo = 0;
-    function AddItemsToTable(Membername,Email,type,size,address,p,d){
+    function AddItemsToTable(Membername,tname,Email,type,size,address,p,d){
       var tbody = document.getElementById('tbody1');
         var trow = document.createElement('tr');
         var td0 = document.createElement('td');
@@ -272,18 +274,20 @@ measurementId: "G-2VWCQ9QR4S"
         var td5 = document.createElement('td');
         var td6 = document.createElement('td');
         var td7 = document.createElement('td');
+        var td8 = document.createElement('td');
    
 
 
         
         td0.innerHTML = ++stdNo;
         td1.innerHTML = Membername;
-        td2.innerHTML = Email;
-        td3.innerHTML = type;
-        td4.innerHTML = size;
-        td5.innerHTML = address;
-        td6.innerHTML = p;
-        td7.innerHTML = d;
+        td2.innerHTML = tname;
+        td3.innerHTML = Email;
+        td4.innerHTML = type;
+        td5.innerHTML = size;
+        td6.innerHTML = address;
+        td7.innerHTML = p;
+        td8.innerHTML = d;
 
  
         trow.appendChild(td0);
@@ -294,6 +298,7 @@ measurementId: "G-2VWCQ9QR4S"
         trow.appendChild(td5);
         trow.appendChild(td6);
         trow.appendChild(td7);
+        trow.appendChild(td8);
 
 
         
