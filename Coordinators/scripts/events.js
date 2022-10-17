@@ -200,6 +200,7 @@ async function getuserInfoRealtime(userID){
                                         <td>14th March 2021</td>
                                         <td>Jesthakunja Oldage Home, Dhemaji</td>
                                         <td style="text-align: center">-</td>
+					 <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
 
@@ -209,6 +210,7 @@ async function getuserInfoRealtime(userID){
                                         <td>20th February 2022</td>
                                         <td>Enajori Children home, Dhemaji</td>
                                         <td style="text-align: center">-</td>
+					 <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
 
@@ -218,6 +220,7 @@ async function getuserInfoRealtime(userID){
                                         <td>29th November 2021</td>
                                         <td>Jalukbari Girls High School</td>
                                         <td style="text-align: center">-</td>
+					 <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
 
@@ -227,6 +230,7 @@ async function getuserInfoRealtime(userID){
                                         <td>26th September 2021</td>
                                         <td>Paltan bazar</td>
                                         <td style="text-align: center">-</td>
+					 <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
                           
