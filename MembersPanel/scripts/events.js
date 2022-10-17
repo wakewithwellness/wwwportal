@@ -183,6 +183,7 @@ async function getuserInfoRealtime(userID){
                                         <th style="min-width: 20vh">Event Date</th>
                                         <th style="min-width: 20vh">Venue</th>
                                         <th style="text-align: center">Attendance</th>
+                                        <th style="text-align: center">Certificate</th>
                                         <th style="text-align: center">Registration</th>
                                        
                                     </tr>
@@ -195,6 +196,7 @@ async function getuserInfoRealtime(userID){
                                         <td>9th October 2022</td>
                                         <td>Uzanbazar Ghat, Guwahati</td>
                                         <td style="text-align: center">${userInfo.event3}</td>
+                                        <td style="text-align: center"><a href="${userInfo.e3}" style="display:${userInfo.e3}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td  style="text-align: center"><button onclick="location.href='eventReg.html'" class="btn btn-dark">Register</button></td>
                                     </tr>
 
@@ -203,6 +205,7 @@ async function getuserInfoRealtime(userID){
                                         <td><h2><a>Wellness Drive - Medical & Health CheckUp</a></h2></td>
                                         <td>14th March 2021</td>
                                         <td>Jesthakunja Oldage Home, Dhemaji</td>
+                                        <td style="text-align: center">-</td>
                                         <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
@@ -213,6 +216,7 @@ async function getuserInfoRealtime(userID){
                                         <td>20th February 2022</td>
                                         <td>Enajori Children home, Dhemaji</td>
                                         <td style="text-align: center">-</td>
+                                        <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
 
@@ -222,6 +226,7 @@ async function getuserInfoRealtime(userID){
                                         <td>29th November 2021</td>
                                         <td>Jalukbari Girls High School</td>
                                         <td style="text-align: center">${userInfo.event2}</td>
+                                        <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
 
@@ -231,6 +236,7 @@ async function getuserInfoRealtime(userID){
                                         <td>26th September 2021</td>
                                         <td>Paltan bazar</td>
                                         <td style="text-align: center">${userInfo.event1}</td>
+                                        <td style="text-align: center"><a href="${userInfo.e1}" style="display:${userInfo.e1}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
                           
