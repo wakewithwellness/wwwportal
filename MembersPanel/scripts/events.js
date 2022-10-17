@@ -197,7 +197,7 @@ async function getuserInfoRealtime(userID){
                                         <td>Uzanbazar Ghat, Guwahati</td>
                                         <td style="text-align: center">${userInfo.event3}</td>
                                         <td style="text-align: center"><a href="${userInfo.e3}" style="display:${userInfo.e3}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                        <td  style="text-align: center"><button onclick="location.href='eventReg.html'" class="btn btn-dark">Register</button></td>
+                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
 
                                     <tr>
