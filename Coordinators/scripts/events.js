@@ -177,6 +177,7 @@ async function getuserInfoRealtime(userID){
                                         <th style="min-width: 20vh">Event Date</th>
                                         <th style="min-width: 20vh">Venue</th>
                                         <th style="text-align: center">Attendance</th>
+					   <th style="text-align: center">Certificate</th>
                                         <th style="text-align: center">Registration</th>
                                        
                                     </tr>
@@ -189,6 +190,7 @@ async function getuserInfoRealtime(userID){
                                         <td>9th October 2022</td>
                                         <td>Uzanbazar Ghat</td>
                                         <td style="text-align: center">${userInfo.event1}</td>
+					 <td style="text-align: center"><a href="${userInfo.e1}" style="display:${userInfo.e1}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
 
