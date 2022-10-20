@@ -184,14 +184,24 @@ async function getuserInfoRealtime(userID){
                                 </thead>
                                 <tbody>
                                
+                                   <tr>
+                                        <td><a>5</a></td>
+                                        <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
+                                        <td>6th November 2022</td>
+                                        <td>Yet to decide</td>
+                                        <td style="text-align: center">${userInfo.event2}</td>
+                                        <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                        <td  style="text-align: center"><button onclick="location.href='registrations.html'" class="btn btn-dark">Register</button></td>
+                                    </tr>
+                               
                                     <tr>
                                         <td><a>5</a></td>
                                         <td><h2><a>Swachh Prayaakh - Cleanliness Drive 1</a></h2></td>
                                         <td>9th October 2022</td>
-                                        <td>Uzanbazar Ghat</td>
+                                        <td>Uzanbazar ghat</td>
                                         <td style="text-align: center">${userInfo.event1}</td>
-					 <td style="text-align: center"><a href="${userInfo.e1}" style="display:${userInfo.e1}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                                <td  style="text-align: center"><button onclick="location.href='registrations.html'" class="btn btn-dark">Register</button></td>
+                                        <td style="text-align: center"><a href="${userInfo.e1}" style="display:${userInfo.e1}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                        <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
 
                                     <tr>
