@@ -191,13 +191,23 @@ async function getuserInfoRealtime(userID){
                                 <tbody>
                                
                                     <tr>
+                                <td><a>5</a></td>
+                                <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
+                                <td>9th October 2022</td>
+                                <td>Yet to decide</td>
+                                <td style="text-align: center">${userInfo.event4}</td>
+                                <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.e4}"></a></td>
+                                <td  style="text-align: center"><button onclick="location.href='eventReg.html'" class="btn btn-dark">Register</button></td>
+                            </tr>
+                               
+                                    <tr>
                                         <td><a>5</a></td>
                                         <td><h2><a>Swachh Prayaakh - Cleanliness Drive 1</a></h2></td>
                                         <td>9th October 2022</td>
                                         <td>Uzanbazar Ghat, Guwahati</td>
                                         <td style="text-align: center">${userInfo.event3}</td>
                                         <td style="text-align: center"><a href="${userInfo.e3}" style="display:${userInfo.e3}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                         <td style="text-align: center; color: red">Registration closed</td>
+                                        <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
 
                                     <tr>
