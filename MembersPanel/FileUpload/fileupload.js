@@ -181,10 +181,11 @@ async function getuserInfoRealtime(userID){
                          <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileII" style="display: ${userInfo.down2};color: #198754;font-size: 18px" href="${userInfo.file2}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                          <td><p style="font-weight: 500; color: green;text-align:center;display: ${userInfo.down2};">Submitted</p></td>
                          </tr>
-                         <tr>
-                         <td>2</td>
-                         <td style="font-weight: 400">Blog Writing Competition</td>
-                         <td style="font-weight: 500" id="date2">September 26, 2022</td>
+
+                         <tr style="display: ${userInfo.a3}">
+                         <td>3</td>
+                         <td style="font-weight: 400">${userInfo.a3}</td>
+                         <td style="font-weight: 500" id="date2">${userInfo.d3}</td>
                          <td style="text-align: center;color:orange;cursor:pointer" ><i style="display: ${userInfo.upload3}; font-size: 20px" href="#modal4" class="fa fa-pencil modal-trigger" aria-hidden="true"></i></td>
                          <td style="text-align: center;color:#198754;cursor:pointer"><a id="fileIII" style="display: ${userInfo.down3};color: #198754;font-size: 18px" href="${userInfo.file3}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                          <td><p style="font-weight: 500; color: green;text-align:center;display: ${userInfo.down3};">Submitted</p></td>
