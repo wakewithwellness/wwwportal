@@ -193,7 +193,7 @@ async function getuserInfoRealtime(userID){
                                         <tr>
                                             <td><a>6</a></td>
                                             <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
-                                            <td>9th October 2022</td>
+                                            <td>6th November 2022</td>
                                             <td>Yet to decide</td>
                                             <td style="text-align: center">${userInfo.event4}</td>
                                             <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.e4}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
