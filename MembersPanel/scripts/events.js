@@ -182,25 +182,37 @@ async function getuserInfoRealtime(userID){
                                     
                                         <th style="min-width: 20vh">Event Date</th>
                                         <th style="min-width: 20vh">Venue</th>
-                                        <th style="text-align: center">Attendance</th>
+                                        <th style="text-align: center">Status</th>
                                         <th style="text-align: center">Certificate</th>
                                         <th style="text-align: center">Registration</th>
                                        
                                     </tr>
                                 </thead>
                                 <tbody>
+
+                                        <tr>
+                                            <td><a>6</a></td>
+                                            <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
+                                            <td>9th October 2022</td>
+                                            <td>Yet to decide</td>
+                                            <td style="text-align: center">${userInfo.event4}</td>
+                                            <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.e4}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                            <td  style="text-align: center">
+
+                                            <form onsubmit="registerevent1(event)" id="registereventform">
+                                            <select id="event" class="form-control">
+                                            <option value="Registered">Registered</option>
+                                            <option value="Cancelled">Cancel</option></select>
+                                            <button id="send" type="submit" style="width: 100%; margin-top: 3px" class="btn btn-dark">Confirm</button>
+                                            </form>
+
+                                            </td>
+                                        </tr>
                                
-                                    <tr>
-                                <td><a>6</a></td>
-                                <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
-                                <td>6th November 2022</td>
-                                <td>Yet to decide</td>
-                                <td style="text-align: center">${userInfo.event4}</td>
-                                <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.e4}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                <td  style="text-align: center"><button onclick="location.href='eventReg.html'" class="btn btn-dark">Register</button></td>
-                            </tr>
-                               
-                                    <tr>
+                                    
+     
+                                     <tr>
+                                   
                                         <td><a>5</a></td>
                                         <td><h2><a>Swachh Prayaakh - Cleanliness Drive 1</a></h2></td>
                                         <td>9th October 2022</td>
@@ -208,7 +220,8 @@ async function getuserInfoRealtime(userID){
                                         <td style="text-align: center">${userInfo.event3}</td>
                                         <td style="text-align: center"><a href="${userInfo.e3}" style="display:${userInfo.e3}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
-                                    </tr>
+                                   </form>
+                                        </tr>
 
                                     <tr>
                                         <td><a>4</a></td>
@@ -315,3 +328,34 @@ async function getuserInfoRealtime(userID){
 
 
 
+
+function registerevent1(event){
+    event.preventDefault()
+    var event4 = document.getElementById('event').value
+   
+
+    var userRef = firebase.firestore().collection('OfflineEvents').doc(firebase.auth().currentUser.uid);
+  
+    var setWithMerge = userRef.set({
+        event4:event4,
+
+   
+  
+    },{ merge: true}).then(()=>{
+     
+  
+       // Show alert
+       M.toast({html:`<div><i style="font-size: 20px" class="fa fa-check-circle" aria-hidden="true"></i> Registered successfully</div>`,classes:"green"})
+
+   // Clear form
+   document.getElementById('registereventform').reset();
+  
+    }).catch((err) => {
+      console.log(err)
+      M.toast({html:`<div><i style="font-size: 20px" class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error ! Something went wrong</div>`,classes:"red"})
+    });
+  }
+  
+
+
+  
