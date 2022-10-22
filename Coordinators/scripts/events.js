@@ -37,21 +37,21 @@ async function getuserInfo(userID){
        `
    }    
     }else{
-      userDetails.innerHTML = ` <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
-      <div class="card" style="border-top: 3px solid #198754">
+      userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
+      <div class="card" style="border-top: 3px solid #16151a">
       <div class="card-body" style="text-align: center">
-      <h5 class="card-title" style="text-align: center; color: #198754; font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
+      <h5 class="card-title" style="text-align: center; color: #16151a; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
 <br>
       <form autocomplete="off" onsubmit="login(event)">
           <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
-        
-          <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;margin-top:10px;
+
+          <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
           <br>
-          <div style="text-align:left"> <a style="text-decoration: none; color: #198754; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
-          <br> 
-          <button type="submit" class="btn" style="background-color:#198754;color: #fff; padding-bottom:8px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+          <div style="text-align:left"> <a style="text-decoration: none; color: #16151a; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+          <br>
+          <button type="submit" class="btn" style="background-color:#16151a;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
           
   </form>
         <div>
@@ -177,22 +177,33 @@ async function getuserInfoRealtime(userID){
                                         <th style="min-width: 20vh">Event Date</th>
                                         <th style="min-width: 20vh">Venue</th>
                                         <th style="text-align: center">Attendance</th>
-					   <th style="text-align: center">Certificate</th>
+                                        <th style="text-align: center">Certificate</th>
                                         <th style="text-align: center">Registration</th>
                                        
                                     </tr>
                                 </thead>
                                 <tbody>
+
+                                <tr>
+                                <td><a>6</a></td>
+                                <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
+                                <td>6th November 2022</td>
+                                <td>Yet to decide</td>
+                                <td style="text-align: center">${userInfo.event2}</td>
+                                <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td  style="text-align: center">
+
+                                <form onsubmit="registerevent1(event)" id="registereventform">
+                                <select id="event" class="form-control">
+                                <option value="Registered">Registered</option>
+                                <option value="Cancelled">Cancel</option></select>
+                                <button id="send" type="submit" style="width: 100%; margin-top: 3px" class="btn btn-dark">Confirm</button>
+                                </form>
+
+                                </td>
+                            </tr>
+
                                
-                                   <tr>
-                                        <td><a>6</a></td>
-                                        <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
-                                        <td>6th November 2022</td>
-                                        <td>Yet to decide</td>
-                                        <td style="text-align: center">${userInfo.event2}</td>
-                                        <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                        <td  style="text-align: center"><button onclick="location.href='registrations.html'" class="btn btn-dark">Register</button></td>
-                                    </tr>
                                
                                     <tr>
                                         <td><a>5</a></td>
@@ -210,7 +221,7 @@ async function getuserInfoRealtime(userID){
                                         <td>14th March 2021</td>
                                         <td>Jesthakunja Oldage Home, Dhemaji</td>
                                         <td style="text-align: center">-</td>
-					 <td style="text-align: center">-</td>
+                                        <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
 
@@ -220,7 +231,7 @@ async function getuserInfoRealtime(userID){
                                         <td>20th February 2022</td>
                                         <td>Enajori Children home, Dhemaji</td>
                                         <td style="text-align: center">-</td>
-					 <td style="text-align: center">-</td>
+                                        <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
 
@@ -230,7 +241,7 @@ async function getuserInfoRealtime(userID){
                                         <td>29th November 2021</td>
                                         <td>Jalukbari Girls High School</td>
                                         <td style="text-align: center">-</td>
-					 <td style="text-align: center">-</td>
+                                        <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
 
@@ -240,7 +251,7 @@ async function getuserInfoRealtime(userID){
                                         <td>26th September 2021</td>
                                         <td>Paltan bazar</td>
                                         <td style="text-align: center">-</td>
-					 <td style="text-align: center">-</td>
+                                        <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
                           
@@ -268,20 +279,20 @@ async function getuserInfoRealtime(userID){
 
     }else{
         userDetails.innerHTML = ` <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
-        <div class="card" style="border-top: 3px solid #198754">
+        <div class="card" style="border-top: 3px solid #16151a">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: #198754; font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: #16151a; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
 <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
-          
-            <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;margin-top:10px;
-            height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
+            height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px; margin-top:5px">
             <br>
-            <div style="text-align:left"> <a style="text-decoration: none; color: #198754; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
-            <br> 
-            <button type="submit" class="btn" style="background-color:#198754;color: #fff; padding-bottom:8px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            <div style="text-align:left"> <a style="text-decoration: none; color: #16151a; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+            <br>
+            <button type="submit" class="btn" style="background-color:#16151a;color: #fff; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
             
     </form>
           <div>
@@ -291,6 +302,8 @@ async function getuserInfoRealtime(userID){
          
         </div>
       </div></div>
+        
+        
 
 
     <div class="sidebar-overlay" data-reff=""></div>
@@ -309,3 +322,29 @@ async function getuserInfoRealtime(userID){
 
 
 
+function registerevent1(event){
+    event.preventDefault()
+    var event2 = document.getElementById('event').value
+   
+
+    var userRef = firebase.firestore().collection('events').doc(firebase.auth().currentUser.uid);
+  
+    var setWithMerge = userRef.set({
+        event2:event2,
+
+   
+  
+    },{ merge: true}).then(()=>{
+     
+  
+       // Show alert
+       M.toast({html:`<div><i style="font-size: 20px" class="fa fa-check-circle" aria-hidden="true"></i> Registered successfully</div>`,classes:"green"})
+
+   // Clear form
+   document.getElementById('registereventform').reset();
+  
+    }).catch((err) => {
+      console.log(err)
+      M.toast({html:`<div><i style="font-size: 20px" class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error ! Something went wrong</div>`,classes:"red"})
+    });
+  }
