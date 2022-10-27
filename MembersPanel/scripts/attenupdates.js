@@ -180,7 +180,9 @@ async function getuserInfoRealtime(userID){
 <div class="row">
 
 <div class="col-lg">
+
 <h3 style="color: ${userInfo.status}; font-size:40px; text-align:center">${userInfo.AAper}</h3>
+
 <div style="height: 25px" class="progress">
   <div  class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
   aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${userInfo.AAper};background-color:${userInfo.status}">
@@ -220,6 +222,25 @@ async function getuserInfoRealtime(userID){
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <tr display: ${userInfo.Nov22bf}>
+                               
+                                <td rowspan="2" id=month> <h4>November 2022</h4>
+                               
+                                </td>
+                                <td><a id="dateee">15/11/22 <br>-<br> 30/11/22</a></td>
+                                <td id="statuss">${userInfo.Nov22b}</td>
+                                <td>${userInfo.Nov22bf}</td>
+                                </tr>
+
+                                <tr display: ${userInfo.Nov22af}>
+                               
+                               
+                                <td><a id="dateee">01/11/22 <br>-<br> 15/11/22</a></td>
+                                <td id="statuss">${userInfo.Nov22a}</td>
+                                <td>${userInfo.Nov22af}</td>
+                                </tr>
+
+
 
                                 <tr display: ${userInfo.Oct22bf}>
                                
@@ -501,7 +522,7 @@ async function getuserInfoRealtime(userID){
                      
                 </div>
             </div>
-           <br><br>
+            <br><br>
 
       
             <div class="container-fluid" id="footerbar">
@@ -513,8 +534,8 @@ async function getuserInfoRealtime(userID){
             
             </div>
             </div>
-	    
-	    
+
+            
         </div>
                        
                         `
