@@ -164,15 +164,15 @@ async function getuserInfoRealtime(userID){
                     <td rowspan="2" id=month> <h4>October 2022</h4>
                    
                     </td>
-                    <td id="datecolor2"><a>15/10/2022 to 31/10/2022</a></td>
-                    <td>${userInfo.Oct22b}</td>
-                    <td>${userInfo.Oct22bf}</td>
+                    <td ><a>01/10/2022 to 15/10/2022</a></td>
+                    <td>${userInfo.Oct22a}</td>
+                    <td>${userInfo.Oct22af}</td>
                     </tr>
 
                     <tr>
-                    <td id="datecolor1"><a>01/10/2022 to 15/10/2022</a></td>
-                    <td>${userInfo.Oct22a}</td>
-                    <td>${userInfo.Oct22af}</td>
+                    <td><a>15/10/2022 to 31/10/2022</a></td>
+                    <td>${userInfo.Oct22b}</td>
+                    <td>${userInfo.Oct22bf}</td>
                     </tr>
 
                     </tbody>
@@ -394,7 +394,7 @@ function updateattendance(event){
          document.querySelector('#send').style.cursor = "not-allowed";
          document.getElementById("send").innerHTML = "Locked";
          document.getElementById("date").style.color = "red";
-         document.getElementById("datecolor1").style.color = "red";
+    
       
        }
      }, 1000);
