@@ -47,9 +47,9 @@ async function getuserInfo(userID){
    }    
     }else{
       userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
-      <div class="card" style="border-top: 3px solid #16151a">
+      <div class="card" style="border-top: 3px solid #03b1fc">
       <div class="card-body" style="text-align: center">
-      <h5 class="card-title" style="text-align: center; color: #16151a; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
+      <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
 <br>
       <form autocomplete="off" onsubmit="login(event)">
           <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -58,9 +58,9 @@ async function getuserInfo(userID){
           <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
           <br>
-          <div style="text-align:left"> <a style="text-decoration: none; color: #16151a; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+          <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
           <br>
-          <button type="submit" class="btn" style="background-color:#16151a;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+          <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
           
   </form>
         <div>
@@ -129,10 +129,11 @@ async function getuserInfoRealtime(userID){
                                                     <li>
                                                     <a href="coordinators.html"><i class="fa fa-users"></i> <span>Coordinators List</span></a>
                                                     </li>
-                                      
+
                                                     <li>
                                                     <a href="payments.html"><i class="fa fa-money"></i> <span>Payment History</span></a>
                                                     </li>
+                                      
                                     
                                       </ul>
                                   </div>
@@ -142,7 +143,7 @@ async function getuserInfoRealtime(userID){
         
                     <div class="page-wrapper">
                     <div style="float: right; margin-right:15px">
-                    <a href="activities.html" style="background-color:#16151a;padding:10px;color:white;border-radius: 4px">Dashboard</a>
+                    <a href="activities.html" style="background-color:#03b1fc;padding:10px;color:white;border-radius: 4px">Dashboard</a>
                     <a type="button" style="background-color:red;padding:8.5px;color:white;margin-left: 5px; border-radius: 4px; cursor: pointer" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-sign-out"></i> SignOut</a> 
                     </div>
 
@@ -150,7 +151,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-                <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;padding: 20px;border-radius: 5px">
+                <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;padding: 20px;border-radius: 5px">
         
                  <div class="row">
                     <div class="col-sm-12">
@@ -225,7 +226,7 @@ async function getuserInfoRealtime(userID){
 
    
 
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;border-radius: 5px"">
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;border-radius: 5px"">
 
         <div class="row">
         <div class="col-sm-12">
@@ -251,7 +252,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;border-radius: 5px"">
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;border-radius: 5px"">
 
         <div class="row">
         <div class="col-sm-12">
@@ -311,9 +312,9 @@ async function getuserInfoRealtime(userID){
     }else{
         userDetails.innerHTML = `
         <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
-        <div class="card" style="border-top: 3px solid #16151a">
+        <div class="card" style="border-top: 3px solid #03b1fc">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: #16151a; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
 <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -322,9 +323,9 @@ async function getuserInfoRealtime(userID){
             <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
             <br>
-            <div style="text-align:left"> <a style="text-decoration: none; color: #16151a; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+            <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
             <br>
-            <button type="submit" class="btn" style="background-color:#16151a;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
             
     </form>
           <div>
