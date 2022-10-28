@@ -236,6 +236,7 @@ margin-bottom: 12px; /* Add some space below the input */
                           
                             <th scope="col" style="min-width: 20vh;">Amount</th> 
                             <th scope="col" style="min-width: 20vh;">Date</th> 
+                            <th scope="col" style="min-width: 20vh;">Status</th> 
                        
                         
                      
@@ -311,17 +312,16 @@ margin-bottom: 12px; /* Add some space below the input */
       querySnapshot.forEach(doc=>{
           let data = doc.data();
           let row  = `       <tr>
-                              <td style="font-size: 12px;">
-                                ${data.regno}
-                              </td>
+                            
                               <td style="font-size: 12px;">
                                 ${data.name}
                               </td>
-                              <td style="font-size: 12px>
+
+                              <td style="font-size: 12px">
                                 ${data.email}
                               </td>
 
-                              <td style="font-size: 12px>
+                              <td style="font-size: 12px">
                                 ${data.phone}
                               </td>
 
@@ -333,6 +333,10 @@ margin-bottom: 12px; /* Add some space below the input */
 
                               <td style="font-size: 12px">
                                 ${data.date}
+                              </td>
+
+                              <td style="font-size: 12px">
+                                ${data.status}
                               </td>
                             
                               </tr>
