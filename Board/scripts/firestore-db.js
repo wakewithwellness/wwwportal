@@ -403,11 +403,11 @@ async function getuserInfoRealtime(userID){
                 <tr>
                 <td style="min-width: 200px;">
                     
-                    <h2><a href="blogwriting.html"  >Blog Writing Competition</a></h2>
+                    <h2><a href="childrensday.html">Children's Day Funds</a></h2>
                 </td>                 
 
                 <td class="text-right">
-                    <a href="blogwriting.html"  class="btn btn-outline-danger take-btn">View</a>
+                    <a href="childrensday.html"  class="btn btn-success take-btn">View</a>
                 </td>
             </tr>
 
@@ -426,29 +426,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-                    <tr>
-                    <td style="min-width: 200px;">
-                        
-                        <h2><a href="coordinators.html"  >Coordinators List</a></h2>
-                    </td>                 
-
-                    <td class="text-right">
-                        <a href="coordinators.html"  class="btn btn-outline-primary take-btn">View</a>
-                    </td>
-                </tr>
-
-
-                <tr>
-                <td style="min-width: 200px;">
-                    
-                    <h2><a href="coordinatorsatten.html"  >Coordinators Attendance</a></h2>
-                </td>                 
-
-                <td class="text-right">
-                    <a href="coordinatorsatten.html"  class="btn btn-outline-primary take-btn">View</a>
-                </td>
-            </tr>
-
+                   
 
                 
                 <tr>
@@ -482,7 +460,7 @@ async function getuserInfoRealtime(userID){
         </div>
 
 <hr>
-        <h4 class="page-title" style="text-align:left;">Intern's Panel</h4>
+        <h4 class="page-title" style="text-align:left;">Coordinator's Panel</h4>
         <hr>
 
         <div class="table-responsive" style="overflow-x: hidden">
@@ -490,18 +468,30 @@ async function getuserInfoRealtime(userID){
 									
 										<tbody>
 											
-									
-											
-											<tr>
-												<td style="min-width: 200px;">
-													
-													<h2><a href="internmembers.html">Members List</a></h2>
-												</td>                 
-
-												<td class="text-right">
-													<a href="internmembers.html" class="btn btn-outline-primary take-btn">View</a>
-												</td>
-											</tr>
+								
+                                            <tr>
+                                            <td style="min-width: 200px;">
+                                                
+                                                <h2><a href="coordinators.html"  >Coordinators List</a></h2>
+                                            </td>                 
+                        
+                                            <td class="text-right">
+                                                <a href="coordinators.html"  class="btn btn-outline-primary take-btn">View</a>
+                                            </td>
+                                        </tr>
+                        
+                        
+                                        <tr>
+                                        <td style="min-width: 200px;">
+                                            
+                                            <h2><a href="coordinatorsatten.html"  >Coordinators Attendance</a></h2>
+                                        </td>                 
+                        
+                                        <td class="text-right">
+                                            <a href="coordinatorsatten.html"  class="btn btn-outline-primary take-btn">View</a>
+                                        </td>
+                                    </tr>
+                        
 											
 
                                                       
