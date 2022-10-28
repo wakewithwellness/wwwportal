@@ -176,7 +176,7 @@ async function getuserInfoRealtime(userID){
                                     
                                         <th style="min-width: 20vh">Event Date</th>
                                         <th style="min-width: 20vh">Venue</th>
-                                        <th style="text-align: center">Attendance</th>
+                                        <th style="text-align: center">Status</th>
                                         <th style="text-align: center">Certificate</th>
                                         <th style="text-align: center">Registration</th>
                                        
