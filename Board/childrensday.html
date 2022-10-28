@@ -325,29 +325,22 @@ margin-bottom: 12px; /* Add some space below the input */
                                 ${data.phone}
                               </td>
 
-                             
-
                               <td style="font-size: 12px; font-weight: bold">
-                                   ₹  ${data.amount}
+                              ₹  ${data.amount}
                               </td>
 
                               <td style="font-size: 12px">
                                 ${data.date}
                               </td>
 
-                              <td style="font-size: 12px">
+                              <td style="font-size: 12px; font-weight: bold;">
                                 ${data.status}
                               </td>
                             
-                              </tr>
+                              </tr>  `;
 
 
-
-                      
-
-
-                          
-          `;
+                              
           let table = document.getElementById('myTable')
           table.innerHTML += row
       })
