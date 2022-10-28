@@ -38,9 +38,9 @@ async function getuserInfo(userID){
    }    
     }else{
       userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
-      <div class="card" style="border-top: 3px solid #16151a">
+      <div class="card" style="border-top: 3px solid #03b1fc">
       <div class="card-body" style="text-align: center">
-      <h5 class="card-title" style="text-align: center; color: #16151a; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
+      <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
 <br>
       <form autocomplete="off" onsubmit="login(event)">
           <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -49,9 +49,9 @@ async function getuserInfo(userID){
           <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
           <br>
-          <div style="text-align:left"> <a style="text-decoration: none; color: #16151a; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+          <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
           <br>
-          <button type="submit" class="btn" style="background-color:#16151a;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+          <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
           
   </form>
         <div>
@@ -128,7 +128,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;padding: 20px;border-radius:5px">
+<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;padding: 20px;border-radius:5px">
 <div class="row">
 <div class="col-sm-12">
     <h4 class="page-title">Coordinator Details</h4><hr>
@@ -156,7 +156,7 @@ async function getuserInfoRealtime(userID){
 
 
 </div>
-            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;border-radius:5px">
+            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;border-radius:5px">
            
           
                 <div class="row">
@@ -183,25 +183,26 @@ async function getuserInfoRealtime(userID){
                                     </tr>
                                 </thead>
                                 <tbody>
+                                
 
-                                <tr>
-                                <td><a>6</a></td>
-                                <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
-                                <td>6th November 2022</td>
-                                <td>Yet to decide</td>
-                                <td style="text-align: center">${userInfo.event2}</td>
-                                <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                <td  style="text-align: center">
+                                    <tr>
+                                        <td><a>6</a></td>
+                                        <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
+                                        <td>6th November 2022</td>
+                                        <td>Yet to decide</td>
+                                        <td style="text-align: center">${userInfo.event2}</td>
+                                        <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                        <td  style="text-align: center">
 
-                                <form onsubmit="registerevent1(event)" id="registereventform">
-                                <select id="event" class="form-control">
-                                <option value="Registered">Register</option>
-                                <option value="Cancelled">Cancel</option></select>
-                                <button id="send" type="submit" style="width: 100%; margin-top: 3px" class="btn btn-dark">Confirm</button>
-                                </form>
+                                        <form onsubmit="registerevent1(event)" id="registereventform">
+                                        <select id="event" class="form-control">
+                                        <option value="Registered">Register</option>
+                                        <option value="Cancelled">Cancel</option></select>
+                                        <button id="send" type="submit" style="width: 100%; margin-top: 3px" class="btn btn-success">Confirm</button>
+                                        </form>
 
-                                </td>
-                            </tr>
+                                        </td>
+                                    </tr>
 
                                
                                
@@ -279,9 +280,9 @@ async function getuserInfoRealtime(userID){
 
     }else{
         userDetails.innerHTML = ` <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
-        <div class="card" style="border-top: 3px solid #16151a">
+        <div class="card" style="border-top: 3px solid #03b1fc">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: #16151a; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
 <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -290,9 +291,9 @@ async function getuserInfoRealtime(userID){
             <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px; margin-top:5px">
             <br>
-            <div style="text-align:left"> <a style="text-decoration: none; color: #16151a; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+            <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
             <br>
-            <button type="submit" class="btn" style="background-color:#16151a;color: #fff; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
             
     </form>
           <div>
