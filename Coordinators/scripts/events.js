@@ -195,7 +195,7 @@ async function getuserInfoRealtime(userID){
 
                                 <form onsubmit="registerevent1(event)" id="registereventform">
                                 <select id="event" class="form-control">
-                                <option value='Registered'>Registered</option>
+                                <option value='Registered'>Register</option>
                                 <option value='Cancelled'>Cancel</option></select>
 
                                 <select id="color" name="color" hidden class="form-control">
