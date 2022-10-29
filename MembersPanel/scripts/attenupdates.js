@@ -180,7 +180,7 @@ async function getuserInfoRealtime(userID){
 <div class="row">
 
 <div class="col-lg">
-<p style="color: white; background-color: red; max-width:50vh; padding:10px; font-size:12px; display:  ${userInfo.Alert}">* You are not eligible for tenure certificate</p>
+<p style="color: white; background-color: red; max-width:50vh; padding:10px; font-size:12px; display:  ${userInfo.Alert}"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> You are not eligible for tenure certificate</p>
 <h3 style="color: ${userInfo.status}; font-size:40px; text-align:center">${userInfo.AAper}</h3>
 
 <div style="height: 25px" class="progress">
