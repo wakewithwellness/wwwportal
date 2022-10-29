@@ -69,6 +69,10 @@ db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW00
                     </th>
                         <td>${data.name}</td>
                         <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
+                        <td>${data.Nov22af}</td>
+                        <td>${data.Nov22af}</td>
+                        <td>${data.Oct22bf}</td>
+                       <td>${data.Oct22af}</td>
                         <td>${data.Sept22af}</td>
                         <td>${data.Sept22af}</td>
                         <td>${data.Aug22bf}</td>
@@ -111,6 +115,10 @@ db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=
                    </th>
                        <td>${data.name}</td>
                        <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
+                       <td>${data.Nov22af}</td>
+                       <td>${data.Nov22af}</td>
+                       <td>${data.Oct22bf}</td>
+                      <td>${data.Oct22af}</td>
                        <td>${data.Sept22af}</td>
                        <td>${data.Sept22af}</td>
                        <td>${data.Aug22bf}</td>
@@ -138,7 +146,7 @@ console.log(`Error: ${err}`)
 
 
 // Third batch
-db.collection("attendance").orderBy('regno').limitToLast(11).get().then(querySnapshot=>{
+db.collection("attendance").orderBy('regno').limitToLast(4).get().then(querySnapshot=>{
    querySnapshot.forEach(doc=>{
        let data = doc.data();
        let row  = `<tr>
@@ -148,7 +156,11 @@ db.collection("attendance").orderBy('regno').limitToLast(11).get().then(querySna
                    </th>
                        <td>${data.name}</td>
                        <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
-                       <td>${data.Sept22bf}</td>
+                       <td>${data.Nov22af}</td>
+                       <td>${data.Nov22af}</td>
+                       <td>${data.Oct22bf}</td>
+                      <td>${data.Oct22af}</td>
+                       <td>${data.Sept22af}</td>
                        <td>${data.Sept22af}</td>
                        <td>${data.Aug22bf}</td>
                       <td>${data.Aug22af}</td>
