@@ -183,35 +183,40 @@ async function getuserInfoRealtime(userID){
                                     </tr>
                                 </thead>
                                 <tbody>
+
+                                <tr>
+                                <td><a>6</a></td>
+                                <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
+                                <td>6th November 2022</td>
+                                <td>Yet to decide</td>
+                                <td style="text-align: center;font-weight: 500;color: red"><span style="color: ${userInfo.color2}">${userInfo.event2}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td  style="text-align: center">
+
+                                <form onsubmit="registerevent1(event)" id="registereventform">
+                                <select id="event" class="form-control">
+                                <option value='Registered'>Registered</option>
+                                <option value='Cancelled'>Cancel</option></select>
+
+                                <select id="color" name="color" hidden class="form-control">
+                                <option value='green'>green</option>
+                                <option value="orange">red</option></select>
+
+
+                                <button id="send" type="submit" style="width: 100%; margin-top: 3px" class="btn btn-dark">Confirm</button>
+                                </form>
+
+                                </td>
+                            </tr>
                                 
 
-                                    <tr>
-                                        <td><a>6</a></td>
-                                        <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
-                                        <td>6th November 2022</td>
-                                        <td>Yet to decide</td>
-                                        <td style="text-align: center">${userInfo.event2}</td>
-                                        <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                        <td  style="text-align: center">
-
-                                        <form onsubmit="registerevent1(event)" id="registereventform">
-                                        <select id="event" class="form-control">
-                                        <option value="Registered">Register</option>
-                                        <option value="Cancelled">Cancel</option></select>
-                                        <button id="send" type="submit" style="width: 100%; margin-top: 3px" class="btn btn-success">Confirm</button>
-                                        </form>
-
-                                        </td>
-                                    </tr>
-
-                               
                                
                                     <tr>
                                         <td><a>5</a></td>
                                         <td><h2><a>Swachh Prayaakh - Cleanliness Drive 1</a></h2></td>
                                         <td>9th October 2022</td>
                                         <td>Uzanbazar ghat</td>
-                                        <td style="text-align: center">${userInfo.event1}</td>
+                                        <td style="text-align: center;font-weight: 500; color: red;">${userInfo.event1}</td>
                                         <td style="text-align: center"><a href="${userInfo.e1}" style="display:${userInfo.e1}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
@@ -221,7 +226,7 @@ async function getuserInfoRealtime(userID){
                                         <td><h2><a>Wellness Drive - Medical & Health CheckUp</a></h2></td>
                                         <td>14th March 2021</td>
                                         <td>Jesthakunja Oldage Home, Dhemaji</td>
-                                        <td style="text-align: center">-</td>
+                                        <td style="text-align: center; color: red;">-</td>
                                         <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
@@ -231,7 +236,7 @@ async function getuserInfoRealtime(userID){
                                         <td><h2><a>Wellness Drive - Clothes & Books Donation</a></h2></td>
                                         <td>20th February 2022</td>
                                         <td>Enajori Children home, Dhemaji</td>
-                                        <td style="text-align: center">-</td>
+                                        <td style="text-align: center; color: red;">-</td>
                                         <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
@@ -241,7 +246,7 @@ async function getuserInfoRealtime(userID){
                                         <td><h2><a>Prabhati - A Dawn of a Vital Outlook</a></h2></td>
                                         <td>29th November 2021</td>
                                         <td>Jalukbari Girls High School</td>
-                                        <td style="text-align: center">-</td>
+                                        <td style="text-align: center; color: red;">-</td>
                                         <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
@@ -251,7 +256,7 @@ async function getuserInfoRealtime(userID){
                                         <td><h2><a>Wellness Drive</a></h2></td>
                                         <td>26th September 2021</td>
                                         <td>Paltan bazar</td>
-                                        <td style="text-align: center">-</td>
+                                        <td style="text-align: center; color: red;">-</td>
                                         <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
@@ -326,12 +331,13 @@ async function getuserInfoRealtime(userID){
 function registerevent1(event){
     event.preventDefault()
     var event2 = document.getElementById('event').value
-   
+    var color2 = document.getElementById('color').value
 
     var userRef = firebase.firestore().collection('events').doc(firebase.auth().currentUser.uid);
   
     var setWithMerge = userRef.set({
         event2:event2,
+        color2:color2
 
    
   
