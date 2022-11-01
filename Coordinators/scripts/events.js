@@ -188,13 +188,13 @@ async function getuserInfoRealtime(userID){
                                 <td><a>6</a></td>
                                 <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
                                 <td>6th November 2022</td>
-                                <td>Lachit Ghat</td>
+                                <td>Lachit Ghat, Guwahati</td>
                                 <td style="text-align: center;font-weight: 500;color: red"><span style="color: ${userInfo.color2}">${userInfo.event2}</span></td>
                                 <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td  style="text-align: center">
 
                                 <form onsubmit="registerevent1(event)" id="registereventform">
-                                <select id="event" class="form-control">
+                                <select id="event" class="form-control" hidden>
                                 <option value='Registered'>Register</option>
                                 <option value='Cancelled'>Cancel</option></select>
 
@@ -202,8 +202,16 @@ async function getuserInfoRealtime(userID){
                                 <option value='green'>green</option>
                                 <option value="orange">red</option></select>
 
+                                <select id="bb" name="disabled" hidden class="form-control">
+                                <option value='disabled'>hide</option>
+                                <show value="show">red</show></select>
 
-                                <button id="send" type="submit" style="width: 100%; margin-top: 3px" class="btn btn-dark">Confirm</button>
+                                <select id="aa" name="color2" hidden class="form-control">
+                                <option value='#d1d1d1'>#d1d1d1</option>
+                                <show value="#d1d1d1">#d1d1d1</show></select>
+
+
+                                <button id="send" ${userInfo.bb} type="submit" style="width: 100%; margin-top: 3px;background-color:${userInfo.aa}; border:none" class="btn btn-success">Register</button>
                                 </form>
 
                                 </td>
@@ -332,12 +340,15 @@ function registerevent1(event){
     event.preventDefault()
     var event2 = document.getElementById('event').value
     var color2 = document.getElementById('color').value
-
+    var bb = document.getElementById('bb').value
+    var aa = document.getElementById('aa').value
     var userRef = firebase.firestore().collection('events').doc(firebase.auth().currentUser.uid);
   
     var setWithMerge = userRef.set({
         event2:event2,
-        color2:color2
+        color2:color2,
+        bb:bb,
+        aa:aa
 
    
   
