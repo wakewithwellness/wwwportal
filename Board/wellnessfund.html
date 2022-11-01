@@ -140,7 +140,7 @@ margin-bottom: 12px; /* Add some space below the input */
           <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;">
                 <div class="row"  style="padding: 15px">
                   <div class="col-sm-12">
-                      <h4 class="page-title">Wellness Fundraiser</h4><hr>
+                      <h4 class="page-title">Wellness Funds</h4><hr>
                   </div>
                 </div>
 
@@ -157,11 +157,12 @@ margin-bottom: 12px; /* Add some space below the input */
                             <thead>
                                 <tr style="background-color: #0d6efd;color: #fff;"> 
                                   <th scope="col" style="min-width: 20vh">Name</th>
-                                <th scope="col">Contact</th>
-                                <th scope="col" style="min-width: 12vh">Date</th>
+                                <th scope="col" style="text-align: center">Contact</th>
+                                <th scope="col" style="min-width: 15vh;text-align: center">Date</th>
                                 <th scope="col">Purpose</th>
-                                <th scope="col" style="min-width: 12vh">Amount</th>
-                            
+                                <th scope="col" style="min-width: 19vh;width: 3vh;text-align: center">Amount</th>
+                           
+                                <th scope="col" style="text-align: center">Status</th>
             
                                 </tr>
                             </thead>
@@ -233,10 +234,11 @@ margin-bottom: 12px; /* Add some space below the input */
           
                    
                         <td>${data.name}</td>
-                        <td>${data.phone}</td>
-                        <td>${data.date}</td>
-                        <td>${data.purpose}</td>
-                        <td style="color:green; font-size: 13px; font-weight: 800">₹ ${data.amount}.00</td>
+                        <td style="text-align: center">${data.phone}</td>
+                        <td style="text-align: center">${data.date}</td>
+                        <td style="font-weight: 600">${data.purpose}</td>
+                        <td style="font-size: 13px; font-weight: 800;text-align: right; padding-right:25px">₹ ${data.amount}.00</td>
+                        <td style="color:orange; font-size: 13px; font-weight: 700; text-align: center"><span style="color: ${data.color}">${data.statuss}</span></td>
                        
                   </tr>`;
         let table = document.getElementById('myTable')
