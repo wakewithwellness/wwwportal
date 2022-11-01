@@ -323,15 +323,7 @@ async function getuserInfoRealtime(userID){
                         <a href="BloodCamp.html"  class="btn btn-primary take-btn">View</a>
                     </td>
                 </tr>
-                <tr>
-                <td style="min-width: 200px;">
-                    
-                    <h2><a href="childrensday.html">Children's Day Funds</a></h2>
-                </td>                 
-                <td class="text-right">
-                    <a href="childrensday.html"  class="btn btn-success take-btn">View</a>
-                </td>
-            </tr>
+              
                 <tr>
                         <td style="min-width: 200px;">
                             
@@ -346,16 +338,16 @@ async function getuserInfoRealtime(userID){
                 <tr>
                 <td style="min-width: 200px;">
                     
-                    <h2><a href="wellnessfund.html"  >Wellness Fundraiser</a></h2>
+                    <h2><a href="wellnessfund.html"  >Fundraiser</a></h2>
                 </td>                 
                 <td class="text-right">
-                    <a href="wellnessfund.html"  class="btn btn-outline-primary take-btn">View</a>
+                    <a href="wellnessfund.html"  class="btn btn-success take-btn">View</a>
                 </td>
             </tr>
             <tr>
             <td style="min-width: 200px;">
                 
-                <h2><a href="finance.html"  >Finance Updates</a></h2>
+                <h2><a href="finance.html"  >Funds History</a></h2>
             </td>                 
             <td class="text-right">
                 <a href="finance.html"  class="btn btn-outline-primary take-btn">View</a>
