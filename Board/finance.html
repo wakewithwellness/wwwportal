@@ -140,7 +140,7 @@ margin-bottom: 12px; /* Add some space below the input */
           <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;">
                 <div class="row"  style="padding: 15px">
                   <div class="col-sm-12">
-                      <h4 class="page-title">Finance</h4><hr>
+                      <h4 class="page-title">Fund History</h4><hr>
                   </div>
                 </div>
 
@@ -160,9 +160,9 @@ margin-bottom: 12px; /* Add some space below the input */
                           <thead>
                               <tr style="background-color: #0d6efd;color: #fff;"> 
                                 <th scope="col">Purpose</th>
-                              <th scope="col" style="width: 12vh">Amount</th>
-                              <th scope="col">Date</th>
-                              <th scope="col" style="width: 12vh">Balance</th>
+                              <th scope="col" style="width: 12vh; text-align: center">Amount</th>
+                              <th scope="col"  style="text-align: center">Last update</th>
+                              <th scope="col" style="width: 12vh;text-align: center">Balance</th>
                             
           
                               </tr>
@@ -177,14 +177,14 @@ margin-bottom: 12px; /* Add some space below the input */
 
 
                         <div class="col-lg">
-                          <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">FUNDS BALANCE</h6>
+                          <h6 style="text-align: center;font-weight: bold;color: #ffffff;background-color: #4b4b4b;padding: 10px;">FUND BALANCE</h6>
                 
                         <div class="table-responsive custom-table-responsive">
                             <table class="table custom-table" id="myTable2" style="color: rgb(0, 0, 0);">
                                 <thead>
                                     <tr style="background-color: #198754;color: #fff;"> 
-                                      <th scope="col" >Purpose</th>
-                                    <th scope="col" style="text-align: center;">Total Amount</th>
+                                      <th scope="col" style="text-align: center">Last Update</th>
+                                    <th scope="col" style="text-align: center">Total Amount</th>
                                     
                                   
                 
@@ -268,7 +268,7 @@ margin-bottom: 12px; /* Add some space below the input */
         let row  = `<tr>
           
                    
-                        <td style="font-size: 20px; font-weight: 800">${data.udate}</td>
+                        <td style="font-size: 20px; text-align: center; font-weight: 800">${data.udate}</td>
                         <td style="color:green; font-size: 20px; font-weight: 800; text-align: center">₹ ${data.tamount}.00</td>
                     
                       
@@ -295,9 +295,9 @@ margin-bottom: 12px; /* Add some space below the input */
           
                    
                         <td>${data.purpose}</td>
-                        <td style="color:red; font-weight: 800">₹ ${data.amount}.00</td>
-                        <td>${data.date}</td>
-                        <td style="color:green; font-weight: 800">₹ ${data.balance}.00</td>
+                        <td style="color:red; font-weight: 800;text-align:right">₹ ${data.amount}.00</td>
+                        <td style="text-align:center">${data.date}</td>
+                        <td style="color:green; font-weight: 800; text-align:right">₹ ${data.balance}.00</td>
                       
                        
                   </tr>`;
