@@ -189,6 +189,20 @@ async function getuserInfoRealtime(userID){
                                 </thead>
                                 <tbody>
 
+<tr>
+                                   
+                                        <td><a>7</a></td>
+                                        <td><h2><a>Hepah: From welfare to well-being</a></h2></td>
+                                        <td>14th November 2022</td>
+                                        <td>Anand Ashram Kahilipara</td>
+                                        <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
+                                        <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                        <td style="text-align: center; color: red">Registration not yet opened</td>
+                                   </form>
+                                        </tr>
+
+
+
                                         <tr>
                                             <td><a>6</a></td>
                                             <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
