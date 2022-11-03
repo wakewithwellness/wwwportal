@@ -146,7 +146,7 @@ console.log(`Error: ${err}`)
 
 
 // Third batch
-db.collection("attendance").orderBy('regno').limitToLast(4).get().then(querySnapshot=>{
+db.collection("attendance").orderBy('regno').limitToLast(12).get().then(querySnapshot=>{
    querySnapshot.forEach(doc=>{
        let data = doc.data();
        let row  = `<tr>
