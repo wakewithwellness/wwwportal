@@ -220,7 +220,7 @@ async function getuserInfoRealtime(userID){
                                             <h2><a href="./OfflineEventsAtten.html"  style="color: green;font-weight: 500;">Offline Events Attendance</a></h2>
                                         </td>                 
                                         <td class="text-right">
-                                            <a href="./OfflineEventsAtten.html"  class="btn btn-outline-success take-btn">View</a>
+                                            <a href="./OfflineEvents.html"  class="btn btn-outline-success take-btn">View</a>
                                         </td>
                                     </tr>
 
@@ -377,16 +377,7 @@ async function getuserInfoRealtime(userID){
                                         </tr>
                         
                         
-                                        <tr>
-                                        <td style="min-width: 200px;">
-                                            
-                                            <h2><a href="coordinatorsatten.html"  >Coordinators Attendance</a></h2>
-                                        </td>                 
-                        
-                                        <td class="text-right">
-                                            <a href="coordinatorsatten.html"  class="btn btn-outline-primary take-btn">View</a>
-                                        </td>
-                                    </tr>
+                                      
                         
 											
                                                       
