@@ -55,9 +55,6 @@ async function getuserInfo(userID){
           
   </form>
         <div>
-
-
-
        
       </div>
     </div></div>
@@ -81,20 +78,15 @@ async function getuserInfoRealtime(userID){
                  const userInfo = doc.data()
                     if(userInfo){
                         userDetails.innerHTML = `
-
                        
-
                         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
-
     
-
     <div class="sidebar" id="sidebar">
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
-
         <ul>
         <li class="menu-title">Main</li>
         <li>
@@ -111,7 +103,6 @@ async function getuserInfoRealtime(userID){
        <li>
         <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
        </li>
-
        <li>
        <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
       </li>
@@ -123,19 +114,8 @@ async function getuserInfoRealtime(userID){
         </div>
     </div>
 </div>
-
         
-
-
-
 <div class="page-wrapper">
-
-
-
-
-
-
-
 <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;padding: 20px;border-radius:5px">
 <div class="row">
 <div class="col-sm-12">
@@ -143,23 +123,13 @@ async function getuserInfoRealtime(userID){
 </div>
 </div>
 <div class="row">
-
 <div class="col-lg">
 <h5>Name: <span style="color: #16151a">${userInfo.name}</span></h5>
 </div>
-
-
-
-
-
 <div class="col-lg">
 <h5>Registration no.: <span style="color: #16151a">${userInfo.regno}</span></h5>
 </div>
-
-
 </div>
-
-
 </div>
             <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;border-radius:5px">
            
@@ -170,6 +140,12 @@ async function getuserInfoRealtime(userID){
                         <p style="color: red;font-size:12px">Note: Minimum attendance for the event will be 60%</p>
                     </div>
                 </div>
+  
+                <p class="alert"  style="background-color:green;color:white;padding:8px;display:none">You have been successfully registered</p>
+           
+
+           
+
                 <div class="row">
                    
                         <div class="table-responsive">
@@ -188,45 +164,52 @@ async function getuserInfoRealtime(userID){
                                     </tr>
                                 </thead>
                                 <tbody>
+                                      
+                                
+                                <tr>
+                                <td><a>6</a></td>
+                                <td><h2><a>Hepah: From welfare to well-being</a></h2></td>
+                                <td>14th November 2022</td>
+                                <td>Anand Ashram Kahilipara</td>
+                                <td style="text-align: center;font-weight: 500;color: red"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td  style="text-align: center">
+                                <form onsubmit="registerevent1(event)" id="registereventform">
+                                <select id="event" hidden class="form-control">
+                                <option value='Registered'>Register</option>
+                                <option value='Cancelled'>Cancel</option></select>
+                                <select id="color" name="color" hidden class="form-control">
+                                <option value='green'>green</option>
+                                <option value="orange">red</option></select>
+                                
 
-<tr>
+                                <select id="Btn" name="Btn" hidden class="form-control">
+                                <option value='disabled'>grey</option>
+                                <option value="disabled">grey</option></select>
+                                <select id="BtnColor" name="BtnColor" hidden class="form-control">
+                                <option value='#d1d1d1'>d1d1d1</option>
+                                <option value="#d1d1d1">d1d1d1</option></select>
+
+                                <button id="send" type="submit" style="width: 100%; margin-top: 3px;border: none;background-color:${userInfo.BtnColor}" ${userInfo.Btn} class="btn btn-success">Register</button>
+                                </form>
+                                </td>
+                                </tr>
+                                
+                                  
+                                
+
+                                        
+                                     <tr>
                                    
-                                        <td><a>7</a></td>
-                                        <td><h2><a>Hepah: From welfare to well-being</a></h2></td>
-                                        <td>14th November 2022</td>
-                                        <td>Anand Ashram Kahilipara</td>
-                                        <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
-                                        <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                        <td style="text-align: center; color: red">Registration not yet opened</td>
-                                   </form>
-                                        </tr>
-
-
-
-                                        <tr>
-                                            <td><a>6</a></td>
-                                            <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2</a></h2></td>
-                                            <td>6th November 2022</td>
-                                            <td>Lachit Ghat</td>
-                                            <td style="text-align: center;font-weight: 500;color: red"><span style="color: ${userInfo.color4}">${userInfo.event4}</span></td>
-                                            <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.e4}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                            <td  style="text-align: center">
-
-                                            <form onsubmit="registerevent1(event)" id="registereventform">
-                                            <select id="event" class="form-control">
-                                            <option value='Registered'>Register</option>
-                                            <option value='Cancelled'>Cancel</option></select>
-
-                                            <select id="color" name="color" hidden class="form-control">
-                                            <option value='green'>green</option>
-                                            <option value="orange">red</option></select>
-
-
-                                            <button id="send" type="submit" style="width: 100%; margin-top: 3px" class="btn btn-dark">Confirm</button>
-                                            </form>
-
-                                            </td>
-                                        </tr>
+                                     <td><a>5</a></td>
+                                     <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2.0</a></h2></td>
+                                     <td>6th November 2022</td>
+                                     <td>Lachit Ghat, Guwahati</td>
+                                     <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color4}">${userInfo.event4}</span></td>
+                                     <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.e4}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                     <td style="text-align: center; color: red">Registration closed</td>
+                               
+                                     </tr>
                                
                                     
      
@@ -239,9 +222,8 @@ async function getuserInfoRealtime(userID){
                                         <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color3}">${userInfo.event3}</span></td>
                                         <td style="text-align: center"><a href="${userInfo.e3}" style="display:${userInfo.e3}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
-                                   </form>
+                                  
                                         </tr>
-
                                     <tr>
                                         <td><a>4</a></td>
                                         <td><h2><a>Wellness Drive - Medical & Health CheckUp</a></h2></td>
@@ -251,7 +233,6 @@ async function getuserInfoRealtime(userID){
                                         <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
-
                                     <tr>
                                         <td><a>3</a></td>
                                         <td><h2><a>Wellness Drive - Clothes & Books Donation</a></h2></td>
@@ -261,7 +242,6 @@ async function getuserInfoRealtime(userID){
                                         <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
-
                                     <tr>
                                         <td><a>2</a></td>
                                         <td><h2><a>Prabhati - A Dawn of a Vital Outlook</a></h2></td>
@@ -271,7 +251,6 @@ async function getuserInfoRealtime(userID){
                                         <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
-
                                     <tr>
                                         <td><a>1</a></td>
                                         <td><h2><a>Wellness Drive</a></h2></td>
@@ -282,7 +261,6 @@ async function getuserInfoRealtime(userID){
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
                           
-
                                
                                 </tbody>
                                
@@ -323,14 +301,9 @@ async function getuserInfoRealtime(userID){
             
     </form>
           <div>
-
-
-
          
         </div>
       </div></div>
-
-
     <div class="sidebar-overlay" data-reff=""></div>
     <script src="../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
 	<script src="../MembersPanel/assets/js/popper.min.js"></script>
@@ -350,33 +323,36 @@ async function getuserInfoRealtime(userID){
 
 function registerevent1(event){
     event.preventDefault()
-    var event4 = document.getElementById('event').value
-    var color4 = document.getElementById('color').value
-   
+    var event5 = document.getElementById('event').value
+    var color5 = document.getElementById('color').value
+    var Btn = document.getElementById('Btn').value
+    var BtnColor = document.getElementById('BtnColor').value
 
     var userRef = firebase.firestore().collection('OfflineEvents').doc(firebase.auth().currentUser.uid);
   
     var setWithMerge = userRef.set({
-        event4:event4,
-        color4:color4
+        event5:event5,
+        color5:color5,
+        Btn:Btn,
+        BtnColor:BtnColor
 
    
   
     },{ merge: true}).then(()=>{
      
-  
+        document.querySelector('.alert').style.display = 'block';
        // Show alert
-       M.toast({html:`<div><i style="font-size: 20px" class="fa fa-check-circle" aria-hidden="true"></i> Registered successfully</div>`,classes:"green"})
+    
+       document.querySelector('.alert').style.display = 'block';
+
 
    // Clear form
    document.getElementById('registereventform').reset();
   
     }).catch((err) => {
       console.log(err)
-      M.toast({html:`<div><i style="font-size: 20px" class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error ! Something went wrong</div>`,classes:"red"})
+     
     });
   }
   
 
-
-  
