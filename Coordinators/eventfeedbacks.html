@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>EventsList</title>
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <style>
+      
+  
+    .testbox {
+ 
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    margin-top: 10px;
+    padding: 3px;
+    }
+
+    textarea {
+   min-width: 30vh;
+   height: 90px;
+    padding: 7px 0;
+    border-radius: 3px;
+
+    background: transparent;
+    }
+
+
+    select {
+    padding: 7px 0;
+    border-radius: 3px;
+    margin-top: 5px;
+    border: 1px solid rgb(49, 49, 49);
+    background: transparent;
+    }
+    select, table {
+    width: 100%;
+    }
+
+    .btn-block {
+    margin-top: 30px;
+    text-align: center;
+    }
+
+    button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+
+
+    
+    }
+
+
+
+  .alert{
+   text-align: center;
+ padding: 10px;
+ background:#79c879;
+ color: white;
+ margin-bottom: 10px;
+ margin-top: 10px;
+ display: none;
+ 
+  
+  }
+
+
+
+  
+ 
+
+
+    @media (min-width: 568px) {
+    .title-block {
+    display: flex;
+    justify-content: space-between;
+    }
+    .title-block select {
+    width: 30%;
+    margin-bottom: 0;
+    }
+  
+  
+    }
+  </style>
+
+
+
+</head>
+
+
+
+
+<body style="background-color: rgb(238, 238, 238)">
+
+
+    <div class="topnav" style="width: 100%;">
+   
+        <div style="float: right"> 
+          <a class="modal-trigger" href="#modal2" id="loginli" style="visibility: collapse;color:#5793D1;">Login</a>
+          <a class="modal-trigger" href="#modal1" id="signupli" style="visibility: collapse;"></a>
+         
+    
+        </div>
+      
+      </div>
+    
+    
+      <div class="header" style="background-color: #03b1fc;">
+        <div class="header-left">
+          <a class="logo" style="margin-left: -15px;">
+            <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span style="font-size: 17px">Coordinator Portal</span>
+          </a>
+        </div>
+        <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+              <ul class="nav user-menu float-right" id="logoutli" style="display: none;"> 
+              </ul>
+              <div class="dropdown mobile-user-menu float-right" id="logoutli" style="display: none;">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>                 
+              </div>
+          </div>
+    
+    
+
+    
+    <div style="margin-top: 20px;"></div>
+    
+
+       <div id="logindata"></div>
+             
+
+    
+      <div class="center">
+        <div class="Atten"></div>
+      </div>
+             
+
+
+
+
+
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../MembersPanel/assets/js/popper.min.js"></script>
+    <script src="../MembersPanel/assets/js/bootstrap.min.js"></script>
+    <script src="../MembersPanel/assets/js/jquery.dataTables.min.js"></script>
+    <script src="../MembersPanel/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../MembersPanel/assets/js/jquery.slimscroll.js"></script>
+    <script src="../MembersPanel/assets/js/app.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDA9d5s_dvWlu8z5_n4XHwYwGBo5DIR7VY",
+  authDomain: "volunteers-2ddcc.firebaseapp.com",
+  projectId: "volunteers-2ddcc",
+  storageBucket: "volunteers-2ddcc.appspot.com",
+  messagingSenderId: "883437128120",
+  appId: "1:883437128120:web:5630bee115d8ca26aba74d",
+  measurementId: "G-5K86CCM7ZV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+      <script src="./scripts/auth.js"></script>
+      <script src="./scripts/eventfeedbacks.js" ></script>
+
+
+</body>
+
+</html>
