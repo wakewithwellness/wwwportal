@@ -333,6 +333,17 @@ async function getuserInfoRealtime(userID){
                             <a href="volunteershipadmin.html"  class="btn btn-outline-primary take-btn">View</a>
                         </td>
                     </tr>
+		    
+		    
+		      <tr>
+                        <td style="min-width: 200px;">
+                            
+                            <h2><a href="OfflineEventFeedbacks.html"  >Offline Events Feedbacks</a></h2>
+                        </td>                 
+                        <td class="text-right">
+                            <a href="OfflineEventFeedbacks.html"  class="btn btn-outline-primary take-btn">View</a>
+                        </td>
+                    </tr>
                    
                 
                 <tr>
