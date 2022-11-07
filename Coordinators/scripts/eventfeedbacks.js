@@ -141,128 +141,128 @@ async function getuserInfoRealtime(userID){
       
                               <div class="testbox" >
                           
-                                              <form onsubmit="updateattendance(event)" id="attendanceform" style="text-align:left">
+                              <form onsubmit="updateattendance(event)" id="attendanceform" style="text-align:left">
                                               
                                             
-                                                <div class="form-group">
-                                                <label for="exampleFormControlSelect1"> 1. Overall, how would the rate the <strong>Swachh Prayaakh : Cleanliness Drive 2.0</strong></label>
-                                                <select id="q1" class="form-control">
-                                                <option selected disabled value="">--Select--</option>
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3</option>
-                                                  <option value="4">4</option>
-                                                  <option value="5">5</option>
-                                                  <option value="6">6</option>
-                                                  <option value="7">7</option>
-                                                  <option value="8">8</option>
-                                                  <option value="9">9</option>
-                                                  <option value="10">10</option>
-                                                </select>
-                                                </div>
+                              <div class="form-group">
+                              <label for="exampleFormControlSelect1"> 1. Overall, how would the rate the <strong>Swachh Prayaakh : Cleanliness Drive 2.0</strong><span style="color: red; font-size:15px">*</span></label>
+                              <select id="q1" class="form-control" required>
+                              <option selected disabled value="">--Select--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                              </div>
 
 
-                                                <div class="form-group">
-                                                <label for="exampleFormControlSelect1">2. After the event, how inspired did you feel?</label>
-                                                <select id="q2" class="form-control">
-                                                <option selected disabled value="">--Select--</option>
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3</option>
-                                                  <option value="4">4</option>
-                                                  <option value="5">5</option>
-                                                  <option value="6">6</option>
-                                                  <option value="7">7</option>
-                                                  <option value="8">8</option>
-                                                  <option value="9">9</option>
-                                                  <option value="10">10</option>
-                                                </select>
-                                                </div>
+                              <div class="form-group">
+                              <label for="exampleFormControlSelect1">2. After the event, how inspired did you feel?<span style="color: red; font-size:15px">*</span></label>
+                              <select id="q2" class="form-control" required>
+                              <option selected disabled value="">--Select--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                              </div>
 
 
 
-                                          
+                        
 
-                                                <div class="form-group">
-                                                <label >3. Are you willing to participate in our future drives?</label>
-                                                <select id="q3" class="form-control">
-                                                <option selected disabled value="">--Select--</option>
-                                                  <option value="Yes">Yes, definitely</option>
-                                                  <option value="Maybe">Maybe</option>
-                                                  <option value="No">No, never</option>
-                                                </select>
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                <label for="exampleFormControlSelect1">4. Overall rating for the management of the event</label>
-                                                <select id="q4" class="form-control">
-                                                <option selected disabled value="">--Select--</option>
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3</option>
-                                                  <option value="4">4</option>
-                                                  <option value="5">5</option>
-                                                  <option value="6">6</option>
-                                                  <option value="7">7</option>
-                                                  <option value="8">8</option>
-                                                  <option value="9">9</option>
-                                                  <option value="10">10</option>
-                                                </select>
-                                                </div>
+                              <div class="form-group">
+                              <label >3. Are you willing to participate in our future drives?<span style="color: red; font-size:15px">*</span></label>
+                              <select id="q3" class="form-control" required>
+                              <option selected disabled value="">--Select--</option>
+                                <option value="Yes">Yes, definitely</option>
+                                <option value="Maybe">Maybe</option>
+                                <option value="No">No, never</option>
+                              </select>
+                              </div>
 
 
-                                                <div class="form-group">
-                                                <label for="exampleFormControlSelect1">5. Overall rating for the management of the event</label>
-                                                <select id="q5" class="form-control">
-                                                <option selected disabled value="">--Select--</option>
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3</option>
-                                                  <option value="4">4</option>
-                                                  <option value="5">5</option>
-                                                  <option value="6">6</option>
-                                                  <option value="7">7</option>
-                                                  <option value="8">8</option>
-                                                  <option value="9">9</option>
-                                                  <option value="10">10</option>
-                                                </select>
-                                                </div>
+                              <div class="form-group">
+                              <label for="exampleFormControlSelect1">4. Overall rating for the management of the event<span style="color: red; font-size:15px">*</span></label>
+                              <select id="q4" class="form-control" required>
+                              <option selected disabled value="">--Select--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                              </div>
 
 
-                                                <div class="form-group">
-                                                <label for="exampleFormControlSelect1">6. Feedback regarding the overall experience about the drive and management</label>
-                                                <textarea id="q6" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" minlength="5" required ></textarea>
-                                                </div>
+                              <div class="form-group">
+                              <label for="exampleFormControlSelect1">5. Overall rating for the management of the event<span style="color: red; font-size:15px">*</span></label>
+                              <select id="q5" class="form-control" required>
+                              <option selected disabled value="">--Select--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                              </div>
 
-                                                <div class="form-group">
-                                                <label for="exampleFormControlSelect1">7. Feedback regarding the participated members in general </label>
-                                                <textarea id="q7" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" minlength="5" required ></textarea>
-                                                </div>
+
+                              <div class="form-group">
+                              <label for="exampleFormControlSelect1">6. Feedback regarding the overall experience about the drive and management<span style="color: red; font-size:15px">*</span></label>
+                              <textarea id="q6" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" minlength="5" required ></textarea>
+                              </div>
+
+                              <div class="form-group">
+                              <label for="exampleFormControlSelect1">7. Feedback regarding the participated members in general </label>
+                              <textarea id="q7" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" minlength="5"></textarea>
+                              </div>
 
 
-                                                <div class="form-group">
-                                                <label for="exampleFormControlSelect1">8. Feedback regarding the board members</label>
-                                                <textarea id="q8" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" minlength="5" required ></textarea>
-                                                </div>
+                              <div class="form-group">
+                              <label for="exampleFormControlSelect1">8. Feedback regarding the board members</label>
+                              <textarea id="q8" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px"></textarea>
+                              </div>
 
-                                               
+                             
 
-                                                <div class="form-group">
-                                                <label for="exampleFormControlSelect1">9. Any suggestion how can we improve the future events</label>
-                                                <textarea id="q9" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" minlength="5" required ></textarea>
-                                                </div>
-                                            
-                                                <p class="alert"  style="background-color:green;color:white;padding:8px;display:none">Feedback submitted</p>
+                              <div class="form-group">
+                              <label for="exampleFormControlSelect1">9. Any suggestion how can we improve the future events</label>
+                              <textarea id="q9" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" ></textarea>
+                              </div>
+                          
+                    
 
-                                                  <div class="btn-block">
-                                                  <button style="background-color:#03b1fc; font-size:13px;font-weight:500; border-radius:5px" id="send" type="submit" >Submit</button> 
-                                                  </div>
+                                <div class="btn-block">
+                                <button style="background-color:#198754; font-size:13px;font-weight:500; border-radius:5px" id="send" type="submit" >Submit</button> 
+                                </div>
 
-                                                <div class="container-fluid" style="margin-bottom:70px;">
-                                
-                                              </div>
-                                              </form>
+                              <div class="container-fluid" style="margin-bottom:70px;">
+              
+                            </div>
+                            </form>
 
                                            
                               </div> 
@@ -361,7 +361,7 @@ function updateattendance(event){
   var q9 = document.getElementById('q9').value
 
 
-  var userRef = firebase.firestore().collection('EventsFeedbacks').doc(firebase.auth().currentUser.uid).collection('cleanliness2').doc(firebase.auth().currentUser.uid);
+  var userRef = firebase.firestore().collection('EventsFeedbacks').doc('Swachh Prayaakh').collection('Drive2').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
     q1:q1,
