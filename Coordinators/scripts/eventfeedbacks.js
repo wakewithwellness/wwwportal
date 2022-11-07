@@ -141,7 +141,7 @@ async function getuserInfoRealtime(userID){
       
                               <div class="testbox" >
                           
-                              <form onsubmit="updateattendance(event)" id="attendanceform" style="text-align:left">
+                              <form onsubmit="updateattendance(event)" id="feedbackform" style="text-align:left">
                                               
                                             
                               <div class="form-group">
@@ -238,7 +238,7 @@ async function getuserInfoRealtime(userID){
                               <textarea id="q8" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" ></textarea>
                               </div>
                           
-                    
+                              <p class="alert"  style="background-color:green;color:white;padding:8px;display:none">Feedback submitted</p>
 
                                 <div class="btn-block">
                                 <button style="background-color:#198754; font-size:13px;font-weight:500; border-radius:5px" id="send" type="submit" >Submit</button> 
@@ -356,7 +356,7 @@ function updateattendance(event){
     q6:q6,
     q7:q7,
     q8:q8,
-   
+
 
 
 
@@ -372,7 +372,7 @@ function updateattendance(event){
 
 
  // Clear form
- document.getElementById('attendanceform').reset();
+ document.getElementById('feedbackform').reset();
 
   }).catch((err) => {
     console.log(err)
