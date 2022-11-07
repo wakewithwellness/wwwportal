@@ -294,16 +294,7 @@ async function getuserInfoRealtime(userID){
     
 
 
-      
-        <div class="container-fluid" id="footerbar">
-        <div class="row">
-        <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="./assets/img/notifications.png" alt=""/></a></div>
-        <div class="col"><a href="./payments.html"><img style="width:54px; height:auto" src="./assets/img/payments.png" alt=""/></a></div>
-        <div class="col"><a ><img style="width:54px; height:auto" src="./assets/img/attendance.png" alt=""/></a></div>
-        <div class="col"><a href="./main.html"><img style="width:54px; height:auto" src="./assets/img/home.png" alt=""/></a></div>
-        
-        </div>
-        </div>
+ 
 
 
         
