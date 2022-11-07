@@ -257,7 +257,7 @@ async function getuserInfoRealtime(userID){
 
                                                 <div class="form-group">
                                                 <label for="exampleFormControlSelect1">8. Feedback regarding the board members</label>
-                                                <textarea id="q8" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" required ></textarea>
+                                                <textarea id="q8" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px"></textarea>
                                                 </div>
 
                                                
