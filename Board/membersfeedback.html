@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Agreements</title>
+  <title>Events Feedbacks</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -38,8 +38,74 @@
   <link href="../MembersPanel/assets/img/favicon.png" rel="icon">
 <link href="../MembersPanel/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+<script>
+  $(document).ready(function(){
+      $("select").change(function(){
+          $(this).find("option:selected").each(function(){
+              var optionValue = $(this).attr("value");
+              if(optionValue){
+                  $(".batch").not("." + optionValue).hide();
+                  $("." + optionValue).show();
+              } else{
+                  $(".batch").hide();
+              }
+          });
+      }).change();
+  });
+  </script>
 
 
+  <style>
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+    /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: #0d6efd;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(27, 27, 27);
+    color: rgb(235, 235, 235);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #0d6efd;
+    color: white;
+  }
+  </style>
 
 <style>
   table {
@@ -56,12 +122,11 @@
   }
   
   tr:nth-child(even) {
-    background-color: #e1e1e1;
+    background-color: #c5c5c5;
   }
 
  
   </style>
-
 
 <style>
   #myInput {
@@ -75,10 +140,29 @@ border: 1px solid #ddd; /* Add a grey border */
 margin-bottom: 12px; /* Add some space below the input */
 }
 
+#myInput2 {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myInput3 {
+background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+background-position: 10px 12px; /* Position the search icon */
+background-repeat: no-repeat; /* Do not repeat the icon image */
+width: 100%; /* Full-width */
+font-size: 16px; /* Increase font-size */
+padding: 12px 20px 12px 40px; /* Add some padding */
+border: 1px solid #ddd; /* Add a grey border */
+margin-bottom: 12px; /* Add some space below the input */
+}
+
 </style>
-
-
-
 
 
 
@@ -108,7 +192,7 @@ margin-bottom: 12px; /* Add some space below the input */
                         <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
                         </li>
 
-                        
+
                       <li >
                         <a href="attenUpdates.html"><i class="fa fa-calendar"></i> <span>Attendance</span></a>
                         </li>
@@ -137,25 +221,74 @@ margin-bottom: 12px; /* Add some space below the input */
           </div>
       </div>
       <div class="page-wrapper">
-          <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;">
-                <div class="row"  style="padding: 15px">
-                  <div class="col-sm-12">
-                      <h4 class="page-title">Member's Feedback</h4><hr>
-                      <p style="font-size:12px">This is the feedbacks taken from the members for the year 2021-22</p>
-                  </div>
 
-                
-                 
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;">
+          <div class="row" style="padding: 15px">
+            <div class="col-sm-12">
+                <h4 class="page-title">Offline Events Feedbacks</h4><hr>
+            </div>
+          </div>
+        
+        <div class="row" style="margin-top: -15px">
+            <div class="col-md-12">
+   
+                <div class="container">
+                  <select style="width: 100%;height:40px;font-size: 14px;padding:10px">
+                    <option>Choose Event</option>
+                    <option value="SPD2">Swachh Prayaakh 2.0</option>
+                    <option value="Hepah">Hepah: From Wellness to Well-being</option>
+                  
+                    
+                </select>
                 </div>
+                    <br>    
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+          <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;border-radius: 5px;padding:0">
+               
+              
+           
+             
+         
+<br>
+                      
+                      <div class="SPD2 batch" >
+                        <div class="container-fluid">
+               
+                    
+                                  <h4 class="page-title" style="background-color:green; color: white;padding:10px">Member's Feedbacks</h4><hr>
+                      
+                      
+                              <iframe style="width:100%; height:65vh; border: none;background-color: white" src="./OfflineEvents/MembersFeedbacks.html"></iframe>
+                              <br>    <br><hr>
+                          
+                                       <h4 class="page-title" style="background-color:orange; color: white;padding:10px">Coordinator's Feedbacks</h4><hr>
+                             
+                              <iframe style="width:100%; height:65vh; border: none;background-color: white" src="./OfflineEvents/CoordinatorsFeedbacks.html"></iframe>
+          
+                    </div>
+                      </div>
+                      
+   
+
+         
+          
+
+
+
 
           </div>
 
-          <!-- Main content -->
-          <div class="container-fluid" style="padding: 0;" id="feedbackk">
-          </div>
-          <!-- Main content -->
-
-
+           
+          
           <br>   <br>
       
       </div>
@@ -184,32 +317,116 @@ margin-bottom: 12px; /* Add some space below the input */
 
 
 
-  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+
+
+  <script src="../MembersPanel/scripts/updates.js"></script>
+
+
+<script>
+  function myFunction1() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
   
-  <script>
-    var config = {
-  apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
-  authDomain: "members-76725.firebaseapp.com",
-  projectId: "members-76725",
-  storageBucket: "members-76725.appspot.com",
-  messagingSenderId: "734645197873",
-  appId: "1:734645197873:web:808127fdb4d643d4d24910",
-  measurementId: "G-7LYZ3R48GT"
-  };
-  firebase.initializeApp(config);
-  const db = firebase.firestore();
-  db.settings({ timestampsInSnapshots: true }); 
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+
+
+
+  function myFunction2() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput2");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable2");
+    tr = table.getElementsByTagName("tr");
   
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+
+
+
+  function myFunction3() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput3");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable3");
+    tr = table.getElementsByTagName("tr");
   
-  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
   </script>
 
 
-<script src="scripts/feedbacks.js"></script>
 
 
+    
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
