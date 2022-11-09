@@ -74,7 +74,7 @@ function saveData(Membername, Email, Contact, Whatsapp,dob, Alternate, College, 
     Email:Email,
     Contact:Contact,
     Whatsapp:Whatsapp,
-    00dob:dob,
+    dob:dob,
     Alternate:Alternate,
     College:College,
 
@@ -85,7 +85,7 @@ function saveData(Membername, Email, Contact, Whatsapp,dob, Alternate, College, 
     Checkbox5:Checkbox5,
     Checkbox6:Checkbox6,
     Checkbox7:Checkbox7,
-    Checkbox8:Checkbox8
+    Checkbox8:Checkbox8,
 
   });
 }
