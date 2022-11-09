@@ -344,26 +344,7 @@ async function getuserInfoRealtime(userID){
                             <a href="OfflineEventFeedbacks.html"  class="btn btn-outline-primary take-btn">View</a>
                         </td>
                     </tr>
-                   
-                
-                <tr>
-                <td style="min-width: 200px;">
-                    
-                    <h2><a href="wellnessfund.html"  >Fundraiser</a></h2>
-                </td>                 
-                <td class="text-right">
-                    <a href="wellnessfund.html"  class="btn btn-success take-btn">View</a>
-                </td>
-            </tr>
-            <tr>
-            <td style="min-width: 200px;">
-                
-                <h2><a href="finance.html"  >Funds History</a></h2>
-            </td>                 
-            <td class="text-right">
-                <a href="finance.html"  class="btn btn-outline-primary take-btn">View</a>
-            </td>
-        </tr>
+
                 </tbody>
             </table>
         </div>
