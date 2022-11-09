@@ -39,11 +39,11 @@ function submitForm(e){
   var Checkbox5 = getInputVal('Checkbox5');
   var Checkbox6 = getInputVal('Checkbox6');
   var Checkbox7 = getInputVal('Checkbox7');
-  
+  var Checkbox8 = getInputVal('Checkbox8');
 
 
   // Save message
-  saveData(Membername, Email, Contact, Whatsapp,dob, Alternate, College, Checkbox1, Checkbox2, Checkbox3, Checkbox4, Checkbox5, Checkbox6, Checkbox7);
+  saveData(Membername, Email, Contact, Whatsapp,dob, Alternate, College, Checkbox1, Checkbox2, Checkbox3, Checkbox4, Checkbox5, Checkbox6, Checkbox7, Checkbox8);
 
 
  // Show alert
@@ -67,7 +67,7 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveData(Membername, Email, Contact, Whatsapp,dob, Alternate, College, Checkbox1, Checkbox2, Checkbox3, Checkbox4, Checkbox5, Checkbox6, Checkbox7){
+function saveData(Membername, Email, Contact, Whatsapp,dob, Alternate, College, Checkbox1, Checkbox2, Checkbox3, Checkbox4, Checkbox5, Checkbox6, Checkbox7, Checkbox8){
   var newDataRef = dataRef.push();
   newDataRef.set({
     Membername: Membername,
@@ -84,7 +84,8 @@ function saveData(Membername, Email, Contact, Whatsapp,dob, Alternate, College, 
     Checkbox4:Checkbox4,
     Checkbox5:Checkbox5,
     Checkbox6:Checkbox6,
-    Checkbox7:Checkbox7
+    Checkbox7:Checkbox7,
+    Checkbox8:Checkbox8
 
   });
 }
