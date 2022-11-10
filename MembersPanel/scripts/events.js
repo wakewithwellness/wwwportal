@@ -166,10 +166,21 @@ async function getuserInfoRealtime(userID){
                                 <tbody>
                                       
                                 
-						
-						
-						
-                                
+                           
+
+
+                                     
+                                    <tr>
+                                    
+                                    <td><a>7</a></td>
+                                    <td><h2><a>Hepah: From welfare to well-being</a></h2></td>
+                                    <td>13th November 2022</td>
+                                    <td>Anand Ashram Kahilipara</td>
+                                    <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
+                                    <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                    <td style="text-align: center; color: red">Registration closed</td>
+                            
+                                    </tr>
                                 
                                   
                                 
@@ -327,7 +338,7 @@ function registerevent1(event){
   
     }).catch((err) => {
       console.log(err)
-     
+      M.toast({html:`<div><i style="font-size: 20px" class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error ! Something went wrong</div>`,classes:"red"})
     });
   }
   
