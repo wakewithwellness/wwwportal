@@ -166,34 +166,10 @@ async function getuserInfoRealtime(userID){
                                 <tbody>
                                       
                                 
-                                <tr>
-                                <td><a>7</a></td>
-                                <td><h2><a>Hepah: From welfare to well-being</a></h2></td>
-                                <td>13th November 2022</td>
-                                <td>Brahmaputra Children Home, Garchuk,Katabari,Ghy</td>
-                                <td style="text-align: center;font-weight: 500;color: red"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                <td  style="text-align: center">
-                                <form onsubmit="registerevent1(event)" id="registereventform">
-                                <select id="event" hidden class="form-control">
-                                <option value='Registered'>Register</option>
-                                <option value='Cancelled'>Cancel</option></select>
-                                <select id="color" name="color" hidden class="form-control">
-                                <option value='green'>green</option>
-                                <option value="orange">red</option></select>
+						
+						
+						
                                 
-
-                                <select id="Btn" name="Btn" hidden class="form-control">
-                                <option value='disabled'>grey</option>
-                                <option value="disabled">grey</option></select>
-                                <select id="BtnColor" name="BtnColor" hidden class="form-control">
-                                <option value='#d1d1d1'>d1d1d1</option>
-                                <option value="#d1d1d1">d1d1d1</option></select>
-
-                                <button id="send" type="submit" style="width: 100%; margin-top: 3px;border: none;background-color:${userInfo.BtnColor}" ${userInfo.Btn} class="btn btn-success">Register</button>
-                                </form>
-                                </td>
-                                </tr>
                                 
                                   
                                 
