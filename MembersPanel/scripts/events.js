@@ -166,21 +166,20 @@ async function getuserInfoRealtime(userID){
                                 <tbody>
                                       
                                 
-                           
+                             
 
 
-                                     
-                                    <tr>
-                                    
-                                    <td><a>7</a></td>
-                                    <td><h2><a>Hepah: From welfare to well-being</a></h2></td>
-                                    <td>13th November 2022</td>
-                                    <td>Anand Ashram Kahilipara</td>
-                                    <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
-                                    <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                    <td style="text-align: center; color: red">Registration closed</td>
-                            
-                                    </tr>
+                                <tr>
+                                   
+                                <td><a>7</a></td>
+                                <td><h2><a>Hepah: From welfare to well-being</a></h2></td>
+                                <td>13th November 2022</td>
+                                <td>Brahmaputra Children Home</td>
+                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center; color: red">Registration closed</td>
+                          
+                                </tr>
                                 
                                   
                                 
