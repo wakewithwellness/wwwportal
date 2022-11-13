@@ -78,7 +78,7 @@ function saveData(Membername, Email, address, type, size,tname){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("October 16, 2022 18:59:00").getTime();
+     var countDownDate = new Date("November 21, 2022 18:59:00").getTime();
      
      // Update the count down every 1 second
      var x = setInterval(function() {
@@ -105,10 +105,10 @@ function saveData(Membername, Email, address, type, size,tname){
        // If the count down is finished, write some text
        if (distance < 0) {
          clearInterval(x);
-         document.getElementById("demo").innerHTML = "Submissions closed";
+         document.getElementById("demo").innerHTML = "Registration closed";
          document.getElementById("demo").style.color = "red";
          document.getElementById("demo").style.borderColor = "red";
-
+         document.getElementById("tag").style.display = "none";
          document.querySelector('#submit').style.color = "white";
          document.querySelector('#submit').style.background = "#cccccc";
          document.querySelector('#submit').style.border = "none";
