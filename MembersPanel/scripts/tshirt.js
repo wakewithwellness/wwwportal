@@ -78,7 +78,7 @@ function saveData(Membername, Email, address, type, size,tname){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("November 21, 2022 18:59:00").getTime();
+     var countDownDate = new Date("November 23, 2022 18:59:00").getTime();
      
      // Update the count down every 1 second
      var x = setInterval(function() {
