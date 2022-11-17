@@ -209,7 +209,7 @@ async function getuserInfoRealtime(userID){
 						
                     <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="font-weight: 500;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance 
                     from 
-                    <span style="font-size: 14px;color: #198754;font-weight:600" id="date">01/11/2022 - 15/11/2022</span></h5>
+                    <span style="font-size: 14px;color: #198754;font-weight:600" id="date">15/11/2022 - 30/11/2022</span></h5>
                               <div class="testbox" >
                           
                                               <form onsubmit="updateattendance(event)" id="attendanceform">
@@ -325,13 +325,13 @@ async function getuserInfoRealtime(userID){
 
 function updateattendance(event){
   event.preventDefault()
-  var Nov22a = document.getElementById('attend').value
-  var Nov22af = document.getElementById('work').value
+  var Nov22b = document.getElementById('attend').value
+  var Nov22bf = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Nov22a:Nov22a,
-    Nov22af:Nov22af
+    Nov22b:Nov22b,
+    Nov22bf:Nov22bf
 
   },{ merge: true}).then(()=>{
    
@@ -356,7 +356,7 @@ function updateattendance(event){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("November 15, 2022 22:00:00").getTime();
+     var countDownDate = new Date("November 30, 2022 22:00:00").getTime();
      
      // Update the count down every 1 second
      var x = setInterval(function() {
