@@ -126,7 +126,7 @@ async function getuserInfoRealtime(userID){
             <div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #03b1fc;padding: 20px; border-radius: 5px;">
             <div class="row">
             <div class="col-sm-12">
-            <h2 style="text-align: center;">Cleanliness Drive 2.0 Feedback form</h2><hr>
+            <h2 style="text-align: center;color: orange">Hepah: From Welfare to Well-being <span style="color: grey">Feedback form</span></h2><hr>
             </div>
             </div>
         
@@ -145,7 +145,7 @@ async function getuserInfoRealtime(userID){
                                               
                                             
                               <div class="form-group">
-                              <label for="exampleFormControlSelect1"> 1. Overall, how would the rate the <strong>Swachh Prayaakh : Cleanliness Drive 2.0</strong><span style="color: red; font-size:15px">*</span></label>
+                              <label for="exampleFormControlSelect1"> 1. Overall, how would the rate the <strong>Hepah: From Welfare to Well-being </strong><span style="color: red; font-size:15px">*</span></label>
                               <select id="q1" class="form-control" required>
                               <option selected disabled value="">--Select--</option>
                                 <option value="1">1</option>
@@ -234,8 +234,8 @@ async function getuserInfoRealtime(userID){
                              
 
                               <div class="form-group">
-                              <label for="exampleFormControlSelect1">8. Any suggestion how can we improve the future events</label>
-                              <textarea id="q8" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" ></textarea>
+                              <label for="exampleFormControlSelect1">8. Any suggestion how can we improve the future events<span style="color: red; font-size:15px">*</span></label>
+                              <textarea id="q8" class="form-control" id="work" maxlength="500" style="padding: 5px;height:100px" required></textarea>
                               </div>
                           
                               <p class="alert"  style="background-color:green;color:white;padding:8px;display:none">Feedback submitted</p>
