@@ -345,7 +345,7 @@ function updateattendance(event){
   var q8 = document.getElementById('q8').value
 
 
-  var userRef = firebase.firestore().collection('EventsFeedbacks').doc('Swachh Prayaakh').collection('Drive2').doc(firebase.auth().currentUser.uid);
+var userRef = firebase.firestore().collection('EventsFeedbacks').doc('Hepah').collection('ChildrensDay').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
     q1:q1,
