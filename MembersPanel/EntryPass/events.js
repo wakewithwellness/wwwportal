@@ -84,7 +84,7 @@ async function getuserInfoRealtime(userID){
     <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
     
-
+<div class="container-fluid">
 <div class="container" style="background-color: #fff;border-top: 3px solid #198754;padding: 20px;border-radius:5px; margin-top:8vh">
 <div class="row">
 <div class="col-sm-12">
@@ -93,10 +93,10 @@ async function getuserInfoRealtime(userID){
 </div>
 <div class="row">
 <div class="col-lg">
-<h5>Name: <span style="color: #16151a">${userInfo.name}</span> <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" style="width:18px"></h5>
+<h6 style="color: grey">Name: <strong style="color: #198754">${userInfo.name}</strong> <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" style="width:18px"></h6>
 </div>
 <div class="col-lg">
-<h5>Registration no.: <span style="color: #16151a">${userInfo.regno}</span></h5>
+<h6 style="color: grey">Registration no.: <strong style="color: #198754">${userInfo.regno}</strong></h6>
 </div>
 </div>
 </div>
@@ -287,6 +287,9 @@ async function getuserInfoRealtime(userID){
                     </div>
 
                     </div>
+                    </div>
+
+
                     </div>
            
   <br>
