@@ -234,7 +234,7 @@ async function getuserInfoRealtime(userID){
                   
                     <h5 style="background-color:#198754;color:white;padding:8px;margin-bottom:12px">Pass 2</h5>
                     <p style="color:grey; text-align:center;display:${userInfo.h2}">Pass 2 not yet opened</p>
-                    <h5 style="color:red; text-align:center;display:${userInfo.h3}">Pass 1 Locked</h5>
+                    <h5 style="color:red; text-align:center;display:${userInfo.h3}">Pass 2 Locked</h5>
                     <form onsubmit="updatepasstwo(event)" id="passtwo" style="display:${userInfo.h1}" ${userInfo.h4}>
                     <div class="form-group">
                    
