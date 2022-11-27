@@ -225,6 +225,17 @@ async function getuserInfoRealtime(userID){
                                     </tr>
 
 
+                                    <tr>
+                                    <td style="min-width: 200px;">
+                                        
+                                        <h2><a href="./EntryPasses.html"  style="font-weight: 500;">Entry Passes</a></h2>
+                                    </td>                 
+                                    <td class="text-right">
+                                        <a href="./EntryPasses.html"  class="btn btn-outline-warning take-btn">View</a>
+                                    </td>
+                                </tr>
+
+
 											<tr>
 												<td style="min-width: 200px;">
 												
@@ -260,14 +271,7 @@ async function getuserInfoRealtime(userID){
                                                 <a href="payments.html" class="btn btn-outline-primary take-btn">View</a>
                                             </td>
                                         </tr>
-                                        <tr>
-											<td style="min-width: 200px;">	
-												<h2><a href="membersfeedback.html">Member's Feedbacks</a></h2>
-											</td>                 
-											<td class="text-right">
-												<a href="membersfeedback.html" class="btn btn-outline-danger take-btn">View</a>
-											</td>
-										</tr>
+                                 
 				
 										<tr>
 											<td style="min-width: 200px;">
@@ -277,14 +281,7 @@ async function getuserInfoRealtime(userID){
 												<a href="leavepanel.html" class="btn btn-outline-primary take-btn">View</a>
 											</td>
 										</tr>
-                                        <tr>
-                                            <td style="min-width: 200px;"> 
-                                                <h2><a href="../MembersPanel/agreement.html">Member Agreement Form</a></h2>
-                                            </td>                 
-                                            <td class="text-right">
-                                                <a href="../MembersPanel/agreement.html" class="btn btn-outline-primary take-btn">View</a>
-                                            </td>
-                                        </tr>
+                                      
                                         <tr>
                                             <td style="min-width: 200px;">
                                                 <h2><a href="detailUpdates.html">Attendance Details</a></h2>
@@ -305,6 +302,17 @@ async function getuserInfoRealtime(userID){
             <table class="table mb-0">
             
                 <tbody>
+
+                <tr>
+                <td style="min-width: 200px;">	
+                    <h2><a href="membersfeedback.html">Member's Feedbacks</a></h2>
+                </td>                 
+                <td class="text-right">
+                    <a href="membersfeedback.html" class="btn btn-outline-danger take-btn">View</a>
+                </td>
+            </tr>
+
+
                 <tr>
                 <td style="min-width: 200px;">
                     
@@ -356,6 +364,16 @@ async function getuserInfoRealtime(userID){
                     <a href="tshirts.html"  class="btn btn-outline-primary take-btn">View</a>
                 </td>
             </tr>
+
+
+            <tr>
+            <td style="min-width: 200px;"> 
+                <h2><a href="../MembersPanel/agreement.html">Member Agreement Form</a></h2>
+            </td>                 
+            <td class="text-right">
+                <a href="../MembersPanel/agreement.html" class="btn btn-outline-primary take-btn">View</a>
+            </td>
+        </tr>
    
                 </tbody>
             </table>
