@@ -140,7 +140,7 @@ async function getuserInfoRealtime(userID){
                                 <td><h5 style="display:${userInfo.h1}">${userInfo.email1}</h5></td>
                                 <td><h5 style="display:${userInfo.h1}">${userInfo.contact1}<h5></td>
                                 <td style="text-align: center"><h5 style="display:${userInfo.h1}">${userInfo.mode1}<h5></td>
-                                <td style="text-align: center; color: white;font-weight: 500"><h5 style="display:${userInfo.h1}">${userInfo.status1}<h5></td>
+                                <td style="text-align: center; color: green"><h5 style="display:${userInfo.h1};font-weight: 700">${userInfo.status1}<h5></td>
                                 </tr>     
                                   
 
@@ -150,7 +150,7 @@ async function getuserInfoRealtime(userID){
                                 <td><h5 style="display:${userInfo.h3}">${userInfo.email2}</h5></td>
                                 <td><h5 style="display:${userInfo.h3}">${userInfo.contact2}<h5></td>
                                 <td style="text-align: center"><h5 style="display:${userInfo.h3}">${userInfo.mode2}<h5></td>
-                                <td style="text-align: center; color: green;font-weight: 500"><h5 style="display:${userInfo.h3}">${userInfo.status2}<h5></td>
+                                <td style="text-align: center; color: green"><h5 style="display:${userInfo.h3};font-weight: 700">${userInfo.status2}<h5></td>
                                 </tr>    
                            
                                      
