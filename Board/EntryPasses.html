@@ -215,7 +215,7 @@ margin-bottom: 12px; /* Add some space below the input */
           <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #0d6efd;padding: 3px;border-radius: 5px;">
                 <div class="row"  style="padding: 15px">
                   <div class="col-sm-12">
-                      <h4 class="page-title">Entry Pass Registrations</h4><hr>
+                      <h4 class="page-title">Members Details</h4><hr>
                   </div>
                 </div>
 
@@ -236,14 +236,24 @@ margin-bottom: 12px; /* Add some space below the input */
                              <th scope="col" style="min-width: 20vh;">Name</th>
                           <th scope="col">Contact</th>
                           <th scope="col">Email</th>
+                          <th scope="col">Ticket no.</th>
                           <th scope="col" style="text-align:center">Mode</th>
                           <th scope="col" style="text-align:center">Status</th>
                           <th scope="col" style="min-width: 5vh;text-align:center">Pass no.</th>
                           <th scope="col" style="min-width: 17vh;">Name</th>
                        <th scope="col" >Contact</th>
                        <th scope="col">Email</th>
+                       <th scope="col">Ticket no.</th>
                        <th scope="col" style="text-align:center">Mode</th>
                        <th scope="col" style="text-align:center">Status</th>
+
+                       <th scope="col" style="min-width: 5vh;text-align:center">Pass no.</th>
+                       <th scope="col" style="min-width: 17vh;">Name</th>
+                    <th scope="col" >Contact</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Ticket no.</th>
+                    <th scope="col" style="text-align:center">Mode</th>
+                    <th scope="col" style="text-align:center">Status</th>
                          
                    
       
@@ -314,7 +324,7 @@ margin-bottom: 12px; /* Add some space below the input */
       db.settings({ timestampInSnapshots: true});
 
 
-      db.collection("EntryPass").orderBy('regno').get().then(querySnapshot=>{
+      db.collection("EntryPass").orderBy('t1').get().then(querySnapshot=>{
       querySnapshot.forEach(doc=>{
           let data = doc.data();
           let row  = `<tr>
@@ -328,14 +338,23 @@ margin-bottom: 12px; /* Add some space below the input */
                           <td style="font-size:10px;"><p style="display:${data.h1}">${data.name1}</p></td>
                           <td style="font-size:10px"><p style="display:${data.h1}">${data.contact1}</p></td>
                           <td style="font-size:10px"><p style="display:${data.h1}">${data.email1}</p></td>
+                          <td style="font-size:10px"><p >${data.t1}</p></td>
                           <td style="font-size:10px"><p style="display:${data.h1};text-align:center">${data.mode1}</p></td>
                           <td style="font-size:10px"><p style="display:${data.h1};text-align:center">${data.status1}</p></td>
                           <td style="font-size:10px;background-color:#bfbfbf;text-align:center">2</td>
                           <td style="font-size:10px"><p style="display:${data.h3}">${data.name2}</p></td>
                           <td style="font-size:10px"><p style="display:${data.h3}">${data.contact2}</p></td>
                           <td style="font-size:10px"><p style="display:${data.h3}">${data.email2}</p></td>
+                          <td style="font-size:10px"><p >${data.t2}</p></td>
                           <td style="font-size:10px"><p style="display:${data.h3};text-align:center">${data.mode2}</p></td>
                           <td style="font-size:10px"><p style="display:${data.h3};text-align:center">${data.status2}</p></td>
+                          <td style="font-size:10px;background-color:#bfbfbf;text-align:center">3</td>
+                          <td style="font-size:10px"><p style="display:${data.h5}">${data.name3}</p></td>
+                          <td style="font-size:10px"><p style="display:${data.h5}">${data.contact3}</p></td>
+                          <td style="font-size:10px"><p style="display:${data.h5}">${data.email3}</p></td>
+                          <td style="font-size:10px"><p>${data.t3}</p></td>
+                          <td style="font-size:10px"><p style="display:${data.h5};text-align:center">${data.mode3}</p></td>
+                          <td style="font-size:10px"><p style="display:${data.h5};text-align:center">${data.status3}</p></td>
                   
                         
                             </tr>`;
