@@ -196,7 +196,7 @@ async function getuserInfoRealtime(userID){
                     <form onsubmit="updatepassone(event)" id="passone" style="display:${userInfo.h2}">
                     <div class="form-group">
                    
-                    <input type="text" class="form-control" id="name1"  placeholder="Enter fullname" required>
+                    <input type="text" class="form-control" id="name1"  placeholder="Enter Fullname" required>
                    </div>
 
                     <div class="form-group">
@@ -236,6 +236,17 @@ async function getuserInfoRealtime(userID){
                     <option value="none">none</option>
                     </select>
                     </div>
+
+                    <div class="form-group">
+                    <label style="font-size:12px">
+                      <input type="checkbox" name="declaration" required> I'll exercise consideration in my speech and actions<span style="color: red;">*</span></label>
+                    </div>
+
+                    <div class="form-group">
+                    <label style="font-size:12px">
+                      <input type="checkbox" name="declaration" required> I’ll take complete responsibility in case of any property damage due to personal misconduct and will pay the compensations if any<span style="color: red;">*</span></label>
+                    </div>
+                   
                  
                     <button type="submit" class="btn btn-success">Submit</button>
                   </form>
@@ -251,7 +262,7 @@ async function getuserInfoRealtime(userID){
                     <form onsubmit="updatepasstwo(event)" id="passtwo" style="display:${userInfo.h1}" ${userInfo.h4}>
                     <div class="form-group">
                    
-                    <input type="text" class="form-control" id="name2"  placeholder="Enter fullname" required>
+                    <input type="text" class="form-control" id="name2"  placeholder="Enter Fullname" required>
                    </div>
 
                     <div class="form-group">
@@ -296,7 +307,15 @@ async function getuserInfoRealtime(userID){
                     </select>
                     </div>
 
+                    <div class="form-group">
+                    <label style="font-size:12px">
+                      <input type="checkbox" name="declaration" required> I'll exercise consideration in my speech and actions<span style="color: red;">*</span></label>
+                    </div>
 
+                    <div class="form-group">
+                    <label style="font-size:12px">
+                      <input type="checkbox" name="declaration" required> I’ll take complete responsibility in case of any property damage due to personal misconduct and will pay the compensations if any<span style="color: red;">*</span></label>
+                    </div>
                  
                     <button type="submit" class="btn btn-success">Submit</button>
                   </form>
@@ -319,7 +338,7 @@ async function getuserInfoRealtime(userID){
                     <form onsubmit="updatepassthree(event)" id="passthree" style="display:${userInfo.h3}" ${userInfo.h5}>
                     <div class="form-group">
                    
-                    <input type="text" class="form-control" id="name3"  placeholder="Enter fullname" required>
+                    <input type="text" class="form-control" id="name3"  placeholder="Enter Fullname" required>
                    </div>
 
                     <div class="form-group">
@@ -361,7 +380,15 @@ async function getuserInfoRealtime(userID){
                     </select>
                     </div>
 
+                    <div class="form-group">
+                    <label style="font-size:12px">
+                      <input type="checkbox" name="declaration" required> I'll exercise consideration in my speech and actions<span style="color: red;">*</span></label>
+                    </div>
 
+                    <div class="form-group">
+                    <label style="font-size:12px">
+                      <input type="checkbox" name="declaration" required> I’ll take complete responsibility in case of any property damage due to personal misconduct and will pay the compensations if any<span style="color: red;">*</span></label>
+                    </div>
                  
                     <button type="submit" class="btn btn-success">Submit</button>
                   </form>
