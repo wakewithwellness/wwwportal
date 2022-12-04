@@ -93,7 +93,7 @@ async function getuserInfoRealtime(userID){
 </div>
 <div class="row">
 <div class="col-lg">
-<h6 style="color: grey">Name: <strong style="color: #198754">${userInfo.name}</strong> <img src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png" style="width:18px"></h6>
+<h6 style="color: grey">Name: <strong style="color: #198754">${userInfo.name}</strong> </h6>
 </div>
 <div class="col-lg">
 <h6 style="color: grey">Registration no.: <strong style="color: #198754">${userInfo.regno}</strong></h6>
@@ -129,6 +129,7 @@ async function getuserInfoRealtime(userID){
                                         <th>Whatsapp</th>
                                         <th style="text-align: center">Payment Mode</th>
                                         <th style="text-align: center">Payment Status</th>
+                                        <th style="text-align: center">E-Pass No.</th>
                                    
                                     </tr>
                                 </thead>
@@ -141,6 +142,7 @@ async function getuserInfoRealtime(userID){
                                 <td><h5 style="display:${userInfo.h1}">${userInfo.contact1}<h5></td>
                                 <td style="text-align: center"><h5 style="display:${userInfo.h1}">${userInfo.mode1}<h5></td>
                                 <td style="text-align: center; color: green"><h5 style="display:${userInfo.h1};font-weight: 700">${userInfo.status1}<h5></td>
+                                <td style="text-align: center; color: orange"><h5 style="display:${userInfo.h1};font-weight: 700">${userInfo.t1}<h5></td>
                                 </tr>     
                                   
 
@@ -151,7 +153,18 @@ async function getuserInfoRealtime(userID){
                                 <td><h5 style="display:${userInfo.h3}">${userInfo.contact2}<h5></td>
                                 <td style="text-align: center"><h5 style="display:${userInfo.h3}">${userInfo.mode2}<h5></td>
                                 <td style="text-align: center; color: green"><h5 style="display:${userInfo.h3};font-weight: 700">${userInfo.status2}<h5></td>
+                                <td style="text-align: center; color: orange"><h5 style="display:${userInfo.h3};font-weight: 700">${userInfo.t2}<h5></td>
                                 </tr>    
+
+                                <tr>
+                                <td><a>3</a></td>
+                                <td><h5 style="display:${userInfo.h5}"><a>${userInfo.name3}</a></h5></td>
+                                <td><h5 style="display:${userInfo.h5}">${userInfo.email3}</h5></td>-
+                                <td><h5 style="display:${userInfo.h5}">${userInfo.contact3}<h5></td>
+                                <td style="text-align: center"><h5 style="display:${userInfo.h5}">${userInfo.mode3}<h5></td>
+                                <td style="text-align: center; color: green"><h5 style="display:${userInfo.h5};font-weight: 700">${userInfo.status3}<h5></td>
+                                <td style="text-align: center; color: orange"><h5 style="display:${userInfo.h5};font-weight: 700">${userInfo.t3}<h5></td>
+                                </tr>   
                            
                                      
                                 
@@ -242,11 +255,9 @@ async function getuserInfoRealtime(userID){
                    </div>
 
                     <div class="form-group">
-                    
                       <input type="email" class="form-control" id="email2"  placeholder="Enter email" required>
                     </div>
                     <div class="form-group">
-               
                       <input type="tel" class="form-control" id="contact2" placeholder="Contact no." required>
                     </div>
 
@@ -267,15 +278,20 @@ async function getuserInfoRealtime(userID){
 
                     
                     <div class="form-group" hidden>
-                  
                     <select class="form-control" id="h3">
                     <option value="block">block</option>
                     </select>
                     </div>
 
                     <div class="form-group" hidden>
-                  
                     <select class="form-control" id="h4">
+                    <option value="hidden">none</option>
+                    </select>
+                    </div>
+
+
+                    <div class="form-group" hidden>
+                    <select class="form-control" id="h5">
                     <option value="hidden">none</option>
                     </select>
                     </div>
@@ -285,6 +301,74 @@ async function getuserInfoRealtime(userID){
                     <button type="submit" class="btn btn-success">Submit</button>
                   </form>
                     </div>
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-lg" ><br>
+                  
+                    <h5 style="background-color:#198754;color:white;padding:8px;margin-bottom:12px">Pass 3</h5>
+                    <p style="color:grey; text-align:center;display:${userInfo.h4}" ${userInfo.h4}>Pass 3 not yet opened</p>
+                    <h5 style="color:red; text-align:center;display:${userInfo.h5}">Pass 3 Locked</h5>
+                    <form onsubmit="updatepassthree(event)" id="passthree" style="display:${userInfo.h3}" ${userInfo.h5}>
+                    <div class="form-group">
+                   
+                    <input type="text" class="form-control" id="name3"  placeholder="Enter fullname" required>
+                   </div>
+
+                    <div class="form-group">
+                    
+                      <input type="email" class="form-control" id="email3"  placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+               
+                      <input type="tel" class="form-control" id="contact3" placeholder="Contact no." required>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="exampleInputPassword1">Mode of Payment</label>
+                    <select class="form-control" id="mode3" required>
+                    <option value="UPI">UPI</option>
+                    <option value="Cash">Cash</option>
+                    </select>
+                    </div>
+
+                    <div class="form-group" hidden>
+                    <label for="exampleInputPassword1">Status of Payment</label>
+                    <select class="form-control" id="status3" required>
+                    <option value="Paid">Paid</option>
+                    </select>
+                    </div>
+
+                    
+                    <div class="form-group" hidden>
+                  
+                    <select class="form-control" id="h5">
+                    <option value="block">block</option>
+                    </select>
+                    </div>
+
+                    <div class="form-group" hidden>
+                  
+                    <select class="form-control" id="h4">
+                    <option value="none">none</option>
+                    </select>
+                    </div>
+
+
+                 
+                    <button type="submit" class="btn btn-success">Submit</button>
+                  </form>
+                    </div>
+
+
+
 
                     </div>
                     </div>
@@ -413,6 +497,53 @@ function updatepasstwo(event){
     });
   }
   
+
+
+
+
+
+
+
+
+  function updatepassthree(event){
+    event.preventDefault()
+    var name3 = document.getElementById('name3').value
+    var email3 = document.getElementById('email3').value
+    var contact3 = document.getElementById('contact3').value
+    var mode3 = document.getElementById('mode3').value
+    var status3 = document.getElementById('status3').value
+    var h5 = document.getElementById('h5').value
+    var h4 = document.getElementById('h4').value
+    var userRef = firebase.firestore().collection('EntryPass').doc(firebase.auth().currentUser.uid);
+  
+    var setWithMerge = userRef.set({
+        name3:name3,
+        email3:email3,
+        contact3:contact3,
+        mode3:mode3,
+        status3:status3,
+        h5:h5,
+        h4:h4
+   
+  
+    },{ merge: true}).then(()=>{
+     
+  
+       // Show alert
+       M.toast({html:`<div><i style="font-size: 20px" class="fa fa-check-circle" aria-hidden="true"></i> Registered successfully</div>`,classes:"green"})
+  
+  
+  
+   // Clear form
+   document.getElementById('passthree').reset();
+  
+    }).catch((err) => {
+      console.log(err)
+      M.toast({html:`<div><i style="font-size: 20px" class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error ! Registration failed</div>`,classes:"red"})
+    });
+  }
+  
+
 
 
 
