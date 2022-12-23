@@ -222,6 +222,26 @@ async function getuserInfoRealtime(userID){
                                     </tr>
                                 </thead>
                                 <tbody>
+				  <tr display: ${userInfo.Dec22bf}>
+                               
+                                <td rowspan="2" id=month> <h4>December 2022</h4>
+                               
+                                </td>
+                                <td><a id="dateee">15/12/22 <br>-<br> 31/12/22</a></td>
+                                <td id="statuss">${userInfo.Dec22b}</td>
+                                <td>${userInfo.Dec22bf}</td>
+                                </tr>
+
+                                <tr display: ${userInfo.Dec22af}>
+                               
+                               
+                                <td><a id="dateee">01/12/22 <br>-<br> 15/12/22</a></td>
+                                <td id="statuss">${userInfo.Dec22a}</td>
+                                <td>${userInfo.Dec22af}</td>
+                                </tr>
+
+
+
                                 <tr display: ${userInfo.Nov22bf}>
                                
                                 <td rowspan="2" id=month> <h4>November 2022</h4>
