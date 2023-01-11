@@ -161,18 +161,18 @@ async function getuserInfoRealtime(userID){
 
                     <tr>
                    
-                    <td rowspan="2" id=month> <h4>November 2022</h4>
+                    <td rowspan="2" id=month> <h4>January 2023</h4>
                    
                     </td>
-                    <td ><a>01/12/2022 to 15/12/2022</a></td>
-                    <td>${userInfo.Dec22a}</td>
-                    <td>${userInfo.Dec22af}</td>
+                    <td ><a>01/01/2023 to 15/01/2023</a></td>
+                    <td>${userInfo.Jan23a}</td>
+                    <td>${userInfo.Jan23af}</td>
                     </tr>
 
                     <tr>
                     <td><a>15/12/2022 to 31/12/2022</a></td>
-                    <td>${userInfo.Dec22b}</td>
-                    <td>${userInfo.Dec22bf}</td>
+                    <td>${userInfo.Jan23b}</td>
+                    <td>${userInfo.Jan23bf}</td>
                     </tr>
 
                     </tbody>
@@ -209,7 +209,7 @@ async function getuserInfoRealtime(userID){
 						
                     <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="font-weight: 500;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance 
                     from 
-                    <span style="font-size: 14px;color: #198754;font-weight:600" id="date">15/12/2022 - 31/12/2022</span></h5>
+                    <span style="font-size: 14px;color: #198754;font-weight:600" id="date">01/01/2023 - 15/01/2023</span></h5>
                               <div class="testbox" >
                           
                                               <form onsubmit="updateattendance(event)" id="attendanceform">
@@ -325,13 +325,13 @@ async function getuserInfoRealtime(userID){
 
 function updateattendance(event){
   event.preventDefault()
-  var Dec22b = document.getElementById('attend').value
-  var Dec22bf = document.getElementById('work').value
+  var Jan23b = document.getElementById('attend').value
+  var Jan23bf = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Dec22b:Dec22b,
-    Dec22bf:Dec22bf
+    Jan23b:Jan23b,
+    Jan23bf:Jan23bf
 
   },{ merge: true}).then(()=>{
    
@@ -356,7 +356,7 @@ function updateattendance(event){
            
 
      // Set the date we're counting down to
-     var countDownDate = new Date("December 31, 2022 22:00:00").getTime();
+     var countDownDate = new Date("January 15, 2023 22:00:00").getTime();
      
      // Update the count down every 1 second
      var x = setInterval(function() {
