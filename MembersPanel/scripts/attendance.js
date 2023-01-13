@@ -325,13 +325,13 @@ async function getuserInfoRealtime(userID){
 
 function updateattendance(event){
   event.preventDefault()
-  var Jan23b = document.getElementById('attend').value
-  var Jan23bf = document.getElementById('work').value
+  var Jan23a = document.getElementById('attend').value
+  var Jan23af = document.getElementById('work').value
   var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef.set({
-    Jan23b:Jan23b,
-    Jan23bf:Jan23bf
+    Jan23a:Jan23a,
+    Jan23af:Jan23af
 
   },{ merge: true}).then(()=>{
    
