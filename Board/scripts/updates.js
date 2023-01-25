@@ -69,16 +69,21 @@ db.collection("attendance").orderBy('regno').startAt('22WWW0060').endAt('22WWW00
                     </th>
                         <td>${data.name}</td>
                         <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
+                      
+                        <td>${data.Jan23bf}</td>
+                        <td>${data.Jan23af}</td>
+                        <td>${data.Dec22bf}</td>
+                        <td>${data.Dec22af}</td>
                         <td>${data.Nov22af}</td>
                         <td>${data.Nov22af}</td>
                         <td>${data.Oct22bf}</td>
-                       <td>${data.Oct22af}</td>
+                        <td>${data.Oct22af}</td>
                         <td>${data.Sept22af}</td>
                         <td>${data.Sept22af}</td>
                         <td>${data.Aug22bf}</td>
-                       <td>${data.Aug22af}</td>
-                       <td>${data.Jul22bf}</td>
-                       <td>${data.Jul22af}</td>
+                        <td>${data.Aug22af}</td>
+                        <td>${data.Jul22bf}</td>
+                        <td>${data.Jul22af}</td>
                         <td>${data.Junf}</td>
                         <td>${data.May2f}</td>
                         <td>${data.May1f}</td>
@@ -115,11 +120,25 @@ db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=
                    </th>
                        <td>${data.name}</td>
                        <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
-                       <td>${data.Nov22af}</td>
+                      
+                       <td>${data.May23bf}</td>
+                       <td>${data.May23af}</td>
+                       <td>${data.Apr23bf}</td>
+                       <td>${data.Apr23af}</td>
+                       <td>${data.Mar23bf}</td>
+                       <td>${data.Mar23af}</td>
+                       <td>${data.Feb23bf}</td>
+                       <td>${data.Feb23af}</td>
+                       <td>${data.Jan23bf}</td>
+                       <td>${data.Jan23af}</td>
+                       <td>${data.Dec22bf}</td>
+                       <td>${data.Dec22af}</td>
+
+                       <td>${data.Nov22bf}</td>
                        <td>${data.Nov22af}</td>
                        <td>${data.Oct22bf}</td>
                       <td>${data.Oct22af}</td>
-                       <td>${data.Sept22af}</td>
+                       <td>${data.Sept22bf}</td>
                        <td>${data.Sept22af}</td>
                        <td>${data.Aug22bf}</td>
                        <td>${data.Aug22af}</td>
@@ -143,8 +162,6 @@ console.log(`Error: ${err}`)
 
 
 
-
-
 // Third batch
 db.collection("attendance").orderBy('regno').limitToLast(12).get().then(querySnapshot=>{
    querySnapshot.forEach(doc=>{
@@ -156,11 +173,25 @@ db.collection("attendance").orderBy('regno').limitToLast(12).get().then(querySna
                    </th>
                        <td>${data.name}</td>
                        <td style="text-align:center;font-weight:800;color: ${data.status}">${data.AAper}</td>
+                       <td>${data.Jun23bf}</td>
+                       <td>${data.Jun23af}</td>
+                       <td>${data.May23bf}</td>
+                       <td>${data.May23af}</td>
+                       <td>${data.Apr23bf}</td>
+                       <td>${data.Apr23af}</td>
+                       <td>${data.Mar23bf}</td>
+                       <td>${data.Mar23af}</td>
+                       <td>${data.Feb23bf}</td>
+                       <td>${data.Feb23af}</td>
+                       <td>${data.Jan23bf}</td>
+                       <td>${data.Jan23af}</td>
+                       <td>${data.Dec22bf}</td>
+                       <td>${data.Dec22af}</td>
                        <td>${data.Nov22af}</td>
                        <td>${data.Nov22af}</td>
                        <td>${data.Oct22bf}</td>
                       <td>${data.Oct22af}</td>
-                       <td>${data.Sept22af}</td>
+                       <td>${data.Sept22bf}</td>
                        <td>${data.Sept22af}</td>
                        <td>${data.Aug22bf}</td>
                       <td>${data.Aug22af}</td>
