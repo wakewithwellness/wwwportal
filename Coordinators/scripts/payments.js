@@ -276,7 +276,15 @@ async function getuserInfoRealtime(userID){
 
             
         </div>
-                       
+                         <br>
+        <div class="container-fluid" id="footerbarcoordinator">
+        <div class="row">
+        <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/notifications.png" alt=""/></a></div>
+        <div class="col"><a><img style="width:54px; height:auto" src="../MembersPanel//assets/img/payments.png" alt=""/></a></div>
+        <div class="col"><a href="./events.html"><img style="width:54px; height:auto" src="../MembersPanel//assets/img/events.png" alt=""/></a></div>
+        <div class="col"><a href="./main.html"><img style="width:54px; height:auto" src="../MembersPanel//assets/img/home.png" alt=""/></a></div> 
+        </div>
+        </div>
                         `
                         editProfile["name"].value = userInfo.name
                         editProfile["profileEmail"].value = userInfo.email
