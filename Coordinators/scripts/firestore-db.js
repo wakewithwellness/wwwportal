@@ -291,7 +291,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-
+<br>
         <div class="container-fluid" id="footerbarcoordinator">
         <div class="row">
         <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/notifications.png" alt=""/></a></div>
