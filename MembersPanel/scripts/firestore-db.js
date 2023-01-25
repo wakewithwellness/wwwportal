@@ -327,13 +327,18 @@ async function getuserInfoRealtime(userID){
 
 
         <div style="text-align:left; cursor:pointer">
-        <h5 style="font-size: 13px" onclick="location.href='${userInfo.agreement}'">Agreement letter <a style="color: #198754"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
+        <h5 style="font-size: 13px">Agreement letter 
+        <button style="color: #198754; background: none; border:none;font-weight:500" type="button" data-toggle="modal" data-target="#examplemodalagree">
+        <i class="fa fa-hand-o-right" aria-hidden="true"></i> Download
+      </button>
+              </h5>
         <h5 style="font-size: 13px" onclick="location.href='${userInfo.certificate}'">Download your certificate <a style="color: #198754"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>          
         <h5 style="font-size: 13px" onclick="location.href='${userInfo.idcard}'">ID Card  <a style="color: #198754"><i class="fa fa-hand-o-right" aria-hidden="true"></i> View</a></h5>
+    
+        
         </div>
                                
         </div>
-
 
 
         <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius: 5px"">
@@ -378,6 +383,27 @@ async function getuserInfoRealtime(userID){
     </div>
         </div><br>
 
+
+
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="examplemodalagreeTitle" aria-hidden="true" id="examplemodalagree" style="min-height: 100%;background:none">
+       
+          <div class="modal-content modal-dialog" style="width: 100%;height: 100%" role="document">
+            <div class="modal-header">
+              <h5 class="modal-title" id="examplemodalagreeTitle">Agreement</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          
+            <iframe src=
+            "${userInfo.agreement}" 
+            style="width:100%; height:90%"> 
+            </iframe>
+          
+            </div>
+       
+        </div>
+    
       
                        
                         `
