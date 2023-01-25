@@ -189,6 +189,17 @@ async function getuserInfoRealtime(userID){
                                 </thead>
                                 <tbody>
 
+   <tr>
+                                    
+                                <td><a>8</a></td>
+                                <td><h2><a>NE Organization Convene'22</a></h2></td>
+                                <td>27th December 2022</td>
+                                <td>K.B Natya Mandir</td>
+                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color4}">${userInfo.event4}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.e4}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center; color: red">Registration closed</td>
+                        
+                                </tr>
 
 
                                 <tr>
