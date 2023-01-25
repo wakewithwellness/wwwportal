@@ -1,48 +1,43 @@
-const userDetails  = document.querySelector('.userDetails')
-const editProfile  = document.querySelector('#editProfile')
+const userDetails = document.querySelector(".userDetails");
+const editProfile = document.querySelector("#editProfile");
 
-
-function createUserCollection(user){
-   firebase.firestore().collection('users')
-   .doc(user.uid)
-   .set({
-       uid:user.uid,
-       name:user.displayName,
-       email:user.email,
-       regno:"",
-       phone:"",
-       whatsapp:"",
-       department:"",
-       college:"",
-       gender:"",
-       address:"",
-       agreement: "",
-       idcard:"",
-       certificate:"",
-       depthref:"",
-     
-
-   })
+function createUserCollection(user) {
+  firebase.firestore().collection("users").doc(user.uid).set({
+    uid: user.uid,
+    name: user.displayName,
+    email: user.email,
+    regno: "",
+    phone: "",
+    whatsapp: "",
+    department: "",
+    college: "",
+    gender: "",
+    address: "",
+    agreement: "",
+    idcard: "",
+    certificate: "",
+    depthref: "",
+  });
 }
 
+async function getuserInfo(userID) {
+  if (userID) {
+    const userInfoSnap = await firebase
+      .firestore()
+      .collection("users")
+      .doc(userID)
+      .get();
 
-async function getuserInfo(userID){
-    if(userID){
-      const userInfoSnap = await  firebase.firestore()
-    .collection('users')
-    .doc(userID)
-    .get()
-
-   const userInfo = userInfoSnap.data()
-   if(userInfo){
-       userDetails.innerHTML = `
+    const userInfo = userInfoSnap.data();
+    if (userInfo) {
+      userDetails.innerHTML = `
        <h3>${userInfo.name}</h3>
        <h3>${userInfo.email}</h3>
        <h3>${userInfo.phone}</h3>
-       `
-   }    
-    }else{
-      userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
+       `;
+    }
+  } else {
+    userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
       <div class="card" style="border-top: 3px solid #0d6efd">
       <div class="card-body" style="text-align: center">
       <h5 class="card-title" style="text-align: center; color: #0d6efd; font-weight: 700; font-size:30px">BOARD PORTAL</h5><hr>
@@ -60,26 +55,21 @@ async function getuserInfo(userID){
        
       </div>
     </div></div>
-      `
-    
-       
-    }
-
-
+      `;
+  }
 }
 
-
-
-async function getuserInfoRealtime(userID){
-    if(userID){
-      const userdocRef = await  firebase.firestore()
-        .collection('users')
-        .doc(userID)
-        userdocRef.onSnapshot((doc)=>{
-            if(doc.exists){
-                 const userInfo = doc.data()
-                    if(userInfo){
-                        userDetails.innerHTML = `
+async function getuserInfoRealtime(userID) {
+  if (userID) {
+    const userdocRef = await firebase
+      .firestore()
+      .collection("users")
+      .doc(userID);
+    userdocRef.onSnapshot((doc) => {
+      if (doc.exists) {
+        const userInfo = doc.data();
+        if (userInfo) {
+          userDetails.innerHTML = `
                         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
@@ -225,16 +215,7 @@ async function getuserInfoRealtime(userID){
                                     </tr>
 
 
-                                    <tr>
-                                    <td style="min-width: 200px;">
-                                        
-                                        <h2><a href="./EntryPasses.html"  style="font-weight: 500;">Entry Passes</a></h2>
-                                    </td>                 
-                                    <td class="text-right">
-                                        <a href="./EntryPasses.html"  class="btn btn-outline-warning take-btn">View</a>
-                                    </td>
-                                </tr>
-
+                         
 
 											<tr>
 												<td style="min-width: 200px;">
@@ -265,12 +246,21 @@ async function getuserInfoRealtime(userID){
 											</tr>
                                         <tr>
                                             <td style="min-width: 200px;">    
-                                                <h2><a href="payments.html">Payments</a></h2>
+                                                <h2><a href="payments.html">Member's Payments</a></h2>
                                             </td>                 
                                             <td class="text-right">
                                                 <a href="payments.html" class="btn btn-outline-primary take-btn">View</a>
                                             </td>
                                         </tr>
+
+                                        <tr>
+                                        <td style="min-width: 200px;">    
+                                            <h2><a href="paymentscoordinators.html">Coordinator's Payments</a></h2>
+                                        </td>                 
+                                        <td class="text-right">
+                                            <a href="paymentscoordinators.html" class="btn btn-outline-primary take-btn">View</a>
+                                        </td>
+                                    </tr>
                                  
 				
 										<tr>
@@ -501,30 +491,24 @@ async function getuserInfoRealtime(userID){
    
     
                        
-                        `
-                        editProfile["name"].value = userInfo.name
-                        editProfile["profileEmail"].value = userInfo.email
-                        editProfile["regno"].value = userInfo.regno
-                        editProfile["department"].value = userInfo.department
-                        editProfile["phoneno"].value = userInfo.phone
-                        editProfile["whatsapp"].value = userInfo.whatsapp
-                        editProfile["address"].value = userInfo.address
-                       
-                      
-                       
+                        `;
+          editProfile["name"].value = userInfo.name;
+          editProfile["profileEmail"].value = userInfo.email;
+          editProfile["regno"].value = userInfo.regno;
+          editProfile["department"].value = userInfo.department;
+          editProfile["phoneno"].value = userInfo.phone;
+          editProfile["whatsapp"].value = userInfo.whatsapp;
+          editProfile["address"].value = userInfo.address;
 
-                        if(firebase.auth().currentUser.photoURL){
-                            document.querySelector('#proimg').src = firebase.auth().currentUser.photoURL
-                        }
-                      
-
-                }    
-             }
-        })
-
-
-    }else{
-        userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
+          if (firebase.auth().currentUser.photoURL) {
+            document.querySelector("#proimg").src =
+              firebase.auth().currentUser.photoURL;
+          }
+        }
+      }
+    });
+  } else {
+    userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
         <div class="card" style="border-top: 3px solid #0d6efd">
         <div class="card-body" style="text-align: center">
         <h5 class="card-title" style="text-align: center; color: #0d6efd; font-weight: 700; font-size:30px">BOARD PORTAL</h5><hr>
@@ -555,42 +539,36 @@ async function getuserInfoRealtime(userID){
     <script src="../MembersPanel/assets/js/Chart.bundle.js"></script>
     <script src="../MembersPanel/assets/js/chart.js"></script>
     <script src="../MembersPanel/assets/js/app.js"></script>
-        `
-    }
+        `;
+  }
 }
 
+function updateUserProfile(e) {
+  e.preventDefault();
+  const userDocRef = firebase
+    .firestore()
+    .collection("users")
+    .doc(firebase.auth().currentUser.uid);
 
-function updateUserProfile(e){
-    e.preventDefault()
-    const userDocRef =  firebase.firestore()
-    .collection('users')
-    .doc(firebase.auth().currentUser.uid)
+  userDocRef.update({
+    name: editProfile["name"].value,
+    email: editProfile["profileEmail"].value,
+    phone: editProfile["phoneno"].value,
+    whatsapp: editProfile["whatsapp"].value,
+    college: editProfile["college"].value,
+    department: editProfile["department"].value,
+    status: editProfile["status"].value,
+  });
 
-
-    userDocRef.update({
-        name:editProfile["name"].value,
-        email:editProfile["profileEmail"].value,
-        phone:editProfile["phoneno"].value,
-        whatsapp:editProfile["whatsapp"].value,
-        college:editProfile["college"].value,
-        department:editProfile["department"].value,
-        status:editProfile["status"].value
-
-    })
-
-    M.Modal.getInstance(myModel[2]).close()
+  M.Modal.getInstance(myModel[2]).close();
 }
 
-
-
-
-
-async function allUserDetails(){
-  document.getElementById('table').style.display='table'
-  const userRef = await firebase.firestore().collection('users').get()  
-  userRef.docs.forEach(doc=>{
-           const info =   doc.data()
-           document.getElementById('tbody').innerHTML += `
+async function allUserDetails() {
+  document.getElementById("table").style.display = "table";
+  const userRef = await firebase.firestore().collection("users").get();
+  userRef.docs.forEach((doc) => {
+    const info = doc.data();
+    document.getElementById("tbody").innerHTML += `
            <tr>
             <td>${info.name}</td>
             <td>${info.email}</td>
@@ -600,78 +578,72 @@ async function allUserDetails(){
             <td>${info.college}</td>
             <td>${info.status}</td>
           </tr>
-           `
-    })
- 
+           `;
+  });
 }
 
+function uploadImage(e) {
+  console.log(e.target.files[0]);
+  const uid = firebase.auth().currentUser.uid;
+  const fileRef = firebase.storage().ref().child(`/users/${uid}/profile`);
+  const uploadTask = fileRef.put(e.target.files[0]);
+  uploadTask.on(
+    "state_changed",
+    (snapshot) => {
+      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      if (progress == "100")
+        // Show alert
+        document.querySelector(
+          ".success"
+        ).innerHTML = `<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
 
+      // Hide alert after 10 seconds
+      setTimeout(function () {
+        document.querySelector(".success").innerHTML = ``;
+      }, 10000);
 
+      uploader.value = progress;
 
-function uploadImage(e){
-    console.log(e.target.files[0])
-    const uid = firebase.auth().currentUser.uid
-    const fileRef = firebase.storage().ref().child(`/users/${uid}/profile`)
-    const uploadTask =  fileRef.put(e.target.files[0])
-    uploadTask.on('state_changed', 
-  (snapshot) => {
-    
-    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    if(progress=='100') 
-     // Show alert
-     document.querySelector('.success').innerHTML=`<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
-              
-     // Hide alert after 10 seconds
-setTimeout(function(){
-document.querySelector('.success').innerHTML=``;
-},10000);
-      
-uploader.value = progress;
-              
-console.log('Upload is ' + progress + '% done');
-document.querySelector('.prog').innerHTML=`${progress}%`;
+      console.log("Upload is " + progress + "% done");
+      document.querySelector(".prog").innerHTML = `${progress}%`;
 
-switch (snapshot.state) {
-     case firebase.storage.TaskState.PAUSED: // or 'paused'
-          console.log('Upload is paused');
-       
+      switch (snapshot.state) {
+        case firebase.storage.TaskState.PAUSED: // or 'paused'
+          console.log("Upload is paused");
+
           break;
-     case firebase.storage.TaskState.RUNNING: // or 'running'
-          console.log('Upload is running');
-          
-          break;
-}
-}, function (error) {
+        case firebase.storage.TaskState.RUNNING: // or 'running'
+          console.log("Upload is running");
 
-// A full list of error codes is available at
-// https://firebase.google.com/docs/storage/web/handle-errors
-switch (error.code) {
-     case 'storage/unauthorized':
+          break;
+      }
+    },
+    function (error) {
+      // A full list of error codes is available at
+      // https://firebase.google.com/docs/storage/web/handle-errors
+      switch (error.code) {
+        case "storage/unauthorized":
           // User doesn't have permission to access the object
           break;
 
-     case 'storage/canceled':
+        case "storage/canceled":
           // User canceled the upload
           break;
 
-     case 'storage/unknown':
+        case "storage/unknown":
           // Unknown error occurred, inspect error.serverResponse
           break;
-}
-}, 
+      }
+    },
 
-function () {
-    
-    uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-      console.log('File available at', downloadURL);
-      document.querySelector('#proimg').src = downloadURL
-      firebase.auth().currentUser.updateProfile({
-        photoURL: downloadURL
-      })
-    });
-  }
-
-
-  
-);
+    function () {
+      uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+        console.log("File available at", downloadURL);
+        document.querySelector("#proimg").src = downloadURL;
+        firebase.auth().currentUser.updateProfile({
+          photoURL: downloadURL,
+        });
+      });
+    }
+  );
 }
