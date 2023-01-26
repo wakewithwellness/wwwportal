@@ -306,7 +306,7 @@ function updatestartbtn(event){
 
 
       myTimer = setInterval(myCounter, 1000);
-      var fiveMinutes = 60 * 1,
+      var fiveMinutes = 60 * 15,
       display = document.querySelector('#time');
       startTimer(fiveMinutes, display);
 
