@@ -116,7 +116,7 @@ async function getuserInfoRealtime(userID) {
 
         <div class="col-lg-8">
                         <div class="content" style="background-color: #fff;border-top: 3px solid #333333;padding: 20px;border-radius: 5px">
-                        <h5>Your answers:</h5><hr><br>
+                           <h5>Your answers: <span style="float: right; background-color: #cccccc;padding:10px;font-size:15px;border-radius:5px">Result: <span style="color:red">Pending</span></span></h5><hr><br>
                                 <form name="quiz" onsubmit="questions(event)" id="questionsform">
                                     <label for="q1" style="font-size:14px;color:red">1. Why do you want to work in recruitment?</label>
                                     <p style="margin-left:8px"><i>Answer:</i> ${userInfo.q1}</p>
