@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+    <title>Recruitment_Home</title>
+
+
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+
+
+    <style>
+  .alert{
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        background:#79c879;
+        color: white;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        display: none;
+      }
+  
+      
+
+      .forgot{
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        background:#ff8811;
+        color: white;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        display: none;
+      }
+
+
+
+      /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #2e2e2e00;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(207, 207, 207);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(185, 185, 185);
+  }
+
+  #inputboxform{
+  width: 100%;
+  padding: 12px;
+  color:#198754;
+  border: 1px solid #198754;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+
+  </style>
+  
+  
+            
+</head>
+<body  style="overflow-x: hidden;background-color: rgb(238, 238, 238)" oncontextmenu="return false">
+
+  <div class="topnav" style="width: 100%;">
+   
+    <div style="float: right"> 
+      <a class="modal-trigger" href="#modal2" id="loginli" style="visibility: collapse;color:#5793D1;">Login</a>
+      <a class="modal-trigger" href="#modal1" id="signupli" style="visibility: collapse;"></a>
+     
+
+    </div>
+  
+  </div>
+
+
+  <div class="header" style="background-color: #333333;height:70px">
+    <div class="header-left">
+      <a class="logo" style="float:left;margin-top:9px">
+        <img src="../assets/img/logoonly.png" width="auto" height="55" alt=""> 
+      </a>
+    </div>
+    <a id="toggle_btn" href="javascript:void(0);"></a>
+
+
+          <ul class="nav user-menu float-right" id="logoutli" style="display: none;">
+            
+      
+
+          </ul>
+
+         
+      </div>
+
+
+
+
+
+
+
+
+
+ <!-- Forgot your password -->
+      <div id="modal2" class="modal container" style="background: none;">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Reset Password</h3>
+      
+             
+            </div>
+            <div class="modal-body">
+            <label>Enter your email : </label>
+              <input type="email" style="border: 1px solid rgb(79, 78, 78); padding: 5px; border-radius:5px" id="forgotEmail" placeholder="Email">
+              <div class="forgot">Your password reset link will be sent to your email address<span style="font-weight: 600;"> (SPAM FOLDER)</span>.</div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" onclick="location.href='main.html'">Close</button>
+           
+              <button onclick="forgotPass()" type="button" style="margin-left:5px" class="btn btn-primary">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+ <!-- Forgot your password -->
+
+
+
+
+
+
+     <!-- LoGOUT Modal -->
+
+<div class="modal fade" id="modal">
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to LogOut?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger mx-2" onclick="logout()" data-dismiss="modal">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+      
+
+
+<div style="margin-top: 20px;"></div>
+
+
+
+
+  <div id="logindata"></div>
+      
+  
+
+  <div class="modal container" id="modal5" style="padding: 10px; max-width: 80vh; max-height:23vh; overflow-y:hidden">
+   
+      <div class="modal-content">
+       
+        <div class="modal-body">
+          <h5 class="modal-title" id="exampleModalLongTitle">Are you ready to take the test?</h5>
+        </div>
+       
+         
+          <button type="button" onclick="location.href='./test.html'" class="btn btn-success">Confirm</button>
+       
+      </div>
+   
+  </div>
+
+
+
+
+
+ 
+    <!--edit profile details -->
+  <div id="modal3" class="modal container" style="padding: 10px; max-width: 110vh;max-height: 85vh;overflow-y:visible;">
+    <div class="modal-content">
+      
+     
+  
+      <h3 style="text-align:left;">Profile Update</h3>
+     <div style="height: 2px; background-color:rgb(197, 197, 197)"></div>
+      <form autocomplete="off" id="editProfile" style="margin-top: 30px;" onsubmit="updateUserProfile(event)">
+       
+        <div class="form-group row">
+          <label class="col-form-label col-md-2">Name : </label>
+          <div class="col-md-10">
+              <input id="inputboxform" type="text" name="name" class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-form-label col-md-2">Email ID : </label>
+        <div class="col-md-10">
+        
+            <input id="inputboxform" type="email" style="border: 1px solid #adadad;color:#adadad; cursor: not-allowed" disabled name="profileEmail" class="form-control">
+        </div>
+    </div>
+
+
+
+  <div class="form-group row">
+    <label class="col-form-label col-md-2">Phone no. : </label>
+    <div class="col-md-10">
+        <input id="inputboxform" type="text" name="phoneno" class="form-control">
+    </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-md-2">Whatsapp no. : </label>
+  <div class="col-md-10">
+      <input id="inputboxform" type="text" name="whatsapp" class="form-control">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-md-2">Blood group : </label>
+  <div class="col-md-10">
+      <input id="inputboxform" type="text" name="blood" class="form-control">
+  </div>
+</div>
+
+
+
+<div class="form-group row">
+  <label class="col-form-label col-md-2">College : </label>
+  <div class="col-md-10">
+      <input id="inputboxform" type="text" name="college" class="form-control">
+  </div>
+</div>
+
+
+<div class="alert">Updated successfully</div>
+
+  
+
+        <button style="width: 100%;background-color: #198754;padding: 10px;border: none;cursor: pointer;color: white;border-radius: 5px;"  type="submit">Update</button> 
+        
+      </form>
+  
+    </div>   
+  </div> 
+
+
+
+ <!--edit profile Picture -->
+  <div id="modal4" class="modal container" style="padding: 10px; max-width: 120vh;height: auto;overflow-y: scroll;">
+    <div class="modal-content">
+      <h4 >Update Profile Picture</h4>
+      <p style="color: red;font-style: italic;">File size must be less than 2MB</p>
+  
+      <div class="file-field input-field">
+        <div class="btn" style="background-color: #198754; color: white">
+          <span>Choose file</span>
+          <input type="file" id="file1" max-size="2000" accept="image/*" onchange="uploadImage(event)" />
+         
+        </div>
+        
+        <div class="file-path-wrapper">
+          <input class="file-path validate"  type="text">
+        </div>
+
+        <br><br>
+          <p style="text-align:right" class="prog"></p>
+        <progress  style="width: 100%;height: 25px;margin-top: -10vh;background: #198754;" role="progressbar" value="0" max="100" id="uploader">0%</progress>
+      
+        <div class="success" style="color: #139413;text-align: center;font-size: 20px;" ></div>
+       
+      
+      
+      </div>
+    </div>
+  </div> 
+
+	
+	
+	
+
+  <div class="center">
+    <div class="userDetails"></div>
+  </div>
+         
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+</script>  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+    authDomain: "members-76725.firebaseapp.com",
+    projectId: "members-76725",
+    storageBucket: "members-76725.appspot.com",
+    messagingSenderId: "734645197873",
+    appId: "1:734645197873:web:808127fdb4d643d4d24910",
+    measurementId: "G-7LYZ3R48GT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="scripts/auth.js"></script>
+<script src="scripts/firestore-db.js" ></script>
+
+<div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/Chart.bundle.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+
+</body>
+</html>

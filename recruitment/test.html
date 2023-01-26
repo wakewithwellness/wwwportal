@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+
+     <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+          <title>Recruitment_Test</title>
+
+
+          <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap.min.css">
+          <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
+          <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
+      
+          <link href="../assets/img/favicon.png" rel="icon">
+          <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      
+         
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+         
+         
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+     </head>
+
+          
+          <body style="background-color: rgb(238, 238, 238)" oncontextmenu="return false">
+
+               <div class="topnav" style="width: 100%;">
+   
+                    <div style="float: right"> 
+                      <a class="modal-trigger" href="#modal2" id="loginli" style="visibility: collapse;color:#5793D1;">Login</a>
+                      <a class="modal-trigger" href="#modal1" id="signupli" style="visibility: collapse;"></a>
+                     
+                
+                    </div>
+                  
+                  </div>
+               
+               <div class="header" style="background-color: #333333;height:70px">
+                    <div class="header-left">
+                      <a class="logo" style="float:left;margin-top:9px">
+                        <img src="../assets/img/logoonly.png" width="auto" height="55" alt=""> 
+                      </a>
+                    </div>
+                    <a id="toggle_btn" href="javascript:void(0);"></a>
+                
+                
+                          <ul class="nav user-menu float-right" id="logoutli" style="display: none;">
+                            
+                      
+                
+                          </ul>
+                
+                         
+                      </div>
+
+
+
+                 
+             
+               <section style="height:100px"></section>
+               
+               <div id="logindata"></div>
+   
+               <div class="center">
+                    <div class="userDetails"></div>
+                  </div>
+                         
+
+               
+
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+                  <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                      var elems = document.querySelectorAll('.modal');
+                      var instances = M.Modal.init(elems);
+                    });
+                  </script>  
+                  <!-- The core Firebase JS SDK is always required and must be listed first -->
+                  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+                  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+                  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+                  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+                  
+                  <script>
+                    // Your web app's Firebase configuration
+                    var firebaseConfig = {
+                      apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+                      authDomain: "members-76725.firebaseapp.com",
+                      projectId: "members-76725",
+                      storageBucket: "members-76725.appspot.com",
+                      messagingSenderId: "734645197873",
+                      appId: "1:734645197873:web:808127fdb4d643d4d24910",
+                      measurementId: "G-7LYZ3R48GT"
+                    };
+                    // Initialize Firebase
+                    firebase.initializeApp(firebaseConfig);
+                  </script>
+                  <script src="scripts/auth.js"></script>
+                  <script src="scripts/test.js" ></script>
+
+    
+       <script>
+               window.onbeforeunload = function() {
+                   return "Are you sure you want to leave?";
+               }
+           </script> 
+
+          <script>
+               document.addEventListener("visibilitychange", function(){
+                    document = document.visibilityState;
+                    alert("Tab changed!")
+
+               })
+           </script> 
+
+
+           <script>
+    
+            document.onkeydown=function(e)
+            {
+              if (event.keyCode == 123) 
+              {
+                return false;
+              }
+              if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+              {
+                return false;
+              }
+          
+              if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
+              {
+                return false;
+              }
+          
+              if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
+              {
+                return false;
+              }
+            }
+          
+          </script>
+     </body>
+     </html>
