@@ -143,6 +143,13 @@ db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=
                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${data.AAper};background-color:${data.status}">
                           </div> 
                          </div></td>
+                     
+                         <td>${data.May23b}</td>
+                         <td>${data.May23a}</td>
+                         <td>${data.Apr23b}</td>
+                         <td>${data.Apr23a}</td>
+                         <td>${data.Mar23b}</td>
+                         <td>${data.Mar23a}</td>
                          <td>${data.Feb23b}</td>
                           <td>${data.Feb23a}</td>
                          <td>${data.Jan23b}</td>
@@ -195,6 +202,14 @@ db.collection("attendance").orderBy('regno').limitToLast(12).get().then(querySna
                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${data.AAper};background-color:${data.status}">
                           </div> 
                          </div></td>
+                         <td>${data.Jun23b}</td>
+                         <td>${data.Jun23a}</td>
+                         <td>${data.May23b}</td>
+                         <td>${data.May23a}</td>
+                         <td>${data.Apr23b}</td>
+                         <td>${data.Apr23a}</td>
+                         <td>${data.Mar23b}</td>
+                         <td>${data.Mar23a}</td>
                          <td>${data.Feb23b}</td>
                          <td>${data.Feb23a}</td>
                          <td>${data.Jan23b}</td>
