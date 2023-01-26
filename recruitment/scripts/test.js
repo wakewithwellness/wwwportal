@@ -216,17 +216,25 @@ async function getuserInfoRealtime(userID){
 
 
 
+                      <div class="container" id="success" style="display:none;max-width:450px;background-color:white; text-align:center;border-radius:10px; border:1px solid #dedede;padding:15px;margin-top:30px" id="hello">
+                      <img src="https://cdn-icons-png.flaticon.com/512/1355/1355667.png" style="width:20vh" alt=""/><br><br>
+                      <div class="text-center">
+                           <h5 style="color: green; padding:7px;">Your response has been submitted!</h5>
+                      </div>
+                      <hr><button onclick="location.href='./result.html'" class="btn btn-secondary"><i class="fa fa-bookmark" aria-hidden="true"></i> See Answers</button>
+                      </div>
 
-                      <div id="success" style="display:none">
-                      <h2><center>Your response has been submitted!</h2>
-                      <center><button onclick="location.href='./result.html'" class="w3-button w3-green w3-round">See Answers</button></div>
 
 
-                       <div id="timeuppage" style="display:none">
-                       <h2><center>Your time is up! Contact the technical team, if you haven't submit your responce</h2>
-                       <center><button onclick="location.href='./home.html'" class="w3-button w3-green w3-round">Home</button></div>
-      
-                       
+                
+                       <div class="container" id="timeuppage" style="display:none;max-width:450px;background-color:white; text-align:center;border-radius:10px; border:1px solid #dedede;padding:15px;margin-top:30px" id="hello">
+                       <img src="https://cdn-icons-png.flaticon.com/512/9474/9474001.png" style="width:20vh" alt=""/><br>
+                       <div class="text-center">
+                            <h5 style="color: red; padding:7px;">Your time is up!</h5>
+                       </div>
+                       <hr><button onclick="location.href='./home.html'" class="btn btn-secondary"><i class="fa fa-home" aria-hidden="true"></i> Home</button>
+                       </div>
+
                         `
            
     
@@ -298,7 +306,7 @@ function updatestartbtn(event){
 
 
       myTimer = setInterval(myCounter, 1000);
-      var fiveMinutes = 60 * 15,
+      var fiveMinutes = 60 * 1,
       display = document.querySelector('#time');
       startTimer(fiveMinutes, display);
 
@@ -332,10 +340,6 @@ function questions(event){
        q5:q5
    
      },{ merge: true}).then(()=>{
-      
-   
-        // Show alert
-        M.toast({html:`<div><i style="font-size: 20px" class="fa fa-check-circle" aria-hidden="true"></i>Test Submitted</div>`,classes:"green"})
         document.getElementById('qui').style.display='none';
         document.getElementById('success').style.display='block';
        
