@@ -5176,3 +5176,39 @@ a.link:hover {background-color: #0085a6; color: #fff; text-decoration:none;}
 }
 /* End Modals ------------------------------*/
 
+
+
+
+#resultcenter{
+	padding: 20px 0;
+	text-align: center;
+	
+}
+
+   @media (max-width: 575px) {
+
+	#resultcenter{
+		padding: 20px 0;
+		height:17vh;
+	}
+	
+   }
+
+   @media (min-width: 575px) {
+
+	#resultcenter{
+		padding: 25vh 0;
+	}
+
+
+   }
+
+
+
+   @media (max-width: 575px) {
+
+	#rrr{
+		margin-bottom:10vh
+	}
+	
+   }
