@@ -362,7 +362,7 @@ function questions(event) {
 
   var userRef = firebase
     .firestore()
-    .collection("users")
+    .collection("test")
     .doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef
