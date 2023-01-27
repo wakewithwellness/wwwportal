@@ -24,7 +24,7 @@ async function getuserInfo(userID) {
        `;
     }
   } else {
-    userDetails.innerHTML = `  <div class="container" style="max-width: 60vh;margin-top:120px">
+    userDetails.innerHTML = `      <div class="container" style="max-width: 60vh;margin-top:120px">
     <div class="card" style="background-color: #2E3035; border-radius:14px">
     <div class="card-body" style="text-align: left">
     <h4 class="card-title" style="color: #fff; font-weight: 700; font-size:26px">USER LOGIN</h4>
@@ -36,7 +36,7 @@ async function getuserInfo(userID) {
         <input type="password" id="loginPassword" placeholder="PASSWORD" style="width: 98%;margin-top:10px;
         height: 40px;padding-left:8px;font-size: 13px;border-radius:5px; background-color:#242629;color: #fff">
         <br> 
-        <div style="text-align:left;margin-top:15px;"> <a style="text-decoration: none; color: #FFA800; font-size: 12px; class="modal-trigger" href="#modal2">FORGOT PASSWORD</a></div>
+        <div style="text-align:left;margin-top:15px;"> <a href="#modal-forgot" class="link" style="text-decoration: none; color: #FFA800; font-size: 12px;cursor:pointer" >FORGOT PASSWORD</a></div>
         <br>
         <div class="text-center">
         <button type="submit" class="btn" style="background-color:#13C15C;color: #fff;width:15vh"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</button>
@@ -163,7 +163,18 @@ async function getuserInfoRealtime(userID) {
                                   <div class="col-lg-8" >
                                        <div class="container" style="padding:8px;border-radius:10px;margin-top:10px;position: absolute;overflow: auto;height:100vh;width:93%">
                                      
-                        
+                                       <select id="name" hidden>
+                                       <option value="${userInfo.name}">name</option>
+                                       </select>
+                                       <select id="email" hidden>
+                                       <option value="${userInfo.email}">email</option>
+                                       </select>
+                                       <select id="phone" hidden>
+                                       <option value="${userInfo.phone}">email</option>
+                                       </select>
+                                       <select id="whatsapp" hidden>
+                                       <option value="${userInfo.whatsapp}">email</option>
+                                       </select>
   
                                               <div class="form-group">
                                               <label style="font-size:13px;color:#A9A9A9">QUESTION 1 OF 5</label><br>
@@ -279,43 +290,31 @@ async function getuserInfoRealtime(userID) {
     });
   } else {
     userDetails.innerHTML = `
-        <div class="container" style="max-width: 60vh;margin-top:120px">
-        <div class="card" style="background-color: #2E3035; border-radius:14px">
-        <div class="card-body" style="text-align: left">
-        <h4 class="card-title" style="color: #fff; font-weight: 700; font-size:26px">USER LOGIN</h4>
+    <div class="container" style="max-width: 60vh;margin-top:120px">
+    <div class="card" style="background-color: #2E3035; border-radius:14px">
+    <div class="card-body" style="text-align: left">
+    <h4 class="card-title" style="color: #fff; font-weight: 700; font-size:26px">USER LOGIN</h4>
 <br>
-        <form autocomplete="off" onsubmit="login(event)">
-            <input type="email" id="loginEmail" placeholder="REGISTERED EMAIL" style="width: 98%;
-            height: 40px;padding-left:8px;font-size: 13px;border-radius:5px; background-color:#242629;color: #fff"><br>
+    <form autocomplete="off" onsubmit="login(event)">
+        <input type="email" id="loginEmail" placeholder="REGISTERED EMAIL" style="width: 98%;
+        height: 40px;padding-left:8px;font-size: 13px;border-radius:5px; background-color:#242629;color: #fff"><br>
 
-            <input type="password" id="loginPassword" placeholder="PASSWORD" style="width: 98%;margin-top:10px;
-            height: 40px;padding-left:8px;font-size: 13px;border-radius:5px; background-color:#242629;color: #fff">
-            <br> 
-            <div style="text-align:left;margin-top:15px;"> <a style="text-decoration: none; color: #FFA800; font-size: 12px; class="modal-trigger" href="#modal2">FORGOT PASSWORD</a></div>
-            <br>
-            <div class="text-center">
-            <button type="submit" class="btn" style="background-color:#13C15C;color: #fff;width:15vh"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</button>
-            </div>
-    </form>
-          <div>
-
-
-
-         
+        <input type="password" id="loginPassword" placeholder="PASSWORD" style="width: 98%;margin-top:10px;
+        height: 40px;padding-left:8px;font-size: 13px;border-radius:5px; background-color:#242629;color: #fff">
+        <br> 
+        <div style="text-align:left;margin-top:15px;"> <a href="#modal-forgot" class="link" style="text-decoration: none; color: #FFA800; font-size: 12px;cursor:pointer" >FORGOT PASSWORD</a></div>
+        <br>
+        <div class="text-center">
+        <button type="submit" class="btn" style="background-color:#13C15C;color: #fff;width:15vh"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</button>
         </div>
-      </div></div>
-        
-        
+</form>
+      <div>
 
 
-    <div class="sidebar-overlay" data-reff=""></div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/Chart.bundle.js"></script>
-    <script src="assets/js/chart.js"></script>
-    <script src="assets/js/app.js"></script>
+
+     
+    </div>
+  </div></div>
         `;
   }
 }
@@ -354,6 +353,10 @@ function updatestartbtn(event) {
 
 function questions(event) {
   event.preventDefault();
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var phone = document.getElementById("phone").value;
+  var whatsapp = document.getElementById("whatsapp").value;
   var q1 = document.getElementById("q1").value;
   var q2 = document.getElementById("q2").value;
   var q3 = document.getElementById("q3").value;
@@ -368,6 +371,10 @@ function questions(event) {
   var setWithMerge = userRef
     .set(
       {
+        name:name,
+        email:email,
+        phone:phone,
+        whatsapp:whatsapp,
         q1: q1,
         q2: q2,
         q3: q3,
