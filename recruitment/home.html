@@ -145,59 +145,57 @@
       ></ul>
     </div>
 
-    <!-- Forgot your password -->
-    <div id="modal2" class="modal container" style="background: none">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title">Reset Password</h3>
-          </div>
-          <div class="modal-body">
-            <label>Enter your email : </label>
-            <input
-              type="email"
-              style="
-                border: 1px solid rgb(79, 78, 78);
-                padding: 5px;
-                border-radius: 5px;
-              "
-              id="forgotEmail"
-              placeholder="Email"
-            />
-            <div class="forgot">
-              Your password reset link will be sent to your email address<span
-                style="font-weight: 600"
-              >
-                (SPAM FOLDER)</span
-              >.
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              onclick="location.href='main.html'"
-            >
-              Close
-            </button>
 
-            <button
-              onclick="forgotPass()"
-              type="button"
-              style="margin-left: 5px"
-              class="btn btn-primary"
-            >
-              Reset
-            </button>
+
+
+      <!-- Forgot your password -->
+      <div data-ml-modal id="modal-forgot">
+        <a href="#!" class="modal-overlay"></a>
+        <div class="modal-dialog">
+          <div class="modal-content center" style="color:white; text-align:center">
+          
+          <h5>Reset Password</h5>
+         
+  <br>
+            <div class="text-center">
+
+            
+                <label>Enter your email : </label><br>
+                <input
+                  type="email"
+                  style="
+                    
+                    padding: 5px;background-color:#242629;color: #fff;
+                    border-radius: 5px;
+                  "
+                  id="forgotEmail"
+                  placeholder="Email"
+                />
+                <div class="forgot">
+                  Your password reset link will be sent to your email address<span
+                    style="font-weight: 600"
+                  >
+                    (SPAM FOLDER)</span
+                  >.
+                </div>
+          
+
+              
+                 <button name="data"  onclick="forgotPass()"
+                 data-dismiss="modal-logout" type="submit" class="btn" style="width:100px;margin-top:8px;background-color:#FF3232;" >
+                 <span style="color:white;font-weight:bold;">Reset</span>
+                 </button> 
+            </div>
+  
+  
           </div>
         </div>
       </div>
-    </div>
-    <!-- Forgot your password -->
+   <!-- Forgot your password -->
+
+
 
     <!-- LoGOUT Modal -->
-
-    
     <div data-ml-modal id="modal-logout">
       <a href="#!" class="modal-overlay"></a>
       <div class="modal-dialog">
@@ -217,7 +215,29 @@
         </div>
       </div>
     </div>
+ <!-- LoGOUT Modal -->
 
+
+     <!-- TestConfirm Modal -->
+     <div data-ml-modal id="modal-test">
+      <a href="#!" class="modal-overlay"></a>
+      <div class="modal-dialog">
+        <div class="modal-content center" style="color:white; text-align:center">
+        
+        <h5>Are you sure you want to take the test?</h5>
+       
+
+          <div class="text-center">
+               <button name="data" onclick="location.href='./test.html'" type="submit" class="btn" style="width:100px;margin-top:8px;background-color:#13C15C;" >
+               <span style="color:white;font-weight:bold;">CONFIRM</span>
+               </button> 
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+ <!-- TestConfirm Modal -->
 
 
  
