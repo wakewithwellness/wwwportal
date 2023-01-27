@@ -40,7 +40,7 @@ async function getuserInfo(userID) {
        `;
     }
   } else {
-    userDetails.innerHTML = `<div class="container" style="max-width: 60vh;margin-top:120px">
+    userDetails.innerHTML = `    <div class="container" style="max-width: 60vh;margin-top:120px">
     <div class="card" style="background-color: #2E3035; border-radius:14px">
     <div class="card-body" style="text-align: left">
     <h4 class="card-title" style="color: #fff; font-weight: 700; font-size:26px">USER LOGIN</h4>
@@ -52,7 +52,7 @@ async function getuserInfo(userID) {
         <input type="password" id="loginPassword" placeholder="PASSWORD" style="width: 98%;margin-top:10px;
         height: 40px;padding-left:8px;font-size: 13px;border-radius:5px; background-color:#242629;color: #fff">
         <br> 
-        <div style="text-align:left;margin-top:15px;"> <a style="text-decoration: none; color: #FFA800; font-size: 12px; class="modal-trigger" href="#modal2">FORGOT PASSWORD</a></div>
+        <div style="text-align:left;margin-top:15px;"> <a href="#modal-forgot" class="link" style="text-decoration: none; color: #FFA800; font-size: 12px;cursor:pointer" >FORGOT PASSWORD</a></div>
         <br>
         <div class="text-center">
         <button type="submit" class="btn" style="background-color:#13C15C;color: #fff;width:15vh"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</button>
@@ -106,7 +106,7 @@ async function getuserInfoRealtime(userID) {
           </style>
 
 
-<div>
+
 
 
 <div style="float: right; margin-right:15px;margin-top:-12px">
@@ -124,8 +124,8 @@ async function getuserInfoRealtime(userID) {
               <div class="container" style="text-align:center;background-color:#2E3035;border-radius:10px;padding:10px;color: white"><br>
 
                   <div class="profile-img">
-                      <img id="proimg" class="pic modal-trigger" style="border-radius: 10px" href="#modal4" src="https://cdn-icons-png.flaticon.com/512/4140/4140061.png" alt="">
-                      <div id="cameraicon" style="color: white; margin-top: -18px; text-align: right;"><i href="#modal4" class="fa fa-camera modal-trigger" ></i></div>
+                      <img id="proimg" class="pic" style="border-radius: 10px" src="https://cdn-icons-png.flaticon.com/512/4140/4140061.png" alt="">
+                    
                      </div>
                   
 
@@ -144,12 +144,19 @@ async function getuserInfoRealtime(userID) {
 
                         <hr style="color:#242629;height:3px;margin-top:20px">
 
-                        <button class="btn" style="border-radius:10px;height:40px;width:180px;margin-bottom:9px;margin-top:5px;background-color:#191B20;color:white">Edit Profile</button>
+                        <button onclick="location.href='profile.html'" class="btn" style="border-radius:10px;height:40px;width:180px;margin-bottom:9px;margin-top:5px;background-color:#191B20;color:white">Edit Profile</button>
               </div>
               </div>
 
               <div class="col-lg-8 my-2">
-                    <div class="container" style="background-color:#2E3035;border-radius:10px;padding:10px;color: white;height:100%;width:100%">
+                    <div class="container" id="rrr" style="background-color:#2E3035;border-radius:10px;padding:10px;color: white;width:100%">
+
+                    <div class="container" id="resultcenter">
+                    <h5>Recruitment Result’23</h5>
+                    <button onclick="location.href='result.html'" class="btn" style="border-radius:8px;height:40px;width:200px;margin-bottom:9px;margin-top:5px;background-color:#3281FF;color:white">View Result</button>
+                    </div>
+
+
                     </div>
               </div>
 
@@ -159,22 +166,21 @@ async function getuserInfoRealtime(userID) {
           </div>
              
     
-          <div class="content" style="position: absolute;bottom: 0;background-color: #191B20;padding:20px;height:70px; width:100%">
-            <div class="container">
-              <div class="row">
-                    <div class="col-auto mr-auto" >
-                    <p style="color:white;margin-top:2px;font-weight:bold">Recruitment Test’23</p>
-                    </div>
-                    <div class="col-auto"> 
-                    <a href="#modal-14" class="link btn" style="border:none;min-width:100px;margin-top:-2px;background: linear-gradient(to right, #fb5444 0%, #feb645 100%);color:white;font-weight:bold;">Take Test</a>
-                    </div>
-              </div>
-            </div>
-          </div>
+          
 
-</div>
       
-                       
+<div style="position:fixed;bottom: 0px;background-color: #191B20;padding:20px;height:70px; width:100%;">
+<div class="container">
+  <div class="row">
+        <div class="col-auto mr-auto" >
+          <p style="color:white;margin-top:2px;font-weight:bold">Recruitment Test’23</p>
+        </div>
+        <div class="col-auto"> 
+           <a href="#modal-test" class="link btn" style="border:none;min-width:100px;margin-top:-2px;background: linear-gradient(to right, #fb5444 0%, #feb645 100%);color:white;font-weight:bold;">Take Test</a>
+        </div>
+  </div>
+</div>
+</div>              
                         `;
           editProfile["name"].value = userInfo.name;
           editProfile["profileEmail"].value = userInfo.email;
@@ -182,11 +188,10 @@ async function getuserInfoRealtime(userID) {
           editProfile["whatsapp"].value = userInfo.whatsapp;
           editProfile["blood"].value = userInfo.blood;
           editProfile["college"].value = userInfo.college;
-
-          if (firebase.auth().currentUser.photoURL) {
-            document.querySelector("#proimg").src =
-              firebase.auth().currentUser.photoURL;
-          }
+          if(firebase.auth().currentUser.photoURL){
+            document.querySelector('#proimg').src = firebase.auth().currentUser.photoURL
+        }
+  
         }
       }
     });
@@ -204,7 +209,7 @@ async function getuserInfoRealtime(userID) {
         <input type="password" id="loginPassword" placeholder="PASSWORD" style="width: 98%;margin-top:10px;
         height: 40px;padding-left:8px;font-size: 13px;border-radius:5px; background-color:#242629;color: #fff">
         <br> 
-        <div style="text-align:left;margin-top:15px;"> <a style="text-decoration: none; color: #FFA800; font-size: 12px; class="modal-trigger" href="#modal2">FORGOT PASSWORD</a></div>
+        <div style="text-align:left;margin-top:15px;"> <a href="#modal-forgot" class="link" style="text-decoration: none; color: #FFA800; font-size: 12px;cursor:pointer" >FORGOT PASSWORD</a></div>
         <br>
         <div class="text-center">
         <button type="submit" class="btn" style="background-color:#13C15C;color: #fff;width:15vh"><i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN</button>
@@ -251,68 +256,81 @@ function updateUserProfile(e) {
   }, 3000);
 }
 
-function uploadImage(e) {
-  console.log(e.target.files[0]);
-  const uid = firebase.auth().currentUser.uid;
-  const fileRef = firebase.storage().ref().child(`/users/${uid}/profile`);
-  const uploadTask = fileRef.put(e.target.files[0]);
-  uploadTask.on(
-    "state_changed",
-    (snapshot) => {
-      var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      if (progress == "100")
-        // Show alert
-        document.querySelector(
-          ".success"
-        ).innerHTML = `<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
 
-      // Hide alert after 10 seconds
-      setTimeout(function () {
-        document.querySelector(".success").innerHTML = ``;
-      }, 10000);
 
-      uploader.value = progress;
 
-      console.log("Upload is " + progress + "% done");
-      document.querySelector(".prog").innerHTML = `${progress}%`;
 
-      switch (snapshot.state) {
-        case firebase.storage.TaskState.PAUSED: // or 'paused'
-          console.log("Upload is paused");
+function uploadImage(e){
+  console.log(e.target.files[0])
+  const uid = firebase.auth().currentUser.uid
+  const fileRef = firebase.storage().ref().child(`/users/${uid}/profile`)
+  const uploadTask =  fileRef.put(e.target.files[0])
+  uploadTask.on('state_changed', 
+(snapshot) => {
+  
+  var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+  if(progress=='100') 
+   // Show alert
+   document.querySelector('.success').innerHTML=`<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
+            
+   // Hide alert after 10 seconds
+setTimeout(function(){
+document.querySelector('.success').innerHTML=``;
+},10000);
+    
+uploader.value = progress;
+            
+console.log('Upload is ' + progress + '% done');
+document.querySelector('.prog').innerHTML=`${progress}%`;
 
-          break;
-        case firebase.storage.TaskState.RUNNING: // or 'running'
-          console.log("Upload is running");
-
-          break;
-      }
-    },
-    function (error) {
-      // A full list of error codes is available at
-      // https://firebase.google.com/docs/storage/web/handle-errors
-      switch (error.code) {
-        case "storage/unauthorized":
-          // User doesn't have permission to access the object
-          break;
-
-        case "storage/canceled":
-          // User canceled the upload
-          break;
-
-        case "storage/unknown":
-          // Unknown error occurred, inspect error.serverResponse
-          break;
-      }
-    },
-
-    function () {
-      uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-        console.log("File available at", downloadURL);
-        document.querySelector("#proimg").src = downloadURL;
-        firebase.auth().currentUser.updateProfile({
-          photoURL: downloadURL,
-        });
-      });
-    }
-  );
+switch (snapshot.state) {
+   case firebase.storage.TaskState.PAUSED: // or 'paused'
+        console.log('Upload is paused');
+     
+        break;
+   case firebase.storage.TaskState.RUNNING: // or 'running'
+        console.log('Upload is running');
+        
+        break;
 }
+}, function (error) {
+
+// A full list of error codes is available at
+// https://firebase.google.com/docs/storage/web/handle-errors
+switch (error.code) {
+   case 'storage/unauthorized':
+        // User doesn't have permission to access the object
+        break;
+
+   case 'storage/canceled':
+        // User canceled the upload
+        break;
+
+   case 'storage/unknown':
+        // Unknown error occurred, inspect error.serverResponse
+        break;
+}
+}, 
+
+function () {
+  
+  uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+    console.log('File available at', downloadURL);
+    document.querySelector('#proimg').src = downloadURL
+    firebase.auth().currentUser.updateProfile({
+      photoURL: downloadURL
+    })
+  });
+}
+
+
+
+);
+}
+
+
+
+
+
+
+
