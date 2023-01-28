@@ -47,34 +47,6 @@
 
 
 
-<script>
-document.addEventListener("keyup", function (e) {
-    var keyCode = e.keyCode ? e.keyCode : e.which;
-            if (keyCode == 44) {
-                stopPrntScr();
-            }
-        });
-function stopPrntScr() {
-
-            var inpFld = document.createElement("input");
-            inpFld.setAttribute("value", ".");
-            inpFld.setAttribute("width", "0");
-            inpFld.style.height = "0px";
-            inpFld.style.width = "0px";
-            inpFld.style.border = "0px";
-            document.body.appendChild(inpFld);
-            inpFld.select();
-            document.execCommand("copy");
-            inpFld.remove(inpFld);
-        }
-       function AccessClipboardData() {
-            try {
-                window.clipboardData.setData('text', "Access   Restricted");
-            } catch (err) {
-            }
-        }
-        setInterval("AccessClipboardData()", 300);
-</script>
 
 
   </head>
@@ -131,27 +103,18 @@ function stopPrntScr() {
         
         <h5>Reset Password</h5>
        
-<br>
+         <br>
           <div class="text-center">
-
-          
               <label>Enter your email : </label><br>
               <input
                 type="email"
-                style="
-                  
+                style="   
                   padding: 5px;background-color:#242629;color: #fff;
-                  border-radius: 5px;
-                "
-                id="forgotEmail"
-                placeholder="Email"
-              />
+                  border-radius: 5px;" id="forgotEmail" placeholder="Email"/>
               <div class="forgot">
                 Your password reset link will be sent to your email address<span
-                  style="font-weight: 600"
-                >
-                  (SPAM FOLDER)</span
-                >.
+                  style="font-weight: 600">
+                  (SPAM FOLDER)</span>.
               </div>
         
 
