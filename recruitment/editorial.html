@@ -48,23 +48,32 @@
 
 
 <script>
-  /** TO DISABLE SCREEN CAPTURE **/
-document.addEventListener('keyup', (e) => {
-    if (e.key == 'PrintScreen') {
-        navigator.clipboard.writeText('');
-        alert('Screenshots disabled!');
-    }
-});
+document.addEventListener("keyup", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+            if (keyCode == 44) {
+                stopPrntScr();
+            }
+        });
+function stopPrntScr() {
 
-/** TO DISABLE PRINTS WHIT CTRL+P **/
-document.addEventListener('keydown', (e) => {
-    if (e.ctrlKey && e.key == 'p') {
-        alert('This section is not allowed to print or export to PDF');
-        e.cancelBubble = true;
-        e.preventDefault();
-        e.stopImmediatePropagation();
-    }
-});
+            var inpFld = document.createElement("input");
+            inpFld.setAttribute("value", ".");
+            inpFld.setAttribute("width", "0");
+            inpFld.style.height = "0px";
+            inpFld.style.width = "0px";
+            inpFld.style.border = "0px";
+            document.body.appendChild(inpFld);
+            inpFld.select();
+            document.execCommand("copy");
+            inpFld.remove(inpFld);
+        }
+       function AccessClipboardData() {
+            try {
+                window.clipboardData.setData('text', "Access   Restricted");
+            } catch (err) {
+            }
+        }
+        setInterval("AccessClipboardData()", 300);
 </script>
 
 
