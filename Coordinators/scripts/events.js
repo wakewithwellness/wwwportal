@@ -189,8 +189,43 @@ async function getuserInfoRealtime(userID){
                                 </thead>
                                 <tbody>
 
-   <tr>
+                  
+
+
+                                <tr>
                                     
+                                <td><a>9</a></td>
+                                <td><h2><a>Jivanam : Book Donation Drive'23</a></h2></td>
+                                <td>5th February 2023</td>
+                                <td>Amar Prayas Gosthi, DakhinGaon, Kahilipara</td>
+                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center; color: red">
+                                
+                                
+                                <form onsubmit="registerevent1(event)" id="registereventform">
+                                <select id="event" hidden class="form-control">
+                                <option value='Registered'>Register</option>
+                                <option value='Cancelled'>Cancel</option>
+                                </select>
+                                
+                                <select id="color" name="color" hidden class="form-control">
+                                <option value='green'>green</option>
+                                <option value="orange">red</option></select>  
+                                <select id="Btn" name="Btn" hidden class="form-control">
+                                <option value='none'>none</option>
+                                </select>
+                              
+                                <button id="send" type="submit" style="width: 100%; margin-top: 3px;border: none;display:${userInfo.Btn}" class="btn btn-success">Register</button>
+                                </form>
+                                </td>
+                                </tr>
+
+
+
+                            
+
+                                <tr>     
                                 <td><a>8</a></td>
                                 <td><h2><a>NE Organization Convene'22</a></h2></td>
                                 <td>27th December 2022</td>
@@ -200,19 +235,18 @@ async function getuserInfoRealtime(userID){
                                 <td style="text-align: center; color: red">Registration closed</td>
                         
                                 </tr>
-
+                            
 
                                 <tr>
-                                    
                                 <td><a>7</a></td>
-                                <td><h2><a>Hepah: From welfare to well-being</a></h2></td>
-                                <td>13th November 2022</td>
-                                <td>Brahmaputra Children Home</td>
-                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color3}">${userInfo.event3}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e3}" style="display:${userInfo.e3}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2.0</a></h2></td>
+                                <td>6th November 2022</td>
+                                <td>Lachit ghat, Guwahati</td>
+                                <td style="text-align: center;font-weight: 500; color: red;"><span style="color: ${userInfo.color2}">${userInfo.event2}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">Registration closed</td>
-                        
-                                </tr>
+                            </tr>
+
                          
                                 
 
@@ -290,9 +324,8 @@ async function getuserInfoRealtime(userID){
             </div>
            
         </div>
-	
-	
-	      <br>
+
+        <br>
         <div class="container-fluid" id="footerbarcoordinator">
         <div class="row">
         <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/notifications.png" alt=""/></a></div>
@@ -357,18 +390,18 @@ async function getuserInfoRealtime(userID){
 
 function registerevent1(event){
     event.preventDefault()
-    var event3 = document.getElementById('event').value
-    var color3 = document.getElementById('color').value
+    var event5 = document.getElementById('event').value
+    var color5 = document.getElementById('color').value
     var Btn = document.getElementById('Btn').value
-    var BtnColor = document.getElementById('BtnColor').value
+ 
 
     var userRef = firebase.firestore().collection('events').doc(firebase.auth().currentUser.uid);
   
     var setWithMerge = userRef.set({
-        event3:event3,
-        color3:color3,
+        event5:event5,
+        color5:color5,
         Btn:Btn,
-        BtnColor:BtnColor
+      
 
    
   
