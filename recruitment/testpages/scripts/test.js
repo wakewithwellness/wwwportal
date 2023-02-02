@@ -74,6 +74,12 @@ async function getuserInfoRealtime(userID) {
 
 
 <div class="container-fluid">
+
+<div class="container" style="background-color:#2E3035; padding:18px;border-radius:8px; color:white">
+<h6 style="color:white;font-size:13px">* You can attend more than one test of your choice</h6>
+</div>
+
+
 <div class="row">
 
 <div class="col-lg-4 my-2">
