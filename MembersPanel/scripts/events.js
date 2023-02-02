@@ -164,6 +164,38 @@ async function getuserInfoRealtime(userID){
                                     </tr>
                                 </thead>
                                 <tbody>
+
+
+                                <tr>
+                                    
+                                <td><a>9</a></td>
+                                <td><h2><a>Jivanam : Book Donation Drive'23</a></h2></td>
+                                <td>5th February 2023</td>
+                                <td>Amar Prayas Gosthi, DakhinGaon, Kahilipara</td>
+                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color7}">${userInfo.event7}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e7}" style="display:${userInfo.e7}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center; color: red">
+                                
+                                
+                                <form onsubmit="registerevent1(event)" id="registereventform">
+                                <select id="event" hidden class="form-control">
+                                <option value='Registered'>Register</option>
+                                <option value='Cancelled'>Cancel</option>
+                                </select>
+                                
+                                <select id="color" name="color" hidden class="form-control">
+                                <option value='green'>green</option>
+                                <option value="orange">red</option></select>  
+                                <select id="Btn" name="Btn" hidden class="form-control">
+                                <option value='none'>none</option>
+                                </select>
+                              
+                                <button id="send" type="submit" style="width: 100%; margin-top: 3px;border: none;display:${userInfo.Btn}" class="btn btn-success">Register</button>
+                                </form>
+                                </td>
+                                </tr>
+
+
                                       
                                 <tr>
                                    
@@ -319,18 +351,18 @@ async function getuserInfoRealtime(userID){
 
 function registerevent1(event){
     event.preventDefault()
-    var event5 = document.getElementById('event').value
-    var color5 = document.getElementById('color').value
+    var event7 = document.getElementById('event').value
+    var color7 = document.getElementById('color').value
     var Btn = document.getElementById('Btn').value
-    var BtnColor = document.getElementById('BtnColor').value
+  
 
     var userRef = firebase.firestore().collection('OfflineEvents').doc(firebase.auth().currentUser.uid);
   
     var setWithMerge = userRef.set({
-        event5:event5,
-        color5:color5,
+        event7:event7,
+        color7:color7,
         Btn:Btn,
-        BtnColor:BtnColor
+       
 
    
   
