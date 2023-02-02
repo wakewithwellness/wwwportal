@@ -80,8 +80,7 @@ async function getuserInfoRealtime(userID) {
 <div class="container" style="background-color:#2E3035; padding:18px;border-radius:8px; color:white">
           <div>
           <h6>Editorial Department</h6>  <hr style="color:#898989;height:2px;margin-top:10px">
-          <p style="font-size:11px;text-align:justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
+         
           <div class="row">
           <div class="col">
           <a onclick="location.href='./testpages/result/editorial.html'" class="btn" style="border-radius:8px;height:40px;width:100%;background-color:#13C15C;color:white">View Result</a>
@@ -99,8 +98,7 @@ async function getuserInfoRealtime(userID) {
 <div class="container" style="background-color:#2E3035; padding:18px;border-radius:8px; color:white">
           <div>
           <h6>Curation Department</h6>  <hr style="color:#898989;height:2px;margin-top:10px">
-          <p style="font-size:11px;text-align:justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
+         
           <div class="row">
           <div class="col">
           <a onclick="location.href='./testpages/result/curation.html'" class="btn" style="border-radius:8px;height:40px;width:100%;background-color:#13C15C;color:white">View Result</a>
@@ -118,8 +116,7 @@ async function getuserInfoRealtime(userID) {
 <div class="container" style="background-color:#2E3035; padding:18px;border-radius:8px; color:white">
           <div>
           <h6>Public Relations Department</h6>  <hr style="color:#898989;height:2px;margin-top:10px">
-          <p style="font-size:11px;text-align:justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
+       
           <div class="row">
           <div class="col">
           <a onclick="location.href='./testpages/result/pr.html'" class="btn" style="border-radius:8px;height:40px;width:100%;background-color:#13C15C;color:white">View Result</a>
@@ -137,8 +134,7 @@ async function getuserInfoRealtime(userID) {
 <div class="container" style="background-color:#2E3035; padding:18px;border-radius:8px; color:white">
           <div>
           <h6>Social Media Marketing Department</h6>  <hr style="color:#898989;height:2px;margin-top:10px">
-          <p style="font-size:11px;text-align:justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
+         
           <div class="row">
           <div class="col">
           <a onclick="location.href='./testpages/result/marketing.html'" class="btn" style="border-radius:8px;height:40px;width:100%;background-color:#13C15C;color:white">View Result</a>
@@ -156,8 +152,7 @@ async function getuserInfoRealtime(userID) {
 <div class="container" style="background-color:#2E3035; padding:18px;border-radius:8px; color:white">
           <div>
           <h6>Events Department</h6>  <hr style="color:#898989;height:2px;margin-top:10px">
-          <p style="font-size:11px;text-align:justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-
+       
           <div class="row">
           <div class="col">
           <a onclick="location.href='./testpages/result/events.html'" class="btn" style="border-radius:8px;height:40px;width:100%;background-color:#13C15C;color:white">View Result</a>
@@ -175,7 +170,7 @@ async function getuserInfoRealtime(userID) {
 <div class="container" style="background-color:#2E3035; padding:18px;border-radius:8px; color:white">
           <div>
           <h6>Design & Media Department</h6>  <hr style="color:#898989;height:2px;margin-top:10px">
-          <p style="font-size:11px;text-align:justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+     
 
           <div class="row">
           <div class="col">
