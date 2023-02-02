@@ -359,7 +359,7 @@ function updatestartbtn(event) {
     .set(
       {
         test4: test4,
-        t1: t4,
+        t4: t4,
       },
       { merge: true }
     )
