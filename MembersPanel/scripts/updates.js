@@ -232,6 +232,48 @@ db.collection("attendance").orderBy('regno').limitToLast(12).get().then(querySna
         table.innerHTML += row
     })
    })
+
+
+
+
+
+
+
+
+   // 2nd batch tenure2
+   db.collection("attendance").orderBy('regno').startAt('22WWW0061').endAt('22WWW0066').get().then(querySnapshot=>{
+    querySnapshot.forEach(doc=>{
+        let data = doc.data();
+        let row  = `<tr>
+          
+                   <th scope="row">
+                      <label>${data.regno}</label>
+                    </th>
+                        <td>${data.name} </td>
+                        <td><p style="color:${data.status}; font-weight:900;margin-bottom:0px; font-size: 15px"><i style="display: ${data.Alert}"  class="fa fa-exclamation-triangle" aria-hidden="true"></i> ${data.AAper}</p>
+                        <div class="progress" style="border: 0.5px solid ${data.status};display: ${data.bar}">
+                           <div  class="progress-bar progress-bar-success" role="progressbar"
+                           aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:${data.AAper};background-color:${data.status}">
+                          </div> 
+                         </div></td>
+                         <td>${data.Jun23b}</td>
+                         <td>${data.Jun23a}</td>
+                         <td>${data.May23b}</td>
+                         <td>${data.May23a}</td>
+                         <td>${data.Apr23b}</td>
+                         <td>${data.Apr23a}</td>
+                         <td>${data.Mar23b}</td>
+                         <td>${data.Mar23a}</td>
+                        <td>${data.Feb23b}</td>
+                        <td>${data.Feb23a}</td>
+                     
+                      
+                   
+                  </tr>`;
+        let table = document.getElementById('myTable5')
+        table.innerHTML += row
+    })
+   })
    
 
 
