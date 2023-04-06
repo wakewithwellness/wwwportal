@@ -295,6 +295,15 @@ async function getuserInfoRealtime(userID) {
 
                 <tr>
                 <td style="min-width: 200px;">	
+                    <h2><a href="BoardRegistration.html">Board Registration</a></h2>
+                </td>                 
+                <td class="text-right">
+                    <a href="BoardRegistration.html" class="btn btn-outline-primary take-btn">View</a>
+                </td>
+            </tr>
+
+                <tr>
+                <td style="min-width: 200px;">	
                     <h2><a href="membersfeedback.html">Member's Feedbacks</a></h2>
                 </td>                 
                 <td class="text-right">
