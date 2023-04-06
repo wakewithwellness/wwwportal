@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Attendance</title>
+    
+
+    <link href="../../assets/img/favicon.png" rel="icon">
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../MembersPanel/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../MembersPanel/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../MembersPanel/assets/css/style.css">
+   
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
+    <style>
+      .alert{
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            background:#79c879;
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            display: none;
+          }
+      
+          
+    
+          .forgot{
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            background:#ff8811;
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            display: none;
+          }
+    
+    
+    
+    
+    
+      #inputboxform{
+      width: 100%;
+      padding: 12px;
+      color:#0d6efd;
+      border: 1px solid #0d6efd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+
+
+    @media screen and (max-width: 990px) {
+      #exampleModal{
+      height: 50vh;
+    }
+    
+  }
+
+   
+    
+      </style>
+            
+</head>
+<body   style="overflow-x: hidden;background-color: rgb(238, 238, 238)">
+
+  <div class="topnav" style="width: 100%;">
+   
+    <div style="float: right"> 
+      <a class="modal-trigger" href="#modal2" id="loginli" style="visibility: collapse;color:#5793D1;">Login</a>
+      <a class="modal-trigger" href="#modal1" id="signupli" style="visibility: collapse;"></a>
+     
+
+    </div>
+  
+  </div>
+
+
+  <div class="header" style="background-color: #0d6efd;">
+    <div class="header-left">
+      <a class="logo" style="margin-left: -15px;">
+        <img src="../../assets/img/favicon.png" width="35" height="35" alt=""> <span>Boards Portal</span>
+      </a>
+    </div>
+    <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+
+
+
+
+          <div class="dropdown mobile-user-menu float-right" id="logoutli" style="display: none;">
+             
+              
+          </div>
+      </div>
+
+
+
+
+      
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">LogOut</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to LogOut?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" onclick="logout()">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 20px;"></div>
+
+
+
+
+  <div id="logindata"></div>
+     
+
+  <div class="center">
+    <div class="userDetails"></div>
+  </div>
+         
+ 
+
+ 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+</script>  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBTOvD0aod-fntZ0VYbT6EAp9z1L_bqKwY",
+  authDomain: "website-818ed.firebaseapp.com",
+  databaseURL: "https://website-818ed-default-rtdb.firebaseio.com",
+  projectId: "website-818ed",
+  storageBucket: "website-818ed.appspot.com",
+  messagingSenderId: "542030860652",
+  appId: "1:542030860652:web:ee0bef0509915aa1da2349",
+  measurementId: "G-2VWCQ9QR4S"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="../scripts/auth.js"></script>
+<script src="meeting.js" ></script>
+
+<div class="sidebar-overlay" data-reff=""></div>
+    <script src="../../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../../MembersPanel/assets/js/popper.min.js"></script>
+    <script src="../../MembersPanel/assets/js/bootstrap.min.js"></script>
+    <script src="../../MembersPanel/assets/js/jquery.slimscroll.js"></script>
+    <script src="../../MembersPanel/assets/js/Chart.bundle.js"></script>
+    <script src="../../MembersPanel/assets/js/chart.js"></script>
+    <script src="../../MembersPanel/assets/js/app.js"></script>
+
+    <script>
+    
+      document.onkeydown=function(e)
+      {
+        if (event.keyCode == 123) 
+        {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+        {
+          return false;
+        }
+    
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
+        {
+          return false;
+        }
+    
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
+        {
+          return false;
+        }
+      }
+    
+    </script>
+
+</body>
+</html>
