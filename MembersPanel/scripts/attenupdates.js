@@ -252,7 +252,7 @@ async function getuserInfoRealtime(userID){
                                 </td>
                                 <td><a id="dateee">15/03/23 <br>-<br> 31/03/23</a></td>
                                 <td id="statuss">Present</td>
-                                <td> </td>
+                                <td>Bonus Attendance </td>
                                 </tr>
 
                                 <tr display: ${userInfo.Mar23af}>
