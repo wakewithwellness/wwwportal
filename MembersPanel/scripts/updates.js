@@ -187,7 +187,7 @@ db.collection("attendance").orderBy('regno').limit(32).get().then(querySnapshot=
 
 
 // Third batch
-db.collection("attendance").orderBy('regno').limitToLast(12).get().then(querySnapshot=>{
+db.collection("attendance").orderBy('regno').limitToLast(13).get().then(querySnapshot=>{
     querySnapshot.forEach(doc=>{
         let data = doc.data();
         let row  = `<tr>
