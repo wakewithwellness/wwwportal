@@ -1,43 +1,37 @@
-const userDetails  = document.querySelector('.userDetails')
-const editProfile  = document.querySelector('#editProfile')
+const userDetails = document.querySelector(".userDetails");
+const editProfile = document.querySelector("#editProfile");
 
-
-function createUserCollection(user){
-   firebase.firestore().collection('events')
-   .doc(user.uid)
-   .set({
-       uid:user.uid,
-       name:user.displayName,
-       email:user.email,
-       department:"",
-       phone:"",
-       i1:"",
-       i2:"",
-       hide:""
-
-       
-
-   })
+function createUserCollection(user) {
+  firebase.firestore().collection("events").doc(user.uid).set({
+    uid: user.uid,
+    name: user.displayName,
+    email: user.email,
+    department: "",
+    phone: "",
+    i1: "",
+    i2: "",
+    hide: "",
+  });
 }
 
+async function getuserInfo(userID) {
+  if (userID) {
+    const userInfoSnap = await firebase
+      .firestore()
+      .collection("events")
+      .doc(userID)
+      .get();
 
-async function getuserInfo(userID){
-    if(userID){
-      const userInfoSnap = await  firebase.firestore()
-    .collection('events')
-    .doc(userID)
-    .get()
-
-   const userInfo = userInfoSnap.data()
-   if(userInfo){
-       userDetails.innerHTML = `
+    const userInfo = userInfoSnap.data();
+    if (userInfo) {
+      userDetails.innerHTML = `
        <h3>${userInfo.name}</h3>
        <h3>${userInfo.email}</h3>
        <h3>${userInfo.phone}</h3>
-       `
-   }    
-    }else{
-      userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
+       `;
+    }
+  } else {
+    userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
       <div class="card" style="border-top: 3px solid #03b1fc">
       <div class="card-body" style="text-align: center">
       <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
@@ -61,26 +55,21 @@ async function getuserInfo(userID){
        
       </div>
     </div></div>
-      `
-    
-       
-    }
-
-
+      `;
+  }
 }
 
-
-
-async function getuserInfoRealtime(userID){
-    if(userID){
-      const userdocRef = await  firebase.firestore()
-        .collection('events')
-        .doc(userID)
-        userdocRef.onSnapshot((doc)=>{
-            if(doc.exists){
-                 const userInfo = doc.data()
-                    if(userInfo){
-                        userDetails.innerHTML = `
+async function getuserInfoRealtime(userID) {
+  if (userID) {
+    const userdocRef = await firebase
+      .firestore()
+      .collection("events")
+      .doc(userID);
+    userdocRef.onSnapshot((doc) => {
+      if (doc.exists) {
+        const userInfo = doc.data();
+        if (userInfo) {
+          userDetails.innerHTML = `
 
                        
 
@@ -194,12 +183,12 @@ async function getuserInfoRealtime(userID){
 
                                 <tr>
                                     
-                                <td><a>9</a></td>
-                                <td><h2><a>Jivanam : Book Donation Drive'23</a></h2></td>
-                                <td>5th February 2023</td>
-                                <td>Amar Prayas Gosthi, DakhinGaon, Kahilipara</td>
-                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td><a>10</a></td>
+                                <td><h2><a>Jivanam : Mental Health Workshop</a></h2></td>
+                                <td>29th April 2023</td>
+                                <td>Maharishi Vidya Mandir School, Guwahati</td>
+                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color6}">${userInfo.event6}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e6}" style="display:${userInfo.e6}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">
                                 
                                 
@@ -222,6 +211,17 @@ async function getuserInfoRealtime(userID){
                                 </tr>
 
 
+
+                                <tr>     
+                                <td><a>9</a></td>
+                                <td><h2><a>Jivanam : Book Donation Drive'23</a></h2></td>
+                                <td>5th February 2023</td>
+                                <td>Amar Prayas Gosthi, DakhinGaon, Kahilipara</td>
+                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center; color: red">Registration closed</td>
+                        
+                                </tr>
 
                             
 
@@ -335,16 +335,12 @@ async function getuserInfoRealtime(userID){
         </div>
         </div>
                        
-                        `
-                    
-
-                }    
-             }
-        })
-
-
-    }else{
-        userDetails.innerHTML = ` <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
+                        `;
+        }
+      }
+    });
+  } else {
+    userDetails.innerHTML = ` <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
         <div class="card" style="border-top: 3px solid #03b1fc">
         <div class="card-body" style="text-align: center">
         <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
@@ -380,44 +376,44 @@ async function getuserInfoRealtime(userID){
     <script src="../MembersPanel/assets/js/Chart.bundle.js"></script>
     <script src="../MembersPanel/assets/js/chart.js"></script>
     <script src="../MembersPanel/assets/js/app.js"></script>
-        `
-    }
+        `;
+  }
 }
 
+function registerevent1(event) {
+  event.preventDefault();
+  var event6 = document.getElementById("event").value;
+  var color6 = document.getElementById("color").value;
+  var Btn = document.getElementById("Btn").value;
 
+  var userRef = firebase
+    .firestore()
+    .collection("events")
+    .doc(firebase.auth().currentUser.uid);
 
+  var setWithMerge = userRef
+    .set(
+      {
+        event6: event6,
+        color6: color6,
+        Btn: Btn,
+      },
+      { merge: true }
+    )
+    .then(() => {
+      document.querySelector(".alert").style.display = "block";
+      // Show alert
 
+      document.querySelector(".alert").style.display = "block";
 
-function registerevent1(event){
-    event.preventDefault()
-    var event5 = document.getElementById('event').value
-    var color5 = document.getElementById('color').value
-    var Btn = document.getElementById('Btn').value
- 
-
-    var userRef = firebase.firestore().collection('events').doc(firebase.auth().currentUser.uid);
-  
-    var setWithMerge = userRef.set({
-        event5:event5,
-        color5:color5,
-        Btn:Btn,
-      
-
-   
-  
-    },{ merge: true}).then(()=>{
-     
-  
-        document.querySelector('.alert').style.display = 'block';
-        // Show alert
-     
-        document.querySelector('.alert').style.display = 'block';
-    
-   // Clear form
-   document.getElementById('registereventform').reset();
-  
-    }).catch((err) => {
-      console.log(err)
-      M.toast({html:`<div><i style="font-size: 20px" class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error ! Something went wrong</div>`,classes:"red"})
+      // Clear form
+      document.getElementById("registereventform").reset();
+    })
+    .catch((err) => {
+      console.log(err);
+      M.toast({
+        html: `<div><i style="font-size: 20px" class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error ! Something went wrong</div>`,
+        classes: "red",
+      });
     });
-  }
+}
