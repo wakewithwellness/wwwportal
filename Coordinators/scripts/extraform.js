@@ -30,7 +30,7 @@ function submitForm(e) {
   var Whatsapp = getInputVal("Whatsapp");
   var Alternate = getInputVal("Alternate");
   var College = getInputVal("College");
-
+  var dob = getInputVal("dob");
   var Checkbox1 = getInputVal("Checkbox1");
   var Checkbox2 = getInputVal("Checkbox2");
   var Checkbox3 = getInputVal("Checkbox3");
@@ -49,6 +49,7 @@ function submitForm(e) {
     Whatsapp,
     Alternate,
     College,
+    dob,
     Checkbox1,
     Checkbox2,
     Checkbox3,
@@ -84,6 +85,7 @@ function saveData(
   Whatsapp,
   Alternate,
   College,
+  dob,
   Checkbox1,
   Checkbox2,
   Checkbox3,
@@ -101,7 +103,7 @@ function saveData(
     Whatsapp: Whatsapp,
     Alternate: Alternate,
     College: College,
-
+    dob: dob,
     Checkbox1: Checkbox1,
     Checkbox2: Checkbox2,
     Checkbox3: Checkbox3,
