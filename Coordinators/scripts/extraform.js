@@ -31,6 +31,7 @@ function submitForm(e) {
   var Alternate = getInputVal("Alternate");
   var College = getInputVal("College");
   var dob = getInputVal("dob");
+  var blood = getInputVal("blood");
   var Checkbox1 = getInputVal("Checkbox1");
   var Checkbox2 = getInputVal("Checkbox2");
   var Checkbox3 = getInputVal("Checkbox3");
@@ -50,6 +51,7 @@ function submitForm(e) {
     Alternate,
     College,
     dob,
+    blood,
     Checkbox1,
     Checkbox2,
     Checkbox3,
@@ -86,6 +88,7 @@ function saveData(
   Alternate,
   College,
   dob,
+  blood,
   Checkbox1,
   Checkbox2,
   Checkbox3,
@@ -104,6 +107,7 @@ function saveData(
     Alternate: Alternate,
     College: College,
     dob: dob,
+    blood: blood,
     Checkbox1: Checkbox1,
     Checkbox2: Checkbox2,
     Checkbox3: Checkbox3,
