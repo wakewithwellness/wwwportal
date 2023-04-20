@@ -1,268 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Members Offline Attendance</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>Members Offline Attendance</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <link href="../assets/img/favicon.png" rel="icon" />
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+      href="../../MembersPanel/assets/vendor/animate.css/animate.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../MembersPanel/assets/vendor/aos/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../MembersPanel/assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../MembersPanel/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../MembersPanel/assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../MembersPanel/assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../MembersPanel/assets/vendor/remixicon/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../../MembersPanel/assets/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
 
-  <link href="../../MembersPanel/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="../../MembersPanel/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../../MembersPanel/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../../MembersPanel/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../../MembersPanel/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../../MembersPanel/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../../MembersPanel/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="../../MembersPanel/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="../../MembersPanel/assets/css/style.css" rel="stylesheet" />
 
-  <link href="../../MembersPanel/assets/css/style.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../MembersPanel/assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../MembersPanel/assets/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../MembersPanel/assets/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../MembersPanel/assets/css/select2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../MembersPanel/assets/css/bootstrap-datetimepicker.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../MembersPanel/assets/css/style.css"
+    />
 
-  <link rel="stylesheet" type="text/css" href="../../MembersPanel/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="../../MembersPanel/assets/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="../../MembersPanel/assets/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" type="text/css" href="../../MembersPanel/assets/css/select2.min.css">
-  <link rel="stylesheet" type="text/css" href="../../MembersPanel/assets/css/bootstrap-datetimepicker.min.css">
-  <link rel="stylesheet" type="text/css" href="../../MembersPanel/assets/css/style.css">
-  
-  <link href="../../MembersPanel/assets/img/favicon.png" rel="icon">
-<link href="../../MembersPanel/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../../MembersPanel/assets/img/favicon.png" rel="icon" />
+    <link
+      href="../../MembersPanel/assets/img/apple-touch-icon.png"
+      rel="apple-touch-icon"
+    />
 
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
 
+      td,
+      th {
+        border: 1px solid #d4d4d4;
+        text-align: left;
+        padding: 8px;
+        font-size: 12px;
+      }
 
+      tr:nth-child(even) {
+        background-color: #c5c5c5;
+      }
+    </style>
 
-<style>
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #d4d4d4;
-    text-align: left;
-    padding: 8px;
-    font-size: 12px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #c5c5c5;
-  }
+    <style>
+      #myInput {
+        background-image: url("/css/searchicon.png"); /* Add a search icon to input */
+        background-position: 10px 12px; /* Position the search icon */
+        background-repeat: no-repeat; /* Do not repeat the icon image */
+        width: 100%; /* Full-width */
+        font-size: 16px; /* Increase font-size */
+        padding: 12px 20px 12px 40px; /* Add some padding */
+        border: 1px solid #ddd; /* Add a grey border */
+        margin-bottom: 12px; /* Add some space below the input */
+      }
 
- 
-  </style>
+      /* Add a black background color to the top navigation */
+      .topnav {
+        background-color: #0d6efd;
+        overflow: hidden;
+      }
 
+      /* Style the links inside the navigation bar */
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
 
-<style>
-  #myInput {
-background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-background-position: 10px 12px; /* Position the search icon */
-background-repeat: no-repeat; /* Do not repeat the icon image */
-width: 100%; /* Full-width */
-font-size: 16px; /* Increase font-size */
-padding: 12px 20px 12px 40px; /* Add some padding */
-border: 1px solid #ddd; /* Add a grey border */
-margin-bottom: 12px; /* Add some space below the input */
-}
+      /* Change the color of links on hover */
+      .topnav a:hover {
+        background-color: rgb(27, 27, 27);
+        color: rgb(235, 235, 235);
+      }
 
+      /* Add a color to the active/current link */
+      .topnav a.active {
+        background-color: #0d6efd;
+        color: white;
+      }
 
-    /* Add a black background color to the top navigation */
-    .topnav {
-    background-color: #0d6efd;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: rgb(27, 27, 27);
-    color: rgb(235, 235, 235);
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #0d6efd;
-    color: white;
-  }
+      .form-inline {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+      }
 
+      /* Add some margins for each label */
+      .form-inline label {
+        margin: 5px 10px 5px 0;
+      }
 
+      /* Style the input fields */
+      .form-inline input {
+        vertical-align: middle;
+        margin: 5px 10px 5px 0;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+      }
 
-.form-inline {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
+      /* Style the submit button */
+      .form-inline button {
+        padding: 10px 20px;
+        background-color: dodgerblue;
+        border: 1px solid #ddd;
+        color: white;
+      }
 
-/* Add some margins for each label */
-.form-inline label {
-  margin: 5px 10px 5px 0;
-}
+      .form-inline button:hover {
+        background-color: royalblue;
+      }
 
-/* Style the input fields */
-.form-inline input {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
+      /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+      @media (max-width: 800px) {
+        .form-inline input {
+          margin: 10px 0;
+        }
 
-/* Style the submit button */
-.form-inline button {
-  padding: 10px 20px;
-  background-color: dodgerblue;
-  border: 1px solid #ddd;
-  color: white;
-}
+        .form-inline {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+    </style>
+  </head>
 
-.form-inline button:hover {
-  background-color: royalblue;
-}
+  <body style="background-color: rgb(238, 238, 238)">
+    <div class="content" style="background-color: #fff; padding: 3px">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive custom-table-responsive">
+            <table
+              class="table custom-table"
+              id="myTable"
+              style="color: rgb(0, 0, 0)"
+            >
+              <thead>
+                <tr style="background-color: #0d6efd; color: #fff">
+                  <th scope="col">Reg No.</th>
+                  <th scope="col" style="min-width: 20vh">Name</th>
+                  <th scope="col" style="min-width: 20vh">MH Workshop</th>
+                  <th scope="col" style="min-width: 20vh">Book Drive</th>
+                  <th scope="col" style="min-width: 20vh">NE Convene'22</th>
+                  <th scope="col" style="min-width: 14vh">Children's Day</th>
+                  <th scope="col" style="min-width: 14vh">
+                    Cleanliness Drive II
+                  </th>
+                  <th scope="col" style="min-width: 14vh">
+                    Cleanliness Drive I
+                  </th>
 
-/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
-@media (max-width: 800px) {
-  .form-inline input {
-    margin: 10px 0;
-  }
-
-  .form-inline {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-
-</style>
-
-</head>
-
-<body style="background-color: rgb(238, 238, 238)">
-
-
-   
-    
-   
-          <div class="content" style="background-color: #fff;padding: 3px">
-             
-
-            
-              
-              <div class="row">
-                  <div class="col-md-12">
-                   
-                    <div class="table-responsive custom-table-responsive">
-                    <table class="table custom-table" id="myTable" style="color: rgb(0, 0, 0);">
-                      <thead>
-                          <tr style="background-color: #0d6efd;color: #fff"> 
-                            <th scope="col">Reg No.</th>
-                             <th scope="col" style="min-width: 20vh;">Name</th>
-                             <th scope="col" style="min-width: 20vh;">Book Drive</th>
-                             <th scope="col" style="min-width: 20vh;">NE Convene'22</th>
-                             <th scope="col" style="min-width: 14vh;">Children's Day</th>
-                          <th scope="col" style="min-width: 14vh;">Cleanliness Drive II</th>
-                          <th scope="col" style="min-width: 14vh;">Cleanliness Drive I</th>
-                     
-                          <th scope="col" style="min-width: 14vh;">Prabhati</th>
-                          <th scope="col" style="min-width: 14vh;">Wellness Drive: Food Drive</th>
-                        
-                        
-                      
-                         
-       
-      
-                          </tr>
-                      </thead>
-                      <tbody id="mytable">
-                         
-      
-                      </tbody>
-                  </table>
-                </div>
-
-
-                  </div>
-              </div>
-
+                  <th scope="col" style="min-width: 14vh">Prabhati</th>
+                  <th scope="col" style="min-width: 14vh">
+                    Wellness Drive: Food Drive
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="mytable"></tbody>
+            </table>
           </div>
-       
-      
-  
+        </div>
+      </div>
+    </div>
 
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="../../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="../../MembersPanel/assets/js/popper.min.js"></script>
+    <script src="../../MembersPanel/assets/js/bootstrap.min.js"></script>
+    <script src="../../MembersPanel/assets/js/jquery.dataTables.min.js"></script>
+    <script src="../../MembersPanel/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../MembersPanel/assets/js/jquery.slimscroll.js"></script>
+    <script src="../../MembersPanel/assets/js/select2.min.js"></script>
+    <script src="../../MembersPanel/assets/js/moment.min.js"></script>
+    <script src="../../MembersPanel/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../MembersPanel/assets/js/app.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
 
-
-
-
-
-
-  <div class="sidebar-overlay" data-reff=""></div>
-  <script src="../../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
-<script src="../../MembersPanel/assets/js/popper.min.js"></script>
-  <script src="../../MembersPanel/assets/js/bootstrap.min.js"></script>
-  <script src="../../MembersPanel/assets/js/jquery.dataTables.min.js"></script>
-  <script src="../../MembersPanel/assets/js/dataTables.bootstrap4.min.js"></script>
-  <script src="../../MembersPanel/assets/js/jquery.slimscroll.js"></script>
-  <script src="../../MembersPanel/assets/js/select2.min.js"></script>
-  <script src="../../MembersPanel/assets/js/moment.min.js"></script>
-  <script src="../../MembersPanel/assets/js/bootstrap-datetimepicker.min.js"></script>
-  <script src="../../MembersPanel/assets/js/app.js"></script>
-
-
-
-
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-
-
-
-   
-  <script>
-    //Connection
-        // Your web app's Firebase configuration
+    <script>
+      //Connection
+      // Your web app's Firebase configuration
       var firebaseConfig = {
         apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
-          authDomain: "members-76725.firebaseapp.com",
-          projectId: "members-76725",
-          storageBucket: "members-76725.appspot.com",
-          messagingSenderId: "734645197873",
-          appId: "1:734645197873:web:808127fdb4d643d4d24910",
-          measurementId: "G-7LYZ3R48GT"
+        authDomain: "members-76725.firebaseapp.com",
+        projectId: "members-76725",
+        storageBucket: "members-76725.appspot.com",
+        messagingSenderId: "734645197873",
+        appId: "1:734645197873:web:808127fdb4d643d4d24910",
+        measurementId: "G-7LYZ3R48GT",
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       const db = firebase.firestore();
-      db.settings({ timestampInSnapshots: true});
+      db.settings({ timestampInSnapshots: true });
 
-
-      db.collection("OfflineEvents").orderBy('regno').get().then(querySnapshot=>{
-      querySnapshot.forEach(doc=>{
-          let data = doc.data();
-          let row  = `<tr>
+      db.collection("OfflineEvents")
+        .orderBy("regno")
+        .get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            let data = doc.data();
+            let row = `<tr>
             
                       <th scope="row">
                         <label style="font-size:10px;text-align:center">${data.regno}</label>
                       </th>
 
                        <td style="font-size:10px; font-weight:600">${data.name}</td>
+                       <td style="font-size:10px; color: red; font-weight:600"><span style="color: ${data.color8}">${data.event8}</span> <i style="color: green; font-size:15px; display:${data.e8};cursor: pointer " class="fa fa-download" onclick="location.href='${data.e8}'" aria-hidden="true"></i></td>
                        <td style="font-size:10px; color: red; font-weight:600"><span style="color: ${data.color7}">${data.event7}</span> <i style="color: green; font-size:15px; display:${data.e7};cursor: pointer " class="fa fa-download" onclick="location.href='${data.e7}'" aria-hidden="true"></i></td>
                        <td style="font-size:10px; color: red; font-weight:600"><span style="color: ${data.color6}">${data.event6}</span> <i style="color: green; font-size:15px; display:${data.e6};cursor: pointer " class="fa fa-download" onclick="location.href='${data.e6}'" aria-hidden="true"></i></td>
                        <td style="font-size:10px; color: red; font-weight:600"><span style="color: ${data.color5}">${data.event5}</span> <i style="color: green; font-size:15px; display:${data.e5};cursor: pointer " class="fa fa-download" onclick="location.href='${data.e5}'" aria-hidden="true"></i></td>
@@ -277,28 +296,16 @@ margin-bottom: 12px; /* Add some space below the input */
                         
                        
                     </tr>`;
-          let table = document.getElementById('myTable')
-          table.innerHTML += row
-      })
-  })
-  .catch(err=>{
-      console.log(`Error: ${err}`)
-  });
+            let table = document.getElementById("myTable");
+            table.innerHTML += row;
+          });
+        })
+        .catch((err) => {
+          console.log(`Error: ${err}`);
+        });
+    </script>
 
-</script>
-
-
-
-
-
-<!-- Our script must be loaded after firebase references -->
-<script src="../scripts/members.js"></script>
-
-
-
-
-
-
-</body>
-
+    <!-- Our script must be loaded after firebase references -->
+    <script src="../scripts/members.js"></script>
+  </body>
 </html>
