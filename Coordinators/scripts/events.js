@@ -32,29 +32,29 @@ async function getuserInfo(userID) {
     }
   } else {
     userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
-      <div class="card" style="border-top: 3px solid #03b1fc">
-      <div class="card-body" style="text-align: center">
-      <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
+    <div class="card" style="border-top: 3px solid #03b1fc">
+    <div class="card-body" style="text-align: center">
+    <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
 <br>
-      <form autocomplete="off" onsubmit="login(event)">
-          <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
-          height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+    <form autocomplete="off" onsubmit="login(event)">
+        <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
+        height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
 
-          <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
-          height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
-          <br>
-          <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
-          <br>
-          <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
-          
-  </form>
-        <div>
+        <input type="password" class="form-control my-2" id="loginPassword" placeholder="Password" style="width: 98%;
+        height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+        <br>
+        <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+        <br>
+        <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; padding-bottom:10px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+        
+</form>
+      <div>
 
 
 
-       
-      </div>
-    </div></div>
+     
+    </div>
+  </div></div>
       `;
   }
 }
@@ -70,95 +70,74 @@ async function getuserInfoRealtime(userID) {
         const userInfo = doc.data();
         if (userInfo) {
           userDetails.innerHTML = `
-
                        
-
                         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
-
-
     
-
     <div class="sidebar" id="sidebar">
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
-
-            <ul>
-            <li class="menu-title">Main</li><hr>
-            <li>
-              <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
-          </li>
-      
-          
-          <li>
+        <ul>
+        <li class="menu-title">Main</li>
+        <li>
+          <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+      </li>
+  
+        <li >
           <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
-         </li>
-
-
-          <li>
-          <a href="coordinators.html"><i class="fa fa-users"></i> <span>Coordinators List</span></a>
-          </li>
-        </ul>
+        </li>
+       
+        <li>
+        <a href="employees.html"><i class="fa fa-users"></i> <span>Members List</span></a>
+       </li>
+       <li>
+        <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
+       </li>
+       <li>
+       <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
+      </li>
+  
+       <li>
+       <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+      </li>
+    </ul>
         </div>
     </div>
 </div>
-
         
-
-
-
 <div class="page-wrapper">
-
-
-
-
-
-
-
-<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;padding: 20px;border-radius:5px">
+<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;padding: 20px;border-radius:5px">
 <div class="row">
 <div class="col-sm-12">
-    <h4 class="page-title">Coordinator Details</h4><hr>
+    <h4 class="page-title">Member Details</h4><hr>
 </div>
 </div>
 <div class="row">
-
 <div class="col-lg">
 <h5>Name: <span style="color: #16151a">${userInfo.name}</span></h5>
 </div>
-
-
-
-
-
 <div class="col-lg">
 <h5>Registration no.: <span style="color: #16151a">${userInfo.regno}</span></h5>
 </div>
-
-<div class="col-lg">
-<h5>Department: <span style="color: #16151a">${userInfo.dept}</span></h5>
 </div>
-
 </div>
-
-
-</div>
-            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;border-radius:5px">
+            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;border-radius:5px">
            
           
                 <div class="row">
                     <div class="col-sm-12">
                         <h4 class="page-title">Events</h4>
-                        <p style="color: red;font-size:12px">Note: Minimum attendance for the event will be 70%</p>
+                        <p style="color: red;font-size:12px">Note: Minimum attendance for the event will be 60%</p>
                     </div>
                 </div>
-
+  
                 <p class="alert"  style="background-color:green;color:white;padding:8px;display:none">You have been successfully registered</p>
+           
 
+           
 
-                
                 <div class="row">
                    
                         <div class="table-responsive">
@@ -177,6 +156,8 @@ async function getuserInfoRealtime(userID) {
                                     </tr>
                                 </thead>
                                 <tbody>
+
+
                                 <tr>
                                     
                                 <td><a>10</a></td>
@@ -205,6 +186,9 @@ async function getuserInfoRealtime(userID) {
                                 </form>
                                 </td>
                                 </tr>
+
+
+
                                 <tr>
                                    
                                 <td><a>9</a></td>
@@ -216,6 +200,8 @@ async function getuserInfoRealtime(userID) {
                                 <td style="text-align: center; color: red">Registration closed</td>
                           
                                 </tr>
+
+
                                       
                                 <tr>
                                    
@@ -229,6 +215,8 @@ async function getuserInfoRealtime(userID) {
                           
                                 </tr>
                              
+
+
                                 <tr>
                                    
                                 <td><a>7</a></td>
@@ -243,6 +231,7 @@ async function getuserInfoRealtime(userID) {
                                 
                                   
                                 
+
                                         
                                      <tr>
                                    
@@ -318,78 +307,68 @@ async function getuserInfoRealtime(userID) {
             </div>
            
         </div>
-
-        <br>
-        <div class="container-fluid" id="footerbarcoordinator">
-        <div class="row">
-        <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/notifications.png" alt=""/></a></div>
-        <div class="col"><a href="./payments.html"><img style="width:54px; height:auto" src="../MembersPanel//assets/img/payments.png" alt=""/></a></div>
-        <div class="col"><a><img style="width:54px; height:auto" src="../MembersPanel//assets/img/events.png" alt=""/></a></div>
-        <div class="col"><a href="./main.html"><img style="width:54px; height:auto" src="../MembersPanel//assets/img/home.png" alt=""/></a></div> 
-        </div>
-        </div>
                        
                         `;
         }
       }
     });
   } else {
-    userDetails.innerHTML = ` <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
-        <div class="card" style="border-top: 3px solid #03b1fc">
-        <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
+    userDetails.innerHTML = `  <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
+    <div class="card" style="border-top: 3px solid #03b1fc">
+    <div class="card-body" style="text-align: center">
+    <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
 <br>
-        <form autocomplete="off" onsubmit="login(event)">
-            <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
-            height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+    <form autocomplete="off" onsubmit="login(event)">
+        <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
+        height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
 
-            <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
-            height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px; margin-top:5px">
-            <br>
-            <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
-            <br>
-            <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
-            
-    </form>
-          <div>
-
-
-
-         
-        </div>
-      </div></div>
+        <input type="password" class="form-control my-2" id="loginPassword" placeholder="Password" style="width: 98%;
+        height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
+        <br>
+        <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+        <br>
+        <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; padding-bottom:10px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
         
-        
+</form>
+      <div>
 
 
-    <div class="sidebar-overlay" data-reff=""></div>
-    <script src="../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
-	<script src="../MembersPanel/assets/js/popper.min.js"></script>
-    <script src="../MembersPanel/assets/js/bootstrap.min.js"></script>
-    <script src="../MembersPanel/assets/js/jquery.slimscroll.js"></script>
-    <script src="../MembersPanel/assets/js/Chart.bundle.js"></script>
-    <script src="../MembersPanel/assets/js/chart.js"></script>
-    <script src="../MembersPanel/assets/js/app.js"></script>
+
+     
+    </div>
+  </div></div>
+    
+    
+
+
+<div class="sidebar-overlay" data-reff=""></div>
+<script src="../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
+<script src="../MembersPanel/assets/js/popper.min.js"></script>
+<script src="../MembersPanel/assets/js/bootstrap.min.js"></script>
+<script src="../MembersPanel/assets/js/jquery.slimscroll.js"></script>
+<script src="../MembersPanel/assets/js/Chart.bundle.js"></script>
+<script src="../MembersPanel/assets/js/chart.js"></script>
+<script src="../MembersPanel/assets/js/app.js"></script>
         `;
   }
 }
 
 function registerevent1(event) {
   event.preventDefault();
-  var event6 = document.getElementById("event").value;
-  var color6 = document.getElementById("color").value;
+  var event8 = document.getElementById("event").value;
+  var color8 = document.getElementById("color").value;
   var Btn = document.getElementById("Btn").value;
 
   var userRef = firebase
     .firestore()
-    .collection("events")
+    .collection("OfflineEvents")
     .doc(firebase.auth().currentUser.uid);
 
   var setWithMerge = userRef
     .set(
       {
-        event6: event6,
-        color6: color6,
+        event8: event8,
+        color8: color8,
         Btn: Btn,
       },
       { merge: true }
