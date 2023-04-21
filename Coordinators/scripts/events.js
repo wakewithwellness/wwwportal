@@ -177,18 +177,14 @@ async function getuserInfoRealtime(userID) {
                                     </tr>
                                 </thead>
                                 <tbody>
-
-                  
-
-
                                 <tr>
                                     
                                 <td><a>10</a></td>
                                 <td><h2><a>Jivanam : Mental Health Workshop</a></h2></td>
                                 <td>6th May 2023</td>
                                 <td>Maharishi Vidya Mandir School, Guwahati</td>
-                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color6}">${userInfo.event6}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e6}" style="display:${userInfo.e6}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color8}">${userInfo.event8}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e8}" style="display:${userInfo.e8}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">
                                 
                                 
@@ -209,109 +205,107 @@ async function getuserInfoRealtime(userID) {
                                 </form>
                                 </td>
                                 </tr>
-
-
-
-                                <tr>     
+                                <tr>
+                                   
                                 <td><a>9</a></td>
                                 <td><h2><a>Jivanam : Book Donation Drive'23</a></h2></td>
                                 <td>5th February 2023</td>
                                 <td>Amar Prayas Gosthi, DakhinGaon, Kahilipara</td>
-                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color7}">${userInfo.event7}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e7}" style="display:${userInfo.e7}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">Registration closed</td>
-                        
+                          
                                 </tr>
-
-                            
-
-                                <tr>     
+                                      
+                                <tr>
+                                   
                                 <td><a>8</a></td>
                                 <td><h2><a>NE Organization Convene'22</a></h2></td>
                                 <td>27th December 2022</td>
                                 <td>K.B Natya Mandir</td>
-                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color4}">${userInfo.event4}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.e4}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color6}">${userInfo.event6}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e6}" style="display:${userInfo.e6}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">Registration closed</td>
-                        
+                          
                                 </tr>
-                            
-
+                             
                                 <tr>
+                                   
                                 <td><a>7</a></td>
-                                <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2.0</a></h2></td>
-                                <td>6th November 2022</td>
-                                <td>Lachit ghat, Guwahati</td>
-                                <td style="text-align: center;font-weight: 500; color: red;"><span style="color: ${userInfo.color2}">${userInfo.event2}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td><h2><a>Hepah: From welfare to well-being</a></h2></td>
+                                <td>13th November 2022</td>
+                                <td>Brahmaputra Children Home</td>
+                                <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
+                                <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">Registration closed</td>
-                            </tr>
-
-                         
+                          
+                                </tr>
                                 
-
-                                    <tr>
-                                        <td><a>6</a></td>
-                                        <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2.0</a></h2></td>
-                                        <td>6th November 2022</td>
-                                        <td>Lachit ghat, Guwahati</td>
-                                        <td style="text-align: center;font-weight: 500; color: red;"><span style="color: ${userInfo.color2}">${userInfo.event2}</span></td>
-                                        <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                        <td style="text-align: center; color: red">Registration closed</td>
-                                    </tr>
-
+                                  
+                                
+                                        
+                                     <tr>
+                                   
+                                     <td><a>6</a></td>
+                                     <td><h2><a>Swachh Prayaakh - Cleanliness Drive 2.0</a></h2></td>
+                                     <td>6th November 2022</td>
+                                     <td>Lachit Ghat, Guwahati</td>
+                                     <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color4}">${userInfo.event4}</span></td>
+                                     <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.e4}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                     <td style="text-align: center; color: red">Registration closed</td>
                                
-                                    <tr>
+                                     </tr>
+                               
+                                    
+     
+                                     <tr>
+                                   
                                         <td><a>5</a></td>
                                         <td><h2><a>Swachh Prayaakh - Cleanliness Drive 1</a></h2></td>
                                         <td>9th October 2022</td>
-                                        <td>Uzanbazar ghat</td>
-                                        <td style="text-align: center;font-weight: 500; color: red;"><span style="color: ${userInfo.color1}">${userInfo.event1}</span></td>
-                                        <td style="text-align: center"><a href="${userInfo.e1}" style="display:${userInfo.e1}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                        <td>Uzanbazar Ghat, Guwahati</td>
+                                        <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color3}">${userInfo.event3}</span></td>
+                                        <td style="text-align: center"><a href="${userInfo.e3}" style="display:${userInfo.e3}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
-                                    </tr>
-
+                                  
+                                        </tr>
                                     <tr>
                                         <td><a>4</a></td>
                                         <td><h2><a>Wellness Drive - Medical & Health CheckUp</a></h2></td>
                                         <td>14th March 2021</td>
                                         <td>Jesthakunja Oldage Home, Dhemaji</td>
-                                        <td style="text-align: center; color: red;">-</td>
+                                        <td style="text-align: center">-</td>
                                         <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
-
                                     <tr>
                                         <td><a>3</a></td>
                                         <td><h2><a>Wellness Drive - Clothes & Books Donation</a></h2></td>
                                         <td>20th February 2022</td>
                                         <td>Enajori Children home, Dhemaji</td>
-                                        <td style="text-align: center; color: red;">-</td>
+                                        <td style="text-align: center">-</td>
                                         <td style="text-align: center">-</td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                     </tr>
-
                                     <tr>
                                         <td><a>2</a></td>
                                         <td><h2><a>Prabhati - A Dawn of a Vital Outlook</a></h2></td>
                                         <td>29th November 2021</td>
                                         <td>Jalukbari Girls High School</td>
-                                        <td style="text-align: center; color: red;">-</td>
-                                        <td style="text-align: center">-</td>
+                                        <td style="text-align: center;font-weight: 500"><span style="color: ${userInfo.color2}">${userInfo.event2}</span></td>
+                                        <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
-
                                     <tr>
                                         <td><a>1</a></td>
                                         <td><h2><a>Wellness Drive</a></h2></td>
                                         <td>26th September 2021</td>
                                         <td>Paltan bazar</td>
-                                        <td style="text-align: center; color: red;">-</td>
-                                        <td style="text-align: center">-</td>
+                                        <td style="text-align: center;font-weight: 500"><span style="color: ${userInfo.color1}">${userInfo.event1}</span></td>
+                                        <td style="text-align: center"><a href="${userInfo.e1}" style="display:${userInfo.e1}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
                           
-
                                
                                 </tbody>
                                
