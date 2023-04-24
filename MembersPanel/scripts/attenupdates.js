@@ -161,7 +161,7 @@ async function getuserInfoRealtime(userID){
 </div>
 
 <div class="col-lg">
-<h5>Department: <span style="color: #198754">${userInfo.dept}</span></h5>
+
 </div>
 
 </div>
