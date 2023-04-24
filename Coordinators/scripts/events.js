@@ -157,9 +157,9 @@ async function getuserInfoRealtime(userID) {
                                 <td><a>10</a></td>
                                 <td><h2><a>Jivanam : Mental Health Workshop</a></h2></td>
                                 <td>6th May 2023</td>
-                                <td>Maharishi Vidya Mandir School, Guwahati</td>
+                                <td>Maharishi Vidya Mandir School, Barsajai</td>
                                 <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color8}">${userInfo.event8}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e8}" style="display:${userInfo.e8}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center"><a href="${userInfo.e8}" style="display:${userInfo.s8}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">
                                 
                                 
@@ -190,7 +190,7 @@ async function getuserInfoRealtime(userID) {
                                 <td>5th February 2023</td>
                                 <td>Amar Prayas Gosthi, DakhinGaon, Kahilipara</td>
                                 <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color7}">${userInfo.event7}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e7}" style="display:${userInfo.e7}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center"><a href="${userInfo.e7}" style="display:${userInfo.s7}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">Registration closed</td>
                           
                                 </tr>
@@ -204,7 +204,7 @@ async function getuserInfoRealtime(userID) {
                                 <td>27th December 2022</td>
                                 <td>K.B Natya Mandir</td>
                                 <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color6}">${userInfo.event6}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e6}" style="display:${userInfo.e6}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center"><a href="${userInfo.e6}" style="display:${userInfo.s6}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">Registration closed</td>
                           
                                 </tr>
@@ -218,7 +218,7 @@ async function getuserInfoRealtime(userID) {
                                 <td>13th November 2022</td>
                                 <td>Brahmaputra Children Home</td>
                                 <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color5}">${userInfo.event5}</span></td>
-                                <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.e5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td style="text-align: center"><a href="${userInfo.e5}" style="display:${userInfo.s5}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">Registration closed</td>
                           
                                 </tr>
@@ -234,7 +234,7 @@ async function getuserInfoRealtime(userID) {
                                      <td>6th November 2022</td>
                                      <td>Lachit Ghat, Guwahati</td>
                                      <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color4}">${userInfo.event4}</span></td>
-                                     <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.e4}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                     <td style="text-align: center"><a href="${userInfo.e4}" style="display:${userInfo.s4}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                      <td style="text-align: center; color: red">Registration closed</td>
                                
                                      </tr>
@@ -248,7 +248,7 @@ async function getuserInfoRealtime(userID) {
                                         <td>9th October 2022</td>
                                         <td>Uzanbazar Ghat, Guwahati</td>
                                         <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color3}">${userInfo.event3}</span></td>
-                                        <td style="text-align: center"><a href="${userInfo.e3}" style="display:${userInfo.e3}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                        <td style="text-align: center"><a href="${userInfo.e3}" style="display:${userInfo.s3}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                   
                                         </tr>
@@ -276,7 +276,7 @@ async function getuserInfoRealtime(userID) {
                                         <td>29th November 2021</td>
                                         <td>Jalukbari Girls High School</td>
                                         <td style="text-align: center;font-weight: 500"><span style="color: ${userInfo.color2}">${userInfo.event2}</span></td>
-                                        <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.e2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                        <td style="text-align: center"><a href="${userInfo.e2}" style="display:${userInfo.s2}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
                                     <tr>
@@ -285,7 +285,7 @@ async function getuserInfoRealtime(userID) {
                                         <td>26th September 2021</td>
                                         <td>Paltan bazar</td>
                                         <td style="text-align: center;font-weight: 500"><span style="color: ${userInfo.color1}">${userInfo.event1}</span></td>
-                                        <td style="text-align: center"><a href="${userInfo.e1}" style="display:${userInfo.e1}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                        <td style="text-align: center"><a href="${userInfo.e1}" style="display:${userInfo.s1}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                         <td style="text-align: center; color: red">Registration closed</td>
                                    </tr>
                           
