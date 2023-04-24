@@ -160,7 +160,7 @@ async function getuserInfoRealtime(userID) {
                                 <td><a>10</a></td>
                                 <td><h2><a>Jivanam : Mental Health Workshop</a></h2></td>
                                 <td>6th May 2023</td>
-                                <td>Maharishi Vidya Mandir School, Guwahati</td>
+                                <td>Maharishi Vidya Mandir School, Barsajai</td>
                                 <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color8}">${userInfo.event8}</span></td>
                                 <td style="text-align: center"><a href="${userInfo.e8}" style="display:${userInfo.s8}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">
