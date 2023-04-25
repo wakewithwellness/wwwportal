@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>WWW Board</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+  </head>
+
+
+<style>
+
+.alert{ 
+    text-align: center;
+    padding: 15px;
+    background:#79c879;
+    color: white;
+    font-size: 14px;
+    height:auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: none;     
+  }
+
+  .form-control{
+    border: 1px solid rgb(209, 209, 209);
+  }
+     @media screen and (max-width: 550px) {
+      #extraForms{
+       padding: 0px;
+    }
+    
+  }
+</style>
+
+<body style="background-color: rgb(238, 238, 238)" oncontextmenu="return false">
+
+  <!--oncontextmenu="return false"  -->
+
+            <div class="header" style="background-color: #333333">
+              <div class="header-left">
+                <a class="logo" style="float:left;">
+                  <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>WakeWithWellness</span>
+                </a>
+              </div>   
+            </div>
+       
+
+
+
+        <div class="container-fluid" style="margin-top:9vh">
+    
+
+
+
+            <div class="content" style="background-color: #fff;border-top: 3px solid #333333;padding: 15px;border-radius: 5px;margin-top: 20px;">
+
+
+              <div style="text-align: justify;margin-left: 5px;font-size: 12.5px">
+                <h4 id="tag">Registration will close in</h4>
+                <h2 class="container-fluid" style="text-align: center;color:#009e1a;" id="demo"></h2>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+<br>
+
+            <div class="content" style="background-color: #fff;border-top: 3px solid #333333;padding: 15px;border-radius: 5px;">
+
+              <div class="row">
+                  <div class="col-sm-12">
+                      <h5 class="page-title">Registration Form</h5><hr>
+                  </div>
+              </div>
+
+              <div class="row" >
+              
+                <div class="col-md-12">
+                  
+                    <div class="card-box" id="tshirtform"> 
+                     
+                        <form id="extraForm" style="font-size:13px;text-align: justify;">
+                          <h4 class="card-title">Personal Details :</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" id="Membername" name="name" placeholder="Your name.." required class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" id="Email" name="email" placeholder="Your e-mail.." required class="form-control">
+                                    </div>
+
+                                </div>
+                         
+                              
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                      <label>Contact</label>
+                                      <input type="tel" id="contact" name="contact" placeholder="Your contact.." required class="form-control">
+                                  </div>
+                              
+
+                              </div>
+                                    
+                                   
+                                </div>
+                            </div>
+                    
+                          
+                       
+
+                        
+            
+                   
+                              <div class="alert"><i class="fa fa-check-circle" aria-hidden="true"></i> Form submitted successfully. </div>
+                            <div class="text-center">
+                                <input type="submit" id="submit" value="Submit" style="width: 30vh;height: 6vh" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+
+          <br>
+
+
+
+
+
+        <br><br> 
+       
+           
+        </div>
+ 
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+<script>
+  function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+
+<script>
+
+  //Connection
+const firebaseConfig = {
+  apiKey: "AIzaSyBTOvD0aod-fntZ0VYbT6EAp9z1L_bqKwY",
+  authDomain: "website-818ed.firebaseapp.com",
+  databaseURL: "https://website-818ed-default-rtdb.firebaseio.com",
+  projectId: "website-818ed",
+  storageBucket: "website-818ed.appspot.com",
+  messagingSenderId: "542030860652",
+  appId: "1:542030860652:web:ee0bef0509915aa1da2349",
+  measurementId: "G-2VWCQ9QR4S"
+};
+
+//Init Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Reference messages collection
+var dataRef = firebase.database().ref('membershipContinue');
+
+// Listen for form submit
+document.getElementById('tshirtform').addEventListener('submit', submitForm);
+
+// Submit form
+function submitForm(e){
+  e.preventDefault();
+
+  // Get values
+  var Membername = getInputVal('Membername');
+  var Email = getInputVal('Email');
+  var contact = getInputVal('contact');
+
+
+  // Save message
+  saveData(Membername, Email, contact);
+
+
+ // Show alert
+ document.querySelector('.alert').style.display = 'block';
+ document.getElementById("submit").innerHTML = "Submitted";
+ document.querySelector('#submit').disabled = "disabled";
+ document.querySelector('#submit').style.cursor = "not-allowed";
+ document.querySelector('#submit').style.background = "#70c6ff";
+ document.querySelector('#submit').style.border = "none";
+ 
+
+
+ // Clear form
+ document.getElementById('tshirtform').reset();
+
+}
+
+// Function to get get form values
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveData(Membername, Email, contact){
+  var newDataRef = dataRef.push();
+  newDataRef.set({
+    Membername: Membername,
+    Email:Email,
+    contact:contact,
+ 
+
+
+  });
+}
+
+
+
+
+
+
+           
+
+     // Set the date we're counting down to
+     var countDownDate = new Date("April 6, 2023 22:59:00").getTime();
+     
+     // Update the count down every 1 second
+     var x = setInterval(function() {
+     
+       // Get today's date and time
+       var now = new Date().getTime();
+     
+       // Find the distance between now and the count down date
+       var distance = countDownDate - now;
+     
+       // Time calculations for days, hours, minutes and seconds
+       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+     
+       // Display the result in the element with id="demo"
+       document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+       + minutes + "m " + seconds + "s ";
+
+
+ 
+     
+       // If the count down is finished, write some text
+       if (distance < 0) {
+         clearInterval(x);
+         document.getElementById("demo").innerHTML = "Registration closed";
+         document.getElementById("demo").style.color = "red";
+         document.getElementById("demo").style.borderColor = "red";
+         document.getElementById("tag").style.display = "none";
+         document.querySelector('#submit').style.color = "white";
+         document.querySelector('#submit').style.background = "#cccccc";
+         document.querySelector('#submit').style.border = "none";
+         document.querySelector('#submit').disabled = "disabled";
+         document.querySelector('#submit').style.cursor = "not-allowed";
+
+
+      
+       }
+     }, 1000);
+    
+
+     
+</script>
+
+  <script>
+    
+    document.onkeydown=function(e)
+    {
+      if (event.keyCode == 123) 
+      {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0))
+      {
+        return false;
+      }
+  
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) 
+      {
+        return false;
+      }
+  
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) 
+      {
+        return false;
+      }
+    }
+  
+  </script>
+
+
+  
+
+</body>
+
+</html>

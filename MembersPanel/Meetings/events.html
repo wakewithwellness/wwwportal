@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>Events Dept.</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    
+    <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+</head>
+
+<body style="background-color: rgb(238, 238, 238)">
+    <div class="main-wrapper">
+        <div class="header" style="background-color: #198754;">
+			<div class="header-left">
+				<a href="../main.html" class="logo">
+					<img src="../../assets/img/favicon.png" width="35" height="35" alt=""> <span>Members Portal</span>
+				</a>
+			</div>
+			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+          
+         
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+
+                        <ul>
+                          <li class="menu-title">Main</li>
+                          <li>
+                            <a href="../main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+                        </li>
+                    
+                          <li >
+                            <a href="../activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+                          </li>
+                         
+                          <li>
+                          <a href="../employees.html"><i class="fa fa-users"></i> <span>Members List</span></a>
+                         </li>
+                         <li>
+                          <a href="../attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
+                         </li>
+
+                         <li>
+                          <a href="../attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
+                          </li>
+                    
+                          <li>
+                              <a href="../payments.html"><i class="fa fa-money"></i> <span>Payments</span></a>
+                          </li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-wrapper">
+     
+
+ 
+              <div class="content"  style="background-color: #fff;margin: 15px;border-top: 3px solid #198754;border-radius: 5px;">
+                <div class="row">
+                  <div class="col-sm-12">
+                      <h4 class="page-title">Events Department</h4>  <hr>
+                  </div>
+              </div>
+            
+                <div class="row">
+                    
+                    <div class="col-md-12">
+                      <div class="table-responsive">
+                          <table class="table table-bordered" id="myTable">
+                           
+                            <thead style="background-color: #f7f7f7">
+                                    <tr style="text-align: left;"> 
+                                    <th scope="col">SNo.</th> 
+                                    <th scope="col" style="min-width: 17vh">Date</th> 
+                                    <th scope="col" style="min-width: 30vh">Agenda</th> 
+                                    <th scope="col">Barasha Rani Thakuria</th> 
+                               
+                                    <th scope="col">Sheekha Tripathy</th> 
+                                    <th scope="col">ANKITA BARMAN ROY</th> 
+                                    <th scope="col">Purbasha Baruah Borah</th> 
+                                    <th scope="col">Gurbaaz Dhaliwal</th> 
+                                    <th scope="col">HARMANPAL SINGH</th> 
+                                    <th scope="col">Rimpi Das</th> 
+                                    <th scope="col">KARUNA SRIVASTAVA</th> 
+                                    <th scope="col">Mridushmita Rabha</th> 
+                                   
+                                    </tr>
+                                   
+                           </thead>
+                                <tbody id="tbody1" style="text-align: left;">
+     
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <br><br>
+
+      
+            <div class="container-fluid" id="footerbar">
+            <div class="row">
+            <div class="col"><a href="../activities.html"><img style="width:54px; height:auto" src="../assets/img/notifications.png" alt=""/></a></div>
+            <div class="col"><a href="../payments.html"><img style="width:54px; height:auto" src="../assets/img/payments.png" alt=""/></a></div>
+            <div class="col"><a href="../attendance.html"><img style="width:54px; height:auto" src="../assets/img/attendance.png" alt=""/></a></div>
+            <div class="col"><a href="../main.html"><img style="width:54px; height:auto" src="../assets/img/home.png" alt=""/></a></div>
+            
+            </div>
+            </div>
+
+         
+
+
+
+          
+        </div>
+		
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/js/jquery.slimscroll.js"></script>
+    <script src="../assets/js/select2.min.js"></script>
+    <script src="../assets/js/moment.min.js"></script>
+    <script src="../assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+      <script>
+           var firebaseConfig = {
+                apiKey: "AIzaSyBTOvD0aod-fntZ0VYbT6EAp9z1L_bqKwY",
+                authDomain: "website-818ed.firebaseapp.com",
+                databaseURL: "https://website-818ed-default-rtdb.firebaseio.com",
+                projectId: "website-818ed",
+                storageBucket: "website-818ed.appspot.com",
+                messagingSenderId: "542030860652",
+                appId: "1:542030860652:web:ee0bef0509915aa1da2349",
+                measurementId: "G-2VWCQ9QR4S"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+
+          
+//GET ALL DATA Public relations
+var stdNo;
+    function SelectAllData(){
+      document.getElementById('tbody1').innerHTML="";
+
+      stdNo=0;
+        firebase.database().ref('/Attendance/Events').orderByChild('date').once('value',
+        function(AllRecords){
+            AllRecords.forEach(
+                function(CurrentRecord){
+       
+              
+                    var date = CurrentRecord.val().date;
+                    var name = CurrentRecord.val().name;
+                    var a21WWW0017 = CurrentRecord.val().a21WWW0017;
+                   
+                    var a21WWW0037 = CurrentRecord.val().a21WWW0037;
+                    var a22WWW0062 = CurrentRecord.val().a22WWW0062;
+                    var a22WWW0064 = CurrentRecord.val().a22WWW0064;
+                    var a22WWW0066 = CurrentRecord.val().a22WWW0066;
+                    var a22WWW0072 = CurrentRecord.val().a22WWW0072;
+                    var a22WWW0073 = CurrentRecord.val().a22WWW0073;
+                    var a22WWW0078 = CurrentRecord.val().a22WWW0078;
+                    var a22WWW0079 = CurrentRecord.val().a22WWW0079;
+                  
+                  
+                    
+                    
+                    AddItemsToTable(date,name,a21WWW0017,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078,a22WWW0079);
+             
+
+                              }
+                          );
+
+                      });
+                  }
+
+                  window.onload = SelectAllData;
+
+                  //Filling the table
+
+                  var stdList = [];
+                  function AddItemsToTable(date,name,a21WWW0017,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078,a22WWW0079){
+                      var tbody = document.getElementById('tbody1');
+                      var trow = document.createElement('tr');
+                      var td0 = document.createElement('td');
+                      var td1 = document.createElement('td');
+                      var td2 = document.createElement('td');
+                      var td3 = document.createElement('td');
+                      var td4 = document.createElement('td');
+                      var td5 = document.createElement('td');
+                      var td6 = document.createElement('td');
+                      var td7 = document.createElement('td');
+                      var td8 = document.createElement('td');
+                      var td9 = document.createElement('td');
+                      var td10 = document.createElement('td');
+                      var td11 = document.createElement('td');
+                  
+                  
+
+
+
+                    stdList.push([date,name,a21WWW0017,a21WWW0037,a22WWW0062,a22WWW0064,a22WWW0066,a22WWW0072,a22WWW0073,a22WWW0078,a22WWW0079])
+
+
+
+                         
+                      
+                        td0.innerHTML = ++stdNo;
+                        td1.innerHTML = date;
+                        td2.innerHTML = name;
+                        td1.style.fontWeight = "600";
+                        td2.style.color = "#198754";
+                        td2.style.fontSize = "13px"
+                        td3.innerHTML = a21WWW0017;
+                        td4.innerHTML = a21WWW0037;
+                        td5.innerHTML = a22WWW0062;
+                        td6.innerHTML = a22WWW0064;
+                        td7.innerHTML = a22WWW0066;
+                        td8.innerHTML = a22WWW0072;
+                        td9.innerHTML = a22WWW0073;
+                        td10.innerHTML = a22WWW0078;
+                        td11.innerHTML = a22WWW0079;
+                        
+                    
+                      
+
+                        trow.appendChild(td0);
+                        trow.appendChild(td1); 
+                        trow.appendChild(td2); 
+                        trow.appendChild(td3); 
+                        trow.appendChild(td4); 
+                        trow.appendChild(td5); 
+                        trow.appendChild(td6); 
+                        trow.appendChild(td7); 
+                        trow.appendChild(td8); 
+                        trow.appendChild(td9); 
+                        trow.appendChild(td10); 
+                        trow.appendChild(td11); 
+                   
+                  
+
+
+                        tbody.appendChild(trow);
+                        
+                    }
+
+
+      </script>
+
+
+</body>
+
+</html>

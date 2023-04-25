@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>ID Card</title>
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+
+    <style>
+      
+  
+     .testbox {
+  
+     justify-content: center;
+     align-items: center;
+     height: inherit;
+     margin-top: 10px;
+     padding: 3px;
+     }
+
+     textarea {
+    min-width: 30vh;
+    height: 90px;
+     padding: 7px 0;
+     border-radius: 3px;
+ 
+     background: transparent;
+     }
+
+
+     select {
+     padding: 7px 0;
+     border-radius: 3px;
+     margin-top: 5px;
+     border: 1px solid rgb(49, 49, 49);
+     background: transparent;
+     }
+     select, table {
+     width: 100%;
+     }
+
+     .btn-block {
+     margin-top: 30px;
+     text-align: center;
+     }
+
+     button {
+     width: 100%;
+     padding: 10px;
+     border: none;
+     -webkit-border-radius: 5px; 
+     -moz-border-radius: 5px; 
+     border-radius: 5px; 
+     font-size: 16px;
+     color: #fff;
+     cursor: pointer;
+
+
+     
+     }
+
+
+
+   .alert{
+    text-align: center;
+  padding: 10px;
+  background:#79c879;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: none;
+  
+   
+   }
+
+   .alert1{
+    text-align: center;
+  padding: 10px;
+  background:#79c879;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: none;
+  
+   
+   }
+
+   .alert3{
+    text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+       display: none; 
+  
+   
+   }
+
+
+   .alert2{
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+       display: none; 
+      }
+
+
+
+   
+  
+
+
+     @media (min-width: 568px) {
+     .title-block {
+     display: flex;
+     justify-content: space-between;
+     }
+     .title-block select {
+     width: 30%;
+     margin-bottom: 0;
+     }
+   
+   
+     }
+   </style>
+
+</head>
+
+<body style="background-color: rgb(238, 238, 238);">
+
+
+    <div class="topnav" style="width: 100%;">
+   
+        <div style="float: right"> 
+          <a class="modal-trigger" href="#modal2" id="loginli" style="visibility: collapse;color:#5793D1;">Login</a>
+          <a class="modal-trigger" href="#modal1" id="signupli" style="visibility: collapse;"></a>
+         
+    
+        </div>
+      
+      </div>
+    
+    
+      <div class="header" style="background-color: #198754;">
+        <div class="header-left">
+          <a class="logo" style="margin-left: -15px;">
+            <img src="../assets/img/favicon.png" width="35" height="35" alt=""> <span>Members Portal</span>
+          </a>
+        </div>
+        <a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+              <ul class="nav user-menu float-right" id="logoutli" style="display: none;"> 
+              </ul>
+              <div class="dropdown mobile-user-menu float-right" id="logoutli" style="display: none;">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>                 
+              </div>
+          </div>
+    
+    
+ <!-- Forgot your password -->
+ <div id="modal2" class="modal container" style="background: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Forgot Password</h3>
+
+       
+      </div>
+      <div class="modal-body">
+<labe>Enter your email : </labe>
+        <input type="email" style="border: 1px solid rgb(79, 78, 78); padding: 5px; border-radius:5px" id="forgotEmail" placeholder="Email">
+        <div class="forgot">Your password reset link will be sent to your email address<span style="font-weight: 600;"> (SPAM FOLDER)</span>.</div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="location.href='main.html'">Close</button>
+     
+        <button onclick="forgotPass()" type="button" style="margin-left:5px" class="btn btn-primary">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Forgot your password -->
+
+
+
+
+ <!--Fill profile details -->
+ <div id="modal5" class="modal container" style="padding: 10px; max-width: 120vh;max-height: 75vh;overflow-y:visible;">
+  <div class="modal-content">
+    
+   
+  
+    <h3 style="text-align:center;">ID Card Registration</h3>
+   <div style="height: 2px; background-color:rgb(197, 197, 197)"></div><br><br>
+   <form autocomplete="off" id="editProfileI"  onsubmit="updateUserProfileI(event)" >
+    <div class="row" style="text-align: left">
+
+    <div class="col-lg">
+    <div class="form-group">
+    <label for="exampleInputName">Full Name</label>
+    <input style="border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" type="text" class="form-control" name="name" id="exampleInputName" >
+    </div>
+
+    <div class="form-group">
+    <label for="exampleInputEmail1">Email Address</label>
+    <input style="border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" type="email" class="form-control" name="email" id="exampleInputEmail1">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+
+  
+    <div class="form-group">
+    <label for="exampleInputContact">Contact No.</label>
+    <input style="border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" type="text" class="form-control" name="contact" id="exampleInputContact" >
+    </div>
+
+
+    </div>
+
+    <div class="col-lg">
+    
+    <div class="form-group">
+    <label for="exampleInputBlood">Blood Group</label>
+    <input style="border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" type="text" class="form-control" name="blood" id="exampleInputBlood" >
+        </div>
+      <div class="form-group">
+        <label for="exampleInputAddress">Delivery Address</label>
+      <textarea id="exampleInputAddress" style="height:80px;border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" name="address"></textarea>
+      </div>
+
+      <div class="form-group">
+      <label for="exampleInputType">Type</label>
+      <div class="row">
+        <div class="col"> 
+     
+        <select style="border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" type="text" class="form-control" name="link" >
+      
+        <option value="https://rzp.io/l/RESzvRhh1">Guwahati (Assam)</option>
+        <option value="https://rzp.io/i/fWO0Xt8E">Out of Guwahati (Assam)</option>
+        <option value="https://rzp.io/i/RJlz2TwnY">Out of Assam</option>
+        <option value="https://rzp.io/i/pQ7IO2kS">E-card (Only for members outside Assam)</option>
+        
+        </select></div></div>
+   
+      </div>
+
+     
+      <input style="display: none" type="text" class="form-control" name="i">
+     <input style="display: none" type="text" class="form-control" name="ii">
+ 
+
+     <div class="alert1">Submitted successfully</div>
+  <button style="background-color: #198754;padding: 10px;border: none;cursor: pointer;color: white;border-radius: 5px;" id="proceed1" type="submit">Submit</button> 
+  </div> 
+  </div>   
+    </form>
+
+  </div>   
+</div> 
+
+
+
+
+ <!--edit profile details -->
+ <div id="modal4" class="modal container" style="padding: 10px; max-width: 120vh;max-height: 75vh;overflow-y:visible;">
+  <div class="modal-content">
+    
+   
+  
+    <h3 style="text-align:center;">ID Card Registration</h3>
+   <div style="height: 2px; background-color:rgb(197, 197, 197)"></div><br><br>
+   <form autocomplete="off" id="editProfile"  onsubmit="updateUserProfile(event)" >
+    <div class="row" style="text-align: left">
+
+    <div class="col-lg">
+    <div class="form-group">
+    <label for="exampleInputName">Full Name</label>
+    <input style="border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" type="text" class="form-control" name="name" id="exampleInputName" >
+    </div>
+
+    <div class="form-group">
+    <label for="exampleInputEmail1">Email Address</label>
+    <input style="border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" type="email" class="form-control" name="email" id="exampleInputEmail1">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+
+  
+    <div class="form-group">
+    <label for="exampleInputContact">Contact No.</label>
+    <input style="border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" type="text" class="form-control" name="contact" id="exampleInputContact" >
+    </div>
+
+
+    </div>
+
+    <div class="col-lg">
+    
+    <div class="form-group">
+    <label for="exampleInputBlood">Blood Group</label>
+    <input style="border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" type="text" class="form-control" name="blood" id="exampleInputBlood" >
+        </div>
+      <div class="form-group">
+        <label for="exampleInputAddress">Delivery Address</label>
+      <textarea id="exampleInputAddress" style="height:80px;border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" name="address"></textarea>
+      </div>
+
+      <div class="form-group">
+      <label for="exampleInputType">Location</label>
+      <div class="row">
+      <div class="col"> 
+   
+      <select style="border: 1px solid #c7c7c7; border-radius: 5px; padding-left: 5px" type="text" class="form-control" name="link" >
+    
+      <option value="https://rzp.io/l/RESzvRhh1">Guwahati (Assam)</option>
+      <option value="https://rzp.io/i/fWO0Xt8E">Out of Guwahati (Assam)</option>
+      <option value="https://rzp.io/i/RJlz2TwnY">Out of Assam</option>
+      <option value="https://rzp.io/i/pQ7IO2kS">E-card (Only for members outside Assam)</option>
+      
+      </select></div></div>
+   
+      </div>
+
+      <input style="display: none" type="text" class="form-control" name="i">
+     <input style="display: none" type="text" class="form-control" name="ii">
+ 
+
+
+     <div class="alert">Updated successfully</div>
+  <button style="background-color: #198754;padding: 10px;border: none;cursor: pointer;color: white;border-radius: 5px;" id="proceed" type="submit">Update</button> 
+  </div> 
+  </div>   
+    </form>
+
+  </div>   
+</div> 
+
+
+
+ <!--File1 -->
+ <div id="modal1" class="modal container" style="padding: 10px; max-width: 120vh;height: auto;overflow-y: scroll;">
+  <div class="modal-content">
+    <h3 style="font-weight: bold;color:#198754;">File Upload</h3>
+    <div style="height:1px;background-color: #198754;"></div><br>
+
+    <div class="file-field input-field" id="uploadform1">
+      <div class="btn btn-secondary">
+        <span>Choose file</span>
+        <input type="file" id="file1" accept="image/jpeg,image/png,application/pdf" onchange="uploadImageI(event)" />  
+      </div>
+      
+      <div class="file-path-wrapper">
+        <input class="file-path validate"  type="text">
+      </div>
+
+     
+      <p style="text-align:right" class="prog"></p>
+      <progress  style="width: 100%;height: 25px;margin-top: -10vh;background: #198754;" role="progressbar" value="0" max="100" id="uploader">0%</progress>
+  
+      <div class="success" style="color: #f37b3b;text-align: center;font-size: 20px;margin-top: 5px;" ></div>  
+    </div>
+
+
+    <form autocomplete="off" id="editProfile1" onsubmit="uploadI(event)">
+     
+      <select name="down1">
+        <option value="Submitted">Uploaded</option>  
+     </select>
+
+
+     <div class="alert3">
+      <img style="min-width: 10vh; height:auto" src="https://img.icons8.com/color/96/000000/verified-account.png"/>
+      <h4>Uploaded Successfully</h4>
+     </div>
+
+
+
+     <div class="text-right" style="display: inline-block;">
+      <button id="submit1" style="width:120px;background-color: #198754;padding: 10px;border: none;cursor: pointer;color: white;border-radius: 5px;display: none;"  type="submit">Confirm</button> 
+    </div> 
+    </form>
+
+
+
+  </div>
+</div> 
+
+
+ 
+ <!--File2 -->
+ <div id="modal3" class="modal container" style="padding: 10px; max-width: 120vh;height: auto;overflow-y: scroll;">
+  <div class="modal-content">
+    <h3 style="font-weight: bold;color:#198754;">File Upload</h3>
+    <div style="height:1px;background-color: #198754;"></div><br>
+
+    <div class="file-field input-field" id="uploadform2">
+      <div class="btn btn-secondary">
+        <span>Choose file</span>
+        <input type="file" id="file2" accept="image/jpeg,image/png,application/pdf" onchange="uploadImageII(event)" />  
+      </div>
+      
+      <div class="file-path-wrapper">
+        <input class="file-path validate"  type="text">
+      </div>
+
+     
+      <p style="text-align:right" class="progg"></p>
+      <progress  style="width: 100%;height: 25px;margin-top: -10vh;background: #198754;" role="progressbar" value="0" max="100" id="uploaderII">0%</progress>
+  
+      <div class="successII" style="color: #f37b3b;text-align: center;font-size: 20px;margin-top: 5px;" ></div>  
+    </div>
+
+
+    <form autocomplete="off" id="editProfile2" onsubmit="uploadII(event)">
+     
+      <select name="down2">
+        <option value="Submitted">Uploaded</option>  
+     </select>
+
+
+     <div class="alert2">
+      <img style="min-width: 10vh; height:auto" src="https://img.icons8.com/color/96/000000/verified-account.png"/>
+      <h4>Uploaded Successfully</h4>
+     </div>
+
+
+
+     <div class="text-right" style="display: inline-block;">
+      <button id="submit2" style="width:120px;background-color: #198754;padding: 10px;border: none;cursor: pointer;color: white;border-radius: 5px;display: none;"  type="submit">Confirm</button> 
+    </div> 
+    </form>
+
+
+
+  </div>
+</div> 
+
+    
+    <div style="margin-top: 20px;"></div>
+    
+
+      <div id="logindata"></div>
+             
+
+    
+      <div class="center">
+        <div class="userDetails"></div>
+      </div>
+             
+
+
+
+
+
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+</script>  
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+          authDomain: "members-76725.firebaseapp.com",
+          projectId: "members-76725",
+          storageBucket: "members-76725.appspot.com",
+          messagingSenderId: "734645197873",
+          appId: "1:734645197873:web:808127fdb4d643d4d24910",
+          measurementId: "G-7LYZ3R48GT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+        
+      </script>
+      <script src="./scripts/auth.js"></script>
+      <script src="./idcard.js" ></script>
+
+</body>
+
+</html>
