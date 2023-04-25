@@ -196,7 +196,7 @@ async function getuserInfoRealtime(userID) {
                                     
                                  
                                   
-                                    <div id="cameraicon" style="color: white; margin-top: -18px; text-align: right;"><i href="#modal4" class="fa fa-camera modal-trigger" ></i></div>
+                                    <div id="cameraicon" style="color: orange; margin-top: -18px; text-align: right;"><i href="#modal4" class="fa fa-camera modal-trigger" ></i></div>
                                   
                                  
                                   
