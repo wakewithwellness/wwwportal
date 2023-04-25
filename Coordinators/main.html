@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Volunteers Portal</title>
+    <title>Coordinators Portal</title>
+    <link href="../assets/img/favicon.png" rel="icon" />
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Compiled and minified CSS -->
     <link
@@ -47,9 +49,6 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
-
-    <link href="../assets/img/favicon.png" rel="icon" />
-    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <style>
       .alert {
@@ -97,8 +96,8 @@
       #inputboxform {
         width: 100%;
         padding: 12px;
-        color: #16151a;
-        border: 1px solid #16151a;
+        color: #198754;
+        border: 1px solid #198754;
         border-radius: 4px;
         box-sizing: border-box;
         resize: vertical;
@@ -124,11 +123,20 @@
       </div>
     </div>
 
-    <div class="header" style="background-color: #03b1fc">
+    <div
+      class="header"
+      style="
+        -webkit-box-shadow: 0px 4px 11px 1px rgba(0, 0, 0, 0.33);
+        -moz-box-shadow: 0px 4px 11px 1px rgba(0, 0, 0, 0.33);
+        box-shadow: 0px 4px 11px 1px rgba(0, 0, 0, 0.33);
+        background-color: rgb(53, 53, 53);
+        height: 60px;
+      "
+    >
       <div class="header-left">
-        <a class="logo" style="margin-left: -15px">
+        <a class="logo" style="margin-left: -15px; margin-top: 3px">
           <img src="../assets/img/favicon.png" width="35" height="35" alt="" />
-          <span style="font-size: 17px">Coordinator Portal</span>
+          <span style="color: white">Coordinators Portal</span>
         </a>
       </div>
       <a id="toggle_btn" href="javascript:void(0);"
@@ -356,7 +364,19 @@
           </div>
 
           <div class="form-group row">
-            <label class="col-form-label col-md-2">Department :</label>
+            <label class="col-form-label col-md-2">Blood group : </label>
+            <div class="col-md-10">
+              <input
+                id="inputboxform"
+                type="text"
+                name="blood"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-form-label col-md-2">Department I :</label>
             <div class="col-md-10">
               <input
                 id="inputboxform"
@@ -368,6 +388,24 @@
                 "
                 disabled
                 name="department"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-form-label col-md-2">Department II :</label>
+            <div class="col-md-10">
+              <input
+                id="inputboxform"
+                type="text"
+                style="
+                  border: 1px solid #adadad;
+                  color: #adadad;
+                  cursor: not-allowed;
+                "
+                disabled
+                name="department2"
                 class="form-control"
               />
             </div>
@@ -388,13 +426,12 @@
           <div class="form-group row">
             <label class="col-form-label col-md-2">Address : </label>
             <div class="col-md-10">
-              <textarea
+              <input
                 id="inputboxform"
-                rows="4"
                 type="text"
                 name="address"
                 class="form-control"
-              ></textarea>
+              />
             </div>
           </div>
 
@@ -441,7 +478,7 @@
           <button
             style="
               width: 100%;
-              background-color: #16151a;
+              background-color: #198754;
               padding: 10px;
               border: none;
               cursor: pointer;
@@ -469,7 +506,7 @@
         </p>
 
         <div class="file-field input-field">
-          <div class="btn" style="background-color: #16151a; color: white">
+          <div class="btn" style="background-color: #198754; color: white">
             <span>Choose file</span>
             <input
               type="file"
