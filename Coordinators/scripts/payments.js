@@ -48,18 +48,18 @@ async function getuserInfo(userID) {
     userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
       <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
       <div class="card-body" style="text-align: center">
-      <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
+      <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:30px">COORDINATOR'S PORTAL</h5><hr>
 <br>
       <form autocomplete="off" onsubmit="login(event)">
           <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
 
-          <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
+          <input type="password" class="form-control my-2" id="loginPassword" placeholder="Password" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
           <br>
           <div style="text-align:left"> <a style="text-decoration: none; color: rgb(53, 53, 53); font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
           <br>
-          <button type="submit" class="btn" style="background-color:rgb(53, 53, 53);color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+          <button type="submit" class="btn" style="background-color:rgb(53, 53, 53);color: #fff; padding-bottom:8px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
           
   </form>
         <div>
@@ -135,7 +135,7 @@ async function getuserInfoRealtime(userID) {
 
 
 
-<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid rgb(53, 53, 53);padding: 20px;border-radius:5px">
+<div class="content" style="background-color: #fff;margin: 10px;border-top: 3px solid rgb(53, 53, 53);padding: 20px;border-radius:5px">
 <div class="row">
 <div class="col-sm-12">
     <h4 class="page-title">Coordinator Details</h4><hr>
@@ -163,7 +163,7 @@ async function getuserInfoRealtime(userID) {
 
 
 </div>
-            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid rgb(53, 53, 53);border-radius:5px">
+            <div class="content" style="background-color: #fff;margin: 10px;border-top: 3px solid rgb(53, 53, 53);border-radius:5px">
            
           
                 <div class="row">
@@ -299,18 +299,18 @@ async function getuserInfoRealtime(userID) {
     userDetails.innerHTML = `  <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
         <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:25px">COORDINATOR'S PORTAL</h5><hr>
 <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
 
-            <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
+            <input type="password" class="form-control my-2" id="loginPassword" placeholder="Password" style="width: 98%;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
             <br>
             <div style="text-align:left"> <a style="text-decoration: none; color: rgb(53, 53, 53); font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
             <br>
-            <button type="submit" class="btn" style="background-color:rgb(53, 53, 53);color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            <button type="submit" class="btn" style="background-color:rgb(53, 53, 53);color: #fff; padding-bottom:8px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
             
     </form>
           <div>
