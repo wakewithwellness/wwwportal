@@ -451,69 +451,73 @@ function updateUserProfile(e) {
 }
 
 function uploadImage(e) {
-  console.log(e.target.files[0]);
-  const uid = firebase.auth().currentUser.uid;
+  const file = e.target.files[0];
+  console.log(file);
+
+  // Check if file size is less than or equal to 2MB
+  if (file.size > 1 * 1024 * 1024) {
+    alert("File size exceeds the limit of 1MB.");
+    return;
+  }
+
+  const user = firebase.auth().currentUser;
+  const uid = user.uid;
   const fileRef = firebase
     .storage()
     .ref()
     .child(`/coordinators/${uid}/profile`);
-  const uploadTask = fileRef.put(e.target.files[0]);
+  const uploadTask = fileRef.put(file);
+
   uploadTask.on(
     "state_changed",
     (snapshot) => {
       var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      if (progress == "100")
-        // Show alert
-        document.querySelector(
-          ".success"
-        ).innerHTML = `<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
-
-      // Hide alert after 10 seconds
-      setTimeout(function () {
-        document.querySelector(".success").innerHTML = ``;
-      }, 10000);
-
       uploader.value = progress;
-
       console.log("Upload is " + progress + "% done");
       document.querySelector(".prog").innerHTML = `${progress}%`;
 
       switch (snapshot.state) {
         case firebase.storage.TaskState.PAUSED: // or 'paused'
           console.log("Upload is paused");
-
           break;
         case firebase.storage.TaskState.RUNNING: // or 'running'
           console.log("Upload is running");
-
           break;
       }
     },
     function (error) {
-      // A full list of error codes is available at
-      // https://firebase.google.com/docs/storage/web/handle-errors
+      // Handle errors
       switch (error.code) {
         case "storage/unauthorized":
           // User doesn't have permission to access the object
           break;
-
         case "storage/canceled":
           // User canceled the upload
           break;
-
         case "storage/unknown":
           // Unknown error occurred, inspect error.serverResponse
           break;
       }
     },
-
     function () {
       uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
         console.log("File available at", downloadURL);
         document.querySelector("#proimg").src = downloadURL;
-        firebase.auth().currentUser.updateProfile({
+
+        // Update user profile photo URL
+        user.updateProfile({
           photoURL: downloadURL,
         });
+
+        // Show success alert
+        document.querySelector(
+          ".success"
+        ).innerHTML = `<i class="fa fa-check-circle" aria-hidden="true"></i> Updated Successfully`;
+
+        // Hide alert after 10 seconds
+        setTimeout(function () {
+          document.querySelector(".success").innerHTML = ``;
+        }, 10000);
       });
     }
   );
