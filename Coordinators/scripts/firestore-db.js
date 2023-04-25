@@ -19,6 +19,10 @@ function createUserCollection(user) {
     state: "",
     pincode: "",
     exp: "",
+    agreement: "",
+    idcard: "",
+    certificate: "",
+    status: "",
   });
 }
 
@@ -40,9 +44,9 @@ async function getuserInfo(userID) {
     }
   } else {
     userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
-      <div class="card" style="border-top: 3px solid #03b1fc">
+      <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
       <div class="card-body" style="text-align: center">
-      <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
+      <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:30px">MEMBERS PORTAL</h5><hr>
 <br>
       <form autocomplete="off" onsubmit="login(event)">
           <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -51,9 +55,9 @@ async function getuserInfo(userID) {
           <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
           <br>
-          <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+          <div style="text-align:left"> <a style="text-decoration: none; color: rgb(53, 53, 53); font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
           <br>
-          <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+          <button type="submit" class="btn" style="background-color:rgb(53, 53, 53);color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
           
   </form>
         <div>
@@ -79,9 +83,11 @@ async function getuserInfoRealtime(userID) {
         if (userInfo) {
           userDetails.innerHTML = `
                         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../MembersPanel/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    
 
     
 
@@ -97,74 +103,117 @@ async function getuserInfoRealtime(userID) {
         -o-object-position: center;
         object-position: center;
       }
+
+      #cameraicon{
+        margin-right: 22px
+      }
+
+  
+
+      @media (max-width: 557px) {
+        #cameraicon{
+          margin-right: -10px
+        }
+
+        
+      }
     </style>
     
                         <div class="sidebar" id="sidebar">
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
-                    <ul>
-                        <li class="menu-title" style="text-align:left">Main</li><hr>
-                       
-                  
-                                  <li>
-                                <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
-                                  </li>
+                <ul>
+                <li class="menu-title" style="text-align:left">Main</li><hr>
+               
+          
+                          <li>
+                        <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+                          </li>
 
-                                                    <li>
-                                                    <a href="events.html"><i class="fa fa-users"></i> <span>Events</span></a>
-                                                    </li>
-                                        
-                                                    <li>
-                                                    <a href="coordinators.html"><i class="fa fa-users"></i> <span>Coordinators List</span></a>
-                                                    </li>
+                                            <li>
+                                            <a href="events.html"><i class="fa fa-users"></i> <span>Events</span></a>
+                                            </li>
+                                
+                                            <li>
+                                            <a href="coordinators.html"><i class="fa fa-users"></i> <span>Coordinators List</span></a>
+                                            </li>
 
-                                                    <li>
-                                                    <a href="payments.html"><i class="fa fa-money"></i> <span>Payment History</span></a>
-                                                    </li>
-                                      
-                                    
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
+                                            <li>
+                                            <a href="payments.html"><i class="fa fa-money"></i> <span>Payment History</span></a>
+                                            </li>
+                              
+                            
+                              </ul>
+                </div>
+            </div>
+        </div>
         
         
-                    <div class="page-wrapper">
-                    <div style="float: right; margin-right:15px">
-                    <a href="activities.html" style="background-color:#03b1fc;padding:10px;color:white;border-radius: 4px">Dashboard</a>
-                    <a type="button" style="background-color:red;padding:8.5px;color:white;margin-left: 5px; border-radius: 4px; cursor: pointer" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-sign-out"></i> SignOut</a> 
-                    </div>
+        <div class="page-wrapper">
+
+
+
+        
 
 
 
 
 
-                <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;padding: 20px;border-radius: 5px">
+
+
+       <div style="float: right; margin-right:15px">
+        <a href="activities.html" style="background-color:grey;padding:10px;color:white;border-radius: 4px">Dashboard</a>
+        <a type="button" style="background-color:red;padding:8.5px;color:white;margin-left: 5px; border-radius: 4px; cursor: pointer" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-sign-out"></i></a>
+
+      </div>
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid rgb(53, 53, 53);padding: 20px;border-radius: 5px">
         
                  <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title" style="float:left">My Profile <a style="font-size: 15px;color: red" class="modal-trigger" href="#modal3">[ <i class="fa fa-pencil" aria-hidden="true"></i> Edit ]</a></h4><br><br>
+                        <h4 class="page-title" style="float:left">My Profile <a style="font-size: 15px;color: rgb(53, 53, 53)" class="modal-trigger" href="#modal3">[ <i class="fa fa-pencil" aria-hidden="true"></i> Edit ]</a></h4><br><br>
                         <hr>
                     </div>
                     </div>
 
 
                     <div class="row">
-             
+                    <div class="col-lg-2"> 
+                   
+                    <div class="profile-view">
+                            <div class="profile-img-wrap" style="height:25vh;width:24vh" >
+                                <div class="profile-img">
+                             
+                                    <img id="proimg" class="pic modal-trigger" style="border-radius: 10px" href="#modal4" src="../assets/user.png" alt="">
+                                    
+                                 
+                                  
+                                    <div id="cameraicon" style="color: white; margin-top: -18px; text-align: right;"><i href="#modal4" class="fa fa-camera modal-trigger" ></i></div>
+                                  
+                                 
+                                  
+  
+                                
+                                
+                                   </div>
+                                
+                            </div>
+                    </div>
+                    
+                </div>
                     <div class="col-lg"> 
                     <div class="row" style="text-align:left">
 
 
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">Name: <span style="color: #16151a">${userInfo.name}</span></h4>
+                    <h4 style="font-size: 13px">Name: <span style="color: rgb(53, 53, 53)">${userInfo.name}</span></h4>
                     </div>
 
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">Registration no.: <span style="color: #16151a">${userInfo.regno}</span></h4>
+                    <h4 style="font-size: 13px">Registration no.: <span style="color: rgb(53, 53, 53)">${userInfo.regno}</span></h4>
                     </div>
 
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">E-mail: <span style="color: #16151a">${userInfo.email}</span></h4>
+                    <h4 style="font-size: 13px">E-mail: <span style="color: rgb(53, 53, 53)">${userInfo.email}</span></h4>
                     </div>
 
                   
@@ -172,39 +221,45 @@ async function getuserInfoRealtime(userID) {
                     </div>
 
 
+
+
                     <div class="row" style="text-align:left; margin-top:-9px">
 
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">Department: <span style="color: #16151a">${userInfo.department}</span></h4>
+                    <h4 style="font-size: 13px">Gender: <span style="color: rgb(53, 53, 53)">${userInfo.gender}</span></h4>
                     </div>
 
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">Contact no.: <span style="color: #16151a">${userInfo.phone}</span></h4>
+                    <h4 style="font-size: 13px">Contact no.: <span style="color: rgb(53, 53, 53)">${userInfo.phone}</span></h4>
                     </div>
 
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">Whatsapp no.: <span style="color: #16151a">${userInfo.whatsapp}</span></h4>
+                    <h4 style="font-size: 13px">Whatsapp no.: <span style="color: rgb(53, 53, 53)">${userInfo.whatsapp}</span></h4>
                     </div>
 
+                 
                     </div>
 
 
-         
-                    
 
                     <div class="row" style="text-align:left; margin-top:-9px">
                     <div class="col-lg">
-                    <h4 style="font-size: 13px">Address: <span style="color: #16151a">${userInfo.address}, ${userInfo.state}, ${userInfo.pincode}</span></h4>
-                    </div>
-
-              
-
+                    <h4 style="font-size: 13px">Address: <span style="color: rgb(53, 53, 53)">${userInfo.address}, ${userInfo.state}, ${userInfo.pincode}</span></h4>
                     </div>
 
                     </div>
 
 
 
+
+                    <div class="row" style="text-align:left; margin-top:-9px">
+                    <div class="col-lg">
+                    <h4 style="font-size: 13px">State: <span style="color: rgb(53, 53, 53)">${userInfo.state}</span></h4>
+                    </div>
+
+                    </div>
+
+                    </div>
                     </div>
 
                    
@@ -212,9 +267,9 @@ async function getuserInfoRealtime(userID) {
 
         </div>
 
-   
 
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;border-radius: 5px"">
+
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid rgb(53, 53, 53);border-radius: 5px"">
 
         <div class="row">
         <div class="col-sm-12">
@@ -225,9 +280,9 @@ async function getuserInfoRealtime(userID) {
 
 
         <div style="text-align:left">
-        <h4 style="font-size: 13px">Education Informations/Workplace: <span style="color: #16151a">${userInfo.college}</span></h4>
+        <h4 style="font-size: 13px">Education Informations: <span style="color: rgb(53, 53, 53)">${userInfo.college}</span></h4>
         <br>
-        <h4 style="font-size: 13px">Experience <span style="font-style: italic; color: grey">[Prior Experience in working for a NGO/CBO]</span> : <span style="color: #16151a">${userInfo.exp}</span></h4>
+        <h4 style="font-size: 13px">Experience <span style="font-style: italic; color: grey">[Prior Experience in working for a NGO/CBO]</span> : <span style="color: rgb(53, 53, 53)">${userInfo.exp}</span></h4>
        
         </div>
                                
@@ -236,7 +291,7 @@ async function getuserInfoRealtime(userID) {
 
 
 
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;border-radius: 5px"">
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid rgb(53, 53, 53);border-radius: 5px"">
 
         <div class="row">
         <div class="col-sm-12">
@@ -247,21 +302,16 @@ async function getuserInfoRealtime(userID) {
 
 
         <div style="text-align:left; cursor:pointer">
-        <h5 style="font-size: 13px" onclick="location.href='${userInfo.agreement}'">Agreement letter <a style="color: #000"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
-      
-        <h5 style="font-size: 13px" onclick="location.href='${userInfo.idcard}'">ID Card  <a style="color: #000"><i class="fa fa-hand-o-right" aria-hidden="true"></i> View</a></h5>
+        <h5 style="font-size: 13px" onclick="location.href='${userInfo.agreement}'">Agreement letter <a style="color: rgb(53, 53, 53)"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
+        <h5 style="font-size: 13px" onclick="location.href='${userInfo.certificate}'">Download your certificate <a style="color: rgb(53, 53, 53)"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>          
+        <h5 style="font-size: 13px" onclick="location.href='${userInfo.idcard}'">ID Card  <a style="color: rgb(53, 53, 53)"><i class="fa fa-hand-o-right" aria-hidden="true"></i> View</a></h5>
         </div>
                                
         </div>
 
 
 
-
-    
-
-
-
-        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #03b1fc;border-radius: 5px"">
+        <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid rgb(53, 53, 53);border-radius: 5px"">
 
         <div class="row">
         <div class="col-sm-12">
@@ -272,26 +322,28 @@ async function getuserInfoRealtime(userID) {
 
 
         <div style="text-align:left; cursor:pointer">
-        <h5 style="font-size: 13px" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=6af5a5ee-3079-45f1-a14e-0b35ccafe36c'">Code of Ethics and Professional Conduct <a style="color: #16151a"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
+        <h5 style="font-size: 13px" onclick="location.href='https://firebasestorage.googleapis.com/v0/b/website-818ed.appspot.com/o/CodeofEthics.pdf?alt=media&token=6af5a5ee-3079-45f1-a14e-0b35ccafe36c'">Code of Ethics and Professional Conduct <a style="color: rgb(53, 53, 53)"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Download</a></h5>
         </div>
                                
         </div>
 
 
+<br><br>
 
-<br>
-        <div class="container-fluid" id="footerbarcoordinator">
+      
+        <div class="container-fluid" id="footerbar">
         <div class="row">
-        <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/notifications.png" alt=""/></a></div>
-        <div class="col"><a href="./payments.html"><img style="width:54px; height:auto" src="../MembersPanel//assets/img/payments.png" alt=""/></a></div>
-        <div class="col"><a href="./events.html"><img style="width:54px; height:auto" src="../MembersPanel//assets/img/events.png" alt=""/></a></div>
-        <div class="col"><a><img style="width:54px; height:auto" src="../MembersPanel//assets/img/home.png" alt=""/></a></div>
+        <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="./assets/img/notifications.png" alt=""/></a></div>
+        <div class="col"><a href="./payments.html"><img style="width:54px; height:auto" src="./assets/img/payments.png" alt=""/></a></div>
+        <div class="col"><a href="./attendance.html"><img style="width:54px; height:auto" src="./assets/img/attendance.png" alt=""/></a></div>
+        <div class="col"><a><img style="width:54px; height:auto" src="./assets/img/home.png" alt=""/></a></div>
         
         </div>
         </div>
 
 
-      
+
+
 
 
 </div>
@@ -309,8 +361,7 @@ async function getuserInfoRealtime(userID) {
           editProfile["regno"].value = userInfo.regno;
           editProfile["phoneno"].value = userInfo.phone;
           editProfile["whatsapp"].value = userInfo.whatsapp;
-
-          editProfile["department"].value = userInfo.department;
+          editProfile["blood"].value = userInfo.blood;
 
           editProfile["college"].value = userInfo.college;
           editProfile["address"].value = userInfo.address;
@@ -328,9 +379,9 @@ async function getuserInfoRealtime(userID) {
   } else {
     userDetails.innerHTML = `
         <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
-        <div class="card" style="border-top: 3px solid #03b1fc">
+        <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
 <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -339,9 +390,9 @@ async function getuserInfoRealtime(userID) {
             <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
             <br>
-            <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+            <div style="text-align:left"> <a style="text-decoration: none; color: rgb(53, 53, 53); font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
             <br>
-            <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            <button type="submit" class="btn" style="background-color:rgb(53, 53, 53);color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
             
     </form>
           <div>
@@ -356,13 +407,13 @@ async function getuserInfoRealtime(userID) {
 
 
     <div class="sidebar-overlay" data-reff=""></div>
-    <script src="../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
-	<script src="../MembersPanel/assets/js/popper.min.js"></script>
-    <script src="../MembersPanel/assets/js/bootstrap.min.js"></script>
-    <script src="../MembersPanel/assets/js/jquery.slimscroll.js"></script>
-    <script src="../MembersPanel/assets/js/Chart.bundle.js"></script>
-    <script src="../MembersPanel/assets/js/chart.js"></script>
-    <script src="../MembersPanel/assets/js/app.js"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/Chart.bundle.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/app.js"></script>
         `;
   }
 }
@@ -380,7 +431,8 @@ function updateUserProfile(e) {
     regno: editProfile["regno"].value,
     phone: editProfile["phoneno"].value,
     whatsapp: editProfile["whatsapp"].value,
-    department: editProfile["department"].value,
+    blood: editProfile["blood"].value,
+
     college: editProfile["college"].value,
     address: editProfile["address"].value,
     state: editProfile["state"].value,
@@ -401,7 +453,10 @@ function updateUserProfile(e) {
 function uploadImage(e) {
   console.log(e.target.files[0]);
   const uid = firebase.auth().currentUser.uid;
-  const fileRef = firebase.storage().ref().child(`/users/${uid}/profile`);
+  const fileRef = firebase
+    .storage()
+    .ref()
+    .child(`/coordinators/${uid}/profile`);
   const uploadTask = fileRef.put(e.target.files[0]);
   uploadTask.on(
     "state_changed",
@@ -462,10 +517,4 @@ function uploadImage(e) {
       });
     }
   );
-}
-
-function copyToClipboard() {
-  var textBox = document.getElementById("myvalue");
-  textBox.select();
-  document.execCommand("copy");
 }
