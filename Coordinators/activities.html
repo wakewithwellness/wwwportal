@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+
+    <title>Notications</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../MembersPanel/assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../MembersPanel/assets/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../MembersPanel/assets/css/style.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../MembersPanel/assets/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../MembersPanel/assets/css/select2.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../MembersPanel/assets/css/bootstrap-datetimepicker.min.css"
+    />
+
+    <link href="../assets/img/favicon.png" rel="icon" />
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+  </head>
+
+  <body style="background-color: rgb(238, 238, 238)">
+    <div class="main-wrapper">
+      <div
+        class="header"
+        style="
+          -webkit-box-shadow: 0px 4px 11px 1px rgba(0, 0, 0, 0.33);
+          -moz-box-shadow: 0px 4px 11px 1px rgba(0, 0, 0, 0.33);
+          box-shadow: 0px 4px 11px 1px rgba(0, 0, 0, 0.33);
+          background-color: rgb(53, 53, 53);
+          height: 60px;
+        "
+      >
+        <div class="header-left">
+          <a href="main.html" class="logo" style="margin-top: 3px">
+            <span style="font-size: 20px">Coordinator Portal</span>
+          </a>
+        </div>
+      </div>
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+          <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+              <li class="menu-title">Main</li>
+              <hr />
+
+              <li>
+                <a href="main.html"
+                  ><i class="fa fa-home"></i> <span>Home</span></a
+                >
+              </li>
+
+              <li>
+                <a href="events.html"
+                  ><i class="fa fa-users"></i> <span>Events</span></a
+                >
+              </li>
+
+              <li>
+                <a href="coordinators.html"
+                  ><i class="fa fa-users"></i> <span>Coordinators List</span></a
+                >
+              </li>
+
+              <li>
+                <a href="payments.html"
+                  ><i class="fa fa-users"></i> <span>Payment History</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-wrapper">
+        <div
+          class="content my-4"
+          style="
+            background-color: #fff;
+            margin: 15px;
+            border-top: 3px solid rgb(53, 53, 53);
+            padding: 20px;
+            border-radius: 5px;
+          "
+        >
+          <div class="row">
+            <div class="col-sm-12">
+              <h4 class="page-title">Dashboard</h4>
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="activity">
+                <div class="activity-box">
+                  <ul class="activity-list">
+                    <!-- <li style="border-color:rgb(53, 53, 53);border-radius: 5px;">
+                                        <div class="activity-content" onclick="location.href='../MembersPanel/tshirt.html'" style="cursor: pointer">
+                                            <div class="timeline-content">
+                                                <a style="color: rgb(67, 67, 67)" class="name">Order your WWW Tshirt now! <span style="color: red">[Last vate: 21st November 2022]</span></a> 
+                                            </div>
+                                        </div>
+                                    </li> -->
+
+                    <li
+                      style="border-color: rgb(53, 53, 53); border-radius: 5px"
+                    >
+                      <div
+                        class="activity-content"
+                        onclick="location.href='events.html'"
+                        style="cursor: pointer"
+                      >
+                        <div class="timeline-content">
+                          <a style="color: rgb(67, 67, 67)" class="name"
+                            >Wake With Wellness offline events List :
+                            <span style="color: red">Click here</span></a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <div class="container-fluid" id="footerbarcoordinator">
+        <div class="row">
+          <div class="col">
+            <a
+              ><img
+                style="width: 54px; height: auto"
+                src="../MembersPanel/assets/img/notifications.png"
+                alt=""
+            /></a>
+          </div>
+          <div class="col">
+            <a href="./payments.html"
+              ><img
+                style="width: 54px; height: auto"
+                src="../MembersPanel//assets/img/payments.png"
+                alt=""
+            /></a>
+          </div>
+          <div class="col">
+            <a href="./events.html"
+              ><img
+                style="width: 54px; height: auto"
+                src="../MembersPanel//assets/img/events.png"
+                alt=""
+            /></a>
+          </div>
+          <div class="col">
+            <a href="./main.html"
+              ><img
+                style="width: 54px; height: auto"
+                src="../MembersPanel//assets/img/home.png"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../MembersPanel/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="../MembersPanel/assets/js/popper.min.js"></script>
+    <script src="../MembersPanel/assets/js/bootstrap.min.js"></script>
+    <script src="../MembersPanel/assets/js/jquery.dataTables.min.js"></script>
+    <script src="../MembersPanel/assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../MembersPanel/assets/js/jquery.slimscroll.js"></script>
+    <script src="../MembersPanel/assets/js/select2.min.js"></script>
+    <script src="../MembersPanel/assets/js/moment.min.js"></script>
+    <script src="../MembersPanel/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../MembersPanel/assets/js/app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="./scripts/auth.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
+        authDomain: "members-76725.firebaseapp.com",
+        projectId: "members-76725",
+        storageBucket: "members-76725.appspot.com",
+        messagingSenderId: "734645197873",
+        appId: "1:734645197873:web:808127fdb4d643d4d24910",
+        measurementId: "G-7LYZ3R48GT",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      const auth = firebase.auth();
+      const db = firebase.database();
+
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          // User is signed in.
+        } else {
+          window.location.href = "./main.html";
+        }
+      });
+    </script>
+  </body>
+</html>
