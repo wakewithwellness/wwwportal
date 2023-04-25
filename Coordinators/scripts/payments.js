@@ -173,7 +173,7 @@ async function getuserInfoRealtime(userID) {
                 </div>
                 <div class="row">
                    
-                        <div class="table-responsive" ${userInfo.i1}>
+                        <div class="table-responsive" hid${userInfo.i1}den>
                             <table class="table table-bordered">
                                 <thead style="background-color: #f7f7f7">
                                     <tr>
@@ -189,7 +189,7 @@ async function getuserInfoRealtime(userID) {
                                 </thead>
                                 <tbody>
                                
-                                    <tr display: ${userInfo.i1}>
+                                    <tr hid${userInfo.i1}den>
                                         <td><a>${userInfo.i1}</a></td>
                                         <td>
                                             <h2><a>${userInfo.p1}</a></h2>
@@ -200,7 +200,7 @@ async function getuserInfoRealtime(userID) {
                                         <td></td>
                                         <td>₹ .00</td>
                                     </tr>
-                                    <tr display: ${userInfo.i2}>
+                                    <tr hid${userInfo.i2}den>
                                         <td><a>${userInfo.i2}</a></td>
                                         <td>
                                             <h2><a>${userInfo.p2}</a></h2>
@@ -211,7 +211,7 @@ async function getuserInfoRealtime(userID) {
                                         <td></td>
                                         <td>₹ .00</td>
                                     </tr>
-                                    <tr display: ${userInfo.i3}>
+                                    <tr hid${userInfo.i3}den>
                                         <td><a>${userInfo.i3}</a></td>
                                         <td>
                                             <h2><a>${userInfo.p3}</a></h2>
@@ -224,7 +224,7 @@ async function getuserInfoRealtime(userID) {
                                     </tr>
 
 
-                                    <tr display: ${userInfo.i4}>
+                                    <tr hid${userInfo.i4}den>
                                     <td><a>${userInfo.i4}</a></td>
                                     <td>
                                         <h2><a>${userInfo.p4}</a></h2>
@@ -237,7 +237,7 @@ async function getuserInfoRealtime(userID) {
                                 </tr>
 
 
-                                <tr display: ${userInfo.i5}>
+                                <tr hid${userInfo.i5}den>
                                     <td><a>${userInfo.i5}</a></td>
                                     <td>
                                         <h2><a>${userInfo.p5}</a></h2>
