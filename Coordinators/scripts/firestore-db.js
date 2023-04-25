@@ -335,7 +335,7 @@ async function getuserInfoRealtime(userID) {
         <div class="row">
         <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/notifications.png" alt=""/></a></div>
         <div class="col"><a href="./payments.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/payments.png" alt=""/></a></div>
-        <div class="col"><a href="./attendance.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/attendance.png" alt=""/></a></div>
+        <div class="col"><a href="./events.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/events.png" alt=""/></a></div>
         <div class="col"><a><img style="width:54px; height:auto" src="../MembersPanel/assets/img/home.png" alt=""/></a></div>
         
         </div>
