@@ -167,8 +167,11 @@
     </style>
 
     <style>
-
-      #myInput, #myInput2, #myInput3, #myInput4 , #myInput5 {
+      #myInput,
+      #myInput2,
+      #myInput3,
+      #myInput4,
+      #myInput5 {
         background-image: url("/css/searchicon.png"); /* Add a search icon to input */
         background-position: 10px 12px; /* Position the search icon */
         background-repeat: no-repeat; /* Do not repeat the icon image */
@@ -178,22 +181,14 @@
         border: 1px solid #ddd; /* Add a grey border */
         margin-bottom: 12px; /* Add some space below the input */
       }
-
-
     </style>
   </head>
 
   <body style="background-color: rgb(238, 238, 238)">
     <div class="main-wrapper">
-      <div class="header" style="background-color: #198754">
+      <div class="header" style="background-color: rgb(53, 53, 53)">
         <div class="header-left">
-          <a href="main.html" class="logo">
-            <img
-              src="../assets/img/favicon.png"
-              width="35"
-              height="35"
-              alt=""
-            />
+          <a class="logo" style="margin-left: -15px; margin-top: 3px">
             <span>Members Portal</span>
           </a>
         </div>
@@ -252,11 +247,11 @@
       </div>
       <div class="page-wrapper">
         <div
-          class="content"
+          class="content my-4"
           style="
             background-color: #fff;
             margin: 15px;
-            border-top: 3px solid #198754;
+            border-top: 3px solid rgb(53, 53, 53);
             padding: 20px;
             border-radius: 5px;
           "
@@ -268,7 +263,7 @@
                 <a
                   href="myupdates.html"
                   style="
-                    color: #198754;
+                    color: rgb(53, 53, 53);
                     font-size: 12px;
                     cursor: pointer;
                     font-weight: bold;
@@ -293,7 +288,7 @@
                   "
                 >
                   <option>Choose batch</option>
-                
+
                   <option value="first2">
                     First batch (June'2022-May'2023)
                   </option>
@@ -309,7 +304,6 @@
                   <option value="second1">
                     Second batch (February'2022-January'2023)
                   </option>
-                
                 </select>
               </div>
               <br />
@@ -344,7 +338,9 @@
                     style="color: rgb(0, 0, 0); cursor: pointer"
                   >
                     <thead>
-                      <tr style="background-color: #198754; color: #fff">
+                      <tr
+                        style="background-color: rgb(53, 53, 53); color: #fff"
+                      >
                         <th scope="col">Reg No.</th>
                         <th scope="col">Name</th>
                         <th scope="col" style="text-align: center">
@@ -394,13 +390,15 @@
                     style="color: rgb(0, 0, 0); cursor: pointer"
                   >
                     <thead>
-                      <tr style="background-color: #198754; color: #fff">
+                      <tr
+                        style="background-color: rgb(53, 53, 53); color: #fff"
+                      >
                         <th scope="col">Reg No.</th>
                         <th scope="col">Name</th>
                         <th scope="col" style="text-align: center">
                           Percentage
                         </th>
-                     
+
                         <th scope="col">May2'23</th>
                         <th scope="col">May1'23</th>
                         <th scope="col">Apr2'23</th>
@@ -430,8 +428,7 @@
                   </table>
                 </div>
               </div>
-             <!--First batch end-->
-
+              <!--First batch end-->
 
               <!--Second batch start-->
               <div class="second1 batch">
@@ -448,7 +445,9 @@
                     style="color: rgb(0, 0, 0); cursor: pointer"
                   >
                     <thead>
-                      <tr style="background-color: #198754; color: #fff">
+                      <tr
+                        style="background-color: rgb(53, 53, 53); color: #fff"
+                      >
                         <th scope="col">Reg No.</th>
                         <th scope="col">Name</th>
                         <th scope="col" style="text-align: center">
@@ -485,8 +484,6 @@
                 </div>
               </div>
 
-
-
               <div class="second2 batch">
                 <input
                   type="text"
@@ -501,7 +498,9 @@
                     style="color: rgb(0, 0, 0); cursor: pointer"
                   >
                     <thead>
-                      <tr style="background-color: #198754; color: #fff">
+                      <tr
+                        style="background-color: rgb(53, 53, 53); color: #fff"
+                      >
                         <th scope="col">Reg No.</th>
                         <th scope="col">Name</th>
                         <th scope="col" style="text-align: center">
@@ -517,28 +516,20 @@
                         <th scope="col">Mar1'23</th>
                         <th scope="col">Feb2'23</th>
                         <th scope="col">Feb1'23</th>
-                   
                       </tr>
                     </thead>
-                    <tbody id="mytable">
-                     
-                    </tbody>
+                    <tbody id="mytable"></tbody>
                   </table>
-                 
                 </div>
               </div>
 
-
-
-
-
               <div class="third1 batch">
                 <input
-                type="text"
-                id="myInput4"
-                onkeyup="myFunction4()"
-                placeholder="Search by name..."
-              />
+                  type="text"
+                  id="myInput4"
+                  onkeyup="myFunction4()"
+                  placeholder="Search by name..."
+                />
                 <div class="table-responsive custom-table-responsive">
                   <table
                     class="table custom-table"
@@ -546,7 +537,9 @@
                     style="color: rgb(0, 0, 0); cursor: pointer"
                   >
                     <thead>
-                      <tr style="background-color: #198754; color: #fff">
+                      <tr
+                        style="background-color: rgb(53, 53, 53); color: #fff"
+                      >
                         <th scope="col">Reg No.</th>
                         <th scope="col">Name</th>
                         <th scope="col" style="text-align: center">
@@ -717,7 +710,6 @@
         }
       }
 
-
       function myFunction4() {
         // Declare variables
         var input, filter, table, tr, td, i, txtValue;
@@ -740,10 +732,6 @@
         }
       }
 
-
-
-
-      
       function myFunction5() {
         // Declare variables
         var input, filter, table, tr, td, i, txtValue;
