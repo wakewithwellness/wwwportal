@@ -85,23 +85,21 @@ async function getuserInfoRealtime(userID) {
           <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
       </li>
   
-        <li >
-          <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+      <li>
+      <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
         </li>
-       
-        <li>
-        <a href="employees.html"><i class="fa fa-users"></i> <span>Members List</span></a>
-       </li>
-       <li>
-        <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
-       </li>
-       <li>
-       <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
-      </li>
+
+                     
+              
+                          <li>
+                          <a href="coordinators.html"><i class="fa fa-users"></i> <span>Coordinators List</span></a>
+                          </li>
+
+                          <li>
+                          <a href="payments.html"><i class="fa fa-money"></i> <span>Payment History</span></a>
+                          </li>
+            
   
-       <li>
-       <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
-      </li>
     </ul>
         </div>
     </div>
