@@ -32,9 +32,9 @@ async function getuserInfo(userID) {
     }
   } else {
     userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
-    <div class="card" style="border-top: 3px solid #03b1fc">
+    <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
     <div class="card-body" style="text-align: center">
-    <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:30px">COORDINATOR PORTAL</h5><hr>
+    <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:30px">COORDINATOR'S PORTAL</h5><hr>
 <br>
     <form autocomplete="off" onsubmit="login(event)">
         <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -43,9 +43,9 @@ async function getuserInfo(userID) {
         <input type="password" class="form-control my-2" id="loginPassword" placeholder="Password" style="width: 98%;
         height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
         <br>
-        <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+        <div style="text-align:left"> <a style="text-decoration: none; color: rgb(53, 53, 53); font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
         <br>
-        <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; padding-bottom:10px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+        <button type="submit" class="btn" style="background-color:rgb(53, 53, 53);color: #fff; padding-bottom:10px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
         
 </form>
       <div>
@@ -78,31 +78,37 @@ async function getuserInfoRealtime(userID) {
     
     <div class="sidebar" id="sidebar">
     <div class="sidebar-inner slimscroll">
-       <div id="sidebar-menu" class="sidebar-menu">
-                    <ul>
-                        <li class="menu-title" style="text-align:left">Main</li><hr>
-                       
-                  
-                                  <li>
-                                <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
-                                  </li>
-                                              
-                                        
-                                                    <li>
-                                                    <a href="coordinators.html"><i class="fa fa-users"></i> <span>Coordinators List</span></a>
-                                                    </li>
-                                                    <li>
-                                                    <a href="payments.html"><i class="fa fa-money"></i> <span>Payment History</span></a>
-                                                    </li>
-                                      
-                                    
-                                      </ul>
-                                  </div>
+        <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+        <li class="menu-title">Main</li>
+        <li>
+          <a href="main.html"><i class="fa fa-home"></i> <span>Home</span></a>
+      </li>
+  
+        <li >
+          <a href="activities.html"><i class="fa fa-bell-o"></i> <span>Notifications</span></a>
+        </li>
+       
+        <li>
+        <a href="employees.html"><i class="fa fa-users"></i> <span>Members List</span></a>
+       </li>
+       <li>
+        <a href="attendance.html"><i class="fa fa-calendar-check-o"></i> <span>Attendance</span></a>
+       </li>
+       <li>
+       <a href="attenUpdates.html"><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a>
+      </li>
+  
+       <li>
+       <a href="leaves.html"><i class=" fa fa-edit"></i> <span>Leaves</span></a>
+      </li>
+    </ul>
+        </div>
     </div>
 </div>
         
 <div class="page-wrapper">
-<div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;padding: 20px;border-radius:5px">
+<div class="content" style="background-color: #fff;margin: 10px;border-top: 3px solid #16151a;padding: 20px;border-radius:5px">
 <div class="row">
 <div class="col-sm-12">
     <h4 class="page-title">Member Details</h4><hr>
@@ -117,7 +123,7 @@ async function getuserInfoRealtime(userID) {
 </div>
 </div>
 </div>
-            <div class="content" style="background-color: #fff;margin: 15px;border-top: 3px solid #16151a;border-radius:5px">
+            <div class="content" style="background-color: #fff;margin: 10px;border-top: 3px solid #16151a;border-radius:5px">
            
           
                 <div class="row">
@@ -157,7 +163,7 @@ async function getuserInfoRealtime(userID) {
                                 <td><a>10</a></td>
                                 <td><h2><a>Jivanam : Mental Health Workshop</a></h2></td>
                                 <td>6th May 2023</td>
-                                <td>Maharishi Vidya Mandir School, Barsajai</td>
+                                <td>Maharishi Vidya Mandir School, Guwahati</td>
                                 <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color8}">${userInfo.event8}</span></td>
                                 <td style="text-align: center"><a href="${userInfo.e8}" style="display:${userInfo.s8}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
                                 <td style="text-align: center; color: red">
@@ -296,8 +302,25 @@ async function getuserInfoRealtime(userID) {
                           
                            
                         </div>  
+
+   
                      
                 </div>
+
+                
+            </div>
+
+            <br><br>
+
+      
+            <div class="container-fluid" id="footerbar">
+            <div class="row">
+            <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/notifications.png" alt=""/></a></div>
+            <div class="col"><a href="./payments.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/payments.png" alt=""/></a></div>
+            <div class="col"><a><img style="width:54px; height:auto" src="../MembersPanel/assets/img/events.png" alt=""/></a></div>
+            <div class="col"><a  href="./main.html" ><img style="width:54px; height:auto" src="../MembersPanel/assets/img/home.png" alt=""/></a></div>
+            
+            </div>
             </div>
            
         </div>
@@ -308,9 +331,9 @@ async function getuserInfoRealtime(userID) {
     });
   } else {
     userDetails.innerHTML = `  <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
-    <div class="card" style="border-top: 3px solid #03b1fc">
+    <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
     <div class="card-body" style="text-align: center">
-    <h5 class="card-title" style="text-align: center; color: #03b1fc; font-weight: 700; font-size:25px">COORDINATOR PORTAL</h5><hr>
+    <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:25px">COORDINATOR'S PORTAL</h5><hr>
 <br>
     <form autocomplete="off" onsubmit="login(event)">
         <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -319,9 +342,9 @@ async function getuserInfoRealtime(userID) {
         <input type="password" class="form-control my-2" id="loginPassword" placeholder="Password" style="width: 98%;
         height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
         <br>
-        <div style="text-align:left"> <a style="text-decoration: none; color: #03b1fc; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+        <div style="text-align:left"> <a style="text-decoration: none; color: rgb(53, 53, 53); font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
         <br>
-        <button type="submit" class="btn" style="background-color:#03b1fc;color: #fff; padding-bottom:10px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+        <button type="submit" class="btn" style="background-color:rgb(53, 53, 53);color: #fff; padding-bottom:10px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
         
 </form>
       <div>
