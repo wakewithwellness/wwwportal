@@ -46,7 +46,7 @@ async function getuserInfo(userID) {
     userDetails.innerHTML = ` <div class="container" style="max-width: 80vh;margin-top:180px">
       <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
       <div class="card-body" style="text-align: center">
-      <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:30px">MEMBERS PORTAL</h5><hr>
+      <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:30px">COORDINATOR'S PORTAL</h5><hr>
 <br>
       <form autocomplete="off" onsubmit="login(event)">
           <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -333,10 +333,10 @@ async function getuserInfoRealtime(userID) {
       
         <div class="container-fluid" id="footerbar">
         <div class="row">
-        <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="./assets/img/notifications.png" alt=""/></a></div>
-        <div class="col"><a href="./payments.html"><img style="width:54px; height:auto" src="./assets/img/payments.png" alt=""/></a></div>
-        <div class="col"><a href="./attendance.html"><img style="width:54px; height:auto" src="./assets/img/attendance.png" alt=""/></a></div>
-        <div class="col"><a><img style="width:54px; height:auto" src="./assets/img/home.png" alt=""/></a></div>
+        <div class="col"><a href="./activities.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/notifications.png" alt=""/></a></div>
+        <div class="col"><a href="./payments.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/payments.png" alt=""/></a></div>
+        <div class="col"><a href="./attendance.html"><img style="width:54px; height:auto" src="../MembersPanel/assets/img/attendance.png" alt=""/></a></div>
+        <div class="col"><a><img style="width:54px; height:auto" src="../MembersPanel/assets/img/home.png" alt=""/></a></div>
         
         </div>
         </div>
@@ -381,7 +381,7 @@ async function getuserInfoRealtime(userID) {
         <div class="container-fluid" style="max-width: 80vh;margin-top:180px">
         <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:25px">COORDINATOR'S PORTAL</h5><hr>
 <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
