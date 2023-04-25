@@ -196,7 +196,7 @@ async function getuserInfoRealtime(userID) {
                                     
                                  
                                   
-                                    <div id="cameraicon" style="color: orange; margin-top: -18px; text-align: right;"><i href="#modal4" class="fa fa-camera modal-trigger" ></i></div>
+                                    <div id="cameraicon" style="color: red; margin-top: -2px; text-align: right;"><i href="#modal4" class="fa fa-camera modal-trigger" ></i> Upload</div>
                                   
                                  
                                   
@@ -532,6 +532,8 @@ function uploadImage(e) {
         // Hide alert after 10 seconds
         setTimeout(function () {
           document.querySelector(".success").innerHTML = ``;
+          document.querySelector(".prog").innerHTML = ``;
+          uploader.value = 0;
         }, 10000);
       });
     }
