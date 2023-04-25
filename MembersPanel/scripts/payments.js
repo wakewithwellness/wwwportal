@@ -200,7 +200,7 @@ async function getuserInfoRealtime(userID) {
                                 </thead>
                                 <tbody>
                                
-                                    <tr ${userInfo.s1}>
+                                    <tr hidden${userInfo.i1}>
                                         <td><a>${userInfo.i1}</a></td>
                                         <td>
                                             <h2><a>${userInfo.p1}</a></h2>
@@ -211,7 +211,7 @@ async function getuserInfoRealtime(userID) {
                                         <td></td>
                                         <td>₹ .00</td>
                                     </tr>
-                                    <tr ${userInfo.s2}>
+                                    <tr hidden${userInfo.i2}>
                                         <td><a>${userInfo.i2}</a></td>
                                         <td>
                                             <h2><a>${userInfo.p2}</a></h2>
