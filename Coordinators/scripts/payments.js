@@ -2,7 +2,7 @@ const userDetails = document.querySelector(".userDetails");
 const editProfile = document.querySelector("#editProfile");
 
 function createUserCollection(user) {
-  firebase.firestore().collection("Payments").doc(user.uid).set({
+  firebase.firestore().collection("CoordinatorPayments").doc(user.uid).set({
     uid: user.uid,
     name: user.displayName,
     email: user.email,
@@ -32,7 +32,7 @@ async function getuserInfo(userID) {
   if (userID) {
     const userInfoSnap = await firebase
       .firestore()
-      .collection("Payments")
+      .collection("CoordinatorPayments")
       .doc(userID)
       .get();
 
@@ -77,7 +77,7 @@ async function getuserInfoRealtime(userID) {
   if (userID) {
     const userdocRef = await firebase
       .firestore()
-      .collection("Payments")
+      .collection("CoordinatorPayments")
       .doc(userID);
     userdocRef.onSnapshot((doc) => {
       if (doc.exists) {
