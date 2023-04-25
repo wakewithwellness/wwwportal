@@ -1,44 +1,36 @@
-const userDetails  = document.querySelector('.userDetails')
-const editProfile  = document.querySelector('#editProfile')
+const userDetails = document.querySelector(".userDetails");
+const editProfile = document.querySelector("#editProfile");
 
-
-function createUserCollection(user){
-   firebase.firestore().collection('attendance')
-   .doc(user.uid)
-   .set({
-       uid:user.uid,
-       name:user.displayName,
-       email:user.email,
-       dept:"",
-      
-      
-
-       
-
-   })
+function createUserCollection(user) {
+  firebase.firestore().collection("attendance").doc(user.uid).set({
+    uid: user.uid,
+    name: user.displayName,
+    email: user.email,
+    dept: "",
+  });
 }
 
+async function getuserInfo(userID) {
+  if (userID) {
+    const userInfoSnap = await firebase
+      .firestore()
+      .collection("attendance")
+      .doc(userID)
+      .get();
 
-async function getuserInfo(userID){
-    if(userID){
-      const userInfoSnap = await  firebase.firestore()
-    .collection('attendance')
-    .doc(userID)
-    .get()
-
-   const userInfo = userInfoSnap.data()
-   if(userInfo){
-       userDetails.innerHTML = `
+    const userInfo = userInfoSnap.data();
+    if (userInfo) {
+      userDetails.innerHTML = `
        <h3>${userInfo.name}</h3>
        <h3>${userInfo.email}</h3>
    
-       `
-   }    
-    }else{
-      userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
-      <div class="card" style="border-top: 3px solid #198754">
+       `;
+    }
+  } else {
+    userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
+      <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
       <div class="card-body" style="text-align: center">
-      <h5 class="card-title" style="text-align: center; color: #198754; font-weight: 700; font-size:30px">MEMBERS PORTAL</h5><hr>
+      <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:30px">MEMBERS PORTAL</h5><hr>
 <br>
       <form autocomplete="off" onsubmit="login(event)">
           <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -47,9 +39,9 @@ async function getuserInfo(userID){
           <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;
           height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
           <br>
-          <div style="text-align:left"> <a style="text-decoration: none; color: #198754; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+          <div style="text-align:left"> <a style="text-decoration: none; color: rgb(53, 53, 53); font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
           <br>
-          <button type="submit" class="btn" style="background-color:#198754;color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+          <button type="submit" class="btn" style="background-color:rgb(53, 53, 53);color: #fff; padding-bottom:38px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
           
   </form>
         <div>
@@ -59,26 +51,21 @@ async function getuserInfo(userID){
        
       </div>
     </div></div>
-      `
-    
-       
-    }
-
-
+      `;
+  }
 }
 
-
-
-async function getuserInfoRealtime(userID){
-    if(userID){
-      const userdocRef = await  firebase.firestore()
-        .collection('attendance')
-        .doc(userID)
-        userdocRef.onSnapshot((doc)=>{
-            if(doc.exists){
-                 const userInfo = doc.data()
-                    if(userInfo){
-                        userDetails.innerHTML = `
+async function getuserInfoRealtime(userID) {
+  if (userID) {
+    const userdocRef = await firebase
+      .firestore()
+      .collection("attendance")
+      .doc(userID);
+    userdocRef.onSnapshot((doc) => {
+      if (doc.exists) {
+        const userInfo = doc.data();
+        if (userInfo) {
+          userDetails.innerHTML = `
 
                        
 
@@ -140,7 +127,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-<div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #198754;padding: 20px;border-radius:5px">
+<div class="content" style="background-color: #fff;margin: 10px;border-top: 3px solid rgb(53, 53, 53);padding: 20px;border-radius:5px">
 <div class="row">
 <div class="col-sm-12">
     <h4 class="page-title">Member Details</h4><hr>
@@ -149,7 +136,7 @@ async function getuserInfoRealtime(userID){
 <div class="row">
 
 <div class="col-lg">
-<h5>Name: <span style="color: #198754">${userInfo.name}</span></h5>
+<h5>Name: <span style="color: rgb(53, 53, 53)">${userInfo.name}</span></h5>
 </div>
 
 
@@ -157,7 +144,7 @@ async function getuserInfoRealtime(userID){
 
 
 <div class="col-lg">
-<h5>Registration no.: <span style="color: #198754">${userInfo.regno}</span></h5>
+<h5>Registration no.: <span style="color:rgb(53, 53, 53)">${userInfo.regno}</span></h5>
 </div>
 
 <div class="col-lg">
@@ -171,7 +158,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-<div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #198754;padding: 20px;border-radius:5px">
+<div class="content" style="background-color: #fff;margin: 10px;border-top: 3px solid rgb(53, 53, 53);padding: 20px;border-radius:5px">
 <div class="row">
 <div class="col-sm-12">
     <h4 class="page-title">Attendance Percentage</h4><hr>
@@ -200,7 +187,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-            <div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #198754; border-radius:5px">
+            <div class="content" style="background-color: #fff;margin: 10px;border-top: 3px solid rgb(53, 53, 53); border-radius:5px">
            
           
                 <div class="row">
@@ -632,37 +619,33 @@ async function getuserInfoRealtime(userID){
             
         </div>
                        
-                        `
-                        editProfile["name"].value = userInfo.name
-                        editProfile["profileEmail"].value = userInfo.email
-                        editProfile["regno"].value = userInfo.regno
-                        editProfile["phoneno"].value = userInfo.phone
-                        editProfile["whatsapp"].value = userInfo.whatsapp
-                        editProfile["blood"].value = userInfo.blood
-                        editProfile["department"].value = userInfo.department
-                        editProfile["department2"].value = userInfo.department2
-                        editProfile["college"].value = userInfo.college
-                        editProfile["address"].value = userInfo.address
-                        editProfile["state"].value = userInfo.state
-                        editProfile["pincode"].value = userInfo.pincode
-                        editProfile["exp"].value = userInfo.exp
+                        `;
+          editProfile["name"].value = userInfo.name;
+          editProfile["profileEmail"].value = userInfo.email;
+          editProfile["regno"].value = userInfo.regno;
+          editProfile["phoneno"].value = userInfo.phone;
+          editProfile["whatsapp"].value = userInfo.whatsapp;
+          editProfile["blood"].value = userInfo.blood;
+          editProfile["department"].value = userInfo.department;
+          editProfile["department2"].value = userInfo.department2;
+          editProfile["college"].value = userInfo.college;
+          editProfile["address"].value = userInfo.address;
+          editProfile["state"].value = userInfo.state;
+          editProfile["pincode"].value = userInfo.pincode;
+          editProfile["exp"].value = userInfo.exp;
 
-
-                        if(firebase.auth().currentUser.photoURL){
-                            document.querySelector('#proimg').src = firebase.auth().currentUser.photoURL
-                        }
-                      
-
-                }    
-             }
-        })
-
-
-    }else{
-        userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
-        <div class="card" style="border-top: 3px solid #198754">
+          if (firebase.auth().currentUser.photoURL) {
+            document.querySelector("#proimg").src =
+              firebase.auth().currentUser.photoURL;
+          }
+        }
+      }
+    });
+  } else {
+    userDetails.innerHTML = `<div class="container" style="max-width: 80vh;margin-top:180px">
+        <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: #198754; font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
   <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -671,9 +654,9 @@ async function getuserInfoRealtime(userID){
             <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;margin-top:10px;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
             <br>
-            <div style="text-align:left"> <a style="text-decoration: none; color: #198754; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+            <div style="text-align:left"> <a style="text-decoration: none; color: rgb(53, 53, 53); font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
             <br>
-            <button type="submit" class="btn" style="background-color:#198754;color: #fff; padding-bottom:8px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            <button type="submit" class="btn" style="background-color:rgb(53, 53, 53);color: #fff; padding-bottom:8px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
             
     </form>
           <div>
@@ -693,12 +676,6 @@ async function getuserInfoRealtime(userID){
     <script src="assets/js/Chart.bundle.js"></script>
     <script src="assets/js/chart.js"></script>
     <script src="assets/js/app.js"></script>
-        `
-    }
+        `;
+  }
 }
-
-
-
-
-
-
