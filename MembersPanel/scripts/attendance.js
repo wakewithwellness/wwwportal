@@ -1,42 +1,34 @@
-const Atten  = document.querySelector('.Atten')
+const Atten = document.querySelector(".Atten");
 
-
-
-function createUserCollection(user){
-   firebase.firestore().collection('users')
-   .doc(user.uid)
-   .set({
-       uid:user.uid,
-       name:user.displayName,
-       email:user.email,
-     
-
-       
-
-   })
+function createUserCollection(user) {
+  firebase.firestore().collection("users").doc(user.uid).set({
+    uid: user.uid,
+    name: user.displayName,
+    email: user.email,
+  });
 }
 
+async function getuserInfo(userID) {
+  if (userID) {
+    const userInfoSnap = await firebase
+      .firestore()
+      .collection("attendance")
+      .doc(userID)
+      .get();
 
-async function getuserInfo(userID){
-    if(userID){
-      const userInfoSnap = await  firebase.firestore()
-    .collection('attendance')
-    .doc(userID)
-    .get()
-
-   const userInfo = userInfoSnap.data()
-   if(userInfo){
-    Atten.innerHTML = `
+    const userInfo = userInfoSnap.data();
+    if (userInfo) {
+      Atten.innerHTML = `
        <h3>${userInfo.name}</h3>
        <h3>${userInfo.email}</h3>
 
-       `
-   }    
-    }else{
-        Atten.innerHTML = `<div class="container-fluid" style="max-width: 80vh;margin-top:180px">
-        <div class="card" style="border-top: 3px solid #198754">
+       `;
+    }
+  } else {
+    Atten.innerHTML = `<div class="container-fluid" style="max-width: 80vh;margin-top:180px">
+        <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: #198754; font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
 <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -45,9 +37,9 @@ async function getuserInfo(userID){
             <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;margin-top:10px;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
             <br>
-            <div style="text-align:left"> <a style="text-decoration: none; color: #198754; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+            <div style="text-align:left"> <a style="text-decoration: none; color: rgb(53, 53, 53); font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
             <br> 
-            <button type="submit" class="btn" style="width:17vh;background-color:#198754;color: #fff; padding-bottom:37px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            <button type="submit" class="btn" style="width:17vh;background-color:rgb(53, 53, 53);color: #fff; padding-bottom:37px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
             
     </form>
           <div>
@@ -57,26 +49,21 @@ async function getuserInfo(userID){
          
         </div>
       </div></div>
-      `
-    
-       
-    }
-
-
+      `;
+  }
 }
 
-
-
-async function getuserInfoRealtime(userID){
-    if(userID){
-      const userdocRef = await  firebase.firestore()
-        .collection('attendance')
-        .doc(userID)
-        userdocRef.onSnapshot((doc)=>{
-            if(doc.exists){
-                 const userInfo = doc.data()
-                    if(userInfo){
-                        Atten.innerHTML = `
+async function getuserInfoRealtime(userID) {
+  if (userID) {
+    const userdocRef = await firebase
+      .firestore()
+      .collection("attendance")
+      .doc(userID);
+    userdocRef.onSnapshot((doc) => {
+      if (doc.exists) {
+        const userInfo = doc.data();
+        if (userInfo) {
+          Atten.innerHTML = `
 
                         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -132,7 +119,7 @@ async function getuserInfoRealtime(userID){
 
  <div class="page-wrapper">
 
-<div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #198754;padding: 20px;border-radius: 5px;">
+<div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid rgb(53, 53, 53);padding: 20px;border-radius: 5px;">
 <div class="row">
 <div class="col-sm-12">
 <h2 style="text-align: center;">WEEKLY ATTENDANCE</h2><hr>
@@ -141,7 +128,7 @@ async function getuserInfoRealtime(userID){
 
 
 <div style="text-align: left; margin-bottom:5px">  
-<a onclick="location.href='attenUpdates.html'" style="color:#198754;font-size:14px;text-align:left;cursor: pointer"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Updates</a></div>
+<a onclick="location.href='attenUpdates.html'" style="color:red;font-size:14px;text-align:left;cursor: pointer"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Updates</a></div>
 
             <div class="row">
           
@@ -165,13 +152,13 @@ async function getuserInfoRealtime(userID){
                    
                     </td>
                     <td ><a>15/04/2023 to 31/03/2023</a></td>
-                    <td>${userInfo.Apr23b}</td>
+                    <td style="color:green; font-weight:bold">${userInfo.Apr23b}</td>
                     <td>${userInfo.Apr23bf}</td>
                     </tr>
 
                     <tr>
                     <td><a>01/04/2023 to 15/03/2023</a></td>
-                    <td>${userInfo.Apr23a}</td>
+                    <td style="color:green;font-weight:bold">${userInfo.Apr23a}</td>
                     <td>${userInfo.Apr23af}</td>
                     </tr>
 
@@ -190,7 +177,7 @@ async function getuserInfoRealtime(userID){
 
 
 
-            <div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid #198754;padding: 20px; max-height: 57vh; border-radius: 5px;">
+            <div class="content" style="background-color: #fff;margin: 12px;border-top: 3px solid rgb(53, 53, 53);padding: 20px; max-height: 57vh; border-radius: 5px;">
             <div class="row">
             <div class="col-sm-12">
             <h2 style="text-align: center;">POST ATTENDANCE</h2><hr>
@@ -209,7 +196,7 @@ async function getuserInfoRealtime(userID){
 						
                     <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="font-weight: 500;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance 
                     from 
-                    <span style="font-size: 14px;color: #198754;font-weight:600" id="date">15/04/2023 - 30/04/2023</span></h5>
+                    <span style="font-size: 14px;color: rgb(53, 53, 53);font-weight:600" id="date">15/04/2023 - 30/04/2023</span></h5>
                               <div class="testbox" >
                           
                                               <form onsubmit="updateattendance(event)" id="attendanceform">
@@ -223,8 +210,8 @@ async function getuserInfoRealtime(userID){
                                                 </select>
                                                      
 
-                                                  <div class="btn-block">
-                                                  <button style="background-color:#198754; font-size:13px;font-weight:500; border-radius:5px" id="send" type="submit" >Post Attendance</button> 
+                                                  <div class="text-center my-3">
+                                                  <button style="background-color:rgb(53, 53, 53); font-size:13px;font-weight:500; border-radius:5px; width:30vh" id="send" type="submit" >Post Attendance</button> 
                                                   </div>
 
                                                 <div class="container-fluid" style="margin-bottom:70px;">
@@ -267,21 +254,15 @@ async function getuserInfoRealtime(userID){
 
         
                        
-                        `
-               
-                
-                      
-
-                }    
-             }
-        })
-
-
-    }else{
-        Atten.innerHTML = `<div class="container-fluid" style="max-width: 80vh;margin-top:180px">
-        <div class="card" style="border-top: 3px solid #198754">
+                        `;
+        }
+      }
+    });
+  } else {
+    Atten.innerHTML = `<div class="container-fluid" style="max-width: 80vh;margin-top:180px">
+        <div class="card" style="border-top: 3px solid rgb(53, 53, 53)">
         <div class="card-body" style="text-align: center">
-        <h5 class="card-title" style="text-align: center; color: #198754; font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
+        <h5 class="card-title" style="text-align: center; color: rgb(53, 53, 53); font-weight: 700; font-size:25px">MEMBERS PORTAL</h5><hr>
 <br>
         <form autocomplete="off" onsubmit="login(event)">
             <input type="email" class="form-control" id="loginEmail" placeholder="Email" style="width: 98%;
@@ -290,9 +271,9 @@ async function getuserInfoRealtime(userID){
             <input type="password" class="form-control" id="loginPassword" placeholder="Password" style="width: 98%;margin-top:10px;
             height: 40px;padding-left:8px;font-size: 13px;border: 1px solid #e8e8e8; border-radius:5px">
             <br>
-            <div style="text-align:left"> <a style="text-decoration: none; color: #198754; font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
+            <div style="text-align:left"> <a style="text-decoration: none; color: rgb(53, 53, 53); font-size: 12px; margin-left: 10px" class="modal-trigger" href="#modal2">Forgot Password</a></div>
             <br> 
-            <button type="submit" class="btn" style="width:17vh;background-color:#198754;color: #fff; padding-bottom:37px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            <button type="submit" class="btn" style="width:17vh;background-color:rgb(53, 53, 53);color: #fff; padding-bottom:37px; float: left"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
             
     </form>
           <div>
@@ -312,90 +293,83 @@ async function getuserInfoRealtime(userID){
     <script src="assets/js/Chart.bundle.js"></script>
     <script src="assets/js/chart.js"></script>
     <script src="assets/js/app.js"></script>
-        `
-    }
+        `;
+  }
 }
-
-
-
-
 
 //Attendance
 
+function updateattendance(event) {
+  event.preventDefault();
+  var Apr23b = document.getElementById("attend").value;
+  var Apr23bf = document.getElementById("work").value;
+  var userRef = firebase
+    .firestore()
+    .collection("attendance")
+    .doc(firebase.auth().currentUser.uid);
 
-function updateattendance(event){
-  event.preventDefault()
-  var Apr23b = document.getElementById('attend').value
-  var Apr23bf = document.getElementById('work').value
-  var userRef = firebase.firestore().collection('attendance').doc(firebase.auth().currentUser.uid);
+  var setWithMerge = userRef
+    .set(
+      {
+        Apr23b: Apr23b,
+        Apr23bf: Apr23bf,
+      },
+      { merge: true }
+    )
+    .then(() => {
+      // Show alert
+      M.toast({
+        html: `<div><i style="font-size: 20px" class="fa fa-check-circle" aria-hidden="true"></i> Attendance posted successfully</div>`,
+        classes: "green",
+      });
 
-  var setWithMerge = userRef.set({
-    Apr23b:Apr23b,
-    Apr23bf:Apr23bf
-
-  },{ merge: true}).then(()=>{
-   
-
-     // Show alert
-     M.toast({html:`<div><i style="font-size: 20px" class="fa fa-check-circle" aria-hidden="true"></i> Attendance posted successfully</div>`,classes:"green"})
-
-
-
- // Clear form
- document.getElementById('attendanceform').reset();
-
-  }).catch((err) => {
-    console.log(err)
-    M.toast({html:`<div><i style="font-size: 20px" class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error ! Attendance not posted</div>`,classes:"red"})
-  });
+      // Clear form
+      document.getElementById("attendanceform").reset();
+    })
+    .catch((err) => {
+      console.log(err);
+      M.toast({
+        html: `<div><i style="font-size: 20px" class="fa fa-exclamation-triangle" aria-hidden="true"></i>Error ! Attendance not posted</div>`,
+        classes: "red",
+      });
+    });
 }
 
+// Set the date we're counting down to
+var countDownDate = new Date("April 30, 2023 23:00:00").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function () {
+  // Get today's date and time
+  var now = new Date().getTime();
 
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
 
-           
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-     // Set the date we're counting down to
-     var countDownDate = new Date("April 30, 2023 23:00:00").getTime();
-     
-     // Update the count down every 1 second
-     var x = setInterval(function() {
-     
-       // Get today's date and time
-       var now = new Date().getTime();
-     
-       // Find the distance between now and the count down date
-       var distance = countDownDate - now;
-     
-       // Time calculations for days, hours, minutes and seconds
-       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-     
-       // Display the result in the element with id="demo"
-       document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-       + minutes + "m " + seconds + "s ";
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-
- 
-     
-       // If the count down is finished, write some text
-       if (distance < 0) {
-         clearInterval(x);
-         document.getElementById("demo").innerHTML = "Attendance closed for the week";
-         document.getElementById("demo").style.color = "red";
-         document.getElementById("demo").style.borderColor = "red";
-         document.querySelector('#work').disabled = "disabled";
-         document.querySelector('#work').style.cursor = "not-allowed";
-         document.querySelector('#send').style.color = "white";
-         document.querySelector('#send').style.background = "#fc5c3f";
-         document.querySelector('#send').disabled = "disabled";
-         document.querySelector('#send').style.cursor = "not-allowed";
-         document.getElementById("send").innerHTML = "Locked";
-         document.getElementById("date").style.color = "red";
-    
-      
-       }
-     }, 1000);
-    
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML =
+      "Attendance closed for the week";
+    document.getElementById("demo").style.color = "red";
+    document.getElementById("demo").style.borderColor = "red";
+    document.querySelector("#work").disabled = "disabled";
+    document.querySelector("#work").style.cursor = "not-allowed";
+    document.querySelector("#send").style.color = "white";
+    document.querySelector("#send").style.background = "#fc5c3f";
+    document.querySelector("#send").disabled = "disabled";
+    document.querySelector("#send").style.cursor = "not-allowed";
+    document.getElementById("send").innerHTML = "Locked";
+    document.getElementById("date").style.color = "red";
+  }
+}, 1000);
