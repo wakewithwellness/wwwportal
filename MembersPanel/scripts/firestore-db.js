@@ -439,7 +439,7 @@ function updateUserProfile(e) {
   e.preventDefault();
   const userDocRef = firebase
     .firestore()
-    .collection("users")
+    .collection("members")
     .doc(firebase.auth().currentUser.uid);
 
   userDocRef.update({
