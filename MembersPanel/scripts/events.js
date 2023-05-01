@@ -163,25 +163,7 @@ async function getuserInfoRealtime(userID) {
                                 <td>Maharishi Vidya Mandir School, Guwahati</td>
                                 <td style="text-align: center; color: red;font-weight: 500"><span style="color: ${userInfo.color8}">${userInfo.event8}</span></td>
                                 <td style="text-align: center"><a href="${userInfo.e8}" style="display:${userInfo.s8}"><i class="fa fa-download" aria-hidden="true"></i></a></td>
-                                <td style="text-align: center; color: red">
-                                
-                                
-                                <form onsubmit="registerevent1(event)" id="registereventform">
-                                <select id="event" hidden class="form-control">
-                                <option value='Registered'>Register</option>
-                                <option value='Cancelled'>Cancel</option>
-                                </select>
-                                
-                                <select id="color" name="color" hidden class="form-control">
-                                <option value='green'>green</option>
-                                <option value="orange">red</option></select>  
-                                <select id="Btn" name="Btn" hidden class="form-control">
-                                <option value='none'>none</option>
-                                </select>
-                              
-                                <button id="send" type="submit" style="width: 100%; margin-top: 3px;border: none;display:${userInfo.Btn}" class="btn btn-success">Register</button>
-                                </form>
-                                </td>
+                                <td style="text-align: center; color: red">Registration closed</td>
                                 </tr>
 
 
