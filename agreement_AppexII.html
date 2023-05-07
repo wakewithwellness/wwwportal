@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>Registration</title>
+    <title>Membership'23</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -69,7 +69,7 @@
 
     <div class="container my-2" style="max-width: 100vh">
       <hr />
-   
+
       <br />
       <form id="myForm">
         <div class="form-group">
@@ -164,7 +164,8 @@
             placeholder="Enter address"
           ></textarea>
         </div>
-
+        <input type="date" name="date" id="date" hidden />
+        <input type="text" name="time" value="" id="current-time" hidden />
         <div class="text-center">
           <p style="color: red" id="status"></p>
           <button class="btn btn-success" type="submit">Submit</button>
@@ -179,6 +180,23 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
 
     <script>
+      // Get the current date
+      const currentDate = new Date().toISOString().slice(0, 10);
+
+      // Set the current date as the value of the input field
+      document.getElementById("date").value = currentDate;
+      // Get the current time
+      const now = new Date();
+
+      // Get a reference to the input element
+      const input = document.getElementById("current-time");
+
+      // Set the input element's value to the current time
+      input.value = now.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
       var firebaseConfig = {
         apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
         authDomain: "members-76725.firebaseapp.com",
@@ -210,6 +228,8 @@
         const bloodType = form["blood"].value;
         const address = form.address.value;
         const dept = form.dept.value;
+        const date = form.date.value;
+        const time = form.time.value;
 
         // Create a new user object
         const user = {
@@ -219,6 +239,8 @@
           bloodType: bloodType,
           address: address,
           dept: dept,
+          date: date,
+          time: time,
         };
 
         // Push the user object to Firebase
@@ -226,6 +248,7 @@
         alert("Form submitted Successfully!");
         // Clear the form inputs
         form.reset();
+        location.reload();
       });
     </script>
   </body>
