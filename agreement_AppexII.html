@@ -195,7 +195,7 @@
         <div class="column" style="text-align: justify">
           <div class="form-group">
             <label>
-              <input type="checkbox" />
+              <input type="checkbox" id="agree" name="agree"/>
               I want to continue as a member of Wake With Wellness</label
             >
           </div>
@@ -275,6 +275,7 @@
         const address = form.address.value;
         const dept = form.dept.value;
         const dept2 = form.dept2.value;
+        const agree = form.agree.value;
         const date = form.date.value;
         const time = form.time.value;
 
@@ -287,6 +288,7 @@
           address: address,
           dept: dept,
           dept2: dept2,
+          agree:agree,
           date: date,
           time: time,
         };
