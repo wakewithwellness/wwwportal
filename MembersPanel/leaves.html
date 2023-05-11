@@ -1,366 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=0"
-    />
-
-    <title>Leaves</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/css/dataTables.bootstrap4.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="assets/css/bootstrap-datetimepicker.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Leaves</title>
     <link href="../assets/img/favicon.png" rel="icon" />
     <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
-
   <body style="background-color: rgb(238, 238, 238)">
-    <div class="main-wrapper">
-      <div class="header" style="background-color: rgb(53, 53, 53)">
-        <div class="header-left">
-          <a class="logo" style="margin-left: -15px; margin-top: 3px">
-            <span>Members Portal</span>
-          </a>
+    <div class="header" style="background-color: rgb(53, 53, 53)">
+      <div class="header-left">
+        <a class="logo" style="margin-left: -15px; margin-top: 3px">
+          <span>Members Portal</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+          <ul>
+            <li class="menu-title">Main</li>
+            <li>
+              <a href="main.html"
+                ><i class="fa fa-home"></i> <span>Home</span></a
+              >
+            </li>
+
+            <li>
+              <a href="employees.html"
+                ><i class="fa fa-users"></i> <span>Members List</span></a
+              >
+            </li>
+            <li>
+              <a href="attendance.html"
+                ><i class="fa fa-calendar-check-o"></i>
+                <span>Attendance</span></a
+              >
+            </li>
+
+            <li>
+              <a href="attenUpdates.html"
+                ><i class="fa fa-pencil"></i> <span>Attendance Updates</span></a
+              >
+            </li>
+
+            <li>
+              <a href="leaves.html"
+                ><i class="fa fa-edit"></i> <span>Leaves</span></a
+              >
+            </li>
+
+            <li>
+              <a href="payments.html"
+                ><i class="fa fa-money"></i> <span>Payments</span></a
+              >
+            </li>
+
+            <li>
+              <a href="events.html"
+                ><i class="fa fa-calendar-o"></i> <span>Offline Events</span></a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="sidebar" id="sidebar">
-        <div class="sidebar-inner slimscroll">
-          <div id="sidebar-menu" class="sidebar-menu">
-            <ul>
-              <li class="menu-title">Main</li>
-              <li>
-                <a href="main.html"
-                  ><i class="fa fa-home"></i> <span>Home</span></a
-                >
-              </li>
+    </div>
 
-              <li>
-                <a href="activities.html"
-                  ><i class="fa fa-bell-o"></i> <span>Notifications</span></a
-                >
-              </li>
-
-              <li>
-                <a href="employees.html"
-                  ><i class="fa fa-users"></i> <span>Members List</span></a
-                >
-              </li>
-              <li>
-                <a href="attendance.html"
-                  ><i class="fa fa-calendar-check-o"></i>
-                  <span>Attendance</span></a
-                >
-              </li>
-
-              <li>
-                <a href="attenUpdates.html"
-                  ><i class="fa fa-pencil"></i>
-                  <span>Attendance Updates</span></a
-                >
-              </li>
-
-              <li>
-                <a href="payments.html"
-                  ><i class="fa fa-money"></i> <span>Payments</span></a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal -->
+    <div class="page-wrapper">
       <div
-        class="modal"
-        id="exampleModalCenter"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true"
+        class="content my-4"
+        style="
+          background-color: #fff;
+          margin: 15px;
+          border-top: 3px solid rgb(53, 53, 53);
+          padding: 20px;
+          border-radius: 5px;
+        "
       >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5
-                class="modal-title"
-                id="exampleModalLongTitle"
-                style="color: rgb(53, 53, 53)"
-              >
-                Leave Application
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form id="leaveform">
-                <input
-                  type="text"
-                  id="NameMod"
-                  style="
-                    width: 100%;
-                    height: 35px;
-                    border-radius: 5px;
-                    border: 1px solid rgb(136, 136, 136);
-                    padding: 15px;
-                  "
-                  placeholder="Name"
-                  required
-                /><br /><br />
-                <label style="color: rgb(94, 94, 94)">Reason :</label>
-                <select
-                  id="ReasonMod"
-                  name="Reason"
-                  style="
-                    cursor: pointer;
-                    width: 100%;
-                    height: 35px;
-                    border-radius: 5px;
-                    border: 1px solid rgb(136, 136, 136);
-                    padding: 5px;
-                    color: black;
-                  "
-                >
-                  <option value="Select your reason" disabled>
-                    Select your reason
-                  </option>
-                  <option value="Sick Leave">Sick Leave</option>
-                  <option value="Academic Leave">Academic Leave</option>
-                  <option value="Personal Leave">Personal Leave</option>
-                  <option value="Out of Station">Out of Station</option>
-                  <option value="Others">Others</option>
-                </select>
-
-                <label style="margin-top: 20px; color: rgb(94, 94, 94)"
-                  >From :</label
-                ><br />
-                <input
-                  type="date"
-                  placeholder="DD-MM-YYYY"
-                  id="FromMod"
-                  style="
-                    cursor: pointer;
-                    width: 100%;
-                    height: 35px;
-                    border-radius: 5px;
-                    border: 1px solid rgb(136, 136, 136);
-                    padding: 15px;
-                  "
-                  required
-                /><br /><br />
-                <label style="color: rgb(94, 94, 94)">To :</label> <br />
-                <input
-                  type="date"
-                  placeholder="DD-MM-YYYY"
-                  id="ToMod"
-                  style="
-                    cursor: pointer;
-                    width: 100%;
-                    height: 35px;
-                    border-radius: 5px;
-                    border: 1px solid rgb(136, 136, 136);
-                    padding: 15px;
-                  "
-                  required
-                />
-
-                <select id="StatusMod" style="display: none">
-                  <option value="Pending...">Pending...</option>
-                  <option value="Approved"></option>
-                </select>
-
-                <div class="modal-footer" style="margin-top: 20px">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button
-                    id="AddModBtn"
-                    type="button"
-                    class="btn"
-                    style="background-color: rgb(53, 53, 53); color: white"
-                    onclick="AddStd()"
-                  >
-                    Apply
-                  </button>
-                  <button
-                    id="UpdModBtn"
-                    type="button"
-                    class="btn btn-success"
-                    onclick="UpdStd()"
-                  >
-                    Update Record
-                  </button>
-                  <button
-                    id="DelModBtn"
-                    type="button"
-                    class="btn btn-danger"
-                    onclick="DelStd()"
-                  >
-                    Delete
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="page-wrapper">
-        <br />
-
-        <div style="float: right; margin-right: 15px">
-          <a
-            onclick="FillTboxes(null)"
-            type="button"
-            data-toggle="modal"
-            data-target="#exampleModalCenter"
-            style="
-              cursor: pointer;
-              background-color: rgb(53, 53, 53);
-              padding: 10px;
-              color: white;
-              border-radius: 4px;
-            "
-          >
-            <i class="fa fa-plus"></i> Add Leave</a
-          >
-        </div>
-
-        <div
-          class="content"
-          style="
-            background-color: #fff;
-            margin: 15px;
-            border-top: 3px solid rgb(53, 53, 53);
-            border-radius: 5px;
-          "
-        >
+        <div class="container-fluid my-3">
           <div class="row">
             <div class="col-sm-12">
-              <h4 class="page-title">Leave Requests</h4>
+              <h4 class="page-title">Leave Application</h4>
               <hr />
             </div>
           </div>
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name"
+                aria-describedby="emailHelp"
+              />
+            </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="myTable">
-                  <thead style="background-color: #f7f7f7">
-                    <tr style="text-align: left">
-                      <th scope="col">SNo.</th>
-                      <th scope="col" style="min-width: 22vh">Name</th>
-                      <th scope="col" style="min-width: 20vh">Reason</th>
-                      <th scope="col" style="min-width: 20vh">
-                        From<span style="font-size: 10px; color: grey">
-                          [YYYY-MM-DD]</span
-                        >
-                      </th>
-                      <th scope="col" style="min-width: 18vh">
-                        To<span style="font-size: 10px; color: grey">
-                          [YYYY-MM-DD]</span
-                        >
-                      </th>
-                      <th scope="col">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tbody1" style="text-align: left"></tbody>
-                </table>
+            <div class="row">
+              <div class="col-lg">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Start Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="startDate"
+                    name="startDate"
+                    required
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+              </div>
+              <div class="col-lg">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">End date:</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="endDate"
+                    name="endDate"
+                    required
+                    aria-describedby="emailHelp"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <br /><br />
 
-        <div class="container-fluid" id="footerbar">
-          <div class="row">
-            <div class="col">
-              <a href="./activities.html"
-                ><img
-                  style="width: 54px; height: auto"
-                  src="./assets/img/notifications.png"
-                  alt=""
-              /></a>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Reason</label>
+              <textarea
+                name="reason"
+                required
+                placeholder="State your reason briefly"
+                class="form-control"
+                id="reason"
+              ></textarea>
             </div>
-            <div class="col">
-              <a href="./payments.html"
-                ><img
-                  style="width: 54px; height: auto"
-                  src="./assets/img/payments.png"
-                  alt=""
-              /></a>
-            </div>
-            <div class="col">
-              <a href="./attendance.html"
-                ><img
-                  style="width: 54px; height: auto"
-                  src="./assets/img/attendance.png"
-                  alt=""
-              /></a>
-            </div>
-            <div class="col">
-              <a href="./main.html"
-                ><img
-                  style="width: 54px; height: auto"
-                  src="./assets/img/home.png"
-                  alt=""
-              /></a>
+
+            <input
+              type="text"
+              class="form-control"
+              id="status"
+              name="status"
+              value="Pending"
+              required
+              hidden
+            />
+
+            <input type="date" name="date" id="date" hidden />
+            <input type="text" name="time" value="" id="time" hidden />
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="content my-4"
+        style="
+          background-color: #fff;
+          margin: 15px;
+          border-top: 3px solid rgb(53, 53, 53);
+          padding: 20px;
+          border-radius: 5px;
+        "
+      >
+        <div class="my-3" style="padding: 0">
+          <h4 class="page-title">Leave History</h4>
+          <hr />
+
+          <div id="myTableContainer" style="padding: 0">
+            <div class="table-responsive">
+              <table class="table">
+                <thead style="background-color: rgb(235, 235, 235)">
+                  <td>Reference-ID</td>
+                  <td>Start-date</td>
+                  <td>End-date</td>
+                  <td>Reason</td>
+                  <td>Posted on</td>
+                  <td>Posted at</td>
+                  <td>Status</td>
+                </thead>
+                <!-- table header and rows -->
+              </table>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="sidebar-overlay" data-reff=""></div>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.dataTables.min.js"></script>
-    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <br />
+    <br />
+    <br />
 
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script>
-      // Your web app's Firebase configuration
+      // Get the current date
+      const currentDate = new Date().toISOString().slice(0, 10);
+
+      // Set the current date as the value of the input field
+      document.getElementById("date").value = currentDate;
+      // Get the current time
+      const now = new Date();
+
+      // Get a reference to the input element
+      const input = document.getElementById("time");
+
+      // Set the input element's value to the current time
+      input.value = now.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
       var firebaseConfig = {
         apiKey: "AIzaSyDoiXHxMG_vZPHz0eeJj5s661xhfU-Y4_4",
         authDomain: "members-76725.firebaseapp.com",
-        databaseURL: "https://members-76725-default-rtdb.firebaseio.com",
         projectId: "members-76725",
         storageBucket: "members-76725.appspot.com",
         messagingSenderId: "734645197873",
@@ -370,180 +235,148 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
 
-      const auth = firebase.auth();
-      const db = firebase.database();
+      var db = firebase.firestore();
 
+      // Fetch user details
       firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-          // User is signed in.
+          // User is signed in
+          var userId = user.uid;
+          var userRef = db.collection("members").doc(userId);
+
+          userRef
+            .get()
+            .then(function (doc) {
+              if (doc.exists) {
+                var user = doc.data();
+                console.log("User details:", user);
+                // Do something with user details, like pre-fill the form inputs
+                document.getElementById("startDate").value =
+                  user.lastLeaveStartDate;
+                document.getElementById("endDate").value =
+                  user.lastLeaveEndDate;
+
+                // Query Firestore for user's leave requests
+                // Get a reference to the 'Leaves' collection
+                var leavesCollection = db.collection("Leaves");
+
+                // Create a query to retrieve leave requests for the current user
+                var query = leavesCollection.where("userId", "==", userId);
+
+                // Create a function to handle updates to the UI
+                function updateUI(querySnapshot) {
+                  // Clear the existing table rows
+                  var table = document.querySelector(".table");
+                  var rows = table.querySelectorAll("tr");
+                  for (var i = 1; i < rows.length; i++) {
+                    table.removeChild(rows[i]);
+                  }
+
+                  // Loop through the query snapshot and add the leave requests to the table
+                  querySnapshot.forEach(function (doc) {
+                    var leave = doc.data();
+                    var row = table.insertRow();
+                    row.classList.add("table-light");
+
+                    var idCell = row.insertCell(0);
+                    idCell.innerHTML = doc.id;
+
+                    var startDateCell = row.insertCell(1);
+                    startDateCell.innerHTML = leave.startDate;
+
+                    var endDateCell = row.insertCell(2);
+                    endDateCell.innerHTML = leave.endDate;
+
+                    var reasonCell = row.insertCell(3);
+                    reasonCell.innerHTML = leave.reason;
+
+                    var dateDateCell = row.insertCell(4);
+                    dateDateCell.innerHTML = leave.date;
+                    dateDateCell.style.color = "grey";
+
+                    var timeDateCell = row.insertCell(5);
+                    timeDateCell.innerHTML = leave.time;
+                    timeDateCell.style.color = "grey";
+
+                    var statusCell = row.insertCell(6);
+                    statusCell.innerHTML = leave.status;
+                    statusCell.style.fontWeight = "500";
+
+                    // Set text color based on leave status
+                    if (leave.status === "Pending") {
+                      statusCell.style.color = "orange";
+                    } else if (leave.status === "Approved") {
+                      statusCell.style.color = "green";
+                    } else if (leave.status === "Declined") {
+                      statusCell.style.color = "red";
+                    }
+                  });
+                }
+
+                // Attach a listener to the query using onSnapshot()
+                query.onSnapshot(
+                  function (querySnapshot) {
+                    // Call the updateUI function with the updated query snapshot
+                    updateUI(querySnapshot);
+                  },
+                  function (error) {
+                    console.log("Error fetching leave requests:", error);
+                  }
+                );
+              } else {
+                console.log("No user data available");
+              }
+            })
+            .catch(function (error) {
+              console.log("Error fetching user details:", error);
+            });
+
+          // Handle form submissions
+          var form = document.querySelector("form");
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var startDate = document.getElementById("startDate").value;
+            var endDate = document.getElementById("endDate").value;
+            var reason = document.getElementById("reason").value;
+            var status = document.getElementById("status").value;
+            var date = document.getElementById("date").value;
+            var time = document.getElementById("time").value;
+
+            // Add the leave request to Firestore
+            db.collection("Leaves")
+              .add({
+                userId: userId,
+                name: name,
+
+                startDate: startDate,
+                endDate: endDate,
+                reason: reason,
+                status: status,
+                date: date,
+                time: time,
+              })
+              .then(function (docRef) {
+                console.log("Leave request added with ID: ", docRef.id);
+                alert("Leave request added successfully!");
+                location.reload();
+                // Reset the form inputs
+                form.reset();
+              })
+              .catch(function (error) {
+                console.error("Error adding leave request: ", error);
+                alert(
+                  "An error occurred while adding the leave request. Please try again later."
+                );
+              });
+          });
         } else {
-          window.location.href = "./main.html";
+          // No user is signed in
+
+          // No user is signed in
+          console.log("No user signed in");
         }
       });
-
-      //GET ALL DATAzz
-      var stdNo;
-      function SelectAllData() {
-        document.getElementById("tbody1").innerHTML = "";
-
-        stdNo = 0;
-        firebase
-          .database()
-          .ref("leaverequest")
-          .orderByChild("status")
-          .once("value", function (AllRecords) {
-            AllRecords.forEach(function (CurrentRecord) {
-              var name = CurrentRecord.val().name;
-              var reason = CurrentRecord.val().reason;
-              var from = CurrentRecord.val().from;
-              var to = CurrentRecord.val().to;
-              var status = CurrentRecord.val().status;
-
-              AddItemsToTable(name, reason, from, to, status);
-            });
-          });
-      }
-
-      window.onload = SelectAllData;
-
-      //Filling the table
-
-      var stdList = [];
-      function AddItemsToTable(name, reason, from, to, status) {
-        var tbody = document.getElementById("tbody1");
-        var trow = document.createElement("tr");
-        var td0 = document.createElement("td");
-        var td1 = document.createElement("td");
-        var td2 = document.createElement("td");
-        var td3 = document.createElement("td");
-        var td4 = document.createElement("td");
-        var td5 = document.createElement("td");
-
-        stdList.push([name, reason, from, to, status]);
-
-        td0.innerHTML = ++stdNo;
-        td1.innerHTML = name;
-        td2.innerHTML = reason;
-        td3.innerHTML = from;
-        td4.innerHTML = to;
-        td5.innerHTML = status;
-
-        trow.appendChild(td0);
-        trow.appendChild(td1);
-        trow.appendChild(td2);
-        trow.appendChild(td3);
-        trow.appendChild(td4);
-        trow.appendChild(td5);
-
-        var ControlDiv = document.createElement("div");
-
-        trow.appendChild(ControlDiv);
-
-        tbody.appendChild(trow);
-      }
-
-      var ModName = document.getElementById("NameMod");
-      var ModReason = document.getElementById("ReasonMod");
-      var ModFrom = document.getElementById("FromMod");
-      var ModTo = document.getElementById("ToMod");
-      var ModStatus = document.getElementById("StatusMod");
-
-      var AddModBtn = document.getElementById("AddModBtn");
-      var UpdModBtn = document.getElementById("UpdModBtn");
-      var DelModBtn = document.getElementById("DelModBtn");
-
-      function FillTboxes(index) {
-        if (index == null) {
-          ModName.value = "";
-          ModReason.value = "";
-          ModFrom.value = "";
-          ModTo.value = "";
-          ModStatus.value = "";
-
-          ModName.disabled = false;
-          ModReason.disabled = false;
-          ModFrom.disabled = false;
-          ModTo.disabled = false;
-
-          AddModBtn.style.display = "inline-block";
-          UpdModBtn.style.display = "none";
-          DelModBtn.style.display = "none";
-        } else {
-          --index;
-
-          ModName.value = stdList[index][0];
-          ModReason.value = stdList[index][1];
-          ModFrom.value = stdList[index][2];
-          ModTo.value = stdList[index][3];
-          ModStatus.value = stdList[index][4];
-
-          ModName.disabled = true;
-          ModReason.disabled = true;
-          ModFrom.disabled = true;
-          ModTo.disabled = true;
-
-          AddModBtn.style.display = "none";
-          UpdModBtn.style.display = "inline-block";
-          DelModBtn.style.display = "inline-block";
-        }
-      }
-
-      function AddStd() {
-        firebase
-          .database()
-          .ref("leaverequest/" + ModName.value + ModFrom.value)
-          .set(
-            {
-              name: ModName.value,
-              reason: ModReason.value,
-              from: ModFrom.value,
-              to: ModTo.value,
-              status: ModStatus.value,
-            },
-            (error) => {
-              if (error) {
-                alert("Record was not added, there was some problem");
-              } else {
-                alert("Leave request is sent!");
-                SelectAllData();
-              }
-            }
-          );
-      }
-
-      function UpdStd() {
-        firebase
-          .database()
-          .ref("leaverequest/" + ModName.value + ModFrom.value)
-          .update(
-            {
-              name: ModName.value,
-              reason: ModReason.value,
-              from: ModFrom.value,
-              to: ModTo.value,
-              status: ModStatus.value,
-            },
-            (error) => {
-              if (error) {
-                alert("Record was not updated, there was some problem");
-              } else {
-                alert("Leave request is updated!");
-                SelectAllData();
-              }
-            }
-          );
-      }
-
-      function DelStd() {
-        firebase
-          .database()
-          .ref("leaverequest/" + ModName.value + ModFrom.value)
-          .remove()
-          .then(function () {
-            alert("Leave request is deleted");
-            SelectAllData();
-          });
-      }
     </script>
   </body>
 </html>
