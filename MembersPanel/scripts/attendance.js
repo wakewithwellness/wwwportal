@@ -148,18 +148,18 @@ async function getuserInfoRealtime(userID) {
 
                     <tr>
                    
-                    <td rowspan="2" id=month> <h4>April 2023</h4>
+                    <td rowspan="2" id=month> <h4>June 2023</h4>
                    
                     </td>
-                    <td ><a>15/04/2023 to 31/03/2023</a></td>
-                    <td style="color:green; font-weight:bold">${userInfo.Apr23b}</td>
-                    <td>${userInfo.Apr23bf}</td>
+                    <td ><a>15/06/2023 to 31/06/2023</a></td>
+                    <td style="color:green; font-weight:bold">${userInfo.Jun23b}</td>
+                    <td>${userInfo.Jun23bf}</td>
                     </tr>
 
                     <tr>
-                    <td><a>01/04/2023 to 15/03/2023</a></td>
-                    <td style="color:green;font-weight:bold">${userInfo.Apr23a}</td>
-                    <td>${userInfo.Apr23af}</td>
+                    <td><a>01/06/2023 to 15/06/2023</a></td>
+                    <td style="color:green;font-weight:bold">${userInfo.Jun23a}</td>
+                    <td>${userInfo.Jun23af}</td>
                     </tr>
 
                     </tbody>
@@ -196,7 +196,7 @@ async function getuserInfoRealtime(userID) {
 						
                     <h5 style="color: grey;font-weight: 200;font-size:13px;text-align:left">I, <span style="font-weight: 500;font-size:14px">${userInfo.name} [${userInfo.regno}]</span> post my attendance 
                     from 
-                    <span style="font-size: 14px;color: rgb(53, 53, 53);font-weight:600" id="date">15/04/2023 - 30/04/2023</span></h5>
+                    <span style="font-size: 14px;color: rgb(53, 53, 53);font-weight:600" id="date">01/06/2023 - 15/06/2023</span></h5>
                               <div class="testbox" >
                           
                                               <form onsubmit="updateattendance(event)" id="attendanceform">
@@ -301,8 +301,8 @@ async function getuserInfoRealtime(userID) {
 
 function updateattendance(event) {
   event.preventDefault();
-  var Apr23b = document.getElementById("attend").value;
-  var Apr23bf = document.getElementById("work").value;
+  var Jun23b = document.getElementById("attend").value;
+  var Jun23bf = document.getElementById("work").value;
   var userRef = firebase
     .firestore()
     .collection("attendance")
@@ -311,10 +311,10 @@ function updateattendance(event) {
   var setWithMerge = userRef
     .set(
       {
-        Apr23b: Apr23b,
-        Apr23bf: Apr23bf,
+        Jun23b: Jun23b,
+        Jun23bf: Jun23bf,
       },
-      { merge: true }
+      {merge: true}
     )
     .then(() => {
       // Show alert
@@ -336,7 +336,7 @@ function updateattendance(event) {
 }
 
 // Set the date we're counting down to
-var countDownDate = new Date("April 30, 2023 23:00:00").getTime();
+var countDownDate = new Date("June 15, 2023 23:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
